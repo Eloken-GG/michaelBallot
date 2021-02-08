@@ -7,7 +7,10 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
-import "tailwindcss/tailwind.css"
+import "tailwindcss/tailwind.css";
+
+// import Alpinejs
+import 'alpinejs';
 
 // start the Stimulus application
 import './bootstrap';
