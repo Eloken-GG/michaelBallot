@@ -30,7 +30,7 @@ class ServiceController extends AbstractController
     }
 
     // Display the platinium service.
-    #[Route('/services/platinium', name: 'gold')]
+    #[Route('/services/platinium', name: 'platinium')]
     public function platinium(): Response
     {
         return $this->render('service/platinium.html.twig');

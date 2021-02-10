@@ -14,7 +14,7 @@ module.exports = {
 
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
-        'playfair': ['Poppins', 'serif'],
+        'playfair': ['Playfair Display', 'serif'],
       },
 
       colors: {

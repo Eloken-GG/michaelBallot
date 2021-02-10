@@ -1,3 +1,26 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+
+@layer base {
+    .title-1 {
+        @apply text-gray-900 font-playfair text-5xl lg:text-6xl
+    }
+    .title-2 {
+        @apply text-gray-900 font-playfair text-3xl lg:text-4xl
+    }
+    .title-3 {
+        @apply text-gray-800 font-montserrat uppercase tracking-wide text-xl lg:text-2xl font-bold
+    }
+    .body-1{
+        @apply font-montserrat text-gray-700 text-lg lg:text-xl
+    }
+    .body-2{
+        @apply font-montserrat text-gray-600 text-base lg:text-lg
+    }
+    .subtitle-1{
+        @apply font-montserrat uppercase tracking-widest text-gray-700 text-base lg:text-lg
+    }
+}
+
+
 @import "tailwindcss/utilities";
