@@ -20,6 +20,12 @@
     .subtitle-1{
         @apply font-montserrat uppercase tracking-widest text-gray-700 text-base lg:text-lg
     }
+    .subtitle-2{
+        @apply font-montserrat uppercase tracking-widest font-bold text-gray-700 text-sm lg:text-base
+    }
+    .btn-1 {
+        @apply bg-rose-500 uppercase font-montserrat text-xs tracking-wide p-3  rounded-sm text-white
+    }
 }
 
 
