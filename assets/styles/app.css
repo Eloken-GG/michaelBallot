@@ -9,22 +9,28 @@
         @apply text-gray-900 font-playfair text-3xl lg:text-4xl
     }
     .title-3 {
-        @apply text-gray-800 font-montserrat uppercase tracking-wide text-xl lg:text-2xl font-bold
+        @apply text-gray-800 font-raleway uppercase tracking-wide text-xl lg:text-2xl font-bold
     }
     .body-1{
-        @apply font-montserrat text-gray-700 text-lg lg:text-xl
+        @apply font-raleway text-gray-700 text-lg lg:text-xl
     }
     .body-2{
-        @apply font-montserrat text-gray-600 text-base lg:text-lg
+        @apply font-raleway text-gray-600 text-base lg:text-lg
+    }
+    .body-3{
+        @apply font-raleway text-gray-600 text-base
     }
     .subtitle-1{
-        @apply font-montserrat uppercase tracking-widest text-gray-700 text-base lg:text-lg
+        @apply font-raleway uppercase tracking-widest text-gray-700 text-base lg:text-lg
     }
     .subtitle-2{
-        @apply font-montserrat uppercase tracking-widest font-bold text-gray-700 text-sm lg:text-base
+        @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-sm lg:text-base
     }
     .btn-1 {
-        @apply bg-rose-500 uppercase font-montserrat text-xs tracking-wide p-3  rounded-sm text-white
+        @apply bg-rose-500 uppercase font-raleway text-xs tracking-wide p-3  rounded-sm text-white
+    }
+    .max-h-0 {
+        max-height: 0;
     }
 }
 

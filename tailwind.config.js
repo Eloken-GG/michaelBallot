@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
+        'raleway': ['Raleway', 'sans-serif'],
       },
 
       colors: {
@@ -41,9 +42,9 @@ module.exports = {
       appearance: ['hover', 'focus'],
     },
   },
-  plugins: [
 
-
-  ],
+  corePlugins: {
+    outline: false,
+  },
 
 }
