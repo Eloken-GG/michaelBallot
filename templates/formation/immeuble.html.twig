@@ -6,129 +6,128 @@
 {# BLOC BODY #}
 {% block body %}
 
-    <section class="relative pb-56 sm:pb-80">
+    {# HERO SECTION #}
+    <section x-data="{ open: false }" class="relative pb-56 sm:pb-80">
         <img class="hidden lg:block absolute inset-0 w-full" src="atis-assets/background/lines.svg" alt="">
 
-        <div class="relative pt-12 md:pt-16 pb-32 md:pb-64 bg-gray-50 border-b-4 border-green-600">
+        <div class="relative pt-12 md:pt-16 pb-32 md:pb-64 border-b-4 border-rose-500">
             <div class="relative container mx-auto px-4">
                 <div class="max-w-2xl mx-auto text-center mb-12 md:mb-20">
-                    <h2 class="mb-10 text-4xl lg:text-5xl font-bold">Learn how We will help you to reach your goals</h2>
-                    <div>
-                        <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold leading-loose rounded-l-xl rounded-t-xl transition duration-200"
-                           href="#">Get Started</a><a
-                                class="inline-block w-full lg:w-auto py-2 px-6 font-semibold bg-white hover:bg-gray-50 rounded-l-xl rounded-t-xl transition duration-200"
-                                href="#">How it works</a></div>
+                    <h1 class="title-1 mb-12 font-semibold">Achetez votre premier immeuble</h1>
+                    <p class="body-1">Acheter un immeuble et rentabiliser cet investissement en moins d’un an est
+                        possible. Formez-vous et maitrisez l’ensemble des techniques pour réaliser une opération avec un
+                        fort retour sur investissement .</p>
                 </div>
-            </div>
-            <div class="absolute inset-x-0 max-w-3xl mx-auto px-4">
-                <img class="rounded-3xl md:rounded-6xl md:rounded-br-none"
-                     src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
-                     alt="">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <button class="flex items-center justify-center bg-white rounded-full">
+                <div class="absolute inset-x-0 max-w-3xl mx-auto px-4">
+                    <img class="rounded-sm "
+                         src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                         alt="">
+                    <div class="absolute inset-0 flex items-center justify-center">
                         <svg class="w-16 h-16 text-green-600 hover:text-green-700 transition duration-200"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <button @click="open = true" class="flex items-center justify-center bg-white rounded-full">
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                                   clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="fixed z-10 top-0 left-0 flex items-center justify-center w-screen h-screen"
+             style="background-color: rgba(0,0,0,.5);" x-show="open">
+
+            <!-- A basic modal dialog with title, body and one button to close -->
+            <div class="h-auto p-4 mx-2 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0"
+                 @click.away="open = false">
+
+
+                <div class="container">
+                    <video id="player" controls crossorigin playsinline
+                           poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                type="video/mp4" size="576">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                                type="video/mp4" size="720">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                                type="video/mp4" size="1080">
+
+                        <!-- Caption files -->
+                        <track kind="captions" label="English" srclang="en"
+                               src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                               default>
+                        <track kind="captions" label="Français" srclang="fr"
+                               src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                        <!-- Fallback for browsers that don't support the <video> element -->
+                        <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+                    </video>
+                </div>
+                <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                <!-- One big close button.  --->
+                <div class="mt-5 sm:mt-6">
+                    <span class="flex w-full rounded-md shadow-sm">
+                      <button @click="open = false"
+                              class="inline-flex justify-center w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                </div>
+
             </div>
         </div>
 
     </section>
 
-    <section>
 
-        <div class="py-20 bg-gray-50 radius-for-skewed">
+    {# INTRODUCTION #}
+    <section class="bg-gray-50 w-full pb-32">
+
+        <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
-                <div class="max-w-xl mx-auto text-center">
-                    <img class="mb-6 mx-auto" src="atis-assets/logo/atis/atis-mono-sign.svg" alt="">
-                    <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">So much more than a business analytics
-                        tool</h2>
-                    <p class="mb-8 text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="title-1">Un meilleur investissement que l'immobilier traditionnel</h2>
+                    <p class="body-2 m-6">L'immeuble de rapport est un investissement immobilier, dont la particularité
+                        est d'être un habitat collectif détenu par un unique propriétaire. C’est un modèle économique
+                        qui permet à l’investisseur de faire des économies d’échelle et de maximiser ses rendements à la
+                        location ou la revente.
+                    </p>
                 </div>
             </div>
         </div>
+
 
     </section>
 
     <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-24 mx-auto">
             <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+                     src="https://dummyimage.com/400x400">
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                    <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
-                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+                    <h2 class="subtitle-2">Formation en ligne</h2>
+                    <h1 class="title-2">Investir dans un immeuble de rapport</h1>
                     <div class="flex mb-4">
-          <span class="flex items-center">
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-            </svg>
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-            </svg>
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-            </svg>
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-            </svg>
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-            </svg>
-            <span class="text-gray-600 ml-3">4 Reviews</span>
-          </span>
-                        <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
-            </a>
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-              </svg>
-            </a>
-          </span>
+
                     </div>
-                    <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+                    <p class="body-2">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à la
+                        location ou la vente des lots.</p>
                     <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                        <div class="flex">
-                            <span class="mr-3">Color</span>
-                            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                            <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                            <button class="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                        </div>
-                        <div class="flex ml-6 items-center">
-                            <span class="mr-3">Size</span>
-                            <div class="relative">
-                                <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                                    <option>SM</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                </select>
-                                <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-                            </div>
-                        </div>
+
+
                     </div>
+
+
                     <div class="flex">
                         <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                            Button
+                        </button>
                         <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                 class="w-5 h-5" viewBox="0 0 24 24">
                                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                             </svg>
                         </button>
@@ -136,6 +135,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
 
@@ -205,24 +205,35 @@
                     <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
                         <div class="max-w-md">
                             <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                            <h2 class="mb-3 text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without problems</h2>
-                            <p class="mb-6 max-w-sm text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                            <h2 class="mb-3 text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without
+                                problems</h2>
+                            <p class="mb-6 max-w-sm text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                             <ul class="text-gray-500 font-bold">
                                 <li class="mb-2 flex items-center">
-                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Vestibulum viverra ante non libero</span>
                                 </li>
                                 <li class="mb-2 flex items-center">
-                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Morbi mollis metus pretium ultrices tincidunt</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Etiam lectus nunc, commodo et risus in</span>
                                 </li>
@@ -231,12 +242,21 @@
                     </div>
                     <div class="w-full lg:w-1/2">
                         <div class="mb-4 flex flex-wrap items-end">
-                            <div class="mb-4 lg:mb-0 w-full lg:w-2/3 px-3"><img class="w-full h-32 lg:h-48 object-cover rounded" src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt=""></div>
-                            <div class="w-full lg:w-1/3 px-3"><img class="w-full h-32 object-cover rounded" src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""></div>
+                            <div class="mb-4 lg:mb-0 w-full lg:w-2/3 px-3"><img
+                                        class="w-full h-32 lg:h-48 object-cover rounded"
+                                        src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                        alt=""></div>
+                            <div class="w-full lg:w-1/3 px-3"><img class="w-full h-32 object-cover rounded"
+                                                                   src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                                                   alt=""></div>
                         </div>
                         <div class="flex flex-wrap items-start">
-                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3"><img class="w-full h-32 object-cover rounded" src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80" alt=""></div>
-                            <div class="w-full lg:w-2/3 px-3"><img class="w-full h-32 lg:h-48 object-cover rounded" src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""></div>
+                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3"><img class="w-full h-32 object-cover rounded"
+                                                                                src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                                                                alt=""></div>
+                            <div class="w-full lg:w-2/3 px-3"><img class="w-full h-32 lg:h-48 object-cover rounded"
+                                                                   src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                                                   alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -251,7 +271,8 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-xl mx-auto text-center">
                     <img class="mb-6 mx-auto" src="atis-assets/logo/atis/atis-mono-sign.svg" alt="">
-                    <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">7 étapes pour réussir votre investissement</h2>
+                    <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">7 étapes pour réussir votre
+                        investissement</h2>
 
                 </div>
             </div>
@@ -265,47 +286,72 @@
             <div class="container mx-auto px-4">
 
                 <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 rounded-l"><img class="object-cover" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80" alt=""></div>
+                    <div class="w-full lg:w-1/2 rounded-l"><img class="object-cover"
+                                                                src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                                                                alt=""></div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
                         <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
+                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
+                            eu nulla a metus</h2>
+                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
+                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
+                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
                         <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
                     </div>
                 </div>
                 <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
                         <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
+                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
+                            eu nulla a metus</h2>
+                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
+                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
+                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
                         <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
                     </div>
-                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1"><img class="object-cover" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80" alt=""></div>
+                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1"><img class="object-cover"
+                                                                                   src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                                                                                   alt=""></div>
                 </div>
                 <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 rounded-l"><img class="object-cover" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80" alt=""></div>
+                    <div class="w-full lg:w-1/2 rounded-l"><img class="object-cover"
+                                                                src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                                                                alt=""></div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
                         <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
+                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
+                            eu nulla a metus</h2>
+                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
+                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
+                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
                         <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
                     </div>
                 </div>
                 <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
                         <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
+                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
+                            eu nulla a metus</h2>
+                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
+                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
+                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
                         <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
                     </div>
-                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1"><img class="object-cover" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80" alt=""></div>
+                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1"><img class="object-cover"
+                                                                                   src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                                                                                   alt=""></div>
                 </div>
                 <div class="mb-16 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 rounded-l bg-white"><img class="object-cover" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80" alt=""></div>
+                    <div class="w-full lg:w-1/2 rounded-l bg-white"><img class="object-cover"
+                                                                         src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                                                                         alt=""></div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
                         <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
+                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
+                            eu nulla a metus</h2>
+                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
+                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
+                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
                         <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
                     </div>
                 </div>
@@ -330,56 +376,101 @@
                         <li class="p-6 bg-gray-50 rounded shadow">
                             <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600">
                                 <span class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
-                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
                                 </svg>
                             </button>
-                            <p class="mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.</p>
+                            <p class="mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula
+                                urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem
+                                nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.</p>
                         </li>
                         <li class="p-6 bg-gray-50 rounded shadow">
                             <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600">
                                 <span class="text-xl">Nunc maximus odio sit amet eros faucibus?</span>
-                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
                             </button>
-                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor, scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec, scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
+                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut
+                                vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor,
+                                scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec,
+                                scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta
+                                nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare
+                                laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
                         </li>
                         <li class="p-6 bg-gray-50 rounded shadow">
                             <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600">
                                 <span class="text-xl">Nam feugiat ex eget sapien lobortis?</span>
-                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
                             </button>
-                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor, scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec, scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
+                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut
+                                vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor,
+                                scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec,
+                                scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta
+                                nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare
+                                laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
                         </li>
                         <li class="p-6 bg-gray-50 rounded shadow">
                             <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600">
                                 <span class="text-xl">In hac habitasse platea dictumst?</span>
-                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
                             </button>
-                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor, scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec, scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
+                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut
+                                vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor,
+                                scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec,
+                                scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta
+                                nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare
+                                laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
                         </li>
                         <li class="p-6 bg-gray-50 rounded shadow">
                             <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600">
                                 <span class="text-xl">Nullam congue lacinia nibh quis scelerisque?</span>
-                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
                             </button>
-                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor, scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec, scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
+                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut
+                                vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor,
+                                scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec,
+                                scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta
+                                nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare
+                                laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
                         </li>
                         <li class="p-6 bg-gray-50 rounded shadow">
                             <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600">
                                 <span class="text-xl">Nam feugiat ex eget sapien lobortis?</span>
-                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                <svg class="w-4 h-4 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
                             </button>
-                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor, scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec, scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
+                            <p class="hidden mt-4 text-gray-400 font-normal leading-loose">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Vivamus quis ultricies est. Duis nec hendrerit magna. Ut
+                                vel orci gravida, hendrerit enim non, gravida turpis. Praesent non lectus porttitor,
+                                scelerisque nulla nec, ornare neque. Integer massa libero, ornare ut leo nec,
+                                scelerisque rutrum elit. Morbi et massa id ipsum lobortis rhoncus. Aenean sit amet porta
+                                nulla, quis varius risus. Suspendisse ultrices ut lectus non laoreet. Etiam ornare
+                                laoreet tortor quis porttitor. Suspendisse tempus erat non dui volutpat eleifend.</p>
                         </li>
                     </ul>
                 </div>
@@ -388,7 +479,7 @@
 
     </section>
 
-{#    QUI SUIS JE  #}
+    {# QUI SUIS JE #}
 
     <section>
 
@@ -396,10 +487,15 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-6xl mx-auto">
                     <div class="mb-8 p-6 flex flex-wrap items-center bg-white rounded-lg shadow">
-                        <div class="w-full lg:w-1/3"><img class="mb-5 lg:mb-0 w-full rounded-lg object-cover" style="max-height: 350px;" src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80" alt=""></div>
+                        <div class="w-full lg:w-1/3"><img class="mb-5 lg:mb-0 w-full rounded-lg object-cover"
+                                                          style="max-height: 350px;"
+                                                          src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
+                                                          alt=""></div>
                         <div class="w-full lg:w-2/3">
                             <div class="max-w-lg mx-auto">
-                                <p class="mb-8 text-2xl text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
+                                <p class="mb-8 text-2xl text-gray-500">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat
+                                    finibus, ac condimentum ligula ornare.</p>
                                 <div class="flex items-center justify-between">
                                     <div>
                                         <h4 class="text-2xl font-bold font-heading">Alice Bradley</h4>
@@ -422,7 +518,7 @@
 
     </section>
 
-{#    UPSELL  #}
+    {# UPSELL #}
     <section>
 
         <div class="py-20 bg-gray-50 radius-for-skewed">
@@ -431,34 +527,50 @@
                     <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
                         <div class="max-w-md">
                             <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                            <h2 class="text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without problems</h2>
-                            <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                            <h2 class="text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without
+                                problems</h2>
+                            <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                             <ul class="mb-8 text-gray-500 font-bold">
                                 <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Vestibulum viverra ante non libero</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Morbi mollis metus pretium ultrices tincidunt</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Etiam lectus nunc, commodo et risus in</span>
                                 </li>
                             </ul>
-                            <div><a href="#"><img class="mb-2 mr-6 inline-block" src="atis-assets/logo/brands/google-play-store.png" alt=""></a><a href="#"><img class="mb-2 inline-block" src="atis-assets/logo/brands/app-store-download.png" alt=""></a></div>
+                            <div><a href="#"><img class="mb-2 mr-6 inline-block"
+                                                  src="atis-assets/logo/brands/google-play-store.png" alt=""></a><a
+                                        href="#"><img class="mb-2 inline-block"
+                                                      src="atis-assets/logo/brands/app-store-download.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
                     <div class="transform -rotate-12 flex items-center w-full lg:w-1/2 px-4">
                         <div class="w-1/3"><img src="atis-assets/illustrations/book-detail-full.png" alt=""></div>
-                        <div class="w-1/3"><img src="atis-assets/illustrations/login-full.png" alt=""><img src="atis-assets/illustrations/details-full.png" alt=""></div>
+                        <div class="w-1/3"><img src="atis-assets/illustrations/login-full.png" alt=""><img
+                                    src="atis-assets/illustrations/details-full.png" alt=""></div>
                         <div class="w-1/3"><img src="atis-assets/illustrations/home.png" alt=""></div>
                     </div>
                 </div>
@@ -477,7 +589,7 @@
     {# FIXED #}
     <div class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="p-2 rounded-lg bg-indigo-600 shadow-lg sm:p-3">
+            <div class="p-2 rounded-sm bg-rose-500 shadow-lg sm:p-3">
                 <div class="flex items-center justify-between flex-wrap">
                     <div class="w-0 flex-1 flex items-center">
                   <span class="flex p-2 rounded-lg bg-indigo-800">
