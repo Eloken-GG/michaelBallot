@@ -7,12 +7,12 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <section x-data="{ open: false }" class="relative pb-56 sm:pb-80">
+    <section x-data="{ open: false }" class="relative pb-56 bg-gray-50 sm:pb-80">
         <img class="hidden lg:block absolute inset-0 w-full" src="atis-assets/background/lines.svg" alt="">
 
-        <div class="relative pt-12 md:pt-16 pb-32 md:pb-64 border-b-4 border-rose-500">
+        <div class="relative pt-12 md:pt-16 bg-white  pb-32 md:pb-64 border-b-4 border-rose-500">
             <div class="relative container mx-auto px-4">
-                <div class="max-w-2xl mx-auto text-center mb-12 md:mb-20">
+                <div class="max-w-2xl mx-auto text-center  mb-12 md:mb-20">
                     <h1 class="title-1 mb-12 font-semibold">Achetez votre premier immeuble</h1>
                     <p class="body-1">Acheter un immeuble et rentabiliser cet investissement en moins d’un an est
                         possible. Formez-vous et maitrisez l’ensemble des techniques pour réaliser une opération avec un
@@ -83,7 +83,7 @@
 
 
     {# INTRODUCTION #}
-    <section class="bg-gray-50 w-full pb-32">
+    <section class="bg-gray-50 w-full pb-24">
 
         <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
@@ -97,145 +97,185 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                     src="https://dummyimage.com/400x400">
-                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                    <h2 class="subtitle-2">Formation en ligne</h2>
-                    <h1 class="title-2">Investir dans un immeuble de rapport</h1>
-                    <div class="flex mb-4">
+    {# CARD FORMATION #}
+    <section class="bg-gradient-to-b from-gray-50 w-full pb-24">
+        <div class="max-w-3xl mx-auto">
 
-                    </div>
-                    <p class="body-2">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à la
-                        location ou la vente des lots.</p>
-                    <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+            <div class="w-full p-8 bg-white shadow-lg rounded-sm hover:shadow-sm transition duration-800 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                <div class="w-full lg:col-span-1">
+                    <a href="">
+                        <img
+                                class="w-48 rounded-sm shadow-sm mx-auto mb-8 lg:mb-0 h-auto"
+                                src="https://picsum.photos/200/300" alt=""></a>
+                </div>
+                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto">
+                        <h2 class="subtitle-2">Formation en ligne</h2>
+                        <h1 class="title-2">Investir dans un immeuble de rapport</h1>
+                        <div class="flex mb-4">
 
-
-                    </div>
-
-
-                    <div class="flex">
-                        <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                            Button
-                        </button>
-                        <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                 class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                            </svg>
-                        </button>
+                        </div>
+                        <p class="body-2">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à
+                            la
+                            location ou la vente des lots.</p>
+                        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                        </div>
+                        <div class="flex">
+                            <span class="title-font font-medium text-2xl text-gray-900">1 497,00 €</span>
+                            <button class="flex ml-auto btn-1">
+                                Acheter
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
-
-
 
     {# BULLET POINTS #}
     <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap">
-                <div class="mb-8 w-full md:w-1/2 lg:w-1/4 text-center">
-        <span class="mb-6 inline-block p-4 rounded bg-green-100">
-          <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-               fill="currentColor">
-            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-          </svg>
-        </span>
-                    <h3 class="text-2xl font-bold">250 324</h3>
-                    <p class="text-gray-500">Followers</p>
+                <div class="mb-8 w-full  md:w-1/3 text-center">
+                    <span class="mb-6 inline-block p-4 rounded bg-rose-100">
+                        <svg class="w-6 h-6 text-rose-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                             fill="currentColor">
+                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16                                       16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+                         </svg>
+                     </span>
+                    <h3 class="subtitle-1 font-bold">Facilité de paiement</h3>
+                    <p class="body-2">Réglez en 1, 3 ou 5 fois</p>
                 </div>
-                <div class="mb-8 w-full md:w-1/2 lg:w-1/4 text-center">
-        <span class="mb-6 inline-block p-4 rounded bg-green-100">
-          <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                <div class="mb-8 w-full md:w-1/3 text-center">
+                    <span class="mb-6 inline-block p-4 rounded bg-rose-100">
+          <svg class="w-6 h-6 text-rose-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
           </svg>
         </span>
-                    <h3 class="text-2xl font-bold">6 510</h3>
-                    <p class="text-gray-500">Solved Problems</p>
+                    <h3 class="subtitle-1 font-bold">Paiement sécurisé</h3>
+                    <p class="body-2">Vos informations sont cryptées</p>
                 </div>
-                <div class="mb-8 w-full md:w-1/2 lg:w-1/4 text-center">
-        <span class="mb-6 inline-block p-4 rounded bg-green-100">
-          <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                <div class="mb-8 w-full md:w-1/3 text-center">
+        <span class="mb-6 inline-block p-4 rounded bg-rose-100">
+          <svg class="w-6 h-6 text-rose-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
           </svg>
         </span>
-                    <h3 class="text-2xl font-bold">14 350</h3>
-                    <p class="text-gray-500">Happy Customers</p>
+                    <h3 class="subtitle-1 font-bold">Satisfait ou remboursé</h3>
+                    <p class="body-2">15 jours pour changer d'avis</p>
                 </div>
-                <div class="mb-8 w-full md:w-1/2 lg:w-1/4 text-center">
-        <span class="mb-6 inline-block p-4 rounded bg-green-100">
-          <svg class="w-6 h-6 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-               fill="currentColor">
-            <path fill-rule="evenodd"
-                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                  clip-rule="evenodd"></path>
-            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
-          </svg>
-        </span>
-                    <h3 class="text-2xl font-bold">149 324</h3>
-                    <p class="text-gray-500">Projects</p>
-                </div>
+
             </div>
         </div>
     </section>
 
 
-
-
-
-    <section>
-
-        <div class="py-20 bg-gray-50 radius-for-skewed">
+    {# DETAIL FORMATION #}
+    <section class="bg-gray-50">
+        <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center -mx-4">
                     <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
                         <div class="max-w-md">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                            <h2 class="mb-3 text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without
-                                problems</h2>
-                            <p class="mb-6 max-w-sm text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                            <span class="subtitle-2 inline-block">Contenu de la formation</span>
+                            <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
+
                             <ul class="text-gray-500 font-bold">
-                                <li class="mb-2 flex items-center">
-                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
                                               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                               clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Vestibulum viverra ante non libero</span>
+                                    <span>Maîtriser les règles d'urbanisme</span>
                                 </li>
-                                <li class="mb-2 flex items-center">
-                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
                                               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                               clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Morbi mollis metus pretium ultrices tincidunt</span>
+                                    <span>Utiliser les leviers d'optimisation fiscale </span>
                                 </li>
-                                <li class="flex items-center">
-                                    <svg class="mr-2 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
                                               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                               clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Etiam lectus nunc, commodo et risus in</span>
+                                    <span>Gérer son opération en toute autonomie</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Convaincre les banques</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Trouver des prestataires de confiance</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Etablir une étude de marché viable</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Négocier les prix et pérenniser son investissement</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Réduire au maximum les dépenses inutiles</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Trouver efficacement les locataires</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-rose-500" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Maximiser son retour sur investissement</span>
                                 </li>
                             </ul>
                         </div>
@@ -265,100 +305,137 @@
 
     </section>
 
-    <section>
+    {# LES SESSIONS #}
 
-        <div class="py-20 bg-gray-50 radius-for-skewed">
+    <section class="max-w-5xl mx-auto">
+
+        <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="max-w-xl mx-auto text-center">
-                    <img class="mb-6 mx-auto" src="atis-assets/logo/atis/atis-mono-sign.svg" alt="">
-                    <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">7 étapes pour réussir votre
-                        investissement</h2>
-
+                    <span class="subtitle-2 inline-block mb-5">Les modules</span>
+                    <h2 class="title-2">7 étapes pour réussir votre investissement</h2>
                 </div>
             </div>
         </div>
 
-    </section>
 
-    <section>
-
-        <div class="py-20 bg-gray-50 radius-for-skewed">
+        <div class="py-20">
             <div class="container mx-auto px-4">
+                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden items-center">
+                    <div class="w-full lg:w-1/2 rounded-l">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
 
-                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 rounded-l"><img class="object-cover"
-                                                                src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                                                alt=""></div>
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
-                        <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
-                            eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
-                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
-                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
-                        <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
-                    </div>
-                </div>
-                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
-                        <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
-                            eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
-                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
-                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
-                        <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
-                    </div>
-                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1"><img class="object-cover"
-                                                                                   src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                                                                   alt=""></div>
-                </div>
-                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 rounded-l"><img class="object-cover"
-                                                                src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                                                alt=""></div>
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
-                        <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
-                            eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
-                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
-                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
-                        <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
-                    </div>
-                </div>
-                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
-                        <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
-                            eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
-                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
-                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
-                        <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
-                    </div>
-                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1"><img class="object-cover"
-                                                                                   src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                                                                   alt=""></div>
-                </div>
-                <div class="mb-16 flex flex-wrap rounded-lg shadow overflow-hidden">
-                    <div class="w-full lg:w-1/2 rounded-l bg-white"><img class="object-cover"
-                                                                         src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                                                         alt=""></div>
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
-                        <span class="text-sm text-gray-400">24 Jan, 2021</span>
-                        <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla
-                            eu nulla a metus</h2>
-                        <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin
-                            rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est
-                            tortor, fermentum at urna a, accumsan suscipit sem.</p>
-                        <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
-                    </div>
-                </div>
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">1. Le choix du secteur</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-montserrat">Faites les bons choix dès le
+                            démarrage du projet. Acheter un immeuble n’est pas une démarche habituelle et trouver les
+                            bonnes offres demande une certaine connaissance du marché et des secteurs. Une bonne étude
+                            de marché est un préalable à l’investissement et demande une préparation minutieuse.</p>
 
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap rounded-lg items-center shadow overflow-hidden">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">2. Rentabiliser son projet</h3>
+                        <p class="mb-4 text-gray-400 leading-loose">Optimiser ses rendements et s’assurer un cash-flow
+                            conséquent, c’est savoir négocier afin d’obtenir le meilleur prix possible mais aussi
+                            connaître la fiscalité et la législation française. Adaptez votre projet et rentabilisez vos
+                            investissements.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden items-center">
+                    <div class="w-full lg:w-1/2 rounded-l">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
+
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">3. Etablir le devis</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-montserrat">Faites intervenir des artisans et
+                            les corps compétents dès que l’immeuble sera identifié. Ils établiront des devis concernant
+                            la réfection de l’immeuble et des appartements. Cela permettra d’assurer vos arrières et de
+                            parfaitement identifier les principaux postes de dépenses. Évitez les mauvaises surprises
+                            qui pourraient détériorer vos retours sur investissements.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap rounded-lg items-center shadow overflow-hidden">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">4. Se faire financer</h3>
+                        <p class="mb-4 text-gray-400 leading-loose">Sans financeur, pas de projet. Lorsque l’on fait une
+                            telle opération, la préparation est primordiale : le banquier souhaitera identifier toutes
+                            les failles envisageables afin de couvrir ses arrières. N’oubliez pas que la banque prend le
+                            risque avec vous. Rassurez-la et montrez que vous êtes un partenaire de confiance, qui saura
+                            prendre en main l’ensemble de l’opération. Décrochez le prêt qui permettra à vous et votre
+                            financeur de gagner de l’argent.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden items-center">
+                    <div class="w-full lg:w-1/2 rounded-l">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
+
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">5. Gérer les imprévus</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-montserrat">Aucun chantier n’est exempt
+                            d’imprévus, de retards et/ou de dépassement de budget. Prévoir une marche de manœuvre c’est
+                            savoir identifier les points critiques en amont (ou au moins à temps). Sécurisez votre
+                            investissement en restant à l'affût des problèmes. Gérez les imprévus, et maximisez votre
+                            cash-flow.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap rounded-lg items-center shadow overflow-hidden">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white order-1 lg:order-0">
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">6. Choisir une fiscalité adaptée</h3>
+                        <p class="mb-4 text-gray-400 leading-loose">Saviez-vous que les opérations de ce type
+                            bénéficiaient d’une fiscalité accommodante et d’une niche fiscale permettant d’optimiser au
+                            mieux son investissement. Maîtrisez chaque aspect relevant de l’imposition et de la taxation
+                            de votre projet en faisant le bon montage fiscal et évitez les retours de bâtons
+                            imprévus.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2 rounded-l order-0 lg:order-1">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden items-center">
+                    <div class="w-full lg:w-1/2 rounded-l">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
+
+                        <h3 class="mb-4 text-2xl font-bold font-montserrat">7. Mettre en location</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-montserrat">Trouvez les locataires, établissez
+                            le montant des loyers, faites votre pub sur internet, définissez le montant des charges…
+                            Mais surtout gagnez de l’argent sur ce projet. Assurez-vous un bon cash-flow et atteignez la
+                            liberté financière grâce à 1 seul investissement immobilier.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-
     </section>
 
     <section>
@@ -366,8 +443,8 @@
         <div class="py-20 bg-gray-50 radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="mb-16 max-w-xl mx-auto text-center">
-                    <span class="text-green-600 font-bold font-heading">Dolor sit amet consectutar</span>
-                    <h2 class="mb-6 text-5xl font-bold font-heading">Frequently Asked Questions</h2>
+                    <span class="subtitle-2 inline-block mb-5">FAQ</span>
+                    <h2 class="mb-6 title-2">Questions fréquentes</h2>
 
                 </div>
 
