@@ -23,6 +23,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "alpinejs": "^2.8.0"
+        "alpinejs": "^2.8.0",
+        "plyr": "^3.6.4",
+        "scrollreveal": "^4.0.7"
     }
 }
