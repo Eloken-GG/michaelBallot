@@ -5,4 +5,630 @@
 
 {# BLOC BODY #}
 {% block body %}
+
+    {# HERO SECTION #}
+    <section x-data="{ open: false }" class="relative pb-56 bg-gray-50 sm:pb-80">
+        <img class="hidden lg:block absolute inset-0 w-full" src="atis-assets/background/lines.svg" alt="">
+
+        <div class="relative pt-5 md:pt-16  pb-32 md:pb-64 border-b-4 bg-cover bg-no-repeat border-black bg-black"
+             style="background-image: url('https://images.pexels.com/photos/1546166/pexels-photo-1546166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+
+            <div class="absolute w-full h-full top-0 left-0 bg-black opacity-70"></div>
+
+
+            <div class="relative container mx-auto px-4">
+
+                {# BRADCRUMB #}
+                <nav class="flex mb-10 w-auto font-raleway mx-auto text-center text-gray-100 opacity-50"
+                     aria-label="Breadcrumb">
+                    <ol class="flex items-center mx-auto space-x-4">
+                        <li>
+                            <div>
+                                <a href="#" class="hover:text-gray-300">
+                                    <!-- Heroicon name: solid/home -->
+                                    <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                    </svg>
+                                    <span class="sr-only">Home</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <!-- Heroicon name: solid/chevron-right -->
+                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" class="ml-4 text-sm font-light hover:text-gray-300">Formations</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <!-- Heroicon name: solid/chevron-right -->
+                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" aria-current="page"
+                                   class="ml-4 text-sm font-light hover:text-gray-300">Trouver le bon bien pour
+                                    investir</a>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
+                {# START HERO TEXT #}
+
+                <div class="max-w-2xl mx-auto text-center text-white mb-12 md:mb-20">
+
+                    <h1 class="title-1 mb-12 text-white font-semibold">Vous ne trouvez pas le bon bien ?</h1>
+                    <p class="body-1 text-white font-raleway">Vous n'osez pas vous lancer dans un investissement car
+                        vous n'êtes pas certain d'avoir trouvé le bon bien, vous ignorez si la rentabilité sera au
+                        rendez-vous, si vous allez rencontrer des pépins... Je vous livre toutes les astuces pour
+                        trouver un bien rentable</p>
+                </div>
+                <div class="absolute inset-x-0 max-w-3xl mx-auto px-4">
+                    <img class=" "
+                         src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                         alt="">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-green-600 hover:text-green-700 transition duration-200"
+                        <button @click="open = true" class="flex items-center justify-center bg-white rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed z-10 top-0 left-0 flex items-center justify-center w-screen h-screen"
+             style="background-color: rgba(0,0,0,.5);" x-show="open">
+
+            <!-- A basic modal dialog with title, body and one button to close -->
+            <div class="h-auto p-4 mx-2 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0"
+                 @click.away="open = false">
+
+
+                <div class="container">
+                    <video id="player" controls crossorigin playsinline
+                           poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                type="video/mp4" size="576">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                                type="video/mp4" size="720">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                                type="video/mp4" size="1080">
+
+                        <!-- Caption files -->
+                        <track kind="captions" label="English" srclang="en"
+                               src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                               default>
+                        <track kind="captions" label="Français" srclang="fr"
+                               src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                        <!-- Fallback for browsers that don't support the <video> element -->
+                        <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+                    </video>
+                </div>
+                <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                <!-- One big close button.  --->
+                <div class="mt-5 sm:mt-6">
+                    <span class="flex w-full  shadow-sm">
+                      <button @click="open = false"
+                              class="inline-flex justify-center w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    {# INTRODUCTION #}
+    <section class="bg-gray-50 w-full pb-24">
+
+        <div class="py-20 radius-for-skewed">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="title-1">Tout est une question de préparation</h2>
+                    <p class="body-2 m-6">Définissez vos objectifs, vos contraintes, votre zone géographique, votre
+                        budget avant de vous lancer. Tout est une question de préparation. Lorsque l’on recherche un
+                        bien, il est primordial d’avoir à l’esprit toutes les problématiques liées à cet investissement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {# CARD FORMATION #}
+    <section class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
+        <div class="max-w-4xl px-8 mx-auto">
+
+            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                <div class="w-full  max-w-sm md:col-span-1">
+                    <a href="">
+                        <img
+                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                src="https://picsum.photos/200/300" alt=""></a>
+                </div>
+                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto mb-4">
+                        <h2 class="subtitle-2">Formation en ligne</h2>
+                        <h3 class="title-2">Trouver le bon bien</h3>
+
+                        <p class="body-2">Comprendre tous les enjeux de la recherche de bien pour pouvoir trouver le
+                            bien idéal dans les meilleures conditions.</p>
+                        <ul class="font-raleway mt-5 uppercase font-bold text-sm">
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">4 modules</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">accès illimité à vie</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">Accompagnement personnalisé</span>
+                            </li>
+
+                        </ul>
+                        <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                        </div>
+                        <div class="flex">
+                            <span class="title-font font-medium text-2xl text-gray-900">297,00 €</span>
+                            <button class="flex ml-auto btn-1">
+                                Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# BULLET POINTS #}
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <div class="mb-8 w-full  md:w-1/3 text-center">
+                    <span class="mb-6 inline-block p-4">
+                        <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                             fill="currentColor">
+                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16                                       16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+                         </svg>
+                     </span>
+                    <h3 class="subtitle-1 font-bold">Facilité de paiement</h3>
+                    <p class="body-2">Réglez en 1, 3 ou 5 fois</p>
+                </div>
+                <div class="mb-8 w-full md:w-1/3 text-center">
+                    <span class="mb-6 inline-block p-4">
+          <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </span>
+                    <h3 class="subtitle-1 font-bold">Paiement sécurisé</h3>
+                    <p class="body-2">Vos informations sont cryptées</p>
+                </div>
+                <div class="mb-8 w-full md:w-1/3 text-center">
+        <span class="mb-6 inline-block p-4">
+          <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </span>
+                    <h3 class="subtitle-1 font-bold">Satisfait ou remboursé</h3>
+                    <p class="body-2">15 jours pour changer d'avis</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    {# DETAIL FORMATION #}
+    <section class="bg-gray-50">
+        <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center -mx-4">
+                    <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
+                        <div class="max-w-md">
+                            <span class="subtitle-2 inline-block">Contenu de la formation</span>
+                            <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
+
+                            <ul class="font-raleway font-base text-black tracking-tight">
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Connaître les sites clés pour effectuer les recherches</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Établir un étude de marché</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Identifier les qualités et défauts des biens</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Effectuer des visites efficaces</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">S'entourer des bonnes personnes</span>
+                                </li>
+
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Identifier et réduire les dépenses inutiles</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Maximiser son retour sur investissement</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="mb-4 flex flex-wrap items-end">
+                            <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
+                                <img class="tagline w-full h-32 lg:h-48 object-cover"
+                                     src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                     alt=""></div>
+                            <div class="w-full lg:w-1/3 px-3">
+                                <img class="punchline w-full h-32 object-cover"
+                                     src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                     alt=""></div>
+                        </div>
+                        <div class=" flex flex-wrap items-start">
+                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
+                                <img class="headline w-full h-32 object-cover"
+                                     src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                     alt=""></div>
+                            <div class="w-full lg:w-2/3 px-3">
+                                <img class="highline w-full h-32 lg:h-48 object-cover"
+                                     src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                     alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {# LES SESSIONS #}
+
+    <section class="max-w-5xl mx-auto">
+
+        <div class="py-20 radius-for-skewed">
+            <div class="container mx-auto px-4">
+                <div class="max-w-xl mx-auto text-center">
+                    <span class="subtitle-2 inline-block mb-5">Les modules</span>
+                    <h2 class="title-2">4 étapes pour trouver le bon bien</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="mb-8 flex flex-wrap  shadow overflow-hidden items-center">
+                    <div class="w-full lg:w-1/2 ">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
+
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">1. Étude de marché</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Trouver un bien rentable, ce n'est pas
+                            trouver un bien peu cher, c’est surtout trouver un bien qui se vend ou se loue facilement.
+                            Le secteur est donc primordial pour réussir son opération. Établissez vos objectifs pour
+                            pérenniser votre investissement</p>
+
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap  items-center shadow overflow-hidden">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white order-1 lg:order-0">
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">2. Recherche de biens</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Tous les sites et toutes les techniques
+                            pour trouver le bon bien sur internet et pour effectuer des visites efficaces. Validez tous
+                            les points de la check List et sélectionnez le meilleur bien en termes de rentabilité.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2  order-0 lg:order-1">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap  shadow overflow-hidden items-center">
+                    <div class="w-full lg:w-1/2 ">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
+
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">3. Budgétisation</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Estimez le coût de votre opération. Ne
+                            négligez aucun frais, aucune taxe et aucun travaux pour vous assurer une profitabilité
+                            optimale et un cash-flow rapide
+                        </p>
+
+                    </div>
+                </div>
+                <div class="mb-8 flex flex-wrap  items-center shadow overflow-hidden">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white order-1 lg:order-0">
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">4. Business plan et négociation</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Maîtrisez les clés pour payer un
+                            minimum d’impôt. Votre rentabilité ne devrait pas s’évaporer sous une fiscalité trop lourde.
+                            Dans le cadre d’une location, il est possible de ne pas payer d’impôts sur les loyers. Faire
+                            le bon choix de fiscalité dès le départ est une des clés de la réussite de votre projet.
+                            Faites les bonnes demandes, remplissez les bons formulaires et oubliez les problématiques
+                            fiscales.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2  order-0 lg:order-1">
+                        <img class="object-cover"
+                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {# FAQ #}
+    <section x-data="{selected:null}">
+        <div class="py-20 bg-gray-50 radius-for-skewed">
+            <div class="container mx-auto px-4">
+                <div class="mb-16 max-w-xl mx-auto text-center">
+                    <span class="subtitle-2 inline-block mb-5">FAQ</span>
+                    <h2 class="mb-6 title-2">Questions fréquentes</h2>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <ul class="space-y-1 lg:space-y-6">
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                <span class="text-lg font-semibold font-raleway">À qui s'adresse cette formation ?</span>
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 1 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                               x-ref="container1"
+                               x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 1 }">
+                                Vous êtes un investisseur débutant et souhaitez maîtriser la première étape de tous vos
+                                futurs investissements.</p>
+                        </li>
+
+
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                <span class="text-lg font-semibold font-raleway">Si la formation ne me convient pas, puis-je me rétracter ?</span>
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 2 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                               x-ref="container1"
+                               x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 2 }">
+                                Oui ! Vous avez 15 jours pour changer d’avis. Aucune explication ne vous est demandée,
+                                nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de nos
+                                formations, nous vous permettons de vous rétracter à tout moment pendant 15 jours.</p>
+                        </li>
+
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 3 ? selected = 3 : selected = null">
+                            <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 3 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                               x-ref="container1"
+                               x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 3 }">
+                                Oui, en fonction de la formation, vous pouvez avoir la possibilité de payer en 1, 3 ou 5
+                                fois. Vous êtes alors débité chaque mois du montant indiqué lors de l’achat.
+                        </li>
+
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 4 ? selected = 4 : selected = null">
+                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages de cette formation ?</span>
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 4 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                               x-ref="container1"
+                               x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 4 }">
+                                Avec la formation vous bénéficiez d’un accès à notre communauté d’investisseurs et aux
+                                conseils d'experts afin d'être au fait de toutes les évolutions de la législation et des
+                                obligations liées aux opérations de promotion immobilière. Vous bénéficiez aussi de
+                                tarifs préférentiels pour nos autres formations ou pour participer à nos évènements
+                                immobiliers.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {# QUI SUIS JE #}
+    <section>
+
+        <div class="py-20 bg-gray-50 radius-for-skewed">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="mb-8 p-6 flex flex-wrap items-center bg-white  shadow">
+                        <div class="w-full lg:w-1/3">
+                            <img class="mb-5 lg:mb-0 w-full  object-cover" style="max-height: 350px;"
+                                 src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
+                                 alt=""></div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="max-w-lg mx-auto">
+                                <p class="mb-8 quote-1">Lorsque l’on investit, on prend un risque que l’on ne mesure pas
+                                    toujours. Des risques j’en ai pris un paquet ces dernières années et j’ai fini par
+                                    apprendre et comprendre les choses à ne pas faire.
+                                    <br>
+                                    Je possède aujourd’hui plus de 15 biens et je gagne en net plus de 5000€ de rente
+                                    mensuelle. Je vous livre dans cette formation les astuces pour réussir à trouver le
+                                    bon bien et à générer un maximum de rentabilité.
+                                    <br>
+                                    Alors la prochaine fois que vous doutez, dites-vous que prendre un risque c’est
+                                    avant tout générer une opportunité
+
+
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="text-2xl font-bold font-heading">Michael Ballot</h4>
+                                        <p class="text-blueGrey-500">Coach & formateur immobilier</p>
+                                    </div>
+                                    <a href="#"><img src="atis-assets/social/facebook-name.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# UPSELL #}
+    {% include 'shared/_packFormations.html.twig' %}
+
+    {# ECHANGE TELEPHONIQUE #}
+    {% include 'shared/_contact.html.twig' %}
+
+    {# FIXED #}
+    <div class="sticky bottom-0 inset-x-0 bg-black font-raleway bg-opacity-90 text-white">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="p-2  sm:p-3">
+                <div class="flex items-center justify-stretch">
+                    <div class="flex-1 flex items-center">
+                  <span class="flex p-2">
+                    297,00 €
+                  </span>
+                        <span class="flex p-2"> | </span>
+                        <p class="ml-3 font-semibold uppercase">
+                        <span class="hidden md:inline">
+                          Formation Trouver le bon bien
+                        </span>
+                        </p>
+                    </div>
+                    <div class="order-3 mt-2 flex-shrink-0 sm:order-2 sm:mt-0 w-auto">
+                        <a href="#"
+                           class="flex items-center justify-center px-4 py-2 border border-transparent  shadow-sm text-sm font-bold uppercase text-white bg-rose-500 hover:bg-rose-700 transition duration-300">
+                            Acheter
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

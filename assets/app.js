@@ -19,6 +19,7 @@ import ScrollReveal from 'scrollreveal';
     ScrollReveal().reveal('.headline');
     ScrollReveal().reveal('.tagline', { delay: 500 });
     ScrollReveal().reveal('.punchline', { delay: 2000 });
+    ScrollReveal().reveal('.highline', { delay: 1000 });
 
 // import Plyr
 import Plyr from 'plyr';

@@ -32,6 +32,9 @@
     .max-h-0 {
         max-height: 0;
     }
+    .quote-1 {
+        @apply text-sm font-playfair text-gray-500
+    }
 }
 
 

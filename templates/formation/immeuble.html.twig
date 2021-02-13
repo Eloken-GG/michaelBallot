@@ -10,13 +10,65 @@
     <section x-data="{ open: false }" class="relative pb-56 bg-gray-50 sm:pb-80">
         <img class="hidden lg:block absolute inset-0 w-full" src="atis-assets/background/lines.svg" alt="">
 
-        <div class="relative pt-12 md:pt-16  pb-32 md:pb-64 border-b-4 bg-cover bg-no-repeat border-black bg-black" style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+        <div class="relative pt-5 md:pt-16  pb-32 md:pb-64 border-b-4 bg-cover bg-no-repeat border-black bg-black"
+             style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+
             <div class="absolute w-full h-full top-0 left-0 bg-black opacity-70"></div>
+
+
             <div class="relative container mx-auto px-4">
+
+                {# BRADCRUMB #}
+                <nav class="flex mb-10 w-auto font-raleway mx-auto text-center text-gray-100 opacity-50" aria-label="Breadcrumb">
+                    <ol class="flex items-center mx-auto space-x-4">
+                        <li>
+                            <div>
+                                <a href="#" class="hover:text-gray-300">
+                                    <!-- Heroicon name: solid/home -->
+                                    <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                    </svg>
+                                    <span class="sr-only">Home</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <!-- Heroicon name: solid/chevron-right -->
+                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" class="ml-4 text-sm font-light hover:text-gray-300">Formations</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <!-- Heroicon name: solid/chevron-right -->
+                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" aria-current="page"
+                                   class="ml-4 text-sm font-light hover:text-gray-300">Investir dans un
+                                    immeuble de rapport</a>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
+                {# START HERO TEXT #}
+
                 <div class="max-w-2xl mx-auto text-center text-white mb-12 md:mb-20">
 
                     <h1 class="title-1 mb-12 text-white font-semibold">Achetez votre premier immeuble</h1>
-                    <p class="body-1 text-white font-raleway">Acheter un immeuble et rentabiliser cet investissement en moins d’un an est
+                    <p class="body-1 text-white font-raleway">Acheter un immeuble et rentabiliser cet investissement en
+                        moins d’un an est
                         possible. Formez-vous et maitrisez l’ensemble des techniques pour réaliser une opération avec un
                         fort retour sur investissement .</p>
                 </div>
@@ -27,7 +79,7 @@
                     <div class="absolute inset-0 flex items-center justify-center">
                         <svg class="w-16 h-16 text-green-600 hover:text-green-700 transition duration-200"
                         <button @click="open = true" class="flex items-center justify-center bg-white rounded-full">
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                                   clip-rule="evenodd"></path>
@@ -101,28 +153,53 @@
         </div>
     </section>
 
-    {# CARD FORMATION #}
-    <section class="bg-gradient-to-b from-gray-50 w-full pb-24">
-        <div class="max-w-3xl mx-auto">
 
-            <div class="w-full p-8 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:col-span-1">
+
+    {# CARD FORMATION #}
+    <section class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
+        <div class="max-w-4xl px-8 mx-auto">
+
+            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                <div class="w-full  max-w-sm md:col-span-1">
                     <a href="">
                         <img
-                                class="w-48  shadow-sm mx-auto mb-8 lg:mb-0 h-auto"
+                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
+                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto mb-4">
                         <h2 class="subtitle-2">Formation en ligne</h2>
-                        <h1 class="title-2">Investir dans un immeuble de rapport</h1>
-                        <div class="flex mb-4">
+                        <h3 class="title-2">Investir dans un immeuble de rapport</h3>
 
-                        </div>
-                        <p class="body-2">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à
-                            la
-                            location ou la vente des lots.</p>
-                        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                        <p class="body-2">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à la location ou la vente des lots.</p>
+                        <ul class="font-raleway mt-5 uppercase font-bold text-sm">
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3" />
+                                </svg>
+                                <span class="">7 modules</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3" />
+                                </svg>
+                                <span class="">22 vidéos</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3" />
+                                </svg>
+                                <span class="">accès illimité à vie</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-rose-500">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3" />
+                                </svg>
+                                <span class="">Accompagnement personnalisé</span>
+                            </li>
+
+                        </ul>
+                        <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
                         </div>
                         <div class="flex">
                             <span class="title-font font-medium text-2xl text-gray-900">1 497,00 €</span>
@@ -190,43 +267,113 @@
 
                             <ul class="font-raleway font-base text-black tracking-tight">
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Maîtriser les règles d'urbanisme</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Utiliser les leviers d'optimisation fiscale </span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Gérer son opération en toute autonomie</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Convaincre les banques</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Trouver des prestataires de confiance</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Etablir une étude de marché viable</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Négocier les prix et pérenniser son investissement</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Réduire au maximum les dépenses inutiles</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Trouver efficacement les locataires</span>
                                 </li>
                                 <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="14" height="14"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
                                     <span class="ml-4">Maximiser son retour sur investissement</span>
                                 </li>
                             </ul>
@@ -234,21 +381,24 @@
                     </div>
                     <div class="w-full lg:w-1/2">
                         <div class="mb-4 flex flex-wrap items-end">
-                            <div class="mb-4 lg:mb-0 w-full lg:w-2/3 px-3"><img
-                                        class="w-full h-32 lg:h-48 object-cover"
-                                        src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
-                                        alt=""></div>
-                            <div class="w-full lg:w-1/3 px-3"><img class="w-full h-32 object-cover"
-                                                                   src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
-                                                                   alt=""></div>
+                            <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
+                                <img class="tagline w-full h-32 lg:h-48 object-cover"
+                                     src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                     alt=""></div>
+                            <div class="w-full lg:w-1/3 px-3">
+                                <img class="punchline w-full h-32 object-cover"
+                                     src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                     alt=""></div>
                         </div>
-                        <div class="flex flex-wrap items-start">
-                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3"><img class="w-full h-32 object-cover"
-                                                                                src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
-                                                                                alt=""></div>
-                            <div class="w-full lg:w-2/3 px-3"><img class="w-full h-32 lg:h-48 object-cover"
-                                                                   src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
-                                                                   alt=""></div>
+                        <div class=" flex flex-wrap items-start">
+                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
+                                <img class="headline w-full h-32 object-cover"
+                                     src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                     alt=""></div>
+                            <div class="w-full lg:w-2/3 px-3">
+                                <img class="highline w-full h-32 lg:h-48 object-cover"
+                                     src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                     alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -281,7 +431,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
 
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">1. Le choix du secteur</h3>
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">1. Le choix du secteur</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">Faites les bons choix dès le
                             démarrage du projet. Acheter un immeuble n’est pas une démarche habituelle et trouver les
                             bonnes offres demande une certaine connaissance du marché et des secteurs. Une bonne étude
@@ -291,8 +441,9 @@
                 </div>
                 <div class="mb-8 flex flex-wrap  items-center shadow overflow-hidden">
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white order-1 lg:order-0">
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">2. Rentabiliser son projet</h3>
-                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Optimiser ses rendements et s’assurer un cash-flow
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">2. Rentabiliser son projet</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Optimiser ses rendements et s’assurer
+                            un cash-flow
                             conséquent, c’est savoir négocier afin d’obtenir le meilleur prix possible mais aussi
                             connaître la fiscalité et la législation française. Adaptez votre projet et rentabilisez vos
                             investissements.</p>
@@ -311,7 +462,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
 
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">3. Etablir le devis</h3>
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">3. Etablir le devis</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">Faites intervenir des artisans et
                             les corps compétents dès que l’immeuble sera identifié. Ils établiront des devis concernant
                             la réfection de l’immeuble et des appartements. Cela permettra d’assurer vos arrières et de
@@ -323,8 +474,9 @@
                 </div>
                 <div class="mb-8 flex flex-wrap  items-center shadow overflow-hidden">
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white order-1 lg:order-0">
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">4. Se faire financer</h3>
-                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Sans financeur, pas de projet. Lorsque l’on fait une
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">4. Se faire financer</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Sans financeur, pas de projet. Lorsque
+                            l’on fait une
                             telle opération, la préparation est primordiale : le banquier souhaitera identifier toutes
                             les failles envisageables afin de couvrir ses arrières. N’oubliez pas que la banque prend le
                             risque avec vous. Rassurez-la et montrez que vous êtes un partenaire de confiance, qui saura
@@ -345,7 +497,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
 
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">5. Gérer les imprévus</h3>
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">5. Gérer les imprévus</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">Aucun chantier n’est exempt
                             d’imprévus, de retards et/ou de dépassement de budget. Prévoir une marche de manœuvre c’est
                             savoir identifier les points critiques en amont (ou au moins à temps). Sécurisez votre
@@ -357,8 +509,9 @@
                 </div>
                 <div class="mb-8 flex flex-wrap  items-center shadow overflow-hidden">
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white order-1 lg:order-0">
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">6. Choisir une fiscalité adaptée</h3>
-                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Saviez-vous que les opérations de ce type
+                        <h3 class="mb-4 text-xl font-semibold font-ralewayy">6. Choisir une fiscalité adaptée</h3>
+                        <p class="mb-4 text-gray-400 leading-loose font-raleway">Saviez-vous que les opérations de ce
+                            type
                             bénéficiaient d’une fiscalité accommodante et d’une niche fiscale permettant d’optimiser au
                             mieux son investissement. Maîtrisez chaque aspect relevant de l’imposition et de la taxation
                             de votre projet en faisant le bon montage fiscal et évitez les retours de bâtons
@@ -378,7 +531,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
 
-                        <h3 class="mb-4 text-2xl font-bold font-raleway">7. Mettre en location</h3>
+                        <h3 class="mb-4 text-xl font-semibold font-raleway">7. Mettre en location</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">Trouvez les locataires, établissez
                             le montant des loyers, faites votre pub sur internet, définissez le montant des charges…
                             Mais surtout gagnez de l’argent sur ce projet. Assurez-vous un bon cash-flow et atteignez la
@@ -401,61 +554,89 @@
                 </div>
                 <div class="max-w-3xl mx-auto">
                     <ul class="space-y-1 lg:space-y-6">
-                        <li class="pt-6 border-t-2 border-gray-200 hover:border-black relative transition-all duration-400" @click="selected !== 1 ? selected = 1 : selected = null">
-                            <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Si la formation ne me convient pas, puis-je me rétracter ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200" x-bind:class="{ 'rotate-180' : selected == 1 }" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </button>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                                   x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" :class="{ 'pt-6' : selected == 1 }">
-                                Vous êtes un investisseur confirmé et vous recherchez à diversifier votre portefeuille en réalisant une opération à forte valeur ajoutée</p>
-                        </li>
-                        
-
-                        <li class="pt-6 border-t-2 border-gray-200 hover:border-black relative transition-all duration-400" @click="selected !== 2 ? selected = 2 : selected = null">
-                            <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">À qui s'adresse cette formation ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200" x-bind:class="{ 'rotate-180' : selected == 2 }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 1 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
-                            </button>
+                            </div>
                             <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" :class="{ 'pt-6' : selected == 2 }">
-                                Oui ! Vous avez 15 jours pour changer d’avis. Aucune explication ne vous est demandée, nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de nos formations, nous vous permettons de vous rétracter à tout moment pendant 15 jours.</p>
+                               x-ref="container1"
+                               x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 1 }">
+                                Vous êtes un investisseur confirmé et vous recherchez à diversifier votre portefeuille
+                                en réalisant une opération à forte valeur ajoutée</p>
                         </li>
 
-                        <li class="pt-6 border-t-2 border-gray-200 hover:border-black relative transition-all duration-400" @click="selected !== 3 ? selected = 3 : selected = null">
-                            <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                <span class="text-lg font-semibold font-raleway">Si la formation ne me convient pas, puis-je me rétracter ?</span>
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 2 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                               x-ref="container1"
+                               x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 2 }">
+                                Oui ! Vous avez 15 jours pour changer d’avis. Aucune explication ne vous est demandée,
+                                nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de nos
+                                formations, nous vous permettons de vous rétracter à tout moment pendant 15 jours.</p>
+                        </li>
+
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 3 ? selected = 3 : selected = null">
+                            <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200" x-bind:class="{ 'rotate-180' : selected == 3 }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 3 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
-                            </button>
+                            </div>
                             <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" :class="{ 'pt-6' : selected == 3 }">
-                                Oui, en fonction de la formation, vous pouvez avoir la possibilité de payer en 1, 3 ou 5 fois. Vous êtes alors débité chaque mois du montant indiqué lors de l’achat.
+                               x-ref="container1"
+                               x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 3 }">
+                                Oui, en fonction de la formation, vous pouvez avoir la possibilité de payer en 1, 3 ou 5
+                                fois. Vous êtes alors débité chaque mois du montant indiqué lors de l’achat.
                         </li>
 
-                        <li class="pt-6 border-t-2 border-gray-200 hover:border-black relative transition-all duration-400" @click="selected !== 4 ? selected = 4 : selected = null">
-                            <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                            @click="selected !== 4 ? selected = 4 : selected = null">
+                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages de cette formation ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200" x-bind:class="{ 'rotate-180' : selected == 4 }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                     x-bind:class="{ 'rotate-180' : selected == 4 }" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
-                            </button>
+                            </div>
                             <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" :class="{ 'pt-6' : selected == 4 }">
-                                Avec la formation vous bénéficiez d’un accès à notre communauté d’investisseurs et aux conseils d'experts afin d'être au fait de toutes les évolutions de la législation et des obligations liées aux opérations de promotion immobilière. Vous bénéficiez aussi de tarifs préférentiels pour nos autres formations ou pour participer à nos évènements immobiliers.
+                               x-ref="container1"
+                               x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                               :class="{ 'pt-6' : selected == 4 }">
+                                Avec la formation vous bénéficiez d’un accès à notre communauté d’investisseurs et aux
+                                conseils d'experts afin d'être au fait de toutes les évolutions de la législation et des
+                                obligations liées aux opérations de promotion immobilière. Vous bénéficiez aussi de
+                                tarifs préférentiels pour nos autres formations ou pour participer à nos évènements
+                                immobiliers.
                         </li>
 
                     </ul>
@@ -466,26 +647,36 @@
     </section>
 
     {# QUI SUIS JE #}
-
     <section>
 
         <div class="py-20 bg-gray-50 radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="max-w-6xl mx-auto">
                     <div class="mb-8 p-6 flex flex-wrap items-center bg-white  shadow">
-                        <div class="w-full lg:w-1/3"><img class="mb-5 lg:mb-0 w-full  object-cover"
-                                                          style="max-height: 350px;"
-                                                          src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
-                                                          alt=""></div>
+                        <div class="w-full lg:w-1/3">
+                            <img class="mb-5 lg:mb-0 w-full  object-cover" style="max-height: 350px;" src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80" alt=""></div>
                         <div class="w-full lg:w-2/3">
                             <div class="max-w-lg mx-auto">
-                                <p class="mb-8 text-2xl text-gray-500">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat
-                                    finibus, ac condimentum ligula ornare.</p>
+                                <p class="mb-8 quote-1">Je suis tombé dans l’immobilier il y a une dizaine d'années. Je
+                                        rêvais, comme tous les français de m’installer dans ma propre maison avec ma
+                                        famille. J’ai fait construire mon bien et je suis devenu propriétaire. J’ai rejoint
+                                        les rangs d’un constructeur et ai depuis fait construire plus de 100 maisons
+                                        individuelles. Cependant, cette expérience ne me semblait pas suffisante pour
+                                        parfaitement appréhender les métiers de l’immobilier. J’ai donc entrepris d’investir
+                                        dans de la pierre : maisons, appartements, immeubles…
+                                        Ces derniers 18 mois j’ai investi dans 16 logements et je gagne près de 5000€ par
+                                        mois sans rien faire. J’ai quitté mon travail et dorénavant je voyage avec ma
+                                        famille et vis sans me soucier de l’argent. Cette vie me semblait inaccessible et
+                                        pourtant, l’atteindre a été bien plus facile que je ne le pensais. Avec les bons
+                                        outils et une motivation suffisante, on peut choisir son avenir et choisir de
+                                        devenir qui on veut.
+                                        Pourquoi pas vous ?
+
+                                </p>
                                 <div class="flex items-center justify-between">
                                     <div>
-                                        <h4 class="text-2xl font-bold font-heading">Alice Bradley</h4>
-                                        <p class="text-blueGrey-500">Backend Developer</p>
+                                        <h4 class="text-2xl font-bold font-heading">Michael Ballot</h4>
+                                        <p class="text-blueGrey-500">Coach & formateur immobilier</p>
                                     </div>
                                     <a href="#"><img src="atis-assets/social/facebook-name.png" alt=""></a>
                                 </div>
@@ -496,114 +687,37 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     {# UPSELL #}
-    <section>
+    {% include 'shared/_packFormations.html.twig' %}
 
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center -mx-4">
-                    <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
-                        <div class="max-w-md">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                            <h2 class="text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without
-                                problems</h2>
-                            <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                            <ul class="mb-8 text-gray-500 font-bold">
-                                <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Vestibulum viverra ante non libero</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Morbi mollis metus pretium ultrices tincidunt</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Etiam lectus nunc, commodo et risus in</span>
-                                </li>
-                            </ul>
-                            <div><a href="#"><img class="mb-2 mr-6 inline-block"
-                                                  src="atis-assets/logo/brands/google-play-store.png" alt=""></a><a
-                                        href="#"><img class="mb-2 inline-block"
-                                                      src="atis-assets/logo/brands/app-store-download.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="transform -rotate-12 flex items-center w-full lg:w-1/2 px-4">
-                        <div class="w-1/3"><img src="atis-assets/illustrations/book-detail-full.png" alt=""></div>
-                        <div class="w-1/3"><img src="atis-assets/illustrations/login-full.png" alt=""><img
-                                    src="atis-assets/illustrations/details-full.png" alt=""></div>
-                        <div class="w-1/3"><img src="atis-assets/illustrations/home.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-
-
-
+    {# ECHANGE TELEPHONIQUE #}
+    {% include 'shared/_contact.html.twig' %}
 
     {# FIXED #}
-    <div class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
+    <div class="sticky bottom-0 inset-x-0 bg-black font-raleway bg-opacity-90 text-white">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="p-2  bg-black shadow-lg sm:p-3">
-                <div class="flex items-center justify-between flex-wrap">
-                    <div class="w-0 flex-1 flex items-center">
-                  <span class="flex p-2  bg-indigo-800">
-                    <!-- Heroicon name: outline/speakerphone -->
-                    <svg class="h-6 w-6 fill-current text-white" fill-rule="evenodd" clip-rule="evenodd">
-                        <path d="M23.999 12.149c-.049 3.834-1.893 7.223-4.706 9.378-1.993 1.53-4.485 2.449-7.198 2.473-6.464.057-12.051-5.107-12.095-12 3.966 1.066 7.682-1.993 6-6 4.668.655 6.859-2.389 6.077-6 6.724.064 11.999 5.542 11.922 12.149zm-15.576-4.123c-.065 3.393-2.801 5.868-6.182 6.166 1.008 4.489 5.015 7.807 9.759 7.807 5.262 0 9.576-4.072 9.97-9.229.369-4.818-2.755-9.357-7.796-10.534-.277 2.908-2.381 5.357-5.751 5.79zm5.077 8.974c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5.5-2.853c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm10-2.147c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm-5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm2.5-5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-12.5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-1.5-4c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm6-2c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-3.5-1c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
-                    </svg>
+            <div class="p-2  sm:p-3">
+                <div class="flex items-center justify-stretch">
+                    <div class="flex-1 flex items-center">
+                  <span class="flex p-2">
+                    1 497,00 €
                   </span>
-                        <p class="ml-3 font-medium text-white truncate">
+                        <span class="flex p-2"> | </span>
+                        <p class="ml-3 font-semibold uppercase">
                         <span class="hidden md:inline">
-                          Nous utilisons des cookies pour nous assurer du bon fonctionnement de notre site ! Voir notre <a
-                                    href="https://eurowebpage.com/fr/politique-de-cookies/" class="underline"> politique de Cookies.</a>
+                          Formation immeuble de rapport
                         </span>
                         </p>
                     </div>
-                    <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+                    <div class="order-3 mt-2 flex-shrink-0 sm:order-2 sm:mt-0 w-auto">
                         <a href="#"
-                           class="flex items-center justify-center px-4 py-2 border border-transparent  shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50">
-                            J'autorise
+                           class="flex items-center justify-center px-4 py-2 border border-transparent  shadow-sm text-sm font-bold uppercase text-white bg-rose-500 hover:bg-rose-700 transition duration-300">
+                            Acheter
                         </a>
                     </div>
-                    <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
-                        <button type="button"
-                                class="-mr-1 flex p-2  hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
-                            <span class="sr-only">Dismiss</span>
-                            <!-- Heroicon name: outline/x -->
-                            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </div>
