@@ -49,4 +49,11 @@ class FormationController extends AbstractController
     {
         return $this->render('formation/immeuble.html.twig');
     }
+
+    // Display the formation page "Pack de 5 formations".
+    #[Route('/formations/devenir-rentier-immobillier', name: 'pack')]
+    public function pack(): Response
+    {
+        return $this->render('formation/pack.html.twig');
+    }
 }
