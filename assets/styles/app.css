@@ -12,10 +12,10 @@
         @apply text-gray-800 font-raleway uppercase tracking-wide text-xl lg:text-2xl font-bold
     }
     .body-1{
-        @apply font-raleway text-gray-700 text-lg lg:text-xl
+        @apply font-raleway text-gray-700 text-lg
     }
     .body-2{
-        @apply font-raleway text-gray-600 text-base lg:text-lg
+        @apply font-raleway text-gray-600 text-base
     }
     .body-3{
         @apply font-raleway text-gray-600 text-base

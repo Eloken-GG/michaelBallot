@@ -77,24 +77,19 @@
                          src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
                          alt="">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-green-600 hover:text-green-700 transition duration-200"
-                        <button @click="open = true" class="flex items-center justify-center bg-white rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                  clip-rule="evenodd"></path>
-                            </svg>
+                        <button @click="open = true" class="js-play flex items-center justify-center bg-white rounded-full">
+                            OUVRIR
                         </button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="fixed z-10 top-0 left-0 flex items-center justify-center w-screen h-screen"
-             style="background-color: rgba(0,0,0,.5);" x-show="open">
+             x-show="open">
+            <div class="w-full js-pause absolute z-10 h-full flex-none" style="background-color: rgba(0,0,0,.5);" @click="open = false"></div>
 
             <!-- A basic modal dialog with title, body and one button to close -->
-            <div class="h-auto p-4 mx-2 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0"
-                 @click.away="open = false">
+            <div class="h-auto p-4 mx-2 z-20 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
 
 
                 <div class="container">
@@ -122,9 +117,9 @@
 
                 <!-- One big close button.  --->
                 <div class="mt-5 sm:mt-6">
-                    <span class="flex w-full  shadow-sm">
+                    <span class="flex js-pause2 w-full shadow-sm">
                       <button @click="open = false"
-                              class="inline-flex justify-center w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700">
+                              class=" inline-flex justify-center w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700">
                         Fermer la vidéo
                       </button>
                     </span>
@@ -171,7 +166,7 @@
                         <h2 class="subtitle-2">Formation en ligne</h2>
                         <h3 class="title-2">Investir dans un immeuble de rapport</h3>
 
-                        <p class="body-2">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à la location ou la vente des lots.</p>
+                        <p class="body-2 mt-5">Réalisez votre premier achat d’immeuble de rapport. De la recherche du bien à la location ou la vente des lots.</p>
                         <ul class="font-raleway mt-5 uppercase font-bold text-sm">
                             <li class="mb-1 flex items-center text-rose-500">
                                 <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
@@ -214,45 +209,7 @@
     </section>
 
     {# BULLET POINTS #}
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap">
-                <div class="mb-8 w-full  md:w-1/3 text-center">
-                    <span class="mb-6 inline-block p-4">
-                        <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                             fill="currentColor">
-                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16                                       16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                         </svg>
-                     </span>
-                    <h3 class="subtitle-1 font-bold">Facilité de paiement</h3>
-                    <p class="body-2">Réglez en 1, 3 ou 5 fois</p>
-                </div>
-                <div class="mb-8 w-full md:w-1/3 text-center">
-                    <span class="mb-6 inline-block p-4">
-          <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-        </span>
-                    <h3 class="subtitle-1 font-bold">Paiement sécurisé</h3>
-                    <p class="body-2">Vos informations sont cryptées</p>
-                </div>
-                <div class="mb-8 w-full md:w-1/3 text-center">
-        <span class="mb-6 inline-block p-4">
-          <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-        </span>
-                    <h3 class="subtitle-1 font-bold">Satisfait ou remboursé</h3>
-                    <p class="body-2">15 jours pour changer d'avis</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    {% include 'shared/_avantages.html.twig' %}
 
 
     {# DETAIL FORMATION #}

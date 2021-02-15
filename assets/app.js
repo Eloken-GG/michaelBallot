@@ -41,6 +41,10 @@ import Plyr from 'plyr';
             player.pause();
         });
 
+        on('.js-pause2', 'click', () => {
+            player.pause();
+        });
+
         // Play
         on('.js-play', 'click', () => {
             player.play();
