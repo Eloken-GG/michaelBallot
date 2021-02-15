@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 
 @layer base {
+
     .title-1 {
         @apply text-gray-900 font-playfair text-5xl lg:text-6xl
     }
