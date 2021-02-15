@@ -41,6 +41,7 @@ import Plyr from 'plyr';
             player.pause();
         });
 
+        // Pause 2
         on('.js-pause2', 'click', () => {
             player.pause();
         });
