@@ -12,6 +12,9 @@
     .title-3 {
         @apply text-gray-800 font-raleway uppercase tracking-wide text-xl lg:text-2xl font-bold
     }
+    .title-4 {
+        @apply text-gray-900 font-playfair text-2xl
+    }
     .body-1{
         @apply font-raleway text-gray-700 text-lg
     }
@@ -26,6 +29,9 @@
     }
     .subtitle-2{
         @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-sm lg:text-base
+    }
+    .subtitle-3{
+        @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-xs
     }
     .btn-1 {
         @apply bg-rose-500 uppercase font-raleway text-xs tracking-wide p-3  rounded-sm text-white
