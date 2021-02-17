@@ -43,45 +43,7 @@
 
 
     {# BULLET POINTS #}
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap">
-                <div class="mb-8 w-full  md:w-1/3 text-center">
-                    <span class="mb-6 inline-block p-4">
-                        <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                             fill="currentColor">
-                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16                                       16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                         </svg>
-                     </span>
-                    <h3 class="subtitle-1 font-bold">Facilité de paiement</h3>
-                    <p class="body-2">Réglez en 1, 3 ou 5 fois</p>
-                </div>
-                <div class="mb-8 w-full md:w-1/3 text-center">
-                    <span class="mb-6 inline-block p-4">
-          <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-        </span>
-                    <h3 class="subtitle-1 font-bold">Paiement sécurisé</h3>
-                    <p class="body-2">Vos informations sont cryptées</p>
-                </div>
-                <div class="mb-8 w-full md:w-1/3 text-center">
-        <span class="mb-6 inline-block p-4">
-          <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-        </span>
-                    <h3 class="subtitle-1 font-bold">Satisfait ou remboursé</h3>
-                    <p class="body-2">15 jours pour changer d'avis</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    {% include 'shared/_avantages.html.twig' %}
 
     {# LISTE FORMATIONS #}
 
