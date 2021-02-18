@@ -7,16 +7,17 @@
 {% block body %}
 
     {# HERO #}
-    <section>
-        <div class="container px-4 py-32 mx-auto ">
+    <section class="relative bg-cover bg-no-repeat border-black bg-black" style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+        <div class="absolute w-full z-0 h-full top-0 left-0 bg-black opacity-70"></div>
+        <div class="relative max-w-7xl z-10 px-4 py-32 mx-auto ">
             <div class="flex flex-wrap items-center -mx-3">
                 <div class="w-full lg:w-1/2 px-3">
                     <div class="py-12">
                         <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
-                            <h1 class="title-1">
+                            <h1 class="title-1 text-white">
                                 2 jours pour devenir investisseur
                             </h1>
-                            <p class="body-1 mt-12">10 intervenants professionnels seront présents pour accompagner
+                            <p class="body-1 mt-12 text-white">10 intervenants professionnels seront présents pour accompagner
                                 votre réussite : Comptable, Fiscaliste, agent immobilier, Entrepreneur, Banquier,
                                 Marchand de biens, Professionnel de la location courte durée, Investisseur immobilier,
                                 Coach et formateur en investissement, etc.</p>
@@ -27,9 +28,11 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
-                    <div class="lg:h-128 flex items-center justify-center"><img class="lg:max-w-lg"
+                    <div class="lg:h-128 flex items-center justify-center">
+                        <img class="lg:max-w-lg"
                                                                                 src="https://picsum.photos/700/400"
-                                                                                alt=""></div>
+                                                                                alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +43,7 @@
 
     {# BULLET POINTS #}
     <section class="pt-8 pb-2 bg-gray-50 mb-24 bg-blueGray-50">
-        <div class="container px-4 mx-auto">
+        <div class="container max-w-7xl px-4 mx-auto">
             <div class="flex flex-wrap -mx-3">
                 <div class="w-full md:w-1/3 px-3 mb-6">
                     <div class="p-6 ">
@@ -75,18 +78,18 @@
     </section>
 
     {# INTERVENANTS #}
-    <section class="max-w-7xl mx-auto">
+    <section class="max-w-7xl mb-24 mx-auto">
 
         <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="max-w-xl mx-auto text-center">
                     <span class="subtitle-2 inline-block mb-5">QUI ?</span>
-                    <h2 class="title-2">Les intervenants</h2>
+                    <h2 class="title-1">Les intervenants</h2>
                 </div>
             </div>
         </div>
         <div class="grid mx-auto lg:grid-cols-8 md:grid-cols-4 justify-center mb-12 ">
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-auto w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/leo-blanchet.webp') }}"
@@ -100,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/carolin-arthaud.webp') }}"
@@ -114,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="flex lg:col-span-4 lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex lg:col-span-4 lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/carolin-arthaud.webp') }}"
@@ -128,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="flex lg:col-span-4 lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex lg:col-span-4 lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/tony-jazz.webp') }}"
@@ -142,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-auto w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/leo-blanchet.webp') }}"
@@ -155,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/carolin-arthaud.webp') }}"
@@ -168,7 +171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-auto w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/thibault-epee.webp') }}"
@@ -181,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-auto w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/mathieu-kirios.webp') }}"
@@ -194,7 +197,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full rounded-lg object-cover"
                          src="{{ asset('images/intervenants/michael-ballot.webp') }}"
@@ -208,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105 hover:shadow-md transition-all transform duration-300">
+            <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full  rounded-lg object-cover"
                          src="{{ asset('images/intervenants/carolin-arthaud.webp') }}"
@@ -231,7 +234,7 @@
     <section class="pt-20 pb-24 bg-gray-800 text-white">
         <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
-                <div class="max-w-xl mx-auto text-center">
+                <div class="max-w-2xl mx-auto text-center">
                     <span class="subtitle-2 inline-block mb-5 text-white">QUAND ?</span>
                     <h2 class="title-1 text-white">Du 27 au 28 Mars 2021</h2>
                 </div>
@@ -239,27 +242,70 @@
         </div>
     </section>
 
-    {# HERO #}
-    <section>
-        <div class="container px-4 mx-auto">
+    {# LIEU #}
+    <section class="bg-gray-50 m-0">
+        <div class="py-32 max-w-5xl mx-auto  radius-for-skewed ">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center -mx-4">
+                    <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
+                        <div class="max-w-md">
+                            <span class="subtitle-2 inline-block">Où ?</span>
+                            <h2 class="title-1 my-6">Le Golf du Médoc</h2>
+                            <span class="body-3 font-bold">Chemin de Courmateau -
+                                33290 Le Pian Médoc - France</span><br><br>
+                            <p class="body-2">Le <a href="">Golf du Médoc</a> est un lieu d’exception aux plus beaux
+                                horizons.
+                                Une destination incontournable alliant golf, gastronomie, dégustation et détente entre
+                                l’estuaire et l’océan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="mb-4 flex flex-wrap items-end">
+                            <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
+                                <img class="tagline w-full h-32 lg:h-48 object-cover"
+                                     src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                     alt=""></div>
+                            <div class="w-full lg:w-1/3 px-3">
+                                <img class="punchline w-full h-32 object-cover"
+                                     src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                     alt=""></div>
+                        </div>
+                        <div class=" flex flex-wrap items-start">
+                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
+                                <img class="headline w-full h-32 object-cover"
+                                     src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                     alt=""></div>
+                            <div class="w-full lg:w-2/3 px-3">
+                                <img class="highline w-full h-32 lg:h-48 object-cover"
+                                     src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                     alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {# PROGRAMME #}
+    <section class="">
+        <div class="max-w-5xl px-4 mx-auto">
             <div class="flex flex-wrap items-center -mx-3">
                 <div class="w-full lg:w-1/2 px-3">
                     <div class="py-12">
                         <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
-                            <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading">
-                                <span>The quick</span>
-                                <span class="text-blue-600">brown fox</span>
-                                <span>jumps over the lazy dog.</span>
-                            </h2>
-                            <p class="text-blueGray-400 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Sed luctus eget justo et iaculis. Quisque vitae nulla malesuada, auctor
-                                arcu vitae, luctus nisi.</p>
+
+                            <span class="subtitle-2 inline-block">QUOI ?</span>
+                            <h2 class="title-1 my-6">Le Programme</h2>
+
+
                         </div>
                         <div class="text-center lg:text-left"><a
-                                    class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded"
-                                    href="#">Check Now</a><a
-                                    class="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded"
-                                    href="#">Documentation</a></div>
+                                    class="btn-1"
+                                    href="#">S'inscrire</a><a
+                                    class="btn-2"
+                                    href="#">Télécharger le programme</a></div>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
@@ -269,341 +315,239 @@
                 </div>
             </div>
         </div>
-        <div class="hidden navbar-menu relative z-50">
-            <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
-            <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-                <div class="flex items-center mb-8">
-                    <a class="mr-auto text-3xl font-semibold leading-none" href="#"><img class="h-10"
-                                                                                         src="metis-assets/logos/metis/metis.svg"
-                                                                                         alt="" width="auto"></a>
-                    <button class="navbar-close">
-                        <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500"
-                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div>
-                    <ul>
-                        <li class="mb-1"><a
-                                    class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600"
-                                    href="#">Product</a></li>
-                        <li class="mb-1"><a
-                                    class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600"
-                                    href="#">Company</a></li>
-                        <li class="mb-1"><a
-                                    class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600"
-                                    href="#">About Us</a></li>
-                        <li class="mb-1"><a
-                                    class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600"
-                                    href="#">Features</a></li>
-                    </ul>
-                    <div class="mt-4 pt-6 border-t border-blueGray-100"><a
-                                class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded"
-                                href="#">Sign Up</a><a
-                                class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded"
-                                href="#">Log In</a></div>
-                </div>
-                <div class="mt-auto">
-                    <p class="my-4 text-xs text-blueGray-400">
-                        <span>Get in Touch</span>
-                        <a class="text-blue-600 hover:text-blue-600 underline" href="#">info@example.com</a>
-                    </p>
-                    <a class="inline-block px-1" href="#"><img src="metis-assets/icons/facebook-blue.svg" alt=""></a><a
-                            class="inline-block px-1" href="#"><img src="metis-assets/icons/twitter-blue.svg"
-                                                                    alt=""></a><a class="inline-block px-1"
-                                                                                  href="#"><img
-                                src="metis-assets/icons/instagram-blue.svg" alt=""></a>
-                </div>
-            </nav>
-        </div>
+
     </section>
 
-    {# CARD DATE 1 #}
-    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    {# PROGRAMME J 1 #}
+    <div class="bg-white max-w-5xl mx-auto overflow-hidden">
         <div class="px-4 py-5 sm:px-6">
-            <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Applicant Information
+            <h3 class="subtitle-2">
+                Samedi 27 Mars 2021
             </h3>
-            <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                Personal details and application.
-            </p>
         </div>
         <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
             <dl class="sm:divide-y sm:divide-gray-200">
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Full name
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                       08h00 - 08h45
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        Margot Foster
+                    <dd class="body-2 col-span-3">
+                        Petit déjeuner de bienvenue
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Application for
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        08h45 - 09h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        Backend Developer
+                    <dd class="body-2 col-span-3">
+                        Présentation du séminaire par Michael Ballot
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Email address
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        09h00 – 10h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        margotfoster@example.com
+                    <dd class="body-2 col-span-3">
+                        Intervention de Christophe Tournier, agent immobilier
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Salary expectation
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        10h00 - 11h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        $120,000
+                    <dd class="body-2 col-span-3">
+                        Intervention de Maître Robin-Vayssière, notaire
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        About
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        11h00 - 11h30
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat.
-                        Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-                        proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
+                    <dd class="body-2 col-span-3">
+                        Pause & échanges
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Attachments
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        11h30 - 12h30
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
-                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                                <div class="w-0 flex-1 flex items-center">
-                                    <!-- Heroicon name: solid/paper-clip -->
-                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                              d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                                              clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="ml-2 flex-1 w-0 truncate">
-                                      resume_back_end_developer.pdf
-                                    </span>
-                                </div>
-                                <div class="ml-4 flex-shrink-0">
-                                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                        Download
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                                <div class="w-0 flex-1 flex items-center">
-                                    <!-- Heroicon name: solid/paper-clip -->
-                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                              d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                                              clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="ml-2 flex-1 w-0 truncate">
-                                      coverletter_back_end_developer.pdf
-                                    </span>
-                                </div>
-                                <div class="ml-4 flex-shrink-0">
-                                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                        Download
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                    <dd class="body-2 col-span-3">
+                        Intervention de Léo Blanchet, investisseur et marchand de biens
                     </dd>
                 </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        12h30 – 14h00
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Pause déjeuner
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        14h00 - 15h00
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Intervention de Tony Jazz, investisseur et entrepreneur
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        15h00 – 16h00
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Intervention de Julien Tomassi, comptable et fiscaliste
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        16h00 – 16h30
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Pause & échanges
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        16h30 – 17h30
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Intervention de Carolin Arthaud marchand de bien, promoteur et formateur
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        17h00 – 18h30
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Echanges, conclusion et bilan
+                    </dd>
+                </div>
+
+
             </dl>
         </div>
     </div>
 
-    {# CARD DATE 1 #}
-    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+{#    JOUR 2 #}
+    <div class="bg-white my-12 max-w-5xl mx-auto overflow-hidden">
         <div class="px-4 py-5 sm:px-6">
-            <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Applicant Information
+            <h3 class="subtitle-2">
+                Dimanche 28 Mars 2021
             </h3>
-            <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                Personal details and application.
-            </p>
         </div>
         <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
             <dl class="sm:divide-y sm:divide-gray-200">
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Full name
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        08h00 - 09h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        Margot Foster
+                    <dd class="body-2 col-span-3">
+                        Petit déjeuner
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Application for
+
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        09h00 – 10h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        Backend Developer
+                    <dd class="body-2 col-span-3">
+                        Intervention de Michael Ballot, investisseur et coach
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Email address
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        10h00 - 11h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        margotfoster@example.com
+                    <dd class="body-2 col-span-3">
+                        Intervention de Thomas Miralles, courtier
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Salary expectation
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        11h00 - 11h30
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        $120,000
+                    <dd class="body-2 col-span-3">
+                        Pause & échanges
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        About
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        11h30 - 12h30
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat.
-                        Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-                        proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
+                    <dd class="body-2 col-span-3">
+                        Intervention de Mathieu Quiros, investisseur et chasseur immobilier, revenue manager
                     </dd>
                 </div>
-                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                        Attachments
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        12h30 – 14h00
                     </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
-                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                                <div class="w-0 flex-1 flex items-center">
-                                    <!-- Heroicon name: solid/paper-clip -->
-                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                              d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                                              clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="ml-2 flex-1 w-0 truncate">
-                                      resume_back_end_developer.pdf
-                                    </span>
-                                </div>
-                                <div class="ml-4 flex-shrink-0">
-                                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                        Download
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                                <div class="w-0 flex-1 flex items-center">
-                                    <!-- Heroicon name: solid/paper-clip -->
-                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                              d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                                              clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="ml-2 flex-1 w-0 truncate">
-                                      coverletter_back_end_developer.pdf
-                                    </span>
-                                </div>
-                                <div class="ml-4 flex-shrink-0">
-                                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                        Download
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                    <dd class="body-2 col-span-3">
+                        Pause déjeuner
                     </dd>
                 </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        14h00 - 15h00
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Un intervenant surprise va venir vous raconter son histoire
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        15h00 – 16h00
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Intervention de Thibault Epée, investisseur, formateur et fondateur du club rentabilité
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        16h00 – 16h30
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Pause & échanges
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        16h30 – 17h30
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Carolin Arthaud marchand de bien, promoteur et formateur
+                    </dd>
+                </div>
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                    <dt class="body-2 font-semibold">
+                        17h00 – 18h30
+                    </dt>
+                    <dd class="body-2 col-span-3">
+                        Réponse aux questions, conclusion et bilan
+                    </dd>
+                </div>
+
+
             </dl>
         </div>
     </div>
+{#INSCRIPTION#}
 
-    {# AVIS CLIENT #}
-    <section>
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container px-4 mx-auto">
-                <div class="lg:flex items-center justify-center md:space-x-8">
-                    <div class="mb-10 text-center lg:hidden">
-                        <button class="mr-6 lg:mr-0 bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                            </svg>
-                        </button>
-                        <button class="bg-white p-4 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <button class="hidden lg:block lg:mr-0 bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                    </button>
-                    <div class="flex w-full flex-wrap bg-white shadow rounded">
-                        <div class="py-10 text-center w-full lg:w-1/3 border-r">
-                            <span class="text-5xl lg:text-6xl font-bold">5.0</span>
-                            <div class="mb-6 lg:mb-12 flex text-green-600 justify-center">
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                            </div>
-                            <div><img class="block mx-auto" src="atis-assets/social/clutch-logo.png" alt=""></div>
-                        </div>
-                        <div class="py-10 px-6 w-full lg:w-2/3">
-                            <img class="mb-10 w-10 h-10" src="atis-assets/elements/left-quote.png" alt="">
-                            <p class="mb-10 text-xl lg:text-2xl leading-loose text-gray-500">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit
-                                amet erat finibus, ac condimentum ligula ornare.</p>
-                            <h4 class="text-2xl font-bold font-heading">Alice Bradley</h4>
-                            <p class="text-gray-500">Backend Developer</p>
-                        </div>
-                    </div>
-                    <button class="hidden lg:block bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-400 transition duration-200">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </button>
-                </div>
+
+    <section class="bg-cover bg-no-repeat py-20"
+             style="background-image: url('https://picsum.photos/1000/1000/?blur=4')">
+
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto text-center">
+
+                <a href="" class="mt-12 block">
+                    <button class="btn-1">Je m'inscris</button>
+                </a>
             </div>
         </div>
+
     </section>
+
 
 {% endblock %}
