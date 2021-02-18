@@ -52,5 +52,15 @@ import Plyr from 'plyr';
 
     });
 
+// Import Flickity
+const Flickity = require('flickity');
+const flkty = new Flickity('.carousel', {
+    // options...
+});
+
 // Start the Stimulus application
 import './bootstrap';
+
+
+
+
