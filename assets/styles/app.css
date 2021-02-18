@@ -34,7 +34,7 @@
         @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-xs
     }
     .btn-1 {
-        @apply bg-rose-500 uppercase font-raleway text-xs tracking-wide p-3  rounded-sm text-white
+        @apply uppercase font-raleway text-xs tracking-wide p-3 rounded text-white font-extrabold tracking-widest transition ease-in-out duration-150 p-6
     }
     .max-h-0 {
         max-height: 0;

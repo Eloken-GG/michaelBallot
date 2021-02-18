@@ -18,7 +18,7 @@
 
             <div class="relative container mx-auto px-4">
 
-                {# BRADCRUMB #}
+                {# BREADCRUMB #}
                 <nav class="flex mb-10 w-auto font-raleway mx-auto text-center text-gray-100 opacity-50" aria-label="Breadcrumb">
                     <ol class="flex items-center mx-auto space-x-4">
                         <li>
@@ -78,7 +78,8 @@
                          alt="">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <button @click="open = true" class="js-play flex items-center justify-center bg-white rounded-full">
-                            OUVRIR
+                            ouvrir
+
                         </button>
                     </div>
                 </div>
@@ -222,7 +223,7 @@
                             <span class="subtitle-2 inline-block">Contenu de la formation</span>
                             <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
 
-                            <ul class="font-raleway font-base text-black tracking-tight">
+                            <ul class="font-raleway font-base text-gray-900 tracking-tight">
                                 <li class="mb-3 flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
@@ -514,7 +515,7 @@
                             @click="selected !== 1 ? selected = 1 : selected = null">
                             <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">À qui s'adresse cette formation ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
                                      x-bind:class="{ 'rotate-180' : selected == 1 }" xmlns="http://www.w3.org/2000/svg"
                                      fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
@@ -535,7 +536,7 @@
                             @click="selected !== 2 ? selected = 2 : selected = null">
                             <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">Si la formation ne me convient pas, puis-je me rétracter ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
                                      x-bind:class="{ 'rotate-180' : selected == 2 }" xmlns="http://www.w3.org/2000/svg"
                                      fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
@@ -556,7 +557,7 @@
                             @click="selected !== 3 ? selected = 3 : selected = null">
                             <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
                                      x-bind:class="{ 'rotate-180' : selected == 3 }" xmlns="http://www.w3.org/2000/svg"
                                      fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
@@ -576,7 +577,7 @@
                             @click="selected !== 4 ? selected = 4 : selected = null">
                             <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
                                 <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages de cette formation ?</span>
-                                <svg class="w-4 h-4 text-black transform transition duration-200"
+                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
                                      x-bind:class="{ 'rotate-180' : selected == 4 }" xmlns="http://www.w3.org/2000/svg"
                                      fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">

@@ -1,7 +1,7 @@
 <!--------------------- DESKTOP MENU --------------------->
 
-<div x-data="{ mobileMenuOpen: true }" class="relative bg-white">
-    <div class="w-full mx-auto px-4 border-b-2 border-gray-100 sm:px-6">
+<div x-data="{ mobileMenuOpen: true }" class="bg-white fixed top-0 w-screen z-30">
+    <div class="w-full mx-auto px-4 sm:px-5">
         <div class="flex max-w-7xl mx-auto justify-between items-center  py-6 items-center md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
 
@@ -32,8 +32,8 @@
                         <button type="button"
                                 x-state:on="Item active" x-state:off="Item inactive"
                                 :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }"
-                                class="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium font-raleway hover:text-gray-900">
-                            <span>Formations</span>
+                                class="text-gray-500 inline-flex items-center body-2 hover:text-gray-900 hover:font-semi-bold">
+                            <a href="{{ path('formations') }}">Formations</a>
                             <svg x-state:on="Item active" x-state:off="Item inactive"
                                  class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                                  x-bind:class="{ 'text-gray-600': flyoutMenuOpen, 'text-gray-400': !flyoutMenuOpen }"
@@ -52,20 +52,24 @@
                              x-transition:leave="transition ease-in duration-150"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-1"
-                             class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
-                            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                             class="absolute -ml-6 z-10 transform mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
+                            <div class="rounded-lg overflow-hidden">
                                 <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
 
                                     <a href="{{ path('bon') }}"
                                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
                                         <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
-                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="33.503" height="47.931" viewBox="0 0 33.503 47.931">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="33.503"
+                                                 height="47.931" viewBox="0 0 33.503 47.931">
                                                 <g id="Location" transform="translate(-5 -2)">
-                                                    <path id="Tracé_32" data-name="Tracé 32" d="M13.451,4.242a16.487,16.487,0,0,1,16.835.139,17.542,17.542,0,0,1,8.216,15c-.119,6.079-3.462,11.794-7.639,16.212a44.815,44.815,0,0,1-8.038,6.748,2.808,2.808,0,0,1-.975.345,1.961,1.961,0,0,1-.935-.284A44.306,44.306,0,0,1,9.337,31.516,22.206,22.206,0,0,1,5,19.073,17.122,17.122,0,0,1,13.451,4.242Zm3.021,17.369a5.69,5.69,0,0,0,5.259,3.582,5.6,5.6,0,0,0,4.028-1.678,5.874,5.874,0,0,0-1.837-9.466,5.614,5.614,0,0,0-6.208,1.243A5.875,5.875,0,0,0,16.473,21.611Z" fill="#fff" fill-rule="evenodd"/>
-                                                    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="12" cy="2.5" rx="12" ry="2.5" transform="translate(9.751 44.931)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_32" data-name="Tracé 32"
+                                                          d="M13.451,4.242a16.487,16.487,0,0,1,16.835.139,17.542,17.542,0,0,1,8.216,15c-.119,6.079-3.462,11.794-7.639,16.212a44.815,44.815,0,0,1-8.038,6.748,2.808,2.808,0,0,1-.975.345,1.961,1.961,0,0,1-.935-.284A44.306,44.306,0,0,1,9.337,31.516,22.206,22.206,0,0,1,5,19.073,17.122,17.122,0,0,1,13.451,4.242Zm3.021,17.369a5.69,5.69,0,0,0,5.259,3.582,5.6,5.6,0,0,0,4.028-1.678,5.874,5.874,0,0,0-1.837-9.466,5.614,5.614,0,0,0-6.208,1.243A5.875,5.875,0,0,0,16.473,21.611Z"
+                                                          fill="#fff" fill-rule="evenodd"/>
+                                                    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="12" cy="2.5"
+                                                             rx="12" ry="2.5" transform="translate(9.751 44.931)"
+                                                             fill="#fff" opacity="0.4"/>
                                                 </g>
                                             </svg>
-
 
 
                                         </div>
@@ -83,10 +87,15 @@
                                     <a href="{{ path('dossier') }}"
                                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
                                         <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
-                                            <svg class="h-6 w-6"  xmlns="http://www.w3.org/2000/svg" width="42.866" height="42.535" viewBox="0 0 42.866 42.535">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="42.866"
+                                                 height="42.535" viewBox="0 0 42.866 42.535">
                                                 <g id="Duotone" transform="translate(-2 -2.154)">
-                                                    <path id="Tracé_33" data-name="Tracé 33" d="M6.287,10H14.86V25h4.287V10h8.573V25h4.287V10h8.573V25a4.286,4.286,0,0,1,4.287,4.287v2.143a4.286,4.286,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,31.433V29.29A4.287,4.287,0,0,1,6.287,25Z" transform="translate(0 8.97)" fill="#fff" opacity="0.4"/>
-                                                    <path id="Tracé_34" data-name="Tracé 34" d="M2,13.3a4.287,4.287,0,0,1,2.695-3.98L21.841,2.461a4.287,4.287,0,0,1,3.184,0L42.171,9.319a4.287,4.287,0,0,1,2.695,3.98v1.384a4.287,4.287,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,14.684Z" transform="translate(0 0)" fill="#fff"/>
+                                                    <path id="Tracé_33" data-name="Tracé 33"
+                                                          d="M6.287,10H14.86V25h4.287V10h8.573V25h4.287V10h8.573V25a4.286,4.286,0,0,1,4.287,4.287v2.143a4.286,4.286,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,31.433V29.29A4.287,4.287,0,0,1,6.287,25Z"
+                                                          transform="translate(0 8.97)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_34" data-name="Tracé 34"
+                                                          d="M2,13.3a4.287,4.287,0,0,1,2.695-3.98L21.841,2.461a4.287,4.287,0,0,1,3.184,0L42.171,9.319a4.287,4.287,0,0,1,2.695,3.98v1.384a4.287,4.287,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,14.684Z"
+                                                          transform="translate(0 0)" fill="#fff"/>
                                                 </g>
                                             </svg>
 
@@ -106,16 +115,34 @@
                                     <a href="{{ path('immeuble') }}"
                                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
                                         <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
-                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="81.471" height="81.471" viewBox="0 0 81.471 81.471">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="81.471"
+                                                 height="81.471" viewBox="0 0 81.471 81.471">
                                                 <g id="Duotone" transform="translate(-2 -2)">
-                                                    <path id="Tracé_18" data-name="Tracé 18" d="M14,18.147A8.147,8.147,0,0,1,22.147,10H38.441a8.147,8.147,0,0,1,8.147,8.147V50.735a8.147,8.147,0,0,1-8.147,8.147H22.147A8.147,8.147,0,0,1,14,50.735Z" transform="translate(36.882 24.588)" fill="#fff" opacity="0.4"/>
-                                                    <path id="Tracé_19" data-name="Tracé 19" d="M25.147,18.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,18.074Z" transform="translate(46.103 36.882)" fill="#fff"/>
-                                                    <path id="Tracé_20" data-name="Tracé 20" d="M25.147,21.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,21.074Z" transform="translate(46.103 46.103)" fill="#fff"/>
-                                                    <path id="Tracé_21" data-name="Tracé 21" d="M2,10.147A8.147,8.147,0,0,1,10.147,2H34.588a8.147,8.147,0,0,1,8.147,8.147V75.324a8.147,8.147,0,0,1-8.147,8.147H10.147A8.147,8.147,0,0,1,2,75.324Z" transform="translate(0 0)" fill="#fff" opacity="0.4"/>
-                                                    <path id="Tracé_22" data-name="Tracé 22" d="M21.294,10.074A4.074,4.074,0,0,0,17.221,6H9.074a4.074,4.074,0,0,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,10.074Z" transform="translate(9.221 12.294)" fill="#fff"/>
-                                                    <path id="Tracé_23" data-name="Tracé 23" d="M21.294,14.074A4.074,4.074,0,0,0,17.221,10H9.074a4.074,4.074,0,1,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,14.074Z" transform="translate(9.221 24.588)" fill="#fff"/>
-                                                    <path id="Tracé_24" data-name="Tracé 24" d="M17.221,14a4.074,4.074,0,1,1,0,8.147H9.074a4.074,4.074,0,0,1,0-8.147Z" transform="translate(9.221 36.882)" fill="#fff"/>
-                                                    <path id="Tracé_25" data-name="Tracé 25" d="M21.294,22.074A4.074,4.074,0,0,0,17.221,18H9.074A4.074,4.074,0,0,0,5,22.074V32.257a2.037,2.037,0,0,0,2.037,2.037H19.257a2.037,2.037,0,0,0,2.037-2.037Z" transform="translate(9.221 49.177)" fill="#fff"/>
+                                                    <path id="Tracé_18" data-name="Tracé 18"
+                                                          d="M14,18.147A8.147,8.147,0,0,1,22.147,10H38.441a8.147,8.147,0,0,1,8.147,8.147V50.735a8.147,8.147,0,0,1-8.147,8.147H22.147A8.147,8.147,0,0,1,14,50.735Z"
+                                                          transform="translate(36.882 24.588)" fill="#fff"
+                                                          opacity="0.4"/>
+                                                    <path id="Tracé_19" data-name="Tracé 19"
+                                                          d="M25.147,18.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,18.074Z"
+                                                          transform="translate(46.103 36.882)" fill="#fff"/>
+                                                    <path id="Tracé_20" data-name="Tracé 20"
+                                                          d="M25.147,21.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,21.074Z"
+                                                          transform="translate(46.103 46.103)" fill="#fff"/>
+                                                    <path id="Tracé_21" data-name="Tracé 21"
+                                                          d="M2,10.147A8.147,8.147,0,0,1,10.147,2H34.588a8.147,8.147,0,0,1,8.147,8.147V75.324a8.147,8.147,0,0,1-8.147,8.147H10.147A8.147,8.147,0,0,1,2,75.324Z"
+                                                          transform="translate(0 0)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_22" data-name="Tracé 22"
+                                                          d="M21.294,10.074A4.074,4.074,0,0,0,17.221,6H9.074a4.074,4.074,0,0,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,10.074Z"
+                                                          transform="translate(9.221 12.294)" fill="#fff"/>
+                                                    <path id="Tracé_23" data-name="Tracé 23"
+                                                          d="M21.294,14.074A4.074,4.074,0,0,0,17.221,10H9.074a4.074,4.074,0,1,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,14.074Z"
+                                                          transform="translate(9.221 24.588)" fill="#fff"/>
+                                                    <path id="Tracé_24" data-name="Tracé 24"
+                                                          d="M17.221,14a4.074,4.074,0,1,1,0,8.147H9.074a4.074,4.074,0,0,1,0-8.147Z"
+                                                          transform="translate(9.221 36.882)" fill="#fff"/>
+                                                    <path id="Tracé_25" data-name="Tracé 25"
+                                                          d="M21.294,22.074A4.074,4.074,0,0,0,17.221,18H9.074A4.074,4.074,0,0,0,5,22.074V32.257a2.037,2.037,0,0,0,2.037,2.037H19.257a2.037,2.037,0,0,0,2.037-2.037Z"
+                                                          transform="translate(9.221 49.177)" fill="#fff"/>
                                                 </g>
                                             </svg>
 
@@ -135,11 +162,19 @@
                                     <a href="{{ path('maison') }}"
                                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
                                         <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
-                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="82.975" height="74.846" viewBox="0 0 82.975 74.846">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="82.975"
+                                                 height="74.846" viewBox="0 0 82.975 74.846">
                                                 <g id="Duotone" transform="translate(-1 -2.155)">
-                                                    <path id="Tracé_15" data-name="Tracé 15" d="M64.344,64.932V19.07L40.4,4.644h0C38.136,3.28,37,2.6,35.8,2.332a7.542,7.542,0,0,0-3.247,0c-1.209.266-2.341.948-4.605,2.313L4,19.07V64.932c0,4.224,0,6.337.822,7.95a7.542,7.542,0,0,0,3.3,3.3C9.732,77,11.844,77,16.069,77H52.275c4.224,0,6.337,0,7.95-.822a7.542,7.542,0,0,0,3.3-3.3C64.344,71.269,64.344,69.157,64.344,64.932Z" transform="translate(8.315)" fill="#fff" opacity="0.4"/>
-                                                    <path id="Tracé_16" data-name="Tracé 16" d="M1.538,29.88a3.772,3.772,0,0,0,5.174,1.294L42.487,9.709,78.262,31.174a3.772,3.772,0,1,0,3.881-6.468L46.368,3.241a7.543,7.543,0,0,0-7.762,0L2.831,24.706A3.772,3.772,0,0,0,1.538,29.88Z" transform="translate(0 0.031)" fill="#fff" fill-rule="evenodd"/>
-                                                    <path id="Tracé_17" data-name="Tracé 17" d="M9,24.315a11.315,11.315,0,1,1,22.629,0V46.944H9Z" transform="translate(22.173 30.057)" fill="#fff"/>
+                                                    <path id="Tracé_15" data-name="Tracé 15"
+                                                          d="M64.344,64.932V19.07L40.4,4.644h0C38.136,3.28,37,2.6,35.8,2.332a7.542,7.542,0,0,0-3.247,0c-1.209.266-2.341.948-4.605,2.313L4,19.07V64.932c0,4.224,0,6.337.822,7.95a7.542,7.542,0,0,0,3.3,3.3C9.732,77,11.844,77,16.069,77H52.275c4.224,0,6.337,0,7.95-.822a7.542,7.542,0,0,0,3.3-3.3C64.344,71.269,64.344,69.157,64.344,64.932Z"
+                                                          transform="translate(8.315)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_16" data-name="Tracé 16"
+                                                          d="M1.538,29.88a3.772,3.772,0,0,0,5.174,1.294L42.487,9.709,78.262,31.174a3.772,3.772,0,1,0,3.881-6.468L46.368,3.241a7.543,7.543,0,0,0-7.762,0L2.831,24.706A3.772,3.772,0,0,0,1.538,29.88Z"
+                                                          transform="translate(0 0.031)" fill="#fff"
+                                                          fill-rule="evenodd"/>
+                                                    <path id="Tracé_17" data-name="Tracé 17"
+                                                          d="M9,24.315a11.315,11.315,0,1,1,22.629,0V46.944H9Z"
+                                                          transform="translate(22.173 30.057)" fill="#fff"/>
                                                 </g>
                                             </svg>
 
@@ -158,11 +193,18 @@
                                     <a href="{{ path('double') }}"
                                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
                                         <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
-                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="89.7" height="78" viewBox="0 0 89.7 78">
-                                                <g id="Group_33486" data-name="Group 33486" transform="translate(-2.5 -2)">
-                                                    <path id="Tracé_33" data-name="Tracé 33" d="M28.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H45.137a5.532,5.532,0,0,1,5.552,5.512V75.215A4.8,4.8,0,0,0,55.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L47.128,4.63a12.15,12.15,0,0,0-15.435.277L6.271,25.258A9.65,9.65,0,0,0,2.5,32.677V66.617A13.431,13.431,0,0,0,15.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.732,4.732,0,0,0,1.414-3.371Z" transform="translate(0 0)" fill="#fff"/>
-                                                    <g id="Groupe_369" data-name="Groupe 369" transform="translate(18.1 2)" opacity="0.4">
-                                                        <path id="Tracé_34" data-name="Tracé 34" d="M32.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H49.137a5.532,5.532,0,0,1,5.552,5.512h0V75.215A4.8,4.8,0,0,0,59.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L51.128,4.63a12.15,12.15,0,0,0-15.435.277L10.271,25.258A9.65,9.65,0,0,0,6.5,32.677V66.617A13.431,13.431,0,0,0,19.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.731,4.731,0,0,0,1.413-3.371Z" transform="translate(-6.5 -2)" fill="#fff"/>
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="89.7"
+                                                 height="78" viewBox="0 0 89.7 78">
+                                                <g id="Group_33486" data-name="Group 33486"
+                                                   transform="translate(-2.5 -2)">
+                                                    <path id="Tracé_33" data-name="Tracé 33"
+                                                          d="M28.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H45.137a5.532,5.532,0,0,1,5.552,5.512V75.215A4.8,4.8,0,0,0,55.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L47.128,4.63a12.15,12.15,0,0,0-15.435.277L6.271,25.258A9.65,9.65,0,0,0,2.5,32.677V66.617A13.431,13.431,0,0,0,15.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.732,4.732,0,0,0,1.414-3.371Z"
+                                                          transform="translate(0 0)" fill="#fff"/>
+                                                    <g id="Groupe_369" data-name="Groupe 369"
+                                                       transform="translate(18.1 2)" opacity="0.4">
+                                                        <path id="Tracé_34" data-name="Tracé 34"
+                                                              d="M32.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H49.137a5.532,5.532,0,0,1,5.552,5.512h0V75.215A4.8,4.8,0,0,0,59.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L51.128,4.63a12.15,12.15,0,0,0-15.435.277L10.271,25.258A9.65,9.65,0,0,0,6.5,32.677V66.617A13.431,13.431,0,0,0,19.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.731,4.731,0,0,0,1.413-3.371Z"
+                                                              transform="translate(-6.5 -2)" fill="#fff"/>
                                                     </g>
                                                 </g>
                                             </svg>
@@ -183,21 +225,21 @@
                                     <a href="{{ path('formations') }}"
                                        class="-m-3 p-3 flex items-center rounded-lg">
 
-{#                                        <div class="ml-auto mt-auto self-end justify-self-end">#}
-{#                                            <p class="text-base items-center flex font-medium text-gray-900 font-playfair">#}
-{#                                                Voir toutes les formations <span class="ml-2 w-4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="12" height="12"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M.75,10a1.5,1.5,0,0,1,1.5-1.5H16.5V5.011c0-.272.163-.343.362-.158l6.149,6.1a.75.75,0,0,1,0,1.1l-6.149,6.1c-.2.185-.362.114-.362-.158V14.5H2.25A1.5,1.5,0,0,1,.75,13Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></g></svg></span>#}
-{#                                            </p>#}
+                                        {# <div class="ml-auto mt-auto self-end justify-self-end"> #}
+                                        {# <p class="text-base items-center flex font-medium text-gray-900 font-playfair"> #}
+                                        {# Voir toutes les formations <span class="ml-2 w-4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="12" height="12"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M.75,10a1.5,1.5,0,0,1,1.5-1.5H16.5V5.011c0-.272.163-.343.362-.158l6.149,6.1a.75.75,0,0,1,0,1.1l-6.149,6.1c-.2.185-.362.114-.362-.158V14.5H2.25A1.5,1.5,0,0,1,.75,13Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></g></svg></span> #}
+                                        {# </p> #}
 
-{#                                        </div>#}
-                                        <button class="mx-auto btn-1 bg-gray-50 font-extrabold tracking-widest transition ease-in-out duration-150 p-6 rounded text-gray-900 hover:bg-gray-200">
-                                                Toutes les formations
+                                        {# </div> #}
+                                        <button class="mx-auto btn-1 bg-gray-100 hover:bg-gray-200 text-gray-900">
+                                            Toutes les formations
                                         </button>
                                     </a>
 
                                 </div>
-                                <div class="p-5 bg-gray-50 sm:p-8">
+                                <div class="p-5 bg-gray-100 sm:p-8">
                                     <a href="{{ path('formations') }}"
-                                       class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100 transition ease-in-out duration-150">
+                                       class="-m-3 p-3 flow-root rounded-md hover:bg-gray-200 transition ease-in-out duration-150">
             <span class="flex items-center">
               <span class="text-lg font-bold text-gray-900 font-playfair">
                 Pack de 5 formations
@@ -216,22 +258,13 @@
                     </div>
                 </div>
 
-
-                {# Link to coaching page #}
-                <a href="{{ path('coaching') }}"
-                   class="text-base font-raleway font-medium text-gray-500 hover:text-gray-900">
-                    Coaching
-                </a>
-
-
-                {# Flyout Menu of "Service" #}
-                <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
+                <div x-data="{ flyoutMenuOpen: false }" class="relative">
                     <div @mouseover="flyoutMenuOpen = true" @mouseover.away.debounce.350ms="flyoutMenuOpen = false">
-                        <button type="button" x-state:on="Item active" x-state:off="Item inactive"
-                                @click="flyoutMenuOpen = !flyoutMenuOpen"
+                        <button type="button"
+                                x-state:on="Item active" x-state:off="Item inactive"
                                 :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }"
-                                class="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            <span>Services</span>
+                                class="text-gray-500 inline-flex items-center body-2 hover:text-gray-900 hover:font-semi-bold">
+                            <a href="{{ path('service') }}">Services</a>
                             <svg x-state:on="Item active" x-state:off="Item inactive"
                                  class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                                  x-bind:class="{ 'text-gray-600': flyoutMenuOpen, 'text-gray-400': !flyoutMenuOpen }"
@@ -243,145 +276,170 @@
                             </svg>
                         </button>
 
-                        <div x-description="'Services' flyout menu, show/hide based on flyout menu state."
-                             x-show="flyoutMenuOpen" x-transition:enter="transition ease-out duration-200"
+                        <div x-description="Flyout menu, show/hide based on flyout menu state." x-show="flyoutMenuOpen"
+                             x-transition:enter="transition ease-out duration-200"
                              x-transition:enter-start="opacity-0 translate-y-1"
                              x-transition:enter-end="opacity-100 translate-y-0"
                              x-transition:leave="transition ease-in duration-150"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-1"
-                             class="absolute -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                             style="display: none;">
-                            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                             class="absolute -ml-6 z-10 transform mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
+                            <div class="rounded-lg overflow-hidden">
+                                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
 
-                                    <a href="{{ path('silver') }}"
-                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                             x-description="Heroicon name: outline/chart-bar"
-                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                                        </svg>
+                                    <a href="{{ path('bon') }}"
+                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-br from-gray-300 to-gray-500 text-white sm:h-12 sm:w-12">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="33.503"
+                                                 height="47.931" viewBox="0 0 33.503 47.931">
+                                                <g id="Location" transform="translate(-5 -2)">
+                                                    <path id="Tracé_32" data-name="Tracé 32"
+                                                          d="M13.451,4.242a16.487,16.487,0,0,1,16.835.139,17.542,17.542,0,0,1,8.216,15c-.119,6.079-3.462,11.794-7.639,16.212a44.815,44.815,0,0,1-8.038,6.748,2.808,2.808,0,0,1-.975.345,1.961,1.961,0,0,1-.935-.284A44.306,44.306,0,0,1,9.337,31.516,22.206,22.206,0,0,1,5,19.073,17.122,17.122,0,0,1,13.451,4.242Zm3.021,17.369a5.69,5.69,0,0,0,5.259,3.582,5.6,5.6,0,0,0,4.028-1.678,5.874,5.874,0,0,0-1.837-9.466,5.614,5.614,0,0,0-6.208,1.243A5.875,5.875,0,0,0,16.473,21.611Z"
+                                                          fill="#fff" fill-rule="evenodd"/>
+                                                    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="12" cy="2.5"
+                                                             rx="12" ry="2.5" transform="translate(9.751 44.931)"
+                                                             fill="#fff" opacity="0.4"/>
+                                                </g>
+                                            </svg>
+
+
+                                        </div>
                                         <div class="ml-4">
-                                            <p class="text-base font-medium text-gray-900">
+                                            <p class="text-base font-medium text-gray-900 font-playfair">
                                                 Silver
                                             </p>
-                                            <p class="mt-1 text-sm text-gray-500">
-                                                Get a better understanding of where your traffic is coming from.
+                                            <p class="mt-1 text-sm text-gray-500 font-raleway">
+                                                Vous n'osez pas vous lancer dans un investissement car vous n'êtes pas
+                                                certain d'avoir trouvé le bon bien.
                                             </p>
                                         </div>
                                     </a>
 
-                                    <a href="{{ path('gold') }}"
-                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                             x-description="Heroicon name: outline/cursor-click"
-                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
-                                        </svg>
+                                    <a href="{{ path('dossier') }}"
+                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-br from-yellow-200 to-yellow-400 text-white sm:h-12 sm:w-12">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="42.866"
+                                                 height="42.535" viewBox="0 0 42.866 42.535">
+                                                <g id="Duotone" transform="translate(-2 -2.154)">
+                                                    <path id="Tracé_33" data-name="Tracé 33"
+                                                          d="M6.287,10H14.86V25h4.287V10h8.573V25h4.287V10h8.573V25a4.286,4.286,0,0,1,4.287,4.287v2.143a4.286,4.286,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,31.433V29.29A4.287,4.287,0,0,1,6.287,25Z"
+                                                          transform="translate(0 8.97)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_34" data-name="Tracé 34"
+                                                          d="M2,13.3a4.287,4.287,0,0,1,2.695-3.98L21.841,2.461a4.287,4.287,0,0,1,3.184,0L42.171,9.319a4.287,4.287,0,0,1,2.695,3.98v1.384a4.287,4.287,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,14.684Z"
+                                                          transform="translate(0 0)" fill="#fff"/>
+                                                </g>
+                                            </svg>
+
+                                        </div>
                                         <div class="ml-4">
-                                            <p class="text-base font-medium text-gray-900">
+                                            <p class="text-base font-medium text-gray-900 font-playfair">
                                                 Gold
                                             </p>
-                                            <p class="mt-1 text-sm text-gray-500">
-                                                Speak directly to your customers in a more meaningful way.
+                                            <p class="mt-1 text-sm text-gray-500 font-raleway">
+                                                Vous souhaitez investir mais vous pensez que les banques ne vous
+                                                prêteront
+                                                pas.
                                             </p>
                                         </div>
                                     </a>
 
-                                    <a href="{{ path('platinium') }}"
-                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                             x-description="Heroicon name: outline/shield-check"
-                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                        </svg>
+                                    <a href="{{ path('immeuble') }}"
+                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-br from-indigo-200 to-indigo-400 text-white sm:h-12 sm:w-12">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="81.471"
+                                                 height="81.471" viewBox="0 0 81.471 81.471">
+                                                <g id="Duotone" transform="translate(-2 -2)">
+                                                    <path id="Tracé_18" data-name="Tracé 18"
+                                                          d="M14,18.147A8.147,8.147,0,0,1,22.147,10H38.441a8.147,8.147,0,0,1,8.147,8.147V50.735a8.147,8.147,0,0,1-8.147,8.147H22.147A8.147,8.147,0,0,1,14,50.735Z"
+                                                          transform="translate(36.882 24.588)" fill="#fff"
+                                                          opacity="0.4"/>
+                                                    <path id="Tracé_19" data-name="Tracé 19"
+                                                          d="M25.147,18.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,18.074Z"
+                                                          transform="translate(46.103 36.882)" fill="#fff"/>
+                                                    <path id="Tracé_20" data-name="Tracé 20"
+                                                          d="M25.147,21.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,21.074Z"
+                                                          transform="translate(46.103 46.103)" fill="#fff"/>
+                                                    <path id="Tracé_21" data-name="Tracé 21"
+                                                          d="M2,10.147A8.147,8.147,0,0,1,10.147,2H34.588a8.147,8.147,0,0,1,8.147,8.147V75.324a8.147,8.147,0,0,1-8.147,8.147H10.147A8.147,8.147,0,0,1,2,75.324Z"
+                                                          transform="translate(0 0)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_22" data-name="Tracé 22"
+                                                          d="M21.294,10.074A4.074,4.074,0,0,0,17.221,6H9.074a4.074,4.074,0,0,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,10.074Z"
+                                                          transform="translate(9.221 12.294)" fill="#fff"/>
+                                                    <path id="Tracé_23" data-name="Tracé 23"
+                                                          d="M21.294,14.074A4.074,4.074,0,0,0,17.221,10H9.074a4.074,4.074,0,1,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,14.074Z"
+                                                          transform="translate(9.221 24.588)" fill="#fff"/>
+                                                    <path id="Tracé_24" data-name="Tracé 24"
+                                                          d="M17.221,14a4.074,4.074,0,1,1,0,8.147H9.074a4.074,4.074,0,0,1,0-8.147Z"
+                                                          transform="translate(9.221 36.882)" fill="#fff"/>
+                                                    <path id="Tracé_25" data-name="Tracé 25"
+                                                          d="M21.294,22.074A4.074,4.074,0,0,0,17.221,18H9.074A4.074,4.074,0,0,0,5,22.074V32.257a2.037,2.037,0,0,0,2.037,2.037H19.257a2.037,2.037,0,0,0,2.037-2.037Z"
+                                                          transform="translate(9.221 49.177)" fill="#fff"/>
+                                                </g>
+                                            </svg>
+
+                                        </div>
                                         <div class="ml-4">
-                                            <p class="text-base font-medium text-gray-900">
+                                            <p class="text-base font-medium text-gray-900 font-playfair">
                                                 Platinium
                                             </p>
-                                            <p class="mt-1 text-sm text-gray-500">
-                                                Your customers' data will be safe and secure.
+                                            <p class="mt-1 text-sm text-gray-500 font-raleway">
+                                                Acheter un immeuble et rentabiliser cet investissement en moins d’un an
+                                                est
+                                                possible.
                                             </p>
                                         </div>
                                     </a>
 
-                                    <a href="{{ path('diamond') }}"
-                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                             x-description="Heroicon name: outline/view-grid"
-                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-                                        </svg>
+                                    <a href="{{ path('maison') }}"
+                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-br from-green-300 to-green-500 text-white sm:h-12 sm:w-12">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="82.975"
+                                                 height="74.846" viewBox="0 0 82.975 74.846">
+                                                <g id="Duotone" transform="translate(-1 -2.155)">
+                                                    <path id="Tracé_15" data-name="Tracé 15"
+                                                          d="M64.344,64.932V19.07L40.4,4.644h0C38.136,3.28,37,2.6,35.8,2.332a7.542,7.542,0,0,0-3.247,0c-1.209.266-2.341.948-4.605,2.313L4,19.07V64.932c0,4.224,0,6.337.822,7.95a7.542,7.542,0,0,0,3.3,3.3C9.732,77,11.844,77,16.069,77H52.275c4.224,0,6.337,0,7.95-.822a7.542,7.542,0,0,0,3.3-3.3C64.344,71.269,64.344,69.157,64.344,64.932Z"
+                                                          transform="translate(8.315)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_16" data-name="Tracé 16"
+                                                          d="M1.538,29.88a3.772,3.772,0,0,0,5.174,1.294L42.487,9.709,78.262,31.174a3.772,3.772,0,1,0,3.881-6.468L46.368,3.241a7.543,7.543,0,0,0-7.762,0L2.831,24.706A3.772,3.772,0,0,0,1.538,29.88Z"
+                                                          transform="translate(0 0.031)" fill="#fff"
+                                                          fill-rule="evenodd"/>
+                                                    <path id="Tracé_17" data-name="Tracé 17"
+                                                          d="M9,24.315a11.315,11.315,0,1,1,22.629,0V46.944H9Z"
+                                                          transform="translate(22.173 30.057)" fill="#fff"/>
+                                                </g>
+                                            </svg>
+                                            
+
+                                        </div>
                                         <div class="ml-4">
-                                            <p class="text-base font-medium text-gray-900">
+                                            <p class="text-base font-medium text-gray-900 font-playfair">
                                                 Diamond
                                             </p>
-                                            <p class="mt-1 text-sm text-gray-500">
-                                                Connect with third-party tools that you're already using.
+                                            <p class="mt-1 text-sm text-gray-500 font-raleway">
+                                                Avant de se lancer dans un projet de construction, il est essentiel de
+                                                connaître les outils clés.
                                             </p>
                                         </div>
                                     </a>
 
-                                    <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                             x-description="Heroicon name: outline/refresh"
-                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                                        </svg>
-                                        <div class="ml-4">
-                                            <p class="text-base font-medium text-gray-900">
-                                                Automations
-                                            </p>
-                                            <p class="mt-1 text-sm text-gray-500">
-                                                Build strategic funnels that will drive your customers to convert
-                                            </p>
-                                        </div>
-                                    </a>
+
+
+
 
                                 </div>
-                                <div class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                                <div class="p-5 bg-gray-100 sm:p-8">
+                                    <a href="{{ path('formations') }}"
+                                       class="-m-3 p-3 flow-root rounded-md hover:bg-gray-200 transition ease-in-out duration-150">
+            <span class="flex items-center">
+              <span class="text-lg font-bold text-gray-900 font-playfair">
+                Comparez les Offres
+              </span>
 
-                                    <div class="flow-root">
-                                        <a href="#"
-                                           class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
-                                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400"
-                                                 x-description="Heroicon name: outline/play"
-                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                 stroke="currentColor" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                            <span class="ml-3">Watch Demo</span>
-                                        </a>
-                                    </div>
-
-                                    <div class="flow-root">
-                                        <a href="#"
-                                           class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
-                                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400"
-                                                 x-description="Heroicon name: outline/phone"
-                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                 stroke="currentColor" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                            </svg>
-                                            <span class="ml-3">Contact Sales</span>
-                                        </a>
-                                    </div>
-
+            </span>
+                                        <span class="mt-1 block text-sm text-gray-500 font-raleway">
+              Trouvez le service qui correspond le mieux à votre objectif d'investissement
+            </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -389,13 +447,19 @@
                 </div>
 
 
+                {# Link to coaching page #}
+                <a href="{{ path('coaching') }}"
+                   class="text-gray-500 body-2 hover:text-gray-900 hover:font-semi-bold">
+                    Coaching
+                </a>
+
                 {# Link to seminar page #}
-                <a href="{{ path('seminaire') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="{{ path('seminaire') }}" class="text-gray-500  body-2 hover:text-gray-900 hover:font-semi-bold">
                     Séminaire
                 </a>
 
                 {# Link to contact page #}
-                <a href="{{ path('contact') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="{{ path('contact') }}" class="text-gray-500 body-2 hover:text-gray-900 hover:font-semi-bold">
                     Contact
                 </a>
             </nav>
