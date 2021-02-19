@@ -13,15 +13,6 @@
     </div>
 {%- endblock form_row %}
 
-{#{% set showError = (not compound or force_error|default(false)) and not valid %}
-    <div class="mt-1 flex justify-items-stretch items-stretch relative flex-wrap mb-5{% if (not compound or force_error|default(false)) and not valid %} {% endif %}{{ showError ? ' relative' : '' }}">
-        {{- form_label(form) -}}
-        {{- form_widget(form) -}}
-        {{- form_help(form) -}}
-        {{- form_errors(form) -}}
-    </div>#}
-
-    {{ dump() }}
 
 {# _________WIDGET SIMPLE__________ #}
 
