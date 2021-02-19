@@ -42,6 +42,10 @@
     .quote-1 {
         @apply text-sm font-playfair text-gray-500
     }
+
+    .bg-2 {
+        background-image: url(/public/images/main/immeuble.webp);
+    }
 }
 
 
