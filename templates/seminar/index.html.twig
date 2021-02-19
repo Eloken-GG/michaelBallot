@@ -32,8 +32,8 @@
                     </div>
 
 
-                    <div class="w-full relative lg:w-1/2 px-3 mb-12 lg:mb-0">
-                        <img class="lg:h-128 mx-auto flex items-center justify-center"
+                    <div class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
+                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
                              alt="">
                         <div class="absolute  inset-0 flex items-center justify-center">
@@ -88,7 +88,7 @@
                             <div class="mt-5 sm:mt-6">
                     <span class="flex js-pause2 w-full shadow-sm">
                       <button @click="open = false"
-                              class="js-pause2 inline-flex justify-center w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700">
+                              class="btn-1 bg-gray-900 hover:bg-gray-700">
                         Fermer la vidéo
                       </button>
                     </span>
@@ -139,7 +139,7 @@
     </section>
 
     {# INTERVENANTS #}
-    <section class="max-w-7xl mb-24 mx-auto">
+    <section class="mb-24">
 
         <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
@@ -149,7 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid mx-auto lg:grid-cols-8 md:grid-cols-4 justify-center mb-12 ">
+        <div class="grid mx-auto max-w-7xl lg:grid-cols-8 md:grid-cols-4 justify-center mb-12 ">
             <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-auto w-full rounded-lg object-cover"
@@ -167,7 +167,7 @@
             <div class="flex col-span-2 row-span-1 px-4 m-3 w-full hover:scale-105   transition-all transform duration-300">
                 <div class="w-full h-auto relative">
                     <img class="h-full w-full rounded-lg object-cover"
-                         src="{{ asset('images/intervenants/carolin-arthaud.webp') }}"
+                         src="{{ asset('images/intervenants/thomas-miralles.webp') }}"
                          alt="">
                     <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
                         <div class="">
@@ -304,7 +304,7 @@
     </section>
 
     {# LIEU #}
-    <section class="bg-gray-50 m-0">
+    <section class="bg-gray-100 m-0">
         <div class="py-32 max-w-5xl mx-auto  radius-for-skewed ">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center -mx-4">

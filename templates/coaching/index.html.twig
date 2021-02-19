@@ -7,39 +7,102 @@
 {% block body %}
 
     {# HERO #}
-    <section>
-        <div class="container px-4 py-32 mx-auto ">
-            <div class="flex flex-wrap items-center -mx-3">
-                <div class="w-full lg:w-1/2 px-3">
-                    <div class="py-12">
-                        <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
-                            <h1 class="title-1">
-                                Coaching personnalisé
-                            </h1>
-                            <p class="body-1 mt-12">Constituez-vous un patrimoine conséquent et devenez financièrement indépendant !Je vous accompagne pendant 1 an dans toutes les étapes de vos projets immobiliers. </p>
+
+    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
+             style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+        <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
+            <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
+                <div class="flex flex-wrap items-center -mx-3">
+                    <div class="w-full lg:w-1/2 px-3">
+                        <div class="py-12">
+                            <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                                <h1 class="title-1 text-white">
+                                    Coaching personnalisé
+                                </h1>
+                                <p class="body-1 mt-12 text-white">Constituez-vous un patrimoine conséquent et devenez financièrement indépendant !Je vous accompagne pendant 1 an dans toutes les étapes de vos projets immobiliers.</p>
+                            </div>
+                            <button class="btn-1 mx-auto block lg:mx-0 hover:bg-gray-900 bg-rose-600">
+                                Inscription
+                            </button>
                         </div>
-                        <button class="btn-1">
-                            Être contacté
-                        </button>
                     </div>
-                </div>
-                <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
-                    <div class="lg:h-128 flex items-center justify-center"><img class="lg:max-w-lg"
-                                                                                src="https://picsum.photos/700/400"
-                                                                                alt=""></div>
+
+
+                    <div class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
+                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
+                             src="https://picsum.photos/700/400"
+                             alt="">
+                        <div class="absolute  inset-0 flex items-center justify-center">
+                            <button @click="open = true"
+                                    class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="12" height="12">
+                                    <g transform="matrix(14,0,0,14,0,0)">
+                                        <path d="M8.266,3.563,3.7.316h0A1.686,1.686,0,0,0,1.916.2,1.754,1.754,0,0,0,1,1.753V8.247A1.753,1.753,0,0,0,1.916,9.8,1.687,1.687,0,0,0,3.7,9.685L8.266,6.438a1.775,1.775,0,0,0,0-2.875Z"
+                                              fill="currentColor" stroke="none" stroke-linecap="round"
+                                              stroke-linejoin="round" stroke-width="0"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
+                         x-show="open">
+                        <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
+                             @click="open = false"></div>
+
+                        <!-- A basic modal dialog with title, body and one button to close -->
+                        <div class="h-auto p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
+
+
+                            <div class="container">
+                                <video id="player" controls crossorigin playsinline
+                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                            type="video/mp4" size="576">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                                            type="video/mp4" size="720">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                                            type="video/mp4" size="1080">
+
+                                    <!-- Caption files -->
+                                    <track kind="captions" label="English" srclang="en"
+                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                                           default>
+                                    <track kind="captions" label="Français" srclang="fr"
+                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                                    <!-- Fallback for browsers that don't support the <video> element -->
+                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                       download>Download</a>
+                                </video>
+                            </div>
+                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                            <!-- One big close button.  --->
+                            <div class="mt-5 sm:mt-6">
+                    <span class="flex js-pause2 w-full shadow-sm">
+                      <button @click="open = false"
+                              class="btn-1 bg-gray-900 hover:bg-gray-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hidden navbar-menu relative z-50">
-            <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
-        </div>
+
     </section>
 
     {#    DESCRIPTION #}
     <section class="py-20">
         <div class="container px-4 mx-auto">
-            <div class="pt-20 pb-24 px-8 md:px-16 bg-pink-600 rounded">
-                <div class="flex flex-wrap -mx-8">
+            <div class="pt-20 pb-24 px-8 md:px-16 bg-gray-900 rounded">
+                <div class="flex flex-wrap items-center -mx-8">
                     <div class="w-full lg:w-1/2 px-8 flex">
                         <div class="my-auto text-white">
                             <span class="subtitle-2 inline-block text-white">Accompagnement sur-mesure</span>
@@ -68,7 +131,7 @@
 
 
     {# INTRODUCTION #}
-    <section class="bg-gray-50 mt-20 w-full pb-24">
+    <section class="bg-gray-100 mt-20 w-full pb-24">
 
         <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
@@ -85,7 +148,7 @@
 
 
     {# CARD COACHING #}
-    <section class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
+    <section class="bg-gradient-to-b from-gray-100 w-full pb-24 ">
         <div class="max-w-4xl px-8 mx-auto">
 
             <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
@@ -137,9 +200,9 @@
                         </ul>
                         <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
                         </div>
-                        <div class="flex">
+                        <div class="flex items-center">
                             <span class="title-font font-medium text-2xl text-gray-900">3 100,00 €</span>
-                            <button class="flex ml-auto btn-1">
+                            <button class="flex ml-auto btn-1 bg-pink-600 hover:bg-gray-900">
                                 Je m'inscris
                             </button>
                         </div>
@@ -150,7 +213,7 @@
     </section>
 
     {# DETAIL COACHING #}
-    <section class="bg-gray-50">
+    <section class="bg-gray-100">
         <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center -mx-4">
@@ -358,20 +421,20 @@
 
         <div class="py-20">
             <div class="container mx-auto px-4">
-                <div class="mb-8 flex flex-wrap  shadow overflow-hidden items-center">
+                <div class="mb-8 flex flex-wrap  shadow-lg overflow-hidden bg-white items-center">
                     <div class="w-full lg:w-1/2 ">
                         <img class="object-cover"
                              src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
                              alt="">
                     </div>
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  ">
 
                         <h3 class="mb-4 text-xl font-semibold font-raleway">5 Formations en ligne</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">Formez-vous à votre rythme grâce à un accès illimité à 5 formations en ligne. Maitrisez les règles d'urbanisme, trouvez le bon bien, réalisez des opérations rentables, actionnez les bons leviers fiscaux, négociez avec la banque, gérez l'ensemble des travaux, entourez vous des bonnes personnes... Grâce à ces 5 formations vous deviendrez un investisseur hors pair.</p>
 
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap  items-center shadow overflow-hidden">
+                <div class="mb-8 flex flex-wrap  items-center shadow-lg bg-white overflow-hidden">
                     <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white order-1 lg:order-0">
                         <h3 class="mb-4 text-xl font-semibold font-raleway">Un accompagnement sur-mesure</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">En visio-conférence ou en direct, nous nous rencontrons avec l’ensemble des élèves de The School Investment pour échanger à propos de vos projets. Je réponds à toutes vos questions et vous donne des astuces inédites.</p>
@@ -382,13 +445,13 @@
                              alt="">
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap  shadow overflow-hidden items-center">
+                <div class="mb-8 flex flex-wrap  shadow-lg overflow-hidden bg-white items-center">
                     <div class="w-full lg:w-1/2 ">
                         <img class="object-cover"
                              src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
                              alt="">
                     </div>
-                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  bg-white">
+                    <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6  ">
 
                         <h3 class="mb-4 text-xl font-semibold font-raleway">Des séminaires privés</h3>
                         <p class="mb-4 text-gray-400 leading-loose font-raleway">On se retrouve entre investisseurs dans des lieux atypiques : Golf, station de ski, hotels de luxe pour faire le point sur vos projets et approfondir des techniques d’investissement et d’optimisation</p>
