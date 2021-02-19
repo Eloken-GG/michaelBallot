@@ -1,6 +1,6 @@
 {
-  "build/app.css": "/build/app.60567633.css",
-  "build/app.js": "/build/app.508acc63.js",
-  "build/runtime.js": "/build/runtime.cc247730.js",
-  "build/820.65191e65.js": "/build/820.65191e65.js"
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors-node_modules_swup_debug-plugin_lib_index_js-node_modules_swup_fade-theme_lib_index_js-c9f282.js": "/build/vendors-node_modules_swup_debug-plugin_lib_index_js-node_modules_swup_fade-theme_lib_index_js-c9f282.js"
 }
