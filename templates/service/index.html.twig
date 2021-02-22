@@ -7,35 +7,6 @@
 {% block body %}
 
     {# HERO SECTION #}
-{#    <section>#}
-{#        <div class="container px-4 mx-auto ">#}
-{#            <div class="flex flex-wrap items-center -mx-3">#}
-{#                <div class="w-full lg:w-1/2 px-3">#}
-{#                    <div class="py-12">#}
-{#                        <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">#}
-{#                            <h1 class="title-1">#}
-{#                                Votre investissement clé en main#}
-{#                            </h1>#}
-{#                            <p class="body-1 mt-12">Vous souhaitez investir dans la pierre, devenir rentier et maximiser#}
-{#                                votre retour sur investissement. Donnez la gestion de votre projet à un professionnel de#}
-{#                                l’investissement immobilier.</p>#}
-{#                        </div>#}
-{#                        <div class="text-center lg:text-left"><a#}
-{#                                    class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded"#}
-{#                                    href="#">En savoir plus</a></div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">#}
-{#                    <div class="lg:h-128 flex items-center justify-center"><img class="lg:max-w-lg"#}
-{#                                                                                src="https://picsum.photos/700/400"#}
-{#                                                                                alt=""></div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="hidden navbar-menu relative z-50">#}
-{#            <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>#}
-{#        </div>#}
-{#    </section>#}
 
     <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
              style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
@@ -48,7 +19,9 @@
                                 <h1 class="title-1 text-white">
                                     Votre investissement clé en main
                                 </h1>
-                                <p class="body-1 mt-12 text-white">Vous souhaitez investir dans la pierre, devenir rentier et maximiser votre retour sur investissement. Donnez la gestion de votre projet à un professionnel de l’investissement immobilier.</p>
+                                <p class="body-1 mt-12 text-white">Vous souhaitez investir dans la pierre, devenir
+                                    rentier et maximiser votre retour sur investissement. Donnez la gestion de votre
+                                    projet à un professionnel de l’investissement immobilier.</p>
                             </div>
                             <button class="btn-1 mx-auto block lg:mx-0 hover:bg-gray-900 bg-rose-600">
                                 être contacté
@@ -148,30 +121,41 @@
                         <div class="max-w-sm lg:mx-auto">
                             <span class="subtitle-2">Toutes nos offres</span>
                             <h2 class="my-2 title-2">Un investissement rentable</h2>
-                            <p class="my-6 text-gray-500 body-2">Achat revente, Immeuble de rapport, Location meublée… Choisissez l’investissement qui vous convient le mieux et je m’occupe de tout !</p>
+                            <p class="my-6 text-gray-500 body-2">Achat revente, Immeuble de rapport, Location meublée…
+                                Choisissez l’investissement qui vous convient le mieux et je m’occupe de tout !</p>
 
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2 flex flex-wrap -mx-4">
                         <div class="mb-8 lg:mb-0 w-full  md:w-1/2 px-4">
-                            <div class="mb-8 py-6 pl-6 pr-4  pt-32 shadow-sm bg-white">
-                                <h4 class="title-4">Offre Silver</h4>
-                                <p class="font-Raleway text-xs">Achat et revente d'un bien</p>
-                            </div>
-                            <div class="py-6 pl-6 pr-4  pt-32 shadow-sm  bg-white">
-                                <h4 class="title-4">Offre Gold</h4>
-                                <p class="font-Raleway text-xs">Achat et Location meublée non professionnelle de 2 biens</p>
-                            </div>
+                            <a href="" class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Silver</h4>
+                                    <p class="font-raleway text-xs text-white">Achat et revente d'un bien</p>
+                                </div>
+                            </a>
+                            <a href="" class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Gold</h4>
+                                    <p class="font-raleway text-xs text-white">Achat et Location meublée non professionnelle de&nbsp;2&nbsp;biens</p>
+                                </div>
+                            </a>
+
                         </div>
                         <div class="w-full md:w-1/2  lg:mt-20 px-4">
-                            <div class="mb-8 py-6 pl-6 pr-4 pt-32 shadow-sm bg-white">
-                                <h4 class="title-4">Offre Platinium</h4>
-                                <p class="font-Raleway text-xs">Achat d’un immeuble de rapport – entre 3 et 5 lots</p>
-                            </div>
-                            <div class="py-6 pl-6 pr-4  pt-32 shadow-sm bg-white">
-                                <h4 class="title-4">Offre Diamond</h4>
-                                <p class="font-Raleway text-xs">Achat d’un immeuble de rapport – plus de 6 lots</p>
-                            </div>
+                            <a href="" class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Platinium</h4>
+                                    <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – entre 3 et 5 lots</p>
+                                </div>
+                            </a>
+                            <a href="#" class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Diamond</h4>
+                                    <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – plus de 6 lots</p>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
