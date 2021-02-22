@@ -32,7 +32,7 @@
 </head>
 
 {# BODY #}
-<body data-controller="symfony--ux-swup--swup" data-containers="#swup #nav" class="bg-gray-50">
+<body data-controller="symfony--ux-swup--swup hello" data-containers="#swup #nav"  data-theme="slide" data-cache="data-cache" class="bg-gray-50" id="cover">
 
     {# NAVBAR #}
     <nav id="nav">
@@ -63,6 +63,9 @@
     {# BLOC JAVASCRIPT #}
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
+        <script>$(window).on('load', function() {
+                $("#cover").hide();
+            });</script>
     {% endblock %}
 
 </body>
