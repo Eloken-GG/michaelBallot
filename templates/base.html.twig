@@ -58,14 +58,13 @@
 
 
     {# FOOTER #}
-    {% include 'shared/_footer.html.twig' %}
+    <footer class="bg-white">
+        {% include 'shared/_footer.html.twig' %}
+    </footer>
 
     {# BLOC JAVASCRIPT #}
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
-        <script>$(window).on('load', function() {
-                $("#cover").hide();
-            });</script>
     {% endblock %}
 
 </body>
