@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{# BLOC TITLE #}
+{% block title %}{% endblock %}
+
+{# BLOC BODY #}
+{% block body %}
+    <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <div class="container w-full md:max-w-3xl mx-auto pt-20">
+
+        <div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+
+            <div class="font-sans pt-12">
+                <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Mentions
+                    légales</h1>
+                <p class="text-sm md:text-base font-normal text-gray-600">Mis en place le 23 Février 2021</p>
+            </div>
+
+
+            <p class="py-6">
+                👋 Bonjour et merci de lire attentivement les présentes modalités d'utilisation du présent site avant de
+                le parcourir. En vous connectant sur ce site, vous acceptez sans réserve les présentes modalités et les
+                Conditions générales d'utilisation du site.
+            </p>
+
+            <h2 class="py-2 font-sans font-bold">Editeur du site michaelballot.fr :</h2>
+
+            <p class="py-6">En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans
+                l'économie numérique, il est précisé aux utilisateurs du site internet www.michaelballot.fr l'identité
+                des différents intervenants dans le cadre de sa réalisation et de son suivi:
+                <br>
+                <br>
+                Propriétaire du site : SASU LA VIEILLE SOUCHE - 49 route de Haute - 33380 MIOS - France
+                <br>
+                Responsable publication : Michael Ballot
+                <br>
+                Délégué à la protection des données : Michael Ballot
+                <br>
+                <br>
+                Mail : contact@michaelballot.fr</p>
+
+
+            <h2 class="py-2 font-sans font-bold">Hébergeur :</h2>
+
+            <p class="py-6">
+                HEROKU
+                <br>
+                415 Mission Street
+                <br>
+                Suite 300
+                <br>
+                San Francisco, CA
+                <br>
+                94105
+            </p>
+
+            <h2 class="py-2 font-sans font-bold">Design du site internet :</h2>
+
+            <p class="py-6">
+                SAS HERACLES - 465 Chemin du Peuple - 01330 Ambérieux en dombes - FRANCE
+                <br>
+                www.eloken.com
+                <br>
+                <br>
+                hello@eloken.com
+                <br>
+                06 86 70 95 16
+                <br>
+                <br>
+                Ce site est proposé en langages HTML5, JAVASCRIPT et CSS3, pour un meilleur confort d'utilisation et un
+                graphisme plus agréable, nous vous recommandons de recourir aux dernières versions des navigateurs
+                modernes comme Safari, Firefox, Chrome...
+            </p>
+        </div>
+
+        <a href="{{ asset('files/cgv.pdf') }}" target="_blank">
+            <button class="bg-grey-400 hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <span>CGV</span>
+            </button>
+        </a>
+
+        <a href="{{ asset('files/cgu.pdf') }}" target="_blank">
+            <button class="bg-grey-400 hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <span>CGU</span>
+            </button>
+        </a>
+
+
+
+        <div class="flex w-full items-center font-sans px-4 py-12">
+            <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/intervenants/michael-ballot.webp') }}"
+                 alt="Avatar of Author">
+            <div class="flex-1 px-2">
+                <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Michael Ballot</p>
+                <p class="text-gray-600 text-xs md:text-base">Investisseur et fondateur de <a
+                            class="text-green-500 no-underline hover:underline" href="https://www.tailwindtoolbox.com">michaelballot.fr</a>
+                </p>
+            </div>
+            <div class="justify-end">
+                <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">
+                    Qui suis-je ?
+                </button>
+            </div>
+        </div>
+    </div>
+
+    </body>
+{% endblock %}

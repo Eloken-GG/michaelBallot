@@ -50,11 +50,6 @@
     [x-cloak] {
         display: none !important;
     }
-
-    .swup-progress-bar {
-        height: 4px;
-        background-color: blue;
-    }
 }
 
 

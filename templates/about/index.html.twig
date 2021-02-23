@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+        <div class="title-1 relative z-30 p-5 text-6xl text-white">
+            NOTRE MISSION
+        </div>
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+            <source src="{{ asset('videos/building.mp4') }}" type="video/mp4" />Your browser does not support the video tag.
+        </video>
+    </header>
+    <div class="max-w-lg m-auto">
+        <div class="font-sans pt-12">
+            <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Qui sommes-nous ?</h1>
+            <p class="text-sm md:text-base font-normal text-gray-600">Mis en place le 23 Février 2021</p>
+        </div>
+        <p class="mb-4">
+            Ut sagittis lacus consequat accumsan venenatis. Sed sollicitudin, lectus et
+            fringilla ultrices, dolor nisi scelerisque tortor, vel finibus magna massa
+            non nunc. Phasellus massa quam, egestas a nisl sed, porta volutpat metus.
+            Nunc sed elit ac tellus tempor cursus. Suspendisse potenti. Vestibulum
+            varius rutrum nisl nec consequat. Suspendisse semper dignissim sem viverra
+            semper. Nulla porttitor, purus nec accumsan pharetra, nisi dolor condimentum
+            ipsum, id consequat nulla nunc in ligula.
+        </p>
+        <p class="mb-12">
+            Nulla pharetra lacinia nisi, vitae mollis tellus euismod id. Mauris porta
+            dignissim hendrerit. Cras id velit varius, fermentum lectus vitae, ultricies
+            dolor. In bibendum rhoncus purus vel rutrum. Nam vulputate imperdiet
+            fringilla. Donec blandit libero massa. Suspendisse dictum diam mauris, vitae
+            fermentum dolor tincidunt in. Pellentesque sollicitudin venenatis dolor,
+            vitae scelerisque elit ultrices eu. Donec eget sodales risus, quis dignissim
+            neque.
+        </p>
+    </div>
+{% endblock %}
