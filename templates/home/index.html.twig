@@ -5,96 +5,26 @@
 
 {# BLOC BODY #}
 {% block body %}
-    <main x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
-          style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
-        <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
-            <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
-                <div class="flex flex-wrap items-center -mx-3">
-                    <div class="w-full lg:w-1/2 px-3">
-                        <div class="py-12">
-                            <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
-                                <h1 class="title-1 text-white">
-                                    Investissez en&nbsp;vous&nbsp;!
-                                </h1>
-                                <p class="body-1 mt-12 text-white">Formations, coachings, investissements clés en main.
-                                    Devenez un expert de l'investissement immobilier</p>
-                            </div>
-                            <button class="btn-1 mx-auto block lg:mx-0 hover:bg-gray-900 bg-rose-600">
-                                Les formations
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
-                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="https://picsum.photos/700/400"
-                             alt="">
-                        <div class="absolute  inset-0 flex items-center justify-center">
-                            <button @click="open = true"
-                                    class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     viewBox="0 0 140 140" width="12" height="12">
-                                    <g transform="matrix(14,0,0,14,0,0)">
-                                        <path d="M8.266,3.563,3.7.316h0A1.686,1.686,0,0,0,1.916.2,1.754,1.754,0,0,0,1,1.753V8.247A1.753,1.753,0,0,0,1.916,9.8,1.687,1.687,0,0,0,3.7,9.685L8.266,6.438a1.775,1.775,0,0,0,0-2.875Z"
-                                              fill="currentColor" stroke="none" stroke-linecap="round"
-                                              stroke-linejoin="round" stroke-width="0"></path>
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
-                         x-show="open" x-cloak>
-                        <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
-                             @click="open = false"></div>
-
-                        <!-- A basic modal dialog with title, body and one button to close -->
-                        <div class="h-auto p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
-
-
-                            <div class="container">
-                                <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                            type="video/mp4" size="576">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                            type="video/mp4" size="720">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                            type="video/mp4" size="1080">
-
-                                    <!-- Caption files -->
-                                    <track kind="captions" label="English" srclang="en"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                           default>
-                                    <track kind="captions" label="Français" srclang="fr"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
-                                    <!-- Fallback for browsers that don't support the <video> element -->
-                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                       download>Download</a>
-                                </video>
-                            </div>
-                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
-
-
-                            <!-- One big close button.  --->
-                            <div class="mt-5 sm:mt-6">
-                    <span class="flex js-pause2 w-full shadow-sm">
-                      <button @click="open = false"
-                              class="btn-1 bg-gray-900 hover:bg-gray-700">
-                        Fermer la vidéo
-                      </button>
-                    </span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <header class="relative flex items-center justify-center h-screen  overflow-hidden text-center">
+        <div class="title-1 relative z-30 p-5 bg-gray-900 bg-opacity-50 rounded-sm">
+            <h1 class="title-1 text-7xl text-white">Investissez en vous !</h1>
+            <p class="body-1 text-white my-5">Formations, coachings, investissements clés en main.<br>Devenez un expert de
+                l'investissement immobilier</p>
         </div>
-
-    </main>
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+            <source src="{{ asset('videos/city.mp4') }}" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+        <a class="transform animate-bounce z-20 absolute w-6 h-6 right-1/2 flex items-center justify-center bottom-5 left-1/2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="12" height="12">
+                <g transform="matrix(10,0,0,10,0,0)">
+                    <path d="M.5,3.854,6.646,10a.5.5,0,0,0,.708,0L13.5,3.854" fill="none" stroke="#fff"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+        </a>
+    </header>
 
     {# BULLET POINTS #}
     <section class=" bg-white py-20">
@@ -141,7 +71,7 @@
 
     {# CARD SEMINAIRE #}
     <section class="w-full ">
-        <div class="max-w-4xl px-8 pt-20 mx-auto">
+        <div class="max-w-4xl px-8 py-20 mx-auto">
 
             <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
@@ -175,7 +105,7 @@
 
 
     {# PACK 5 FORMATIONS #}
-    <section class="py-8 lg:py-20 lg:my-32 w-full bg-white ">
+    <section class="py-12 lg:py-32 w-full bg-white ">
         <div class="container mx-auto px-4 max-w-5xl w-full mx-auto">
             <div class="flex flex-wrap md:flex-nowrap items-center justify-items-center mx-auto">
                 <div class="mb-12 lg:mb-0 md:ml-12 block mx-auto md:w-1/2 px-4">
@@ -288,32 +218,33 @@
         </div>
     </section>
 
-    {# COACHING #}
+    {# CONTACT #}
+    {% include 'shared/_contact.html.twig' %}
 
-    <section class="bg-gray-50 w-full py-20">
+    {# CARD Accompagnement #}
+    <section class="w-full ">
+        <div class="max-w-4xl px-8 py-20 mx-auto">
 
-
-        <div class="max-w-3xl mx-auto">
-
-            {# FORMATION 1 #}
-
-            <div class="w-full px-4 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:col-span-1">
-                    <a href="{{ path('bon') }}">
+            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                <div class="w-full  max-w-sm md:col-span-1">
+                    <a href="">
                         <img
-                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
-                        <h2 class="mb-3 title-3">
-                            Trouver le bon bien
-                        </h2>
-                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Tous les sites et toutes les
-                            techniques pour trouver le bon bien sur internet et pour effectuer des visites efficaces.
-                            Validez tous les points de la check List et sélectionnez le meilleur bien en termes de
-                            rentabilité ...</p>
-                        <div>
+                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto ">
+                        <h2 class="subtitle-2">Coaching</h2>
+                        <h3 class="title-2 py-5">Un accompagnement pas à pas</h3>
+
+                        <p class="body-2 mt-5">Faites le choix de rejoindre d’autres investisseurs dans un programme
+                            d’un an. Accompagnement, rencontres, formations, aides, support … Tout ce dont vous avez
+                            besoin pour réussir sereinement vos investissements.</p>
+
+                        <div class="flex mt-2 items-center pb-5">
+                        </div>
+                        <div class="">
+
                             <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
                                href="{{ path('bon') }}">En savoir plus</a>
                         </div>
@@ -325,9 +256,9 @@
 
 
     {# SERVICES #}
-    <section>
+    <section class="py-32">
 
-        <div class="py-20 bg-gray-50 radius-for-skewed">
+        <div class="py-20 bg-gray-50 max-w-6xl mx-auto radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center">
                     <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
@@ -385,274 +316,21 @@
 
     </section>
 
-    <section>
 
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center -mx-4">
-                    <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
-                        <div class="max-w-md">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                            <h2 class="text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without
-                                problems</h2>
-                            <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                            <ul class="mb-8 text-gray-500 font-bold">
-                                <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Vestibulum viverra ante non libero</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Morbi mollis metus pretium ultrices tincidunt</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg class="w-5 h-5 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Etiam lectus nunc, commodo et risus in</span>
-                                </li>
-                            </ul>
-                            <div><a href="#"><img class="mb-2 mr-6 inline-block"
-                                                  src="atis-assets/logo/brands/google-play-store.png" alt=""></a><a
-                                        href="#"><img class="mb-2 inline-block"
-                                                      src="atis-assets/logo/brands/app-store-download.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="transform -rotate-12 flex items-center w-full lg:w-1/2 px-4">
-                        <div class="w-1/3"><img src="atis-assets/illustrations/book-detail-full.png" alt=""></div>
-                        <div class="w-1/3"><img src="atis-assets/illustrations/login-full.png" alt=""><img
-                                    src="atis-assets/illustrations/details-full.png" alt=""></div>
-                        <div class="w-1/3"><img src="atis-assets/illustrations/home.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    {% include 'shared/_aboutZone.html.twig' with {
+        'aboutText' : "15 000 € de revenus par mois sans rien faire. Ça vous laisse rêveur ? Moi aussi …
+Il y a 2 ans, je ne pensais pas que cela serait possible. Je n'aurai même pas imaginé qu'un ancien agriculteur comme moi puisse y arriver.
+<br>
+En 18 mois, mes investissements immobiliers m'ont permis de sortir de ma routine, de changer de vie, de quitter mon travail et de vivre uniquement de mes rentes.
+<br>
+Je vous livre dans ces 5 formations mes astuces pour réussir vos investissements immobiliers et devenir rentier à plein temps.
+"
+    } %}
 
-    </section>
 
-    <section class="">
 
-        <div class="bg-gray-50 pt-12 lg:pt-20 pb-20">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap -mx-4">
 
-                    <div class="w-full lg:w-1/2 px-4 flex items-center justify-center">
-                        <div class="relative" style="z-index: 0;"><img
-                                    class="h-128 w-full max-w-lg object-cover rounded-3xl md:rounded-br-none"
-                                    src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
-                                    alt=""><img class="hidden md:block absolute"
-                                                style="top:-2rem; right: 3rem; z-index: -1;"
-                                                src="atis-assets/elements/green-dark-up.svg" alt=""><img
-                                    class="hidden md:block absolute" style="bottom:-2rem; right: -2rem; z-index: -1;"
-                                    src="atis-assets/elements/wing-green-down.svg" alt=""><img
-                                    class="hidden md:block absolute" style="top:3rem; right: -3rem; z-index: -1;"
-                                    src="atis-assets/elements/bullets-gray-right.svg" alt=""><img
-                                    class="hidden md:block absolute" style="bottom:2.5rem; left: -4.5rem; z-index: -1;"
-                                    src="atis-assets/elements/bullets-gray-left.svg" alt=""></div>
-                    </div>
-                    <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
-                        <div class="w-full text-center lg:text-left">
-                            <div class="max-w-md mx-auto lg:mx-0">
-                                <h2 class="mb-3 text-4xl lg:text-5xl font-bold font-heading">
-                                    <span>Build &amp; Launch without</span>
-                                    <span class="text-green-600">problems</span>
-                                </h2>
-                            </div>
-                            <div class="max-w-sm mx-auto lg:mx-0">
-                                <p class="mb-6 text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                                <div>
-                                    <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200"
-                                       href="#">Get Started</a><a
-                                            class="inline-block w-full lg:w-auto py-2 px-6 leading-loose font-semibold bg-white hover:bg-gray-50 rounded-l-xl rounded-t-xl transition duration-200"
-                                            href="#">How it works</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </section>
-    <section>
-
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-xl mx-auto text-center">
-                    <img class="mb-6 mx-auto" src="atis-assets/logo/atis/atis-mono-sign.svg" alt="">
-                    <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">So much more than a business analytics
-                        tool</h2>
-                    <p class="mb-8 text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                    <form class="mx-auto" action="">
-                        <div class="max-w-md mx-auto flex flex-wrap items-center">
-                            <input class="flex-grow py-3 px-4 mr-4 text-xs rounded leading-loose" type="email"
-                                   placeholder="example@shuffle.dev">
-                            <button class="w-auto py-2 px-6 rounded-t-xl rounded-l-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200">
-                                Sign Up
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <section>
-
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
-                        <div class="max-w-md lg:mx-auto">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                            <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without
-                                problems</h2>
-                            <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                            <ul class="text-gray-500 font-bold">
-                                <li class="flex mb-4">
-                                    <svg class="mr-2 w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Vestibulum viverra ante non libero</span>
-                                </li>
-                                <li class="flex mb-4">
-                                    <svg class="mr-2 w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Morbi mollis metus pretium ultrices tincidunt</span>
-                                </li>
-                                <li class="flex mb-4">
-                                    <svg class="mr-2 w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg"
-                                         viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Etiam lectus nunc, commodo et risus in</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-wrap -mx-4">
-                        <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
-                            <div class="mb-8 py-6 pl-6 pr-4 shadow rounded bg-white">
-              <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
-                <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-              </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet</h4>
-                                <p class="text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                            <div class="py-6 pl-6 pr-4 shadow rounded bg-white">
-              <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
-                <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                     fill="currentColor">
-                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                </svg>
-              </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet</h4>
-                                <p class="text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="w-full md:w-1/2 lg:mt-20 px-4">
-                            <div class="mb-8 py-6 pl-6 pr-4 shadow rounded-lg bg-white">
-              <span class="mb-4 inline-block p-3 rounded bg-green-100">
-                <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-              </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet</h4>
-                                <p class="text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                            <div class="py-6 pl-6 pr-4 shadow rounded-lg bg-white">
-              <span class="mb-4 inline-block p-3 rounded bg-green-100">
-                <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                     fill="currentColor">
-                  <path fill-rule="evenodd"
-                        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                  <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
-                </svg>
-              </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet</h4>
-                                <p class="text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section>
-
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
-                    <div class="mb-8 p-6 flex flex-wrap items-center bg-white rounded-lg shadow">
-                        <div class="w-full lg:w-1/3"><img class="mb-5 lg:mb-0 w-full rounded-lg object-cover"
-                                                          style="max-height: 350px;"
-                                                          src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
-                                                          alt=""></div>
-                        <div class="w-full lg:w-2/3">
-                            <div class="max-w-lg mx-auto">
-                                <p class="mb-8 text-2xl text-gray-500">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat
-                                    finibus, ac condimentum ligula ornare.</p>
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h4 class="text-2xl font-bold font-heading">Alice Bradley</h4>
-                                        <p class="text-blueGrey-500">Backend Developer</p>
-                                    </div>
-                                    <a href="#"><img src="atis-assets/social/facebook-name.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="max-w-md mx-auto text-center">
-                        <button class="mr-1 bg-gray-200 rounded-full p-1"></button>
-                        <button class="mr-1 bg-gray-200 rounded-full p-1"></button>
-                        <button class="mr-1 bg-green-600 rounded-full p-1"></button>
-                        <button class="bg-gray-200 rounded-full p-1"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
 
     {# AVIS CLIENT #}
     <section>
