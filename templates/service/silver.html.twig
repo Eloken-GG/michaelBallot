@@ -8,7 +8,7 @@
 
     {# HERO SECTION #}
 
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
+    <main x-data="{ open: false }"  class="bg-cover bg-no-repeat border-black bg-gray-900"
              style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
@@ -16,6 +16,50 @@
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
                             <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                                <nav class="lg:block hidden mb-10 font-raleway justify-start text-gray-100 opacity-50"
+                                     aria-label="Breadcrumb">
+                                    <ol class="flex items-center justify-start mx-auto space-x-4">
+                                        <li>
+                                            <div>
+                                                <a href="{{ path('homepage') }}" class="hover:text-gray-300">
+                                                    <!-- Heroicon name: solid/home -->
+                                                    <svg class="flex-shrink-0 h-5 w-5"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                                    </svg>
+                                                    <span class="sr-only">Accueil</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-center">
+                                                <!-- Heroicon name: solid/chevron-right -->
+                                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path fill-rule="evenodd"
+                                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                          clip-rule="evenodd"/>
+                                                </svg>
+                                                <a href="{{ path('service') }}"
+                                                   class="ml-4 text-sm font-light hover:text-gray-300">Services</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-center">
+                                                <!-- Heroicon name: solid/chevron-right -->
+                                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path fill-rule="evenodd"
+                                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                          clip-rule="evenodd"/>
+                                                </svg>
+                                                <a href="{{ path('silver') }}" aria-current="page"
+                                                   class="ml-4 text-sm font-light hover:text-gray-300">Offre Silver</a>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </nav>
                                 <h1 class="title-1 text-white">
                                     Achat & revente d’un bien
                                 </h1>
@@ -40,7 +84,7 @@
             </div>
         </div>
 
-    </section>
+    </main>
 
 
 

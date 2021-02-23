@@ -1,4 +1,4 @@
-import { Controller } from 'stimulus';
+import {Controller} from 'stimulus';
 import Plyr from "plyr";
 import ScrollReveal from "scrollreveal";
 
@@ -14,6 +14,7 @@ export default class extends Controller {
 
     _onConnect(event) {
         document.addEventListener('swup:contentReplaced', (event) => {
+            window.scrollTo(0, 0);
             // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
             const player = new Plyr('#player');
             console.log('DOM fully loaded and parsed');
@@ -47,12 +48,18 @@ export default class extends Controller {
 
             // Animation of headline, tagline and punchline
             ScrollReveal().reveal('.headline');
-            ScrollReveal().reveal('.tagline', { delay: 500 });
-            ScrollReveal().reveal('.punchline', { delay: 2000 });
-            ScrollReveal().reveal('.highline', { delay: 1000 });
+            ScrollReveal().reveal('.tagline', {delay: 500});
+            ScrollReveal().reveal('.punchline', {delay: 2000});
+            ScrollReveal().reveal('.highline', {delay: 1000});
         });
 
+
+
+
+
+
     }
+
 
 
 }
