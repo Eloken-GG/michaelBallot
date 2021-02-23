@@ -10,8 +10,15 @@ class LegalController extends AbstractController
 {
     // Display the mention page.
     #[Route('/mentions-legales', name: 'mention')]
-    public function index()
+    public function mention()
     {
-        return $this->render('legal/index.html.twig');
+        return $this->render('legal/mention.html.twig');
+    }
+
+    // Display the CGU page.
+    #[Route('/conditions-generales-utilisation', name: 'cgu')]
+    public function cgu()
+    {
+        return $this->render('legal/cgu.html.twig');
     }
 }

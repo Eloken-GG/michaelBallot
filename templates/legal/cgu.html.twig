@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{# BLOC TITLE #}
+{% block title %}{% endblock %}
+
+{# BLOC BODY #}
+{% block body %}
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="mb-10 border-t border-b divide-y">
+            <div class="grid py-8 sm:grid-cols-4">
+                <div class="mb-4 sm:mb-0">
+                </div>
+                <div class="sm:col-span-3 lg:col-span-2">
+                    <div class="mb-3">
+                        <a href="/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700">
+                            <p class="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
+                                Tell them I hate them
+                            </p>
+                        </a>
+                    </div>
+                    <p class="text-gray-700">
+                        Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{{ asset('files/cgu.pdf') }}" target="_blank">
+                <button class="bg-grey-400 hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                    <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                    <span>CGU</span>
+                </button>
+            </a>
+        </div>
+    </div>
+{% endblock %}
