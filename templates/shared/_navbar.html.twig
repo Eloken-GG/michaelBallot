@@ -1,18 +1,24 @@
 <!--------------------- DESKTOP MENU --------------------->
 
-<div x-data="{ mobileMenuOpen: true }" class="bg-white fixed top-0 w-screen z-30 shadow-sm">
+<div x-data="{ mobileMenuOpen: false }" class="bg-white fixed top-0 w-screen z-30 shadow-sm">
     <div class="w-full mx-auto px-4 sm:px-5">
-        <div class="flex max-w-7xl mx-auto justify-between items-center  py-6 items-center md:justify-start md:space-x-10">
-            <div class="flex justify-start lg:w-0 lg:flex-1">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:flex max-w-7xl mx-auto justify-between items-center  py-6 items-center  lg:space-x-10">
 
-                {# Brand #}
+            {# LOGO #}
+            <div class="flex md:order-1 lg:order-0 md:mx-auto justify-start md:justify-center lg:justify-start">
                 <a href="{{ path('homepage') }}">
                     <span class="sr-only">Michael Ballot Formation</span>
-                    <img class="h-8 w-auto sm:h-10" src="{{ asset('images/logo/michael-ballot-logo.png') }}"
+                    <img class="h-auto max-h-12 hidden lg:block w-auto"
+                         src="{{ asset('images/logo/michael-ballot-logo.png') }}"
+                         alt="Logo Michael Ballot formation : coaching immobilier">
+                    <img class="h-8 w-auto lg:hidden sm:h-10" src="{{ asset('images/logo/logo michael ballot.png') }}"
                          alt="Logo Michael Ballot formation : coaching immobilier">
                 </a>
             </div>
-            <div class="-mr-2 -my-2 md:hidden">
+
+            {# BURGER MENU OPEN #}
+            <div class="-mr-2 -my-2 md:order-0 justify-self-end md:justify-self-start lg:hidden"
+                 @click="mobileMenuOpen = true">
                 <button type="button"
                         class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span class="sr-only">Ouvrir le menu</span>
@@ -23,7 +29,7 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-10">
+            <nav class="hidden lg:order-1 w-full lg:flex justify-center justify-self-start mx-auto space-x-10 ">
 
                 {# Flyout Menu of "Formations" #}
 
@@ -225,34 +231,32 @@
                                     <a href="{{ path('formations') }}"
                                        class="-m-3 p-3 flex items-center rounded-lg">
 
-                                        {# <div class="ml-auto mt-auto self-end justify-self-end"> #}
-                                        {# <p class="text-base items-center flex font-medium text-gray-900 font-playfair"> #}
-                                        {# Voir toutes les formations <span class="ml-2 w-4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="12" height="12"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path d="M.75,10a1.5,1.5,0,0,1,1.5-1.5H16.5V5.011c0-.272.163-.343.362-.158l6.149,6.1a.75.75,0,0,1,0,1.1l-6.149,6.1c-.2.185-.362.114-.362-.158V14.5H2.25A1.5,1.5,0,0,1,.75,13Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></g></svg></span> #}
-                                        {# </p> #}
 
-                                        {# </div> #}
                                         <button class="mx-auto btn-1 bg-gray-100 hover:bg-gray-200 text-gray-900">
                                             Toutes les formations
                                         </button>
                                     </a>
 
                                 </div>
+
                                 <div class="p-5 bg-gray-100 sm:p-8">
                                     <a href="{{ path('pack') }}"
                                        class="-m-3 p-3 flow-root rounded-md hover:bg-gray-200 transition ease-in-out duration-150">
-            <span class="flex items-center">
-              <span class="text-lg font-bold text-gray-900 font-playfair">
-                Pack de 5 formations
-              </span>
-              <span class="ml-3 inline-flex font-raleway uppercase items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-pink-50 text-pink-600">
-                - 33% réduction
-              </span>
-            </span>
+                                            <span class="flex items-center">
+                                                <span class="text-lg font-bold text-gray-900 font-playfair">
+                                                    Pack de 5 formations
+                                                </span>
+                                                <span class="ml-3 inline-flex font-raleway uppercase items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-pink-50 text-pink-600">
+                                                    - 33% réduction
+                                                </span>
+                                            </span>
                                         <span class="mt-1 block text-sm text-gray-500 font-raleway">
-              Devenez rentier immobillier et vivez de vos investissements.
-            </span>
+                                            Devenez rentier immobillier et vivez de vos investissements.
+                                            </span>
                                     </a>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -408,7 +412,7 @@
                                                           transform="translate(22.173 30.057)" fill="#fff"/>
                                                 </g>
                                             </svg>
-                                            
+
 
                                         </div>
                                         <div class="ml-4">
@@ -421,9 +425,6 @@
                                             </p>
                                         </div>
                                     </a>
-
-
-
 
 
                                 </div>
@@ -454,18 +455,20 @@
                 </a>
 
                 {# Link to seminar page #}
-                <a href="{{ path('seminaire') }}" class="ttext-gray-500 inline-flex items-center body-2 hover:text-gray-900 hover:font-semi-bold">
+                <a href="{{ path('seminaire') }}"
+                   class="ttext-gray-500 inline-flex items-center body-2 hover:text-gray-900 hover:font-semi-bold">
                     Séminaire
                 </a>
 
                 {# Link to contact page #}
-                <a href="{{ path('contact') }}" class="text-gray-500 inline-flex items-center body-2 hover:text-gray-900 hover:font-semi-bold">
+                <a href="{{ path('contact') }}"
+                   class="text-gray-500 inline-flex items-center body-2 hover:text-gray-900 hover:font-semi-bold">
                     Contact
                 </a>
             </nav>
 
-            {# Link to connection page #}
-            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {# CTA #}
+            <div class="hidden md:flex md:order-2 items-center justify-end md:flex-1 ">
                 <a href="#"
                    class="btn-1 py-3 bg-gray-900 hover:bg-pink-600">
                     Connexion
@@ -478,18 +481,15 @@
 
     <!--------------------- MOBILE MENU --------------------->
 
-    <div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen"
+    <div x-description="Mobile menu, show/hide based on mobile menu state." x-cloak x-show="mobileMenuOpen"
          x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95"
          x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in"
          x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
-         class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+         class="absolute top-0  inset-x-0 p-2 transition transform origin-top-right lg:hidden">
         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div class="pt-5 pb-6 px-5">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                             alt="Workflow">
-                    </div>
+                <div class="flex items-center justify-end md:justify-start">
+
                     <div class="-mr-2">
                         <button @click="mobileMenuOpen = false" type="button"
                                 class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

@@ -20,11 +20,12 @@
     {% block stylesheets %}
 
         {# PLYR #}
-        <link rel="stylesheet" href="{{ asset('css/plyr.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/plyr.css') }}"/>
 
         {# FONTS #}
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+              rel="stylesheet">
 
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
@@ -32,31 +33,33 @@
 </head>
 
 {# BODY #}
-<body data-controller="symfony--ux-swup--swup hello" data-containers="#swup #nav"  data-theme="slide" data-cache="data-cache" class="bg-gray-50" id="cover">
+<body data-controller="symfony--ux-swup--swup hello" data-containers="#swup #nav" data-theme="slide"
+      data-cache="data-cache" class="bg-gray-50 overflow-x-hidden" id="cover">
 
-    {# NAVBAR #}
-    <nav id="nav">
-        {% include 'shared/_navbar.html.twig' %}
-    </nav>
+{# NAVBAR #}
+<nav id="nav">
+    {% include 'shared/_navbar.html.twig' %}
+</nav>
 
-        <div id="swup">
-            {# FLASHES #}
-            {% include 'shared/_flashes.html.twig' %}
+<div id="swup">
+    {# FLASHES #}
+    {% include 'shared/_flashes.html.twig' %}
 
-            {# CONTAINER #}
-{#            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">#}
+    {# CONTAINER #}
+    {# <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> #}
 
-                {# BLOC BODY #}
-                {% block body %}
-                {% endblock %}
-{#            </div>#}
-
-
-            {# COOKIES #}
-            {% include 'shared/_cookies.html.twig' %}
-        </div>
+    {# BLOC BODY #}
+    {% block body %}
+    {% endblock %}
+    {# </div> #}
 
 
+    {# COOKIES #}
+    {% include 'shared/_cookies.html.twig' %}
+</div>
+
+
+<<<<<<< Updated upstream
     {# FOOTER #}
     <footer class="bg-white">
         {% include 'shared/_footer.html.twig' %}
@@ -66,6 +69,18 @@
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
+=======
+{# FOOTER #}
+{% include 'shared/_footer.html.twig' %}
+
+{# BLOC JAVASCRIPT #}
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    <script>$(window).on('load', function () {
+            $("#cover").hide();
+        });</script>
+{% endblock %}
+>>>>>>> Stashed changes
 
 </body>
 </html>
