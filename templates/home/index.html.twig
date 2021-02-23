@@ -5,158 +5,379 @@
 
 {# BLOC BODY #}
 {% block body %}
-    <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
-        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-                <h1>
-                    <span class="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">Coming soon</span>
-                    <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-              <span class="block text-gray-900">Data to enrich your</span>
-              <span class="block text-indigo-600">online business</span>
-            </span>
-                </h1>
-                <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                    amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-                </p>
-                <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                    <p class="text-base font-medium text-gray-900">
-                        Sign up to get notified when it’s ready.
-                    </p>
-                    <form action="#" method="POST" class="mt-3 sm:flex">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="text" name="email" id="email"
-                               class="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:flex-1 border-gray-300"
-                               placeholder="Enter your email">
-                        <button type="submit"
-                                class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                            Notify me
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-                <svg class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
-                     width="640" height="784" fill="none" viewBox="0 0 640 784" aria-hidden="true">
-                    <defs>
-                        <pattern id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e" x="118" y="0" width="20" height="20"
-                                 patternUnits="userSpaceOnUse">
-                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
-                        </pattern>
-                    </defs>
-                    <rect y="72" width="640" height="640" class="text-gray-50" fill="currentColor"/>
-                    <rect x="118" width="404" height="784" fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"/>
-                </svg>
-                <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-                    <button type="button"
-                            class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <span class="sr-only">Watch our video to learn more</span>
-                        <img class="w-full"
-                             src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                             alt="">
-                        <div class="absolute inset-0 w-full h-full flex items-center justify-center" aria-hidden="true">
-                            <svg class="h-20 w-20 text-indigo-500" fill="currentColor" viewBox="0 0 84 84">
-                                <circle opacity="0.9" cx="42" cy="42" r="42" fill="white"/>
-                                <path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z"/>
-                            </svg>
+    <main x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
+          style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+        <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
+            <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
+                <div class="flex flex-wrap items-center -mx-3">
+                    <div class="w-full lg:w-1/2 px-3">
+                        <div class="py-12">
+                            <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                                <h1 class="title-1 text-white">
+                                    Investissez en&nbsp;vous&nbsp;!
+                                </h1>
+                                <p class="body-1 mt-12 text-white">Formations, coachings, investissements clés en main.
+                                    Devenez un expert de l'investissement immobilier</p>
+                            </div>
+                            <button class="btn-1 mx-auto block lg:mx-0 hover:bg-gray-900 bg-rose-600">
+                                Les formations
+                            </button>
                         </div>
-                    </button>
+                    </div>
+
+
+                    <div class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
+                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
+                             src="https://picsum.photos/700/400"
+                             alt="">
+                        <div class="absolute  inset-0 flex items-center justify-center">
+                            <button @click="open = true"
+                                    class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="12" height="12">
+                                    <g transform="matrix(14,0,0,14,0,0)">
+                                        <path d="M8.266,3.563,3.7.316h0A1.686,1.686,0,0,0,1.916.2,1.754,1.754,0,0,0,1,1.753V8.247A1.753,1.753,0,0,0,1.916,9.8,1.687,1.687,0,0,0,3.7,9.685L8.266,6.438a1.775,1.775,0,0,0,0-2.875Z"
+                                              fill="currentColor" stroke="none" stroke-linecap="round"
+                                              stroke-linejoin="round" stroke-width="0"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
+                         x-show="open" x-cloak>
+                        <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
+                             @click="open = false"></div>
+
+                        <!-- A basic modal dialog with title, body and one button to close -->
+                        <div class="h-auto p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
+
+
+                            <div class="container">
+                                <video id="player" controls crossorigin playsinline
+                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                            type="video/mp4" size="576">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                                            type="video/mp4" size="720">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                                            type="video/mp4" size="1080">
+
+                                    <!-- Caption files -->
+                                    <track kind="captions" label="English" srclang="en"
+                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                                           default>
+                                    <track kind="captions" label="Français" srclang="fr"
+                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                                    <!-- Fallback for browsers that don't support the <video> element -->
+                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                       download>Download</a>
+                                </video>
+                            </div>
+                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                            <!-- One big close button.  --->
+                            <div class="mt-5 sm:mt-6">
+                    <span class="flex js-pause2 w-full shadow-sm">
+                      <button @click="open = false"
+                              class="btn-1 bg-gray-900 hover:bg-gray-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
+
+    {# BULLET POINTS #}
+    <section class=" bg-white py-20">
+        <div class="container max-w-7xl px-4 mx-auto">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/3 px-3 mb-6">
+                    <div class="p-6 ">
+                        <span class="title-1 font-bold text-pink-600">+10</span>
+                        <p class="title-3 font-bold">années d'expériences</p>
+                        <p class="body-2 mt-5">
+                            J’ai commencé dans l’immobilier en tant que constructeur. Depuis j’ai quitté mon travail et
+                            je
+                            vis uniquement de mes rentes.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-3 mb-6">
+                    <div class="p-6 ">
+
+                        <span class="title-1 font-bold text-pink-600">+20</span>
+                        <p class="title-3 font-bold">élèves accompagnés</p>
+                        <p class="body-2 mt-5">
+                            Après un an de lancement, j’ai pu accompagner et aider plus de 20 investisseurs novices ou
+                            confirmés à réaliser leurs rêves.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-3 mb-6">
+                    <div class="p-6">
+                        <span class="title-1 font-bold text-pink-600">+100</span>
+                        <p class="title-3 font-bold">projets immobiliers
+                        </p>
+                        <p class="body-2 mt-5">
+                            En plus de 10 ans j’ai aidé des centaines de personnes à construire leurs maisons, acheter
+                            un
+                            immeuble, louer leurs biens …
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {# CARD SEMINAIRE #}
+    <section class="w-full ">
+        <div class="max-w-4xl px-8 pt-20 mx-auto">
+
+            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                <div class="w-full  max-w-sm md:col-span-1">
+                    <a href="">
+                        <img
+                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                src="https://picsum.photos/200/300" alt=""></a>
+                </div>
+                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto ">
+                        <h2 class="subtitle-2">évènement</h2>
+                        <h3 class="title-2 py-5">Participer au séminaire immobilier ! </h3>
+
+                        <p class="body-2 mt-5">Carolin Arthaud et Tony Jazz ainsi que 8 autres intervenants
+                            investisseurs professionnels seront présents lors d’un séminaire immobilier exceptionnel en
+                            Mars !</p>
+
+                        <div class="flex mt-2 items-center pb-5">
+                        </div>
+                        <div class="">
+
+                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                               href="{{ path('bon') }}">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {# PACK 5 FORMATIONS #}
+    <section class="py-8 lg:py-20 lg:my-32 w-full bg-white ">
+        <div class="container mx-auto px-4 max-w-5xl w-full mx-auto">
+            <div class="flex flex-wrap md:flex-nowrap items-center justify-items-center mx-auto">
+                <div class="mb-12 lg:mb-0 md:ml-12 block mx-auto md:w-1/2 px-4">
+                    <div class="max-w-md">
+                        <span class="subtitle-2 block mb-5">Formations</span>
+                        <h2 class="title-2">Formez-vous et devenez financièrement indépendant</h2>
+                        <p class="body-2 mt-5">Pour se lancer dans l’investissement immobilier , nous avons conçu 5
+                            formations qui résument l’ensemble des étapes pour devenir financièrement indépendant et
+                            vivre de sa rente.</p>
+
+                        <ul class="my-8 text-gray-500 font-raleway tracking-tight font-xs">
+                            <li class="mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="14" height="14">
+                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                                <span class="ml-4">Trouver le bon bien</span>
+                            </li>
+                            <li class="mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="14" height="14">
+                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                                <span class="ml-4">Réussir son dossier bancaire</span>
+                            </li>
+                            <li class="mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="14" height="14">
+                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                                <span class="ml-4">Construire la maison de ses rêves</span>
+                            </li>
+                            <li class="mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="14" height="14">
+                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                                <span class="ml-4">La double construction en projet locatif</span>
+                            </li>
+                            <li class="mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="14" height="14">
+                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                              stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                                <span class="ml-4">Investir dans un immeuble de rapport</span>
+                            </li>
+
+                        </ul>
+                        <div class="flex pb-8">
+                            <a href="{{ path('pack') }}">
+                                <button class="btn-1 bg-pink-600 hover:bg-gray-900">Voir l'offre</button>
+                            </a>
+                            <span class="inline-flex align-center ml-5 items-center px-2 py-0.5 rounded text-xs font-medium font-raleway bg-pink-100 text-pink-500">
+
+                                <svg class="mr-1.5 w-4 text-pink-500" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="25" height="25"><g
+                                            transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><path
+                                                d="M23.5,15a3,3,0,0,1,0-6V5.5a1,1,0,0,0-1-1H1.5a1,1,0,0,0-1,1V9a3,3,0,0,1,0,6v3.5a1,1,0,0,0,1,1h21a1,1,0,0,0,1-1Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round"></path><path d="M8 16L16 8" fill="none"
+                                                                                     stroke="currentColor"
+                                                                                     stroke-linecap="round"
+                                                                                     stroke-linejoin="round"></path><path
+                                                d="M7.500 9.000 A1.500 1.500 0 1 0 10.500 9.000 A1.500 1.500 0 1 0 7.500 9.000 Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round"></path><path
+                                                d="M13.500 15.000 A1.500 1.500 0 1 0 16.500 15.000 A1.500 1.500 0 1 0 13.500 15.000 Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round"></path></g></svg>
+                                 30% de réduction
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="transform mx-auto -rotate-12 flex items- md:w-1/3 lg:w-1/2 max-w-md l px-4">
+                    <div class="w-1/3 transform translate-y-12">
+                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                    </div>
+                    <div class="w-1/3 transform -translate-y-6">
+                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                    </div>
+                    <div class="w-1/3 transform translate-y-6">
+                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# COACHING #}
+
+    <section class="bg-gray-50 w-full py-20">
+
+
+        <div class="max-w-3xl mx-auto">
+
+            {# FORMATION 1 #}
+
+            <div class="w-full px-4 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                <div class="w-full lg:col-span-1">
+                    <a href="{{ path('bon') }}">
+                        <img
+                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                src="https://picsum.photos/200/300" alt=""></a>
+                </div>
+                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto">
+                        <h2 class="mb-3 title-3">
+                            Trouver le bon bien
+                        </h2>
+                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Tous les sites et toutes les
+                            techniques pour trouver le bon bien sur internet et pour effectuer des visites efficaces.
+                            Validez tous les points de la check List et sélectionnez le meilleur bien en termes de
+                            rentabilité ...</p>
+                        <div>
+                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                               href="{{ path('bon') }}">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {# SERVICES #}
     <section>
 
         <div class="py-20 bg-gray-50 radius-for-skewed">
             <div class="container mx-auto px-4">
-                <div class="mb-16 max-w-md mx-auto text-center">
-                    <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without problems</h2>
-                </div>
-                <div class="flex flex-wrap -mx-4">
-                    <div class="mb-8 lg:mb-0 w-full lg:w-1/3 px-4">
-                        <div class="py-12 px-6 bg-white rounded shadow text-center">
-            <span class="mb-6 inline-block p-2 rounded-lg bg-green-100">
-              <svg class="w-10 h-10 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                   stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-            </span>
-                            <h3 class="px-8 mb-4 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet</h3>
-                            <p class="text-gray-500">Fusce quam tellus, placerat eu metus ut, viverra aliquet purus.</p>
-                        </div>
-                    </div>
-                    <div class="mb-8 lg:mb-0 w-full lg:w-1/3 px-4">
-                        <div class="py-12 px-6 bg-white rounded shadow text-center">
-            <span class="mb-6 inline-block p-2 rounded-lg bg-green-100">
-              <svg class="w-10 h-10 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                   fill="currentColor">
-                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-              </svg>
-            </span>
-                            <h3 class="px-8 mb-4 text-2xl font-bold font-heading">Ut congue nec leo eget aliquam</h3>
-                            <p class="text-gray-500">Ut tempus tellus ac nisi vestibulum tempus. Nunc tincidunt lectus
-                                libero.</p>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/3 px-4">
-                        <div class="py-12 px-6 bg-white rounded shadow text-center">
-            <span class="mb-6 inline-block p-2 rounded bg-green-100">
-              <svg class="w-10 h-10 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                   stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-            </span>
-                            <h3 class="px-8 mb-4 text-2xl font-bold font-heading">Proin fringilla eleifend justo</h3>
-                            <p class="text-gray-500">Donec ut ligula nunc. Mauris blandit vel est et facilisis. Integer
-                                sapien felis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                        <div class="max-w-sm lg:mx-auto">
+                            <span class="subtitle-2">Services</span>
+                            <h2 class="my-2 title-2">Des investissements clés en main</h2>
+                            <p class="my-6 text-gray-500 body-2">Vous avez du capital dormant et souhaitez l’investir
+                                dans la pierre mais n’avez pas le temps de vous en occuper ? Je prends en charge
+                                l’ensemble de votre investissement en fonction de vos objectifs.</p>
 
-    </section>
-
-    <section class="">
-
-        <div class="bg-gray-50 pt-12 lg:pt-20 pb-20">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
-                        <div class="w-full text-center lg:text-left">
-                            <div class="max-w-md mx-auto lg:mx-0">
-                                <h2 class="mb-3 text-4xl lg:text-5xl font-bold font-heading">
-                                    <span>Build &amp; Launch without</span>
-                                    <span class="text-green-600">problems</span>
-                                </h2>
-                            </div>
-                            <div class="max-w-sm mx-auto lg:mx-0">
-                                <p class="mb-6 text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                                <div>
-                                    <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200"
-                                       href="#">Get Started</a><a
-                                            class="inline-block w-full lg:w-auto py-2 px-6 leading-loose font-semibold bg-white hover:bg-gray-50 rounded-l-xl rounded-t-xl transition duration-200"
-                                            href="#">How it works</a></div>
-                            </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2 px-4 flex items-center justify-center">
-                        <div class="relative" style="z-index: 0;"><img
-                                    class="h-128 w-full max-w-lg object-cover rounded-3xl md:rounded-br-none"
-                                    src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
-                                    alt=""><img class="hidden md:block absolute"
-                                                style="top:-2rem; right: 3rem; z-index: -1;"
-                                                src="atis-assets/elements/green-dark-up.svg" alt=""><img
-                                    class="hidden md:block absolute" style="bottom:-2rem; right: -2rem; z-index: -1;"
-                                    src="atis-assets/elements/wing-green-down.svg" alt=""><img
-                                    class="hidden md:block absolute" style="top:3rem; right: -3rem; z-index: -1;"
-                                    src="atis-assets/elements/bullets-gray-right.svg" alt=""><img
-                                    class="hidden md:block absolute" style="bottom:2.5rem; left: -4.5rem; z-index: -1;"
-                                    src="atis-assets/elements/bullets-gray-left.svg" alt=""></div>
+                    <div class="w-full lg:w-1/2 flex flex-wrap -mx-4">
+                        <div class="mb-8 lg:mb-0 w-full  md:w-1/2 px-4">
+                            <a href=""
+                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Silver</h4>
+                                    <p class="font-raleway text-xs text-white">Achat et revente d'un bien</p>
+                                </div>
+                            </a>
+                            <a href=""
+                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Gold</h4>
+                                    <p class="font-raleway text-xs text-white">Achat et Location meublée non
+                                        professionnelle de&nbsp;2&nbsp;biens</p>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="w-full md:w-1/2  lg:mt-20 px-4">
+                            <a href=""
+                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Platinium</h4>
+                                    <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – entre 3
+                                        et 5 lots</p>
+                                </div>
+                            </a>
+                            <a href="#"
+                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                    <h4 class="title-4 text-white">Offre Diamond</h4>
+                                    <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – plus de
+                                        6 lots</p>
+                                </div>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
