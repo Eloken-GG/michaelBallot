@@ -4559,6 +4559,18 @@ postcss@7.0.21:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
+<<<<<<< Updated upstream
+=======
+postcss@>=8.1, postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.4:
+  version "8.2.6"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.6.tgz#5d69a974543b45f87e464bc4c3e392a97d6be9fe"
+  integrity sha512-xpB8qYxgPuly166AGlpRjUdEYtmOWx2iCwGmrv4vqZL9YPVviDVPZPRXxnXr6xPZOdxQ9lp3ZBFCRgWJ7LE3Sg==
+  dependencies:
+    colorette "^1.2.1"
+    nanoid "^3.1.20"
+    source-map "^0.6.1"
+
+>>>>>>> Stashed changes
 postcss@^6.0.9:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
@@ -4577,6 +4589,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.27:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
+<<<<<<< Updated upstream
 postcss@^8.1, postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.4:
   version "8.2.6"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.6.tgz#5d69a974543b45f87e464bc4c3e392a97d6be9fe"
@@ -4586,6 +4599,8 @@ postcss@^8.1, postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.4:
     nanoid "^3.1.20"
     source-map "^0.6.1"
 
+=======
+>>>>>>> Stashed changes
 pretty-error@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-3.0.3.tgz#57f4b16aebcadbd681db2c002ae0f95bf87b24cf"
