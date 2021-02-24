@@ -8,45 +8,10 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 
-// import Alpinejs
-import 'alpinejs';
 
-// import Plyr
-import Plyr from 'plyr';
 
-document.addEventListener('DOMContentLoaded', () => {
-    // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-    const player = new Plyr('#player');
-    console.log('DOM fully loaded and parsed');
 
-    // Expose
-    window.player = player;
 
-    // Bind event listener
-    function on(selector, type, callback) {
-        document.querySelector(selector).addEventListener(type, callback, false);
-        console.log('1');
-    }
-
-    // Pause
-    on('.js-pause', 'click', () => {
-        player.pause();
-        console.log('2');
-    });
-
-    // Pause 2
-    on('.js-pause2', 'click', () => {
-        player.pause();
-        console.log('3');
-    });
-
-    // Play
-    on('.js-play', 'click', () => {
-        player.play();
-        console.log('4');
-    });
-
-});
 
 // Import Flickity
 import Flickity from 'flickity';

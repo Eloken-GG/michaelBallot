@@ -1,5 +1,5 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
 
 @layer base {
 
@@ -52,8 +52,10 @@
     }
 }
 
+@import "~tailwindcss/utilities";
 @import "~plyr/dist/plyr.css";
-@import "tailwindcss/utilities";
+@import "~flickity/css/flickity.css";
+@import "~aos/dist/aos.css";
 
 
 

@@ -2,13 +2,13 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_swup_debug-plugin_lib_index_js-node_modules_swup_fade-theme_lib_index_js-49b403.js",
-        "/build/app.js"
+        "/build/runtime.cc247730.js",
+        "/build/179.18ac95e5.js",
+        "/build/app.009b3511.js"
       ],
       "css": [
-        "/build/vendors-node_modules_swup_debug-plugin_lib_index_js-node_modules_swup_fade-theme_lib_index_js-49b403.css",
-        "/build/app.css"
+        "/build/179.0e7a9739.css",
+        "/build/app.ea916795.css"
       ]
     }
   }
