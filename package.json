@@ -26,6 +26,7 @@
         "@swup/progress-plugin": "^1.0.0",
         "@tailwindcss/forms": "^0.2.1",
         "alpinejs": "^2.8.0",
+        "flickity": "^2.2.2",
         "plyr": "^3.6.4",
         "scrollreveal": "^4.0.7"
     }
