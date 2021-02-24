@@ -1,6 +1,5 @@
 import {Controller} from 'stimulus';
 import Plyr from "plyr";
-import ScrollReveal from "scrollreveal";
 
 export default class extends Controller {
     connect() {
@@ -46,20 +45,8 @@ export default class extends Controller {
                 console.log('4');
             });
 
-            // Animation of headline, tagline and punchline
-            ScrollReveal().reveal('.headline');
-            ScrollReveal().reveal('.tagline', {delay: 500});
-            ScrollReveal().reveal('.punchline', {delay: 2000});
-            ScrollReveal().reveal('.highline', {delay: 1000});
         });
 
-
-
-
-
-
     }
-
-
 
 }

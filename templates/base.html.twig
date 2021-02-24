@@ -19,6 +19,9 @@
     {# BLOC STYLESHEET #}
     {% block stylesheets %}
 
+        {# AOS #}
+        <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+
         {# PLYR #}
         <link rel="stylesheet" href="{{ asset('css/plyr.css') }}"/>
 
@@ -67,6 +70,7 @@
 
     {# BLOC JAVASCRIPT #}
     {% block javascripts %}
+        <script src="node_modules/aos/dist/aos.js"></script>
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
