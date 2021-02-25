@@ -1,48 +1,10 @@
 import {Controller} from 'stimulus';
 
-// import Plyr
-import Plyr from 'plyr';
-
 // import Alpinejs
 import 'alpinejs';
 
-function initPage () {
-    // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-    const player = new Plyr('#player');
-    console.log('DOM fully loaded and parsed');
+import initPlyr from '../script/initPlyr';
 
-    // Expose
-    window.player = player;
-
-    // Bind event listener
-    function on(selector, type, callback) {
-        document.querySelector(selector).addEventListener(type, callback, false);
-        console.log('1');
-    }
-
-    // Pause
-    on('.js-pause', 'click', () => {
-        player.pause();
-        console.log('2');
-    });
-
-    // Pause 2
-    on('.js-pause2', 'click', () => {
-        player.pause();
-        console.log('3');
-    });
-
-    // Play
-    on('.js-play', 'click', () => {
-        player.play();
-        console.log('4');
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    initPage ()
-
-});
 
 export default class extends Controller {
     connect() {
@@ -57,9 +19,10 @@ export default class extends Controller {
     _onConnect(event) {
         document.addEventListener('swup:contentReplaced', (event) => {
             window.scrollTo(0, 0);
-            initPage ()
+            initPlyr ()
 
         });
+
 
     }
 

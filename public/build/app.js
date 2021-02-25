@@ -289,24 +289,6 @@ var flky = new (flickity__WEBPACK_IMPORTED_MODULE_1___default())('.gallery', {
 
 /***/ }),
 
-/***/ "./assets/bootstrap.js":
-/*!*****************************!*\
-  !*** ./assets/bootstrap.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "app": () => (/* binding */ app)
-/* harmony export */ });
-/* harmony import */ var _symfony_stimulus_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @symfony/stimulus-bridge */ "./node_modules/@symfony/stimulus-bridge/dist/index.js");
- // Registers Stimulus controllers from controllers.json and in the controllers/ directory
-
-var app = (0,_symfony_stimulus_bridge__WEBPACK_IMPORTED_MODULE_0__.startStimulusApp)(__webpack_require__("./assets/controllers sync recursive ./node_modules/@symfony/stimulus-bridge/lazy-controller-loader.js! \\.(j|t)sx?$"));
-
-/***/ }),
-
 /***/ "./assets/styles/app.css":
 /*!*******************************!*\
   !*** ./assets/styles/app.css ***!
