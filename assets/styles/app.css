@@ -4,7 +4,7 @@
 @layer base {
 
     .title-1 {
-        @apply text-gray-900 font-playfair text-5xl lg:text-6xl
+        @apply font-playfair text-5xl lg:text-6xl
     }
     .title-2 {
         @apply text-gray-900 font-playfair text-3xl lg:text-4xl
@@ -16,7 +16,7 @@
         @apply text-gray-900 font-playfair text-2xl
     }
     .body-1{
-        @apply font-raleway text-gray-700 text-lg
+        @apply font-raleway text-lg
     }
     .body-2{
         @apply font-raleway text-gray-600 text-base
@@ -34,7 +34,7 @@
         @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-xs
     }
     .btn-1 {
-        @apply uppercase font-raleway text-xs tracking-wide p-3 rounded text-white font-extrabold tracking-widest transition ease-in-out duration-150 p-6
+        @apply uppercase font-raleway text-xs tracking-wide p-3 rounded font-extrabold tracking-widest transition ease-in-out duration-150 p-6
     }
     .max-h-0 {
         max-height: 0;

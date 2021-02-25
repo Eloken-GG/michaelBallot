@@ -9,10 +9,6 @@
 import './styles/app.css';
 
 
-
-
-
-
 // Import Flickity
 import Flickity from 'flickity';
 
