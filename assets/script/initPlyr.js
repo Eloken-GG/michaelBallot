@@ -1,4 +1,5 @@
 import Plyr from "plyr";
+
 export default function initPlyr () {
     // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
     const player = new Plyr('#player');

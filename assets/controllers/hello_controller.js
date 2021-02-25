@@ -22,8 +22,6 @@ export default class extends Controller {
             initPlyr ()
 
         });
-
-
     }
 
 }
