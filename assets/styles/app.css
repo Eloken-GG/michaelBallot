@@ -1,3 +1,5 @@
+@import "~swiper/swiper-bundle";
+
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 
@@ -34,7 +36,7 @@
         @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-xs
     }
     .btn-1 {
-        @apply uppercase font-raleway text-xs tracking-wide p-3 rounded font-extrabold tracking-widest transition ease-in-out duration-150 p-6
+        @apply uppercase font-raleway text-xs tracking-wide rounded font-extrabold tracking-widest transition ease-in-out duration-150 px-6 py-3
     }
     .max-h-0 {
         max-height: 0;
@@ -44,7 +46,7 @@
     }
 
     .bg-2 {
-        background-image: url(/public/images/main/immeuble.webp);
+        background-image: url(/assets/media_components/images/main/immeuble.webp);
     }
 
     [x-cloak] {
@@ -52,9 +54,21 @@
     }
 }
 
+
+
 @import "~tailwindcss/utilities";
+
 @import "~plyr/dist/plyr.css";
-@import "~flickity/css/flickity.css";
+
+@import '~aos/dist/aos.css';
+
+
+
+
+
+
+
+
 
 
 

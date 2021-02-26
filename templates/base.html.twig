@@ -17,7 +17,6 @@
     </title>
 
     {# BLOC STYLESHEET #}
-    <link rel="shortcut icon" type="image/png" src="{{ asset('images/logo/favicon.png') }}"/>
 
     {% block stylesheets %}
         {# FONTS #}
@@ -34,14 +33,16 @@
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
+
+
 </head>
 
 {# BODY #}
-<body data-controller="symfony--ux-swup--swup hello" data-containers="#swup #nav" data-theme="slide"
+<body data-controller="myswup symfony--ux-swup--swup" data-containers="#swup" data-theme="slide"
       data-cache="data-cache" class="bg-gray-50 overflow-x-hidden" id="cover">
 
 {# NAVBAR #}
-<nav id="nav">
+<nav>
     {% include 'shared/_navbar.html.twig' %}
 </nav>
 
@@ -68,8 +69,6 @@
     <footer class="bg-white">
         {% include 'shared/_footer.html.twig' %}
     </footer>
-
-
 
 
 </body>
