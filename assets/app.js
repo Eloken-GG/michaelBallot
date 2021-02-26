@@ -9,22 +9,34 @@
 import './styles/app.css';
 import 'swiper/swiper-bundle.min.css'
 
+// Import theme
+import './controllers/js/theme'
+
 // Start the Stimulus application
 import './bootstrap';
 
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
+import Plyr from "plyr";
 
-const application = Application.start()
-const context = require.context("./controllers", true, /\.js$/)
-application.load(definitionsFromContext(context))
+// This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+let player = new Plyr('#player');
 
+// Expose
+window.player = player;
 
+// Bind event listener
+function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+}
 
-
-
-
-
-
-
-
+// Pause
+on('.js-pause', 'click', () => {
+    player.pause();
+});
+// Pause 2
+on('.js-pause2', 'click', () => {
+    player.pause();
+});
+// Play
+on('.js-play', 'click', () => {
+    player.play();
+});

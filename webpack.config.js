@@ -55,7 +55,7 @@ Encore
     })
 
     .copyFiles({
-        from: './assets/media_components'
+        from: './assets/media'
     })
 
     // enables @babel/preset-env polyfills
