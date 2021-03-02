@@ -34,7 +34,7 @@
                 {# Flyout Menu of "Formations" #}
 
                 <div x-data="{ flyoutMenuOpen: false }" x-cloak class="relative">
-                    <div @mouseover="flyoutMenuOpen = true" @mouseover.away.debounce.350ms="flyoutMenuOpen = false">
+                    <div @mouseover="flyoutMenuOpen = true" @mouseover.away.debounce.350ms="flyoutMenuOpen = false" @click="flyoutMenuOpen = false">
                         <button type="button"
                                 x-state:on="Item active" x-state:off="Item inactive"
                                 :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }"
@@ -263,7 +263,7 @@
                 </div>
 
                 <div x-data="{ flyoutMenuOpen: false }" x-cloak class="relative">
-                    <div @mouseover="flyoutMenuOpen = true" @mouseover.away.debounce.350ms="flyoutMenuOpen = false">
+                    <div @mouseover="flyoutMenuOpen = true" @mouseover.away.debounce.350ms="flyoutMenuOpen = false" @click="flyoutMenuOpen = false">
                         <button type="button"
                                 x-state:on="Item active" x-state:off="Item inactive"
                                 :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }"

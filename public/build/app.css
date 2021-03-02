@@ -14,9 +14,7 @@
 .title-2 {
   font-family: Playfair Display, serif;
   font-size: 1.875rem;
-  line-height: 2.25rem;
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity))
+  line-height: 2.25rem
 }
 
 @media (min-width: 1024px){
@@ -78,8 +76,6 @@
   font-family: Raleway, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
   text-transform: uppercase;
   letter-spacing: 0.1em
 }
@@ -96,8 +92,6 @@
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
   text-transform: uppercase;
   letter-spacing: 0.1em
 }
@@ -114,8 +108,6 @@
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
   text-transform: uppercase;
   letter-spacing: 0.1em
 }

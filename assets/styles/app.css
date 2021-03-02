@@ -9,7 +9,7 @@
         @apply font-playfair text-5xl lg:text-6xl
     }
     .title-2 {
-        @apply text-gray-900 font-playfair text-3xl lg:text-4xl
+        @apply font-playfair text-3xl lg:text-4xl
     }
     .title-3 {
         @apply text-gray-800 font-raleway uppercase tracking-wide text-xl lg:text-2xl font-bold
@@ -27,13 +27,13 @@
         @apply font-raleway text-gray-600 text-base
     }
     .subtitle-1{
-        @apply font-raleway uppercase tracking-widest text-gray-700 text-base lg:text-lg
+        @apply font-raleway uppercase tracking-widest text-base lg:text-lg
     }
     .subtitle-2{
-        @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-sm lg:text-base
+        @apply font-raleway uppercase tracking-widest font-bold text-sm lg:text-base
     }
     .subtitle-3{
-        @apply font-raleway uppercase tracking-widest font-bold text-gray-700 text-xs
+        @apply font-raleway uppercase tracking-widest font-bold text-xs
     }
     .btn-1 {
         @apply uppercase font-raleway text-xs tracking-wide rounded font-extrabold tracking-widest transition ease-in-out duration-150 px-6 py-3

@@ -325,6 +325,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // Start the Stimulus application
 
+ // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
 
  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
 

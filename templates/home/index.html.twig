@@ -6,7 +6,7 @@
 {# BLOC BODY #}
 {% block body %}
 
-    <main class="relative flex items-center justify-center h-screen  overflow-hidden text-center">
+    <header class="relative flex items-center justify-center h-screen  overflow-hidden text-center">
         <div class="relative z-30 p-5">
             <h1 class="title-1 text-7xl text-white">Investissez en vous !</h1>
             <p class="body-1 text-white my-5">Formations, coachings, investissements clés en main.<br>Devenez un expert
@@ -26,161 +26,167 @@
                 </g>
             </svg>
         </a>
-    </main>
+    </header>
 
-    {# BULLET POINTS #}
-    <section class=" bg-white py-20" data-aos="fade-up">
-        <div class="container max-w-7xl px-4 mx-auto">
-            <div class="flex flex-wrap -mx-3">
-                <div class="w-full md:w-1/3 px-3 mb-6">
-                    <div class="p-6 ">
-                        <span class="title-1 font-bold text-pink-600">+10</span>
-                        <p class="title-3 font-bold">années d'expériences</p>
-                        <p class="body-2 mt-5">
-                            J’ai commencé dans l’immobilier en tant que constructeur. Depuis j’ai quitté mon travail et
-                            je
-                            vis uniquement de mes rentes.
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 px-3 mb-6">
-                    <div class="p-6 ">
+    <main>
 
-                        <span class="title-1 font-bold text-pink-600">+20</span>
-                        <p class="title-3 font-bold">élèves accompagnés</p>
-                        <p class="body-2 mt-5">
-                            Après un an de lancement, j’ai pu accompagner et aider plus de 20 investisseurs novices ou
-                            confirmés à réaliser leurs rêves.
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 px-3 mb-6">
-                    <div class="p-6">
-                        <span class="title-1 font-bold text-pink-600">+100</span>
-                        <p class="title-3 font-bold">projets immobiliers
-                        </p>
-                        <p class="body-2 mt-5">
-                            En plus de 10 ans j’ai aidé des centaines de personnes à construire leurs maisons, acheter
-                            un
-                            immeuble, louer leurs biens …
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    {# CARD SEMINAIRE #}
-    <section class="w-full ">
-        <div class="max-w-4xl px-8 py-20 mx-auto">
-
-            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
-                <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
-                        <img
-                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="https://picsum.photos/200/300" alt=""></a>
-                </div>
-                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto ">
-                        <h2 class="subtitle-2">évènement</h2>
-                        <h3 class="title-2 py-5">Participer au séminaire immobilier ! </h3>
-
-                        <p class="body-2 mt-5">Carolin Arthaud et Tony Jazz ainsi que 8 autres intervenants
-                            investisseurs professionnels seront présents lors d’un séminaire immobilier exceptionnel en
-                            Mars !</p>
-
-                        <div class="flex mt-2 items-center pb-5">
+        {# BULLET POINTS #}
+        <section class=" bg-white py-20" data-aos="fade-up">
+            <div class="container max-w-7xl px-4 mx-auto">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full md:w-1/3 px-3 mb-6">
+                        <div class="p-6 ">
+                            <span class="title-1 font-bold text-pink-600">+10</span>
+                            <p class="title-3 font-bold">années d'expériences</p>
+                            <p class="body-2 mt-5">
+                                J’ai commencé dans l’immobilier en tant que constructeur. Depuis j’ai quitté mon travail
+                                et
+                                je
+                                vis uniquement de mes rentes.
+                            </p>
                         </div>
-                        <div class="">
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6">
+                        <div class="p-6 ">
 
-                            <a class="btn-1  text-gray-900 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('seminaire') }}">En savoir plus</a>
+                            <span class="title-1 font-bold text-pink-600">+20</span>
+                            <p class="title-3 font-bold">élèves accompagnés</p>
+                            <p class="body-2 mt-5">
+                                Après un an de lancement, j’ai pu accompagner et aider plus de 20 investisseurs novices
+                                ou
+                                confirmés à réaliser leurs rêves.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6">
+                        <div class="p-6">
+                            <span class="title-1 font-bold text-pink-600">+100</span>
+                            <p class="title-3 font-bold">projets immobiliers
+                            </p>
+                            <p class="body-2 mt-5">
+                                En plus de 10 ans j’ai aidé des centaines de personnes à construire leurs maisons,
+                                acheter
+                                un
+                                immeuble, louer leurs biens …
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
+        {# CARD SEMINAIRE #}
+        <section class="w-full ">
+            <div class="max-w-4xl px-8 py-20 mx-auto">
 
-    {# PACK 5 FORMATIONS #}
-    <section class="py-12 lg:py-32 w-full bg-white ">
-        <div class="container mx-auto px-4 max-w-5xl w-full mx-auto">
-            <div class="flex flex-wrap md:flex-nowrap items-center justify-items-center mx-auto">
-                <div class="mb-12 lg:mb-0 md:ml-12 block mx-auto md:w-1/2 px-4">
-                    <div class="max-w-md">
-                        <span class="subtitle-2 block mb-5">Formations</span>
-                        <h2 class="title-2">Formez-vous et devenez financièrement indépendant</h2>
-                        <p class="body-2 mt-5">Pour se lancer dans l’investissement immobilier , nous avons conçu 5
-                            formations qui résument l’ensemble des étapes pour devenir financièrement indépendant et
-                            vivre de sa rente.</p>
+                <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+                        <a href="">
+                            <img
+                                    class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                    src="https://picsum.photos/200/300" alt=""></a>
+                    </div>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto ">
+                            <h2 class="subtitle-2">évènement</h2>
+                            <h3 class="title-2 py-5">Participer au séminaire immobilier ! </h3>
 
-                        <ul class="my-8 text-gray-500 font-raleway tracking-tight font-xs">
-                            <li class="mb-3 flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     viewBox="0 0 140 140" width="14" height="14">
-                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                              stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                                <span class="ml-4">Trouver le bon bien</span>
-                            </li>
-                            <li class="mb-3 flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     viewBox="0 0 140 140" width="14" height="14">
-                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                              stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                                <span class="ml-4">Réussir son dossier bancaire</span>
-                            </li>
-                            <li class="mb-3 flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     viewBox="0 0 140 140" width="14" height="14">
-                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                              stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                                <span class="ml-4">Construire la maison de ses rêves</span>
-                            </li>
-                            <li class="mb-3 flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     viewBox="0 0 140 140" width="14" height="14">
-                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                              stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                                <span class="ml-4">La double construction en projet locatif</span>
-                            </li>
-                            <li class="mb-3 flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                     viewBox="0 0 140 140" width="14" height="14">
-                                    <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                        <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                              stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                                <span class="ml-4">Investir dans un immeuble de rapport</span>
-                            </li>
+                            <p class="body-2 mt-5">Carolin Arthaud et Tony Jazz ainsi que 8 autres intervenants
+                                investisseurs professionnels seront présents lors d’un séminaire immobilier exceptionnel
+                                en
+                                Mars !</p>
 
-                        </ul>
-                        <div class="flex pb-8">
-                            <a href="{{ path('pack') }}">
-                                <button class="btn-1 text-white bg-pink-600 hover:bg-gray-900">Voir l'offre</button>
-                            </a>
-                            <span class="inline-flex align-center ml-5 items-center px-2 py-0.5 rounded text-xs font-medium font-raleway bg-pink-100 text-pink-500">
+                            <div class="flex mt-2 items-center pb-5">
+                            </div>
+                            <div class="">
+                                <a class="my-6">
+                                <button class="btn-1 text-gray-900  border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                   href="{{ path('seminaire') }}">En savoir plus</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {# PACK 5 FORMATIONS #}
+        <section class="py-12 lg:py-32 w-full bg-white ">
+            <div class="container mx-auto px-4 max-w-5xl w-full mx-auto">
+                <div class="flex flex-wrap md:flex-nowrap items-center justify-items-center mx-auto">
+                    <div class="mb-12 lg:mb-0 md:ml-12 block mx-auto md:w-1/2 px-4">
+                        <div class="max-w-md">
+                            <span class="subtitle-2 block mb-5">Formations</span>
+                            <h2 class="title-2">Formez-vous et devenez financièrement indépendant</h2>
+                            <p class="body-2 mt-5">Pour se lancer dans l’investissement immobilier , nous avons conçu 5
+                                formations qui résument l’ensemble des étapes pour devenir financièrement indépendant et
+                                vivre de sa rente.</p>
+
+                            <ul class="my-8 text-gray-500 font-raleway tracking-tight font-xs">
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Trouver le bon bien</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Réussir son dossier bancaire</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Construire la maison de ses rêves</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">La double construction en projet locatif</span>
+                                </li>
+                                <li class="mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                         viewBox="0 0 140 140" width="14" height="14">
+                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-4">Investir dans un immeuble de rapport</span>
+                                </li>
+
+                            </ul>
+                            <div class="flex pb-8">
+                                <a href="{{ path('pack') }}">
+                                    <button class="btn-1 text-white bg-pink-600 hover:bg-gray-900">Voir l'offre</button>
+                                </a>
+                                <span class="inline-flex align-center ml-5 items-center px-2 py-0.5 rounded text-xs font-medium font-raleway bg-pink-100 text-pink-500">
 
                                 <svg class="mr-1.5 w-4 text-pink-500" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
@@ -200,127 +206,132 @@
                                                 stroke-linejoin="round"></path></g></svg>
                                  30% de réduction
                             </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="transform mx-auto -rotate-12 flex items- md:w-1/3 lg:w-1/2 max-w-md l px-4">
-                    <div class="w-1/3 transform translate-y-12">
-                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
-                    </div>
-                    <div class="w-1/3 transform -translate-y-6">
-                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
-                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
-                    </div>
-                    <div class="w-1/3 transform translate-y-6">
-                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
-                        <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {# CONTACT #}
-    {% include 'shared/_contact.html.twig' %}
-
-    {# CARD Accompagnement #}
-    <section class="w-full ">
-        <div class="max-w-4xl px-8 py-20 mx-auto">
-
-            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
-                <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
-                        <img
-                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="https://picsum.photos/200/300" alt=""></a>
-                </div>
-                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto ">
-                        <h2 class="subtitle-2">Coaching</h2>
-                        <h3 class="title-2 py-5">Un accompagnement pas à pas</h3>
-
-                        <p class="body-2 mt-5">Faites le choix de rejoindre d’autres investisseurs dans un programme
-                            d’un an. Accompagnement, rencontres, formations, aides, support … Tout ce dont vous avez
-                            besoin pour réussir sereinement vos investissements.</p>
-
-                        <div class="flex mt-2 items-center pb-5">
+                    <div class="transform mx-auto -rotate-12 flex items- md:w-1/3 lg:w-1/2 max-w-md l px-4">
+                        <div class="w-1/3 transform translate-y-12">
+                            <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
                         </div>
-                        <div class="">
-
-                            <a class="btn-1  text-gray-900 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('coaching') }}">En savoir plus</a>
+                        <div class="w-1/3 transform -translate-y-6">
+                            <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                            <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                        </div>
+                        <div class="w-1/3 transform translate-y-6">
+                            <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
+                            <img class="border-2 border-white" src="https://picsum.photos/200/300" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        {# CONTACT #}
+        {% include 'shared/_contact.html.twig' %}
 
-    {# SERVICES #}
-    <section class="py-32">
+        {# CARD Accompagnement #}
+        <section class="w-full ">
+            <div class="max-w-4xl px-8 py-20 mx-auto">
 
-        <div class="py-20 bg-gray-50 max-w-6xl mx-auto radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
-                        <div class="max-w-sm lg:mx-auto">
-                            <span class="subtitle-2">Services</span>
-                            <h2 class="my-2 title-2">Des investissements clés en main</h2>
-                            <p class="my-6 text-gray-500 body-2">Vous avez du capital dormant et souhaitez l’investir
-                                dans la pierre mais n’avez pas le temps de vous en occuper ? Je prends en charge
-                                l’ensemble de votre investissement en fonction de vos objectifs.</p>
-
-                        </div>
+                <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+                        <a href="">
+                            <img
+                                    class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                    src="https://picsum.photos/200/300" alt=""></a>
                     </div>
-                    <div class="w-full lg:w-1/2 flex flex-wrap -mx-4">
-                        <div class="mb-8 lg:mb-0 w-full  md:w-1/2 px-4">
-                            <a href="{{ path('silver') }}"
-                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
-                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
-                                    <h4 class="title-4 text-white">Offre Silver</h4>
-                                    <p class="font-raleway text-xs text-white">Achat et revente d'un bien</p>
-                                </div>
-                            </a>
-                            <a href="{{ path('gold') }}"
-                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
-                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
-                                    <h4 class="title-4 text-white">Offre Gold</h4>
-                                    <p class="font-raleway text-xs text-white">Achat et Location meublée non
-                                        professionnelle de&nbsp;2&nbsp;biens</p>
-                                </div>
-                            </a>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto ">
+                            <h2 class="subtitle-2">Coaching</h2>
+                            <h3 class="title-2 py-5">Un accompagnement pas à pas</h3>
 
-                        </div>
-                        <div class="w-full md:w-1/2  lg:mt-20 px-4">
-                            <a href="{{ path('platinium') }}"
-                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
-                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
-                                    <h4 class="title-4 text-white">Offre Platinium</h4>
-                                    <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – entre 3
-                                        et 5 lots</p>
-                                </div>
-                            </a>
-                            <a href="{{ path('diamond') }}"
-                               class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
-                                <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
-                                    <h4 class="title-4 text-white">Offre Diamond</h4>
-                                    <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – plus de
-                                        6 lots</p>
-                                </div>
-                            </a>
+                            <p class="body-2 mt-5">Faites le choix de rejoindre d’autres investisseurs dans un programme
+                                d’un an. Accompagnement, rencontres, formations, aides, support … Tout ce dont vous avez
+                                besoin pour réussir sereinement vos investissements.</p>
 
+                            <div class="flex mt-2 items-center pb-5">
+                            </div>
+                            <div class="">
+                                <a class="my-6">
+                                    <button class="btn-1 text-gray-900  border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                            href="{{ path('coaching') }}">En savoir plus
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </section>
+        </section>
 
 
-    {% include 'shared/_aboutZone.html.twig' with {
-        'aboutText' : "15 000 € de revenus par mois sans rien faire. Ça vous laisse rêveur ? Moi aussi …
+        {# SERVICES #}
+        <section class="py-32">
+
+            <div class="py-20 bg-gray-50 max-w-6xl mx-auto radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center">
+                        <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                            <div class="max-w-sm lg:mx-auto">
+                                <span class="subtitle-2">Services</span>
+                                <h2 class="my-2 title-2">Des investissements clés en main</h2>
+                                <p class="my-6 text-gray-500 body-2">Vous avez du capital dormant et souhaitez
+                                    l’investir
+                                    dans la pierre mais n’avez pas le temps de vous en occuper ? Je prends en charge
+                                    l’ensemble de votre investissement en fonction de vos objectifs.</p>
+
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 flex flex-wrap -mx-4">
+                            <div class="mb-8 lg:mb-0 w-full  md:w-1/2 px-4">
+                                <a href="{{ path('silver') }}"
+                                   class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                    <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                        <h4 class="title-4 text-white">Offre Silver</h4>
+                                        <p class="font-raleway text-xs text-white">Achat et revente d'un bien</p>
+                                    </div>
+                                </a>
+                                <a href="{{ path('gold') }}"
+                                   class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                    <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                        <h4 class="title-4 text-white">Offre Gold</h4>
+                                        <p class="font-raleway text-xs text-white">Achat et Location meublée non
+                                            professionnelle de&nbsp;2&nbsp;biens</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="w-full md:w-1/2  lg:mt-20 px-4">
+                                <a href="{{ path('platinium') }}"
+                                   class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                    <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                        <h4 class="title-4 text-white">Offre Platinium</h4>
+                                        <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport –
+                                            entre 3
+                                            et 5 lots</p>
+                                    </div>
+                                </a>
+                                <a href="{{ path('diamond') }}"
+                                   class="block mb-8 shadow-sm bg-cover bg-no-repeat rounded-sm overflow-hidden bg-2">
+                                    <div class="h-full mx-auto w-full py-6 pl-6 pr-4 pt-32 inset-0 bg-gradient-to-t  from-gray-900">
+                                        <h4 class="title-4 text-white">Offre Diamond</h4>
+                                        <p class="font-raleway text-xs text-white">Achat d’un immeuble de rapport – plus
+                                            de
+                                            6 lots</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        {% include 'shared/_aboutZone.html.twig' with {
+            'aboutText' : "15 000 € de revenus par mois sans rien faire. Ça vous laisse rêveur ? Moi aussi …
 Il y a 2 ans, je ne pensais pas que cela serait possible. Je n'aurai même pas imaginé qu'un ancien agriculteur comme moi puisse y arriver.
 
 
@@ -329,103 +340,89 @@ En 18 mois, mes investissements immobiliers m'ont permis de sortir de ma routine
 
 Je vous livre dans ces 5 formations mes astuces pour réussir vos investissements immobiliers et devenir rentier à plein temps.
 "
-    } %}
+        } %}
 
 
 
-    {# AVIS CLIENT #}
-    <section class="max-w-xl mx-auto">
-        <div data-controller="carousel" class="swiper-container" data-carousel-options-value='{ "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" } }'>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="h-64 flex justify-center items-center">Slide 1</div>
-                </div>
+        {# CLIENT #}
+        {% include 'shared/_clients.html.twig' %}
 
-                <div class="swiper-slide">
-                    <div class="h-64 flex justify-center items-center">Slide 2</div>
-                </div>
 
-                <div class="swiper-slide">
-                    <div class="h-64 flex justify-center items-center">Slide 3</div>
+        {# YOUTUBE #}
+        <section class="px-4 py-16 w-full mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+
+
+            <div class="w-full pb-6">
+
+                <div class="md:py-20 radius-for-skewed">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-2xl mx-auto text-center">
+
+                            <div class="mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+                                    <path fill="#FF0000"
+                                          d="M63,14.87c-0.72-2.7-2.85-4.83-5.56-5.56C52.54,8,32.88,8,32.88,8S13.23,8,8.32,9.31             c-2.7,0.72-4.83,2.85-5.56,5.56C1.45,19.77,1.45,30,1.45,30s0,10.23,1.31,15.13c0.72,2.7,2.85,4.83,5.56,5.56             C13.23,52,32.88,52,32.88,52s19.66,0,24.56-1.31c2.7-0.72,4.83-2.85,5.56-5.56C64.31,40.23,64.31,30,64.31,30             S64.31,19.77,63,14.87z"/>
+                                    <polygon fill="#FFFFFF" points="26.6,39.43 42.93,30 26.6,20.57"/>
+                                </svg>
+                            </div>
+                            <h2 class="title-2">Retrouvez-moi sur Youtube</h2>
+                            <p class="body-2 m-6">Fiscalité, travaux, projets, construction, signatures, location...
+                                Chaque
+                                semaine je partage sur ma chaine des astuces, des techniques et des conseils sur
+                                l'investissement immobilier
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-
-    </section>
-
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 mt-20">
-
-        {# INTRODUCTION #}
-        <section class="w-full pt-12 pb-6">
-
-            <div class="md:py-20 radius-for-skewed">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-2xl mx-auto text-center">
-
-                        <div class="mx-auto flex items-center justify-center">
-                            <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
-                                <path fill="#FF0000"
-                                      d="M63,14.87c-0.72-2.7-2.85-4.83-5.56-5.56C52.54,8,32.88,8,32.88,8S13.23,8,8.32,9.31             c-2.7,0.72-4.83,2.85-5.56,5.56C1.45,19.77,1.45,30,1.45,30s0,10.23,1.31,15.13c0.72,2.7,2.85,4.83,5.56,5.56             C13.23,52,32.88,52,32.88,52s19.66,0,24.56-1.31c2.7-0.72,4.83-2.85,5.56-5.56C64.31,40.23,64.31,30,64.31,30             S64.31,19.77,63,14.87z"/>
-                                <polygon fill="#FFFFFF" points="26.6,39.43 42.93,30 26.6,20.57"/>
-                            </svg>
-                        </div>
-                        <h2 class="title-2">Retrouvez-moi sur Youtube</h2>
-                        <p class="body-2 m-6">Fiscalité, travaux, projets, construction, signatures, location... Chaque
-                            semaine je partage sur ma chaine des astuces, des techniques et des conseils sur
-                            l'investissement immobilier
-                        </p>
+            <div class="grid max-w-sm w-full gap-5 mb-8 lg:grid-cols-3 lg:max-w-full mx-auto">
+                <div class="md:px-10 px-3 py-10 mx-auto text-center border rounded">
+                    <p class="subtitle-3">
+                        Location courte durée
+                    </p>
+                    <p class="inline-block max-w-xs mx-auto mb-3 title-4"
+                       aria-label="Read article" title="Nori grape silver beet broccoli kombu beet">
+                        Optimiser ses rendements
+                    </p>
+                    <div class="mx-auto flex items-center justify-center pt-6">
+                        <iframe class="w-full h-auto"
+                                src="https://www.youtube.com/embed/eil5V8Q11M8?list=PLPZUmFDe0Fh3NbEgZXrSGIqTbeMaga7mJ"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="md:px-10 px-3 py-10 mx-auto text-center border rounded">
+                    <p class="subtitle-3">
+                        Fiscalité
+                    </p>
+                    <p class="inline-block max-w-xs mx-auto mb-3 title-4" aria-label="Read article"
+                       title="Well, the way they make shows is, they make one">
+                        Choisir la bonne fiscalité
+                    </p>
+                    <div class="mx-auto flex items-center justify-center pt-6">
+                        <iframe class="w-full h-auto" src="https://www.youtube.com/embed/jpTTzuY78fk" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="md:px-10 px-3 py-10 mx-auto text-center border rounded">
+                    <p class="subtitle-3">
+                        Construction
+                    </p>
+                    <p class="inline-block max-w-xs mx-auto mb-3 title-4"
+                       aria-label="Read article" title="Pommy ipsum smeg head whizz morris himer due">
+                        Terre plein vs vide sanitaire
+                    </p>
+                    <div class="mx-auto flex items-center justify-center pt-6">
+                        <iframe class="w-full h-auto" src="https://www.youtube.com/embed/8lEjIn3cI6U" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="grid max-w-sm gap-5 mb-8 lg:grid-cols-3 sm:mx-auto lg:max-w-full mx-auto">
-            <div class="px-10 py-10 text-center border rounded">
-                <p class="subtitle-3">
-                    Location courte durée
-                </p>
-                <p class="inline-block max-w-xs mx-auto mb-3 title-4"
-                   aria-label="Read article" title="Nori grape silver beet broccoli kombu beet">
-                    Optimiser ses rendements
-                </p>
-                <div class="mx-auto flex items-center justify-center pt-6">
-                    <iframe width="280" height="157" src="https://www.youtube.com/embed/xkJ4v80AixA" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="px-10 py-10 text-center border rounded">
-                <p class="subtitle-3">
-                    Fiscalité
-                </p>
-                <p class="inline-block max-w-xs mx-auto mb-3 title-4" aria-label="Read article"
-                   title="Well, the way they make shows is, they make one">
-                    Choisir la bonne fiscalité
-                </p>
-                <div class="mx-auto flex items-center justify-center pt-6">
-                    <iframe width="280" height="157" src="https://www.youtube.com/embed/jpTTzuY78fk" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="px-10 py-10 text-center border rounded ">
-                <p class="subtitle-3">
-                    Construction
-                </p>
-                <p class="inline-block max-w-xs mx-auto mb-3 title-4"
-                   aria-label="Read article" title="Pommy ipsum smeg head whizz morris himer due">
-                    Terre plein vs vide sanitaire
-                </p>
-                <div class="mx-auto flex items-center justify-center pt-6">
-                    <iframe width="280" height="157" src="https://www.youtube.com/embed/8lEjIn3cI6U" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
 
 

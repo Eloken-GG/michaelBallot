@@ -14,7 +14,7 @@
                 <div class="flex flex-wrap items-center -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
-                            <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                            <div data-aos="fade-right" class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
 
 
                                 <h1 class="title-1 text-white">
@@ -28,8 +28,8 @@
                     </div>
 
 
-                    <div class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
-                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
+                    <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
+                        <img  class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
                              alt="">
                         <div class="absolute  inset-0 flex items-center justify-center">
@@ -84,7 +84,7 @@
                             <div class="mt-5 sm:mt-6">
                     <span class="flex js-pause2 w-full shadow-sm">
                       <button @click="open = false"
-                              class="btn-1 bg-gray-900 hover:bg-gray-700">
+                              class="btn-1 text-white bg-gray-900 hover:bg-gray-700">
                         Fermer la vidéo
                       </button>
                     </span>
@@ -105,12 +105,12 @@
 
     {# LISTE FORMATIONS #}
 
-    <section class="bg-gray-50 w-full pb-32">
+    <section  class="bg-gray-50 w-full pb-32">
 
         <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="title-1">Une formation pour chacun de vos projets</h2>
+                    <h2  class="title-1">Une formation pour chacun de vos projets</h2>
                 </div>
             </div>
         </div>
@@ -119,13 +119,13 @@
             {# FORMATION 1 #}
 
             <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:col-span-1">
+                <div data-aos="fade-right" class="w-full lg:col-span-1">
                     <a href="{{ path('bon') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
                         <h2 class="mb-3 title-3">
                             Trouver le bon bien
@@ -146,13 +146,13 @@
             {# FORMATION 2 #}
 
             <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:order-2 lg:col-span-1">
+                <div data-aos="fade-left" class="w-full lg:order-2 lg:col-span-1">
                     <a href="{{ path('dossier') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                <div data-aos="fade-right" class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
                         <h2 class="mb-3 title-3">
                             Réussir son dossier bancaire
@@ -171,13 +171,13 @@
             {# FORMATION 3 #}
 
             <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:col-span-1">
+                <div data-aos="fade-right" class="w-full lg:col-span-1">
                     <a href="{{ path('maison') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
                         <h2 class="mb-3 title-3">
                             Construire la maison de ses rêves
@@ -196,13 +196,13 @@
             {# FORMATION 4 #}
 
             <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:order-2 lg:col-span-1">
+                <div data-aos="fade-left" class="w-full lg:order-2 lg:col-span-1">
                     <a href="{{ path('double') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                <div data-aos="fade-right"  class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
                         <h2 class="mb-3 title-3">
                             La double construction en projet locatif
@@ -221,13 +221,13 @@
             {# FORMATION 5 #}
 
             <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div class="w-full lg:col-span-1">
+                <div data-aos="fade-right" class="w-full lg:col-span-1">
                     <a href="{{ path('immeuble') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
                                 src="https://picsum.photos/200/300" alt=""></a>
                 </div>
-                <div class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
                         <h2 class="mb-3 title-3">
                             Investir dans un immeuble&nbsp;de&nbsp;rapport
