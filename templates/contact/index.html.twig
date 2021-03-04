@@ -2,32 +2,18 @@
 
 
 {% block body %}
-    <div class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <section class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 mt-24">
         <div class="relative max-w-xl mx-auto">
-            <svg class="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
-                <defs>
-                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
-            </svg>
-            <svg class="absolute right-full bottom-0 transform -translate-x-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
-                <defs>
-                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
-            </svg>
+
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Me contacter
+                <h2 class="text-gray-900 title-1">
+                    Vous avez une question ?
                 </h2>
-                <p class="mt-4 text-lg leading-6 text-gray-500">
-                    De rentier immobillier à simple acheteur Michael Ballot est votre solution.
+                <p class="mt-4 body-1 text-gray-500">
+                    Envoyez-moi directement un message, je serai ravi de vous répondre et de vous aider dans vos choix immobiliers.
                 </p>
             </div>
+
             {{ form_start(our_form) }}
             <div class="mt-12">
                 <form method="POST" class="contact-form grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
@@ -50,19 +36,18 @@
                                 {{ form_row(our_form.check) }}
                             </div>
                             <div class="ml-3">
-                                <p class="text-base text-gray-500">
-                                    By selecting this, you agree to the
-                                    <a href="#" class="font-medium text-gray-700 underline">Privacy Policy</a>
-                                    and
-                                    <a href="#" class="font-medium text-gray-700 underline">Cookie Policy</a>.
+                                <p class="text-base text-gray-500 mb-8">
+                                    En cliquant sur ce lien, vous acceptez que vos informations personnelles soient utilisées dans le cadre des
+                                    <a href="{{ asset('build/files/cgu.pdf') }}" class="font-medium text-gray-700 underline">Conditions générales d'utilisation</a>
+
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="sm:col-span-2">
-                        <button type="submit" value="Send" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Allons y !
+                        <button type="submit" value="Send" class="btn-1 bg-gray-900 hover:bg-gray-500 text-white">
+                            Envoyer
                         </button>
                     </div>
                     {{ form_rest(our_form) }}
@@ -71,7 +56,7 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
 
 

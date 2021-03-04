@@ -7,16 +7,13 @@
 {% block body %}
 
     {# HERO #}
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
-             style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-8">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
                             <div data-aos="fade-right" class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
-
-
                                 <h1 class="title-1 text-white">
                                     Devenez un investisseur immobilier expert
                                 </h1>
@@ -28,8 +25,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
@@ -60,7 +55,7 @@
 
                             <div class="container">
                                 <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
                                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
                                             type="video/mp4" size="576">
                                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
@@ -120,12 +115,12 @@
     <section class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
         <div class="max-w-4xl px-8 mx-auto">
 
-            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
                     <a href="">
                         <img
                                 class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="https://picsum.photos/200/300" alt=""></a>
+                                src="{{ asset('build/images/main/pack-5-formations-immobilier.webp') }}" alt=""></a>
                 </div>
                 <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto mb-4">
@@ -197,29 +192,29 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center -mx-4">
 
-                    <div class="w-full lg:order-1 lg:w-1/2">
+                     <div data-aos="fade-right" class="w-full lg:order-1 lg:w-1/2">
                         <div class="mb-4 flex flex-wrap items-end">
                             <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                <img class="tagline w-full h-32 lg:h-48 object-cover"
-                                     src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                <img class="tagline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                     src="{{ asset('build/images/formations/18.webp') }}"
                                      alt=""></div>
                             <div class="w-full lg:w-1/3 px-3">
-                                <img class="punchline w-full h-32 object-cover"
-                                     src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                <img class="punchline w-full h-48 lg:h-32 object-cover"
+                                     src="{{ asset('build/images/formations/10.webp') }}"
                                      alt=""></div>
                         </div>
                         <div class=" flex flex-wrap items-start">
                             <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                <img class="headline w-full h-32 object-cover"
-                                     src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                <img class="headline w-full h-48 lg:h-32 object-cover"
+                                     src="{{ asset('build/images/formations/3.webp') }}"
                                      alt=""></div>
                             <div class="w-full lg:w-2/3 px-3">
-                                <img class="highline w-full h-32 lg:h-48 object-cover"
-                                     src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                     src="{{ asset('build/images/formations/12.webp') }}"
                                      alt=""></div>
                         </div>
                     </div>
-                    <div class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
+                    <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
                         <div class="max-w-md">
                             <span class="subtitle-2 inline-block">Contenu de la formation</span>
                             <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
@@ -343,26 +338,23 @@
             <p class="body-2">Devenez un investisseur immobilier polyvalent</p>
             <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0 ">
 
-                <div x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-80 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
+                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-5 bg-cover bg-no-repeat">
 
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
                                     class="text-white mx-auto flex items-center justify-center h-10 w-10 rounded-md bg-gray-900">
-                                <svg class="h-6 w-6 " xmlns="http://www.w3.org/2000/svg" width="89.7"
-                                     height="78" viewBox="0 0 89.7 78">
-                                    <g id="Group_33486" data-name="Group 33486"
-                                       transform="translate(-2.5 -2)">
+
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="42.866"
+                                     height="42.535" viewBox="0 0 42.866 42.535">
+                                    <g id="Duotone" transform="translate(-2 -2.154)">
                                         <path id="Tracé_33" data-name="Tracé 33"
-                                              d="M28.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H45.137a5.532,5.532,0,0,1,5.552,5.512V75.215A4.8,4.8,0,0,0,55.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L47.128,4.63a12.15,12.15,0,0,0-15.435.277L6.271,25.258A9.65,9.65,0,0,0,2.5,32.677V66.617A13.431,13.431,0,0,0,15.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.732,4.732,0,0,0,1.414-3.371Z"
+                                              d="M6.287,10H14.86V25h4.287V10h8.573V25h4.287V10h8.573V25a4.286,4.286,0,0,1,4.287,4.287v2.143a4.286,4.286,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,31.433V29.29A4.287,4.287,0,0,1,6.287,25Z"
+                                              transform="translate(0 8.97)" fill="#fff" opacity="0.4"/>
+                                        <path id="Tracé_34" data-name="Tracé 34"
+                                              d="M2,13.3a4.287,4.287,0,0,1,2.695-3.98L21.841,2.461a4.287,4.287,0,0,1,3.184,0L42.171,9.319a4.287,4.287,0,0,1,2.695,3.98v1.384a4.287,4.287,0,0,1-4.287,4.287H6.287A4.287,4.287,0,0,1,2,14.684Z"
                                               transform="translate(0 0)" fill="#fff"/>
-                                        <g id="Groupe_369" data-name="Groupe 369"
-                                           transform="translate(18.1 2)" opacity="0.4">
-                                            <path id="Tracé_34" data-name="Tracé 34"
-                                                  d="M32.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H49.137a5.532,5.532,0,0,1,5.552,5.512h0V75.215A4.8,4.8,0,0,0,59.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L51.128,4.63a12.15,12.15,0,0,0-15.435.277L10.271,25.258A9.65,9.65,0,0,0,6.5,32.677V66.617A13.431,13.431,0,0,0,19.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.731,4.731,0,0,0,1.413-3.371Z"
-                                                  transform="translate(-6.5 -2)" fill="#fff"/>
-                                        </g>
                                     </g>
                                 </svg>
                             </div>
@@ -386,25 +378,21 @@
                 </div>
 
 
-                <div x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-80 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
+                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-1 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
                                     class="text-white mx-auto flex items-center justify-center h-10 w-10 rounded-md bg-gray-900">
-                                <svg class="h-6 w-6 " xmlns="http://www.w3.org/2000/svg" width="89.7"
-                                     height="78" viewBox="0 0 89.7 78">
-                                    <g id="Group_33486" data-name="Group 33486"
-                                       transform="translate(-2.5 -2)">
-                                        <path id="Tracé_33" data-name="Tracé 33"
-                                              d="M28.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H45.137a5.532,5.532,0,0,1,5.552,5.512V75.215A4.8,4.8,0,0,0,55.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L47.128,4.63a12.15,12.15,0,0,0-15.435.277L6.271,25.258A9.65,9.65,0,0,0,2.5,32.677V66.617A13.431,13.431,0,0,0,15.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.732,4.732,0,0,0,1.414-3.371Z"
-                                              transform="translate(0 0)" fill="#fff"/>
-                                        <g id="Groupe_369" data-name="Groupe 369"
-                                           transform="translate(18.1 2)" opacity="0.4">
-                                            <path id="Tracé_34" data-name="Tracé 34"
-                                                  d="M32.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H49.137a5.532,5.532,0,0,1,5.552,5.512h0V75.215A4.8,4.8,0,0,0,59.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L51.128,4.63a12.15,12.15,0,0,0-15.435.277L10.271,25.258A9.65,9.65,0,0,0,6.5,32.677V66.617A13.431,13.431,0,0,0,19.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.731,4.731,0,0,0,1.413-3.371Z"
-                                                  transform="translate(-6.5 -2)" fill="#fff"/>
-                                        </g>
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="33.503"
+                                     height="47.931" viewBox="0 0 33.503 47.931">
+                                    <g id="Location" transform="translate(-5 -2)">
+                                        <path id="Tracé_32" data-name="Tracé 32"
+                                              d="M13.451,4.242a16.487,16.487,0,0,1,16.835.139,17.542,17.542,0,0,1,8.216,15c-.119,6.079-3.462,11.794-7.639,16.212a44.815,44.815,0,0,1-8.038,6.748,2.808,2.808,0,0,1-.975.345,1.961,1.961,0,0,1-.935-.284A44.306,44.306,0,0,1,9.337,31.516,22.206,22.206,0,0,1,5,19.073,17.122,17.122,0,0,1,13.451,4.242Zm3.021,17.369a5.69,5.69,0,0,0,5.259,3.582,5.6,5.6,0,0,0,4.028-1.678,5.874,5.874,0,0,0-1.837-9.466,5.614,5.614,0,0,0-6.208,1.243A5.875,5.875,0,0,0,16.473,21.611Z"
+                                              fill="#fff" fill-rule="evenodd"/>
+                                        <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="12" cy="2.5"
+                                                 rx="12" ry="2.5" transform="translate(9.751 44.931)"
+                                                 fill="#fff" opacity="0.4"/>
                                     </g>
                                 </svg>
                             </div>
@@ -414,7 +402,7 @@
                         </div>
                     </div>
 
-                    <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-900 bg-opacity-90 px-8"
+                    <div  class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-900 bg-opacity-90 px-8"
                          x-cloak x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="read">
                         <p class="body-3 text-sm text-center text-white">Tous les sites et toutes les techniques pour
                             trouver le bon
@@ -426,25 +414,25 @@
                     </div>
                 </div>
 
-                <div x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-80 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
+                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-4 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
                                     class="text-white mx-auto flex items-center justify-center h-10 w-10 rounded-md bg-gray-900">
-                                <svg class="h-6 w-6 " xmlns="http://www.w3.org/2000/svg" width="89.7"
-                                     height="78" viewBox="0 0 89.7 78">
-                                    <g id="Group_33486" data-name="Group 33486"
-                                       transform="translate(-2.5 -2)">
-                                        <path id="Tracé_33" data-name="Tracé 33"
-                                              d="M28.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H45.137a5.532,5.532,0,0,1,5.552,5.512V75.215A4.8,4.8,0,0,0,55.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L47.128,4.63a12.15,12.15,0,0,0-15.435.277L6.271,25.258A9.65,9.65,0,0,0,2.5,32.677V66.617A13.431,13.431,0,0,0,15.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.732,4.732,0,0,0,1.414-3.371Z"
-                                              transform="translate(0 0)" fill="#fff"/>
-                                        <g id="Groupe_369" data-name="Groupe 369"
-                                           transform="translate(18.1 2)" opacity="0.4">
-                                            <path id="Tracé_34" data-name="Tracé 34"
-                                                  d="M32.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H49.137a5.532,5.532,0,0,1,5.552,5.512h0V75.215A4.8,4.8,0,0,0,59.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L51.128,4.63a12.15,12.15,0,0,0-15.435.277L10.271,25.258A9.65,9.65,0,0,0,6.5,32.677V66.617A13.431,13.431,0,0,0,19.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.731,4.731,0,0,0,1.413-3.371Z"
-                                                  transform="translate(-6.5 -2)" fill="#fff"/>
-                                        </g>
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="82.975"
+                                     height="74.846" viewBox="0 0 82.975 74.846">
+                                    <g id="Duotone" transform="translate(-1 -2.155)">
+                                        <path id="Tracé_15" data-name="Tracé 15"
+                                              d="M64.344,64.932V19.07L40.4,4.644h0C38.136,3.28,37,2.6,35.8,2.332a7.542,7.542,0,0,0-3.247,0c-1.209.266-2.341.948-4.605,2.313L4,19.07V64.932c0,4.224,0,6.337.822,7.95a7.542,7.542,0,0,0,3.3,3.3C9.732,77,11.844,77,16.069,77H52.275c4.224,0,6.337,0,7.95-.822a7.542,7.542,0,0,0,3.3-3.3C64.344,71.269,64.344,69.157,64.344,64.932Z"
+                                              transform="translate(8.315)" fill="#fff" opacity="0.4"/>
+                                        <path id="Tracé_16" data-name="Tracé 16"
+                                              d="M1.538,29.88a3.772,3.772,0,0,0,5.174,1.294L42.487,9.709,78.262,31.174a3.772,3.772,0,1,0,3.881-6.468L46.368,3.241a7.543,7.543,0,0,0-7.762,0L2.831,24.706A3.772,3.772,0,0,0,1.538,29.88Z"
+                                              transform="translate(0 0.031)" fill="#fff"
+                                              fill-rule="evenodd"/>
+                                        <path id="Tracé_17" data-name="Tracé 17"
+                                              d="M9,24.315a11.315,11.315,0,1,1,22.629,0V46.944H9Z"
+                                              transform="translate(22.173 30.057)" fill="#fff"/>
                                     </g>
                                 </svg>
                             </div>
@@ -467,8 +455,8 @@
                     </div>
                 </div>
 
-                <div x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-80 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
+                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-3 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
@@ -504,25 +492,40 @@
                             avec un maximum de cash-flow.</p>
                     </div>
                 </div>
-                <div x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-80 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
+                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-2 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
                                     class="text-white mx-auto flex items-center justify-center h-10 w-10 rounded-md bg-gray-900">
-                                <svg class="h-6 w-6 " xmlns="http://www.w3.org/2000/svg" width="89.7"
-                                     height="78" viewBox="0 0 89.7 78">
-                                    <g id="Group_33486" data-name="Group 33486"
-                                       transform="translate(-2.5 -2)">
-                                        <path id="Tracé_33" data-name="Tracé 33"
-                                              d="M28.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H45.137a5.532,5.532,0,0,1,5.552,5.512V75.215A4.8,4.8,0,0,0,55.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L47.128,4.63a12.15,12.15,0,0,0-15.435.277L6.271,25.258A9.65,9.65,0,0,0,2.5,32.677V66.617A13.431,13.431,0,0,0,15.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.732,4.732,0,0,0,1.414-3.371Z"
-                                              transform="translate(0 0)" fill="#fff"/>
-                                        <g id="Groupe_369" data-name="Groupe 369"
-                                           transform="translate(18.1 2)" opacity="0.4">
-                                            <path id="Tracé_34" data-name="Tracé 34"
-                                                  d="M32.41,75.25V63.289a5.532,5.532,0,0,1,5.517-5.512H49.137a5.532,5.532,0,0,1,5.552,5.512h0V75.215A4.8,4.8,0,0,0,59.473,80h7.647a13.5,13.5,0,0,0,9.529-3.9,13.3,13.3,0,0,0,3.95-9.45V32.677a9.644,9.644,0,0,0-3.492-7.419L51.128,4.63a12.15,12.15,0,0,0-15.435.277L10.271,25.258A9.65,9.65,0,0,0,6.5,32.677V66.617A13.431,13.431,0,0,0,19.979,80h7.473a4.8,4.8,0,0,0,3.405-1.379,4.731,4.731,0,0,0,1.413-3.371Z"
-                                                  transform="translate(-6.5 -2)" fill="#fff"/>
-                                        </g>
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="81.471"
+                                     height="81.471" viewBox="0 0 81.471 81.471">
+                                    <g id="Duotone" transform="translate(-2 -2)">
+                                        <path id="Tracé_18" data-name="Tracé 18"
+                                              d="M14,18.147A8.147,8.147,0,0,1,22.147,10H38.441a8.147,8.147,0,0,1,8.147,8.147V50.735a8.147,8.147,0,0,1-8.147,8.147H22.147A8.147,8.147,0,0,1,14,50.735Z"
+                                              transform="translate(36.882 24.588)" fill="#fff"
+                                              opacity="0.4"/>
+                                        <path id="Tracé_19" data-name="Tracé 19"
+                                              d="M25.147,18.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,18.074Z"
+                                              transform="translate(46.103 36.882)" fill="#fff"/>
+                                        <path id="Tracé_20" data-name="Tracé 20"
+                                              d="M25.147,21.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,21.074Z"
+                                              transform="translate(46.103 46.103)" fill="#fff"/>
+                                        <path id="Tracé_21" data-name="Tracé 21"
+                                              d="M2,10.147A8.147,8.147,0,0,1,10.147,2H34.588a8.147,8.147,0,0,1,8.147,8.147V75.324a8.147,8.147,0,0,1-8.147,8.147H10.147A8.147,8.147,0,0,1,2,75.324Z"
+                                              transform="translate(0 0)" fill="#fff" opacity="0.4"/>
+                                        <path id="Tracé_22" data-name="Tracé 22"
+                                              d="M21.294,10.074A4.074,4.074,0,0,0,17.221,6H9.074a4.074,4.074,0,0,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,10.074Z"
+                                              transform="translate(9.221 12.294)" fill="#fff"/>
+                                        <path id="Tracé_23" data-name="Tracé 23"
+                                              d="M21.294,14.074A4.074,4.074,0,0,0,17.221,10H9.074a4.074,4.074,0,1,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,14.074Z"
+                                              transform="translate(9.221 24.588)" fill="#fff"/>
+                                        <path id="Tracé_24" data-name="Tracé 24"
+                                              d="M17.221,14a4.074,4.074,0,1,1,0,8.147H9.074a4.074,4.074,0,0,1,0-8.147Z"
+                                              transform="translate(9.221 36.882)" fill="#fff"/>
+                                        <path id="Tracé_25" data-name="Tracé 25"
+                                              d="M21.294,22.074A4.074,4.074,0,0,0,17.221,18H9.074A4.074,4.074,0,0,0,5,22.074V32.257a2.037,2.037,0,0,0,2.037,2.037H19.257a2.037,2.037,0,0,0,2.037-2.037Z"
+                                              transform="translate(9.221 49.177)" fill="#fff"/>
                                     </g>
                                 </svg>
                             </div>
@@ -541,7 +544,7 @@
                             biens hors pair grâce à un immeuble de rapport.</p>
                     </div>
                 </div>
-                <div class="relative headline cursor-default w-full h-80 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" class="relative headline cursor-default w-full h_96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-900 px-8">
                         <div>
                             <h4 class="title-4 text-white text-center w-full">Un offre unique</h4>

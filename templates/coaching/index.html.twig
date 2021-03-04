@@ -8,8 +8,7 @@
 
     {# HERO #}
 
-    <main x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
-             style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+    <main x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-13">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -62,7 +61,7 @@
 
                             <div class="container">
                                 <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
                                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
                                             type="video/mp4" size="576">
                                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
@@ -124,19 +123,16 @@
                     </div>
                     <div class="w-full lg:w-1/2 px-8 mt-12 lg:mt-0">
                         <div class="relative max-w-sm sm:max-w-md mx-auto">
-                            <div class="absolute bg-blue-600" style="top: 22.8%; left: 3%; width: 25.2%; height: 72%;">
+                            <div class="absolute" style="top: 22.8%; left: 3%; width: 25.2%; height: 72%;">
                                 <img class="object-cover w-full h-full"
-                                     src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=668&amp;q=80"
+                                     src="{{ asset('build/images/coaching/1.webp') }}"
                                      alt=""></div>
-                            <div class="absolute bg-blue-600" style="top: 3.8%; left: 37%; width: 25.2%; height: 72%;">
+
+                            <div class="absolute" style="top: 12.8%; left: 70%; width: 25.2%; height: 72%;">
                                 <img class="object-cover w-full h-full"
-                                     src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=350&amp;q=80"
+                                     src="{{ asset('build/images/coaching/2.webp') }}"
                                      alt=""></div>
-                            <div class="absolute bg-blue-600" style="top: 12.8%; left: 70%; width: 25.2%; height: 72%;">
-                                <img class="object-cover w-full h-full"
-                                     src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=668&amp;q=80"
-                                     alt=""></div>
-                            <img class="relative mx-auto" src="https://picsum.photos/200/300" alt="">
+                            <img class="relative mx-auto" src="{{ asset('build/images/coaching/michael-ballot.webp') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -172,12 +168,12 @@
     <section class="bg-gradient-to-b from-gray-100 w-full pb-24 ">
         <div class="max-w-4xl px-8 mx-auto">
 
-            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
                     <a href="">
                         <img
                                 class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="https://picsum.photos/200/300" alt=""></a>
+                                src="{{ asset('build/images/main/coaching-immobilier.webp') }}" alt=""></a>
                 </div>
                 <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto mb-4">
@@ -188,31 +184,31 @@
                             bien à
                             la location ou la vente des lots.</p>
                         <ul class="font-raleway mt-5 uppercase font-bold text-sm">
-                            <li class="mb-1 flex items-center text-rose-500">
+                            <li class="mb-1 flex items-center text-pink-600">
                                 <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
                                     <circle cx="4" cy="4" r="3"/>
                                 </svg>
                                 <span class="">1 an d'accompagnement sur-mesure</span>
                             </li>
-                            <li class="mb-1 flex items-center text-rose-500">
+                            <li class="mb-1 flex items-center text-pink-600">
                                 <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
                                     <circle cx="4" cy="4" r="3"/>
                                 </svg>
                                 <span class="">Accès illimité à vie aux formations</span>
                             </li>
-                            <li class="mb-1 flex items-center text-rose-500">
+                            <li class="mb-1 flex items-center text-pink-600">
                                 <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
                                     <circle cx="4" cy="4" r="3"/>
                                 </svg>
                                 <span class="">Des rencontres toute l'année</span>
                             </li>
-                            <li class="mb-1 flex items-center text-rose-500">
+                            <li class="mb-1 flex items-center text-pink-600">
                                 <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
                                     <circle cx="4" cy="4" r="3"/>
                                 </svg>
                                 <span class="">5 week-ends de séminaires privés</span>
                             </li>
-                            <li class="mb-1 flex items-center text-rose-500">
+                            <li class="mb-1 flex items-center text-pink-600">
                                 <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
                                     <circle cx="4" cy="4" r="3"/>
                                 </svg>
@@ -363,22 +359,22 @@
                     <div class="w-full lg:w-1/2">
                         <div class="mb-4 flex flex-wrap items-end">
                             <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                <img class="tagline w-full h-32 lg:h-48 object-cover"
-                                     src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                <img class="tagline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                     src="{{ asset('build/images/formations/3.webp') }}"
                                      alt=""></div>
                             <div class="w-full lg:w-1/3 px-3">
-                                <img class="punchline w-full h-32 object-cover"
-                                     src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                <img class="punchline w-full h-48 lg:h-32 object-cover"
+                                     src="{{ asset('build/images/formations/4.webp') }}"
                                      alt=""></div>
                         </div>
                         <div class=" flex flex-wrap items-start">
                             <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                <img class="headline w-full h-32 object-cover"
-                                     src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                <img class="headline w-full h-48 lg:h-32 object-cover"
+                                     src="{{ asset('build/images/formations/7.webp') }}"
                                      alt=""></div>
                             <div class="w-full lg:w-2/3 px-3">
-                                <img class="highline w-full h-32 lg:h-48 object-cover"
-                                     src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                     src="{{ asset('build/images/formations/9.webp') }}"
                                      alt=""></div>
                         </div>
                     </div>
@@ -407,11 +403,8 @@
 
         <div class="py-20">
             <div class="container mx-auto px-4">
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 ">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-5 bg-cover bg-no-repeat lg:block hidden">
                     </div>
                     <div class="w-full lg:w-1/2 pb-6">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
@@ -427,13 +420,10 @@
 
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden lg:order-1">
                     </div>
-                    <div class="w-full lg:w-1/2 ">
+                    <div class="w-full lg:w-1/2 pb-6">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                     class="text-xl font-bold uppercase font-raleway">1 accompagnement sur-mesure</h3>
                         </div>
@@ -445,11 +435,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 ">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-19 bg-cover bg-no-repeat lg:block hidden">
                     </div>
                     <div class="w-full lg:w-1/2 pb-6  ">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3

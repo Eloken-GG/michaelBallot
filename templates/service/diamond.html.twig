@@ -7,8 +7,7 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <main x-data="{ open: false }"  class="bg-cover bg-no-repeat border-black bg-gray-900"
-          style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+    <main x-data="{ open: false }"  class="bg-cover bg-no-repeat border-black bg-gray-900 bg-diamond">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -105,12 +104,12 @@
     <section class="pt-8 bg-gray-50 w-full pb-8 ">
         <div class="max-w-4xl px-8 mx-auto">
 
-            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
                     <a href="">
                         <img
                                 class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="https://picsum.photos/200/300" alt=""></a>
+                                src="{{ asset('build/images/main/offre-diamond.webp') }}" alt=""></a>
                 </div>
                 <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto mb-4">
@@ -140,7 +139,7 @@
         <div class="bg-gradient-to-b from-gray-50 radius-for-skewed">
             <div class="container mx-auto px-8">
                 <div class="flex flex-wrap max-w-4xl mx-auto">
-                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                    <div data-aos="fade-left" class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
                         <div class="py-8 px-10 max-w-md mx-auto bg-white shadow-sm text-center">
                             <div class="mb-8">
                                 <h3 class="subtitle-3">Un accompagnement sur-mesure</h3>
@@ -202,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2 px-4">
+                    <div data-aos="fade-right" class="w-full lg:w-1/2 px-4">
                         <div class="py-8 px-10 max-w-md mx-auto bg-white shadow-sm text-center">
                             <div class="mb-8">
                                 <h3 class="subtitle-3">Un investissement clé en main</h3>
@@ -374,11 +373,8 @@
 
         <div class="py-20">
             <div class="container mx-auto px-4">
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 ">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-5 bg-cover bg-no-repeat lg:block hidden">
                     </div>
                     <div class="w-full lg:w-1/2 pb-6">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
@@ -394,13 +390,10 @@
 
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden lg:order-1">
                     </div>
-                    <div class="w-full lg:w-1/2 ">
+                    <div class="w-full lg:w-1/2 pb-6">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                     class="text-xl font-bold uppercase font-raleway">1 accompagnement sur-mesure</h3>
                         </div>
@@ -412,32 +405,25 @@
                         </p>
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 ">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-19 bg-cover bg-no-repeat lg:block hidden">
                     </div>
                     <div class="w-full lg:w-1/2 pb-6  ">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                     class="text-xl font-bold uppercase font-raleway">5+ séminaires privés</h3>
                         </div>
 
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">On se retrouve entre investisseurs
-                            dans
+                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">On se retrouve entre investisseurs dans
                             des lieux atypiques : Golf, station de ski, hotels de luxe pour faire le point sur vos
                             projets et approfondir des techniques d’investissement et d’optimisation
                         </p>
 
                     </div>
                 </div>
-                <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                        <img class="object-cover"
-                             src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                             alt="">
+                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-diamond-small bg-cover bg-no-repeat lg:block hidden lg:order-1">
                     </div>
-                    <div class="w-full lg:w-1/2 ">
+                    <div class="w-full lg:w-1/2 pb-6">
                         <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                     class="text-xl font-bold uppercase font-raleway">Achat d'un immeuble de rapport</h3>
                         </div>

@@ -7,8 +7,7 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900"
-            style="background-image: url('https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-9">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -105,7 +104,7 @@
 
                             <div class="container">
                                 <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
+                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
                                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
                                             type="video/mp4" size="576">
                                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
@@ -162,21 +161,21 @@
 
         <section class="pb-40">
             <div>
-                <div class="md:flex justify-center items-center max-w-3xl px-6 mx-auto">
-                    <img class="w-full max-w-sm md:max-w-full mx-auto md:mx-6 rounded-sm shadow-xl transform transition hover:scale-90 hover:shadow-md"
-                         src="https://picsum.photos/300/450"/>
+                <div class="md:flex justify-items-stretch items-center max-w-3xl px-6 mx-auto">
+                    <img class="w-full max-w-xs mx-auto md:mx-6 rounded-sm shadow-xl transform transition hover:scale-90 hover:shadow-md"
+                         src="{{ asset('build/images/main/guide-de-la-construction.webp') }}" alt="Téléchargez le guide de la construction pour faire naître votre projet de maison familiale"/>
                     <div class="position-form-guide">
                         <form method="post" accept-charset="UTF-8"
                               action="https://formation.michaelballot.fr/form/5d57e61b7db79goaztcncoovbvsciwvkqy"
                               class="bg-white md:max-w-full w-full max-w-sm mx-auto md:w-full shadow-xl rounded-sm md:mx-6 p-6">
                             <input type="hidden" name="form_name" value="Formulaire Prospect">
                             <div class="md:flex">
-                            <input class="font-raleway m-2 uppercase rounded-sm" id="form_input144223" type="text"
+                            <input class="font-raleway my-2 uppercase w-full rounded-sm" id="form_input144223" type="text"
                                    name="fname" placeholder="Prénom *" value="" required>
-                            <input class="font-raleway m-2 uppercase rounded-sm" id="form_input144220" type="text"
+                            <input class="font-raleway my-2 md:ml-2 uppercase w-full rounded-sm" id="form_input144220" type="text"
                                    name="lname" placeholder="Nom *" value="" required>
                             </div>
-                            <input class="font-raleway m-2 uppercase rounded-sm" id="form_input144219"
+                            <input class="font-raleway w-full my-2 uppercase rounded-sm" id="form_input144219"
                                    type="email"
                                    name="email"
                                    placeholder="Adresse email *"
@@ -210,14 +209,14 @@
 
         {# CARD FORMATION #}
         <section class="bg-gradient-to-b from-gray-50 w-full py-24 mt-20">
-            <div class="max-w-4xl px-8 mx-auto">
+            <div  class="max-w-4xl px-8 mx-auto">
 
-                <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                     <div class="w-full  max-w-sm md:col-span-1">
                         <a href="">
                             <img
                                     class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                    src="https://picsum.photos/200/300" alt=""></a>
+                                    src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}" alt=""></a>
                     </div>
                     <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                         <div class="max-w-sm mx-auto mb-4">
@@ -270,7 +269,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
 
 
 
@@ -281,29 +280,29 @@
                 <div class="container mx-auto px-4">
                     <div class="flex flex-wrap items-center -mx-4">
 
-                        <div class="w-full lg:order-1 lg:w-1/2">
+                        <div data-aos="fade-right" class="w-full lg:order-1 lg:w-1/2">
                             <div class="mb-4 flex flex-wrap items-end">
                                 <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                    <img class="tagline w-full h-32 lg:h-48 object-cover"
-                                         src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                    <img class="w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/16.webp') }}"
                                          alt=""></div>
                                 <div class="w-full lg:w-1/3 px-3">
-                                    <img class="punchline w-full h-32 object-cover"
-                                         src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                    <img class="w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/13.webp') }}"
                                          alt=""></div>
                             </div>
                             <div class=" flex flex-wrap items-start">
                                 <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                    <img class="headline w-full h-32 object-cover"
-                                         src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=701&amp;q=80"
+                                    <img class="w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/15.webp') }}"
                                          alt=""></div>
                                 <div class="w-full lg:w-2/3 px-3">
-                                    <img class="highline w-full h-32 lg:h-48 object-cover"
-                                         src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                                    <img class="w-full h-48 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/1.webp') }}"
                                          alt=""></div>
                             </div>
                         </div>
-                        <div class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
+                        <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
                             <div class="max-w-md">
                                 <span class="subtitle-2 inline-block">Contenu de la formation</span>
                                 <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
@@ -453,12 +452,9 @@
 
             <div class="py-8 lg:py-20">
                 <div class="container mx-auto px-4">
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2 ">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-9 bg-cover bg-no-repeat lg:block hidden">
+                    </div>
                         <div class="w-full lg:w-1/2 pb-6  ">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">1. Budgétisation et recherche
@@ -475,13 +471,10 @@
 
                         </div>
                     </div>
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
-                        <div class="w-full lg:w-1/2 ">
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-7 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                    </div>
+                        <div class="w-full lg:w-1/2 pb-6">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">2. étude et devis
                                     d’implantation</h3>
@@ -497,12 +490,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2 ">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-13 bg-cover bg-no-repeat lg:block hidden">
+                    </div>
                         <div class="w-full lg:w-1/2 pb-6  ">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">3. Choix des partenaires et
@@ -520,13 +510,10 @@
 
                         </div>
                     </div>
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
-                        <div class="w-full lg:w-1/2 ">
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-10 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                    </div>
+                        <div class="w-full lg:w-1/2 pb-6">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">4. Le prêt bancaire</h3>
                             </div>
@@ -542,12 +529,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2 ">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden">
+                    </div>
                         <div class="w-full lg:w-1/2 pb-6  ">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">5. La description préalable du
@@ -565,13 +549,10 @@
 
                         </div>
                     </div>
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
-                        <div class="w-full lg:w-1/2 ">
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-6 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                    </div>
+                        <div class="w-full lg:w-1/2 pb-6">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">6. Mise en conformité juridique
                                     et
@@ -588,12 +569,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2 ">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-15 bg-cover bg-no-repeat lg:block hidden">
+                    </div>
                         <div class="w-full lg:w-1/2 pb-6  ">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">7. Le démarrage des
@@ -613,13 +591,10 @@
 
                         </div>
                     </div>
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2  order-0 lg:order-1">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
-                        <div class="w-full lg:w-1/2 ">
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-3 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                    </div>
+                        <div class="w-full lg:w-1/2 pb-6">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">8. La remise des clés</h3>
                             </div>
@@ -636,12 +611,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                        <div class="w-full lg:w-1/2 ">
-                            <img class="object-cover"
-                                 src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80"
-                                 alt="">
-                        </div>
+                    <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                    <div class="w-full lg:w-1/2 bg-formation-11 bg-cover bg-no-repeat lg:block hidden">
+                    </div>
                         <div class="w-full lg:w-1/2 pb-6  ">
                             <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
                                         class="text-xl font-bold uppercase font-raleway">9. Le projet d’investissement

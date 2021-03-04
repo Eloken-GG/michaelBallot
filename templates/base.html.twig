@@ -39,14 +39,14 @@
 
 {# BODY #}
 <body data-controller="myswup symfony--ux-swup--swup" data-containers="#swup" data-theme="slide"
-      data-cache="data-cache" class="bg-gray-50 overflow-x-hidden" id="cover">
+      data-cache="data-cache" class="bg-gray-50 overflow-x-hidden">
 
 {# NAVBAR #}
 <nav>
     {% include 'shared/_navbar.html.twig' %}
 </nav>
 
-<div id="swup">
+<div id="swup" class="relative transform-none">
     {# FLASHES #}
     {% include 'shared/_flashes.html.twig' %}
 
