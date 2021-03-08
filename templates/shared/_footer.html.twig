@@ -1,5 +1,5 @@
-<div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+<div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 font-raleway">
+    <nav class="-mx-5 -my-2 flex flex-wrap subtitle-3 justify-center" aria-label="Footer">
         <div class="px-5 py-2">
             <a href="{{ path('about') }}" class="text-base text-gray-500 hover:text-gray-900">
                 A propos
@@ -36,6 +36,7 @@
             </a>
         </div>
     </nav>
+
     <div class="mt-8 flex justify-center space-x-6">
         <a href="https://www.facebook.com/michaelballotformation/" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Facebook</span>
@@ -56,7 +57,12 @@
             <svg class="h-6 w-6" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></>
         </a>
     </div>
-    <p class="mt-8 text-center text-base text-gray-400">
-        &copy; 2021 Michael Ballot, Inc. Tous droits réservés.
+    <div class="mt-8 flex justify-center space-x-6">
+        <a href="{{ path('mention') }}" class="text-gray-400 text-xs uppercase hover:text-gray-500">Mentions légales</a>
+        <a href="{{ asset('files/cgu.pdf') }}" class="text-gray-400 text-xs uppercase hover:text-gray-500">CGU</a>
+        <a href="{{ asset('files/cgv.pdf') }}" class="text-gray-400 text-xs uppercase hover:text-gray-500">CGV</a>
+    </div>
+    <p class="mt-2 text-center text-xs text-gray-400">
+        &copy; 2021 Michael Ballot Formations. Tous droits réservés.
     </p>
 </div>

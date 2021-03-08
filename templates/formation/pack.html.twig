@@ -7,7 +7,7 @@
 {% block body %}
 
     {# HERO #}
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-8">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-8">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -28,7 +28,7 @@
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
-                             alt="">
+                             alt="Michael Ballot présente la formation complète pour devenir investisseur immobilier">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -93,7 +93,9 @@
             </div>
         </div>
 
-    </section>
+    </header>
+
+    <main>
 
     {# INTRODUCTION #}
     <section class="w-full py-24">
@@ -120,7 +122,7 @@
                     <a href="">
                         <img
                                 class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="{{ asset('build/images/main/pack-5-formations-immobilier.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/pack-5-formations-immobilier.webp') }}" alt="Affiche de la formations immobilière complète pour devenir un investisseur indépendant"></a>
                 </div>
                 <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto mb-4">
@@ -166,10 +168,11 @@
                                 <span class="title-font font-medium text-2xl text-gray-900">899,00 €</span>
 
                             </div>
-
+                            <a href="">
                             <button class="ml-auto btn-1 text-white hover:bg-gray-900 bg-pink-600">
                                 Acheter
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -190,23 +193,23 @@
                      <div data-aos="fade-right" class="w-full lg:order-1 lg:w-1/2">
                         <div class="mb-4 flex flex-wrap items-end">
                             <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                <img class="tagline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                <img class=" w-full h-48 lg:h-32 lg:h-48 object-cover"
                                      src="{{ asset('build/images/formations/18.webp') }}"
-                                     alt=""></div>
+                                     alt="Appels commerciaux avec les parties de prenantes de vos investissements immobilier"></div>
                             <div class="w-full lg:w-1/3 px-3">
-                                <img class="punchline w-full h-48 lg:h-32 object-cover"
+                                <img class=" w-full h-48 lg:h-32 object-cover"
                                      src="{{ asset('build/images/formations/10.webp') }}"
-                                     alt=""></div>
+                                     alt="Signature d'un acte sous seing auprès du notaire pour acheter un bien immobilier à l'investissement"></div>
                         </div>
                         <div class=" flex flex-wrap items-start">
                             <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                <img class="headline w-full h-48 lg:h-32 object-cover"
+                                <img class=" w-full h-48 lg:h-32 object-cover"
                                      src="{{ asset('build/images/formations/3.webp') }}"
-                                     alt=""></div>
+                                     alt="Remise des clés d'un bien immobilier par un professionnel de l'investissement"></div>
                             <div class="w-full lg:w-2/3 px-3">
                                 <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
                                      src="{{ asset('build/images/formations/12.webp') }}"
-                                     alt=""></div>
+                                     alt="Réunion de chantier pour suivre l'avancement des travaux sur votre investissement immobilier"></div>
                         </div>
                     </div>
                     <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
@@ -334,7 +337,7 @@
             <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0 ">
 
                 <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-5 bg-cover bg-no-repeat">
+                     class="relative  cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-5 bg-cover bg-no-repeat">
 
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
@@ -374,7 +377,7 @@
 
 
                 <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-1 bg-cover bg-no-repeat">
+                     class="relative  cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-1 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
@@ -410,7 +413,7 @@
                 </div>
 
                 <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-4 bg-cover bg-no-repeat">
+                     class="relative  cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-4 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
@@ -451,7 +454,7 @@
                 </div>
 
                 <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-3 bg-cover bg-no-repeat">
+                     class="relative  cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-3 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
@@ -488,7 +491,7 @@
                     </div>
                 </div>
                 <div data-aos="fade-up" x-data="{ read : false }" x-on:mouseenter=" read = true " x-on:mouseleave=" read = false "
-                     class="relative headline cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-2 bg-cover bg-no-repeat">
+                     class="relative  cursor-default w-full h-96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-formation-pack-2 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-100 bg-opacity-80 px-8">
                         <div x-show.transition.in.opacity.duration.400ms.out.opacity.duration.200ms="!read">
                             <div
@@ -539,7 +542,7 @@
                             biens hors pair grâce à un immeuble de rapport.</p>
                     </div>
                 </div>
-                <div data-aos="fade-up" class="relative headline cursor-default w-full h_96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
+                <div data-aos="fade-up" class="relative  cursor-default w-full h_96 col-span-4 overflow-hidden  sm:rounded-xl hover:shadow-lg bg-2 bg-cover bg-no-repeat">
                     <div class="absolute mx-auto h-full top-0 flex items-center justify-center w-full bg-gray-900 px-8">
                         <div>
                             <h4 class="title-4 text-white text-center w-full">Un offre unique</h4>
@@ -595,6 +598,6 @@ Il y a 2 ans, je ne pensais pas que cela serait possible. Je n'aurai même pas i
             </div>
         </div>
     </div>
-
+    </main>
 
 {% endblock %}

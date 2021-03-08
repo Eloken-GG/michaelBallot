@@ -7,7 +7,7 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-11">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-11">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -95,9 +95,9 @@
             </div>
         </div>
 
-    </section>
+    </header>
 
-
+<main>
 
     {# BULLET POINTS #}
     {% include 'shared/_avantages.html.twig' %}
@@ -122,7 +122,7 @@
                     <a href="{{ path('bon') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-trouver-un-bien-immobilier.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/formation-trouver-un-bien-immobilier.webp') }}" alt="Affiche de la formation immobilière : trouver le bon bien pour investir ou acheter"></a>
                 </div>
                 <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
@@ -149,7 +149,7 @@
                     <a href="{{ path('dossier') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-dossier-bancaire-immo.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/formation-dossier-bancaire-immo.webp') }}" alt="Affiche de la formations immobilière : Réussir son dossier bancaire"></a>
                 </div>
                 <div data-aos="fade-right" class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
@@ -174,7 +174,7 @@
                     <a href="{{ path('maison') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}" alt="Affiche de la formations immobilière : Construire sa maison en toute autonomie"></a>
                 </div>
                 <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
@@ -199,7 +199,7 @@
                     <a href="{{ path('double') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-construction-location.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/formation-construction-location.webp') }}" alt="Affiche de la formations immobilière : La double construction en projet locatif"></a>
                 </div>
                 <div data-aos="fade-right"  class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
@@ -224,7 +224,7 @@
                     <a href="{{ path('immeuble') }}">
                         <img
                                 class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt="Affiche de la formations immobilière : Investir dans un immeuble de rapport"></a>
                 </div>
                 <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto">
@@ -272,6 +272,6 @@
     {% include 'shared/_packFormations.html.twig' %}
 
 
-
+</main>
 
 {% endblock %}

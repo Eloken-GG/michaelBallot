@@ -8,7 +8,7 @@
 
     {# HERO SECTION #}
 
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-8">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-8">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -32,7 +32,7 @@
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
-                             alt="">
+                             alt="Michael Ballot présente les prestations d'investissements immobiliers">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -97,9 +97,9 @@
             </div>
         </div>
 
-    </section>
+    </header>
 
-
+<main>
     {# PRICING #}
     {% include 'shared/_pricing.html.twig' %}
 
@@ -162,5 +162,6 @@
         </div>
 
     </section>
+</main>
 
 {% endblock %}

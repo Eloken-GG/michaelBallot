@@ -1,6 +1,6 @@
 <!--------------------- DESKTOP MENU --------------------->
 
-<div x-data="{ mobileMenuOpen: false }" class="bg-white fixed top-0 w-screen z-30 shadow-sm">
+<div x-data="{ mobileMenuOpen: false }" class="bg-white fixed top-0 w-screen z-40 shadow-sm">
     <div class="w-full mx-auto px-4 sm:px-5">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:flex max-w-7xl mx-auto justify-between items-center  py-6 items-center  lg:space-x-10">
 
@@ -10,9 +10,9 @@
                     <span class="sr-only">Michael Ballot Formation</span>
                     <img class="h-auto max-h-12 hidden lg:block w-auto"
                          src="{{ asset('build/images/logo/michael-ballot-logo.png') }}"
-                         alt="Logo Michael Ballot formation : coaching immobilier">
+                         alt="Logo Michael Ballot formation : coaching et formation en investissement immobilier">
                     <img class="h-8 w-auto lg:hidden sm:h-10" src="{{ asset('build/images/logo/logo michael ballot.png') }}"
-                         alt="Logo Michael Ballot formation : coaching immobilier">
+                         alt="Logo Michael Ballot formation : coaching et formation en investissement immobilier">
                 </a>
             </div>
 
@@ -118,52 +118,7 @@
                                         </div>
                                     </a>
 
-                                    <a href="{{ path('immeuble') }}"
-                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
-                                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
-                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="81.471"
-                                                 height="81.471" viewBox="0 0 81.471 81.471">
-                                                <g id="Duotone" transform="translate(-2 -2)">
-                                                    <path id="Tracé_18" data-name="Tracé 18"
-                                                          d="M14,18.147A8.147,8.147,0,0,1,22.147,10H38.441a8.147,8.147,0,0,1,8.147,8.147V50.735a8.147,8.147,0,0,1-8.147,8.147H22.147A8.147,8.147,0,0,1,14,50.735Z"
-                                                          transform="translate(36.882 24.588)" fill="#fff"
-                                                          opacity="0.4"/>
-                                                    <path id="Tracé_19" data-name="Tracé 19"
-                                                          d="M25.147,18.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,18.074Z"
-                                                          transform="translate(46.103 36.882)" fill="#fff"/>
-                                                    <path id="Tracé_20" data-name="Tracé 20"
-                                                          d="M25.147,21.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,21.074Z"
-                                                          transform="translate(46.103 46.103)" fill="#fff"/>
-                                                    <path id="Tracé_21" data-name="Tracé 21"
-                                                          d="M2,10.147A8.147,8.147,0,0,1,10.147,2H34.588a8.147,8.147,0,0,1,8.147,8.147V75.324a8.147,8.147,0,0,1-8.147,8.147H10.147A8.147,8.147,0,0,1,2,75.324Z"
-                                                          transform="translate(0 0)" fill="#fff" opacity="0.4"/>
-                                                    <path id="Tracé_22" data-name="Tracé 22"
-                                                          d="M21.294,10.074A4.074,4.074,0,0,0,17.221,6H9.074a4.074,4.074,0,0,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,10.074Z"
-                                                          transform="translate(9.221 12.294)" fill="#fff"/>
-                                                    <path id="Tracé_23" data-name="Tracé 23"
-                                                          d="M21.294,14.074A4.074,4.074,0,0,0,17.221,10H9.074a4.074,4.074,0,1,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,14.074Z"
-                                                          transform="translate(9.221 24.588)" fill="#fff"/>
-                                                    <path id="Tracé_24" data-name="Tracé 24"
-                                                          d="M17.221,14a4.074,4.074,0,1,1,0,8.147H9.074a4.074,4.074,0,0,1,0-8.147Z"
-                                                          transform="translate(9.221 36.882)" fill="#fff"/>
-                                                    <path id="Tracé_25" data-name="Tracé 25"
-                                                          d="M21.294,22.074A4.074,4.074,0,0,0,17.221,18H9.074A4.074,4.074,0,0,0,5,22.074V32.257a2.037,2.037,0,0,0,2.037,2.037H19.257a2.037,2.037,0,0,0,2.037-2.037Z"
-                                                          transform="translate(9.221 49.177)" fill="#fff"/>
-                                                </g>
-                                            </svg>
 
-                                        </div>
-                                        <div class="ml-4">
-                                            <p class="text-base font-medium text-gray-900 font-playfair">
-                                                Achetez votre premier immeuble
-                                            </p>
-                                            <p class="mt-1 text-sm text-gray-500 font-raleway">
-                                                Acheter un immeuble et rentabiliser cet investissement en moins d’un an
-                                                est
-                                                possible.
-                                            </p>
-                                        </div>
-                                    </a>
 
                                     <a href="{{ path('maison') }}"
                                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
@@ -224,6 +179,52 @@
                                             <p class="mt-1 text-sm text-gray-500 font-raleway">
                                                 Faire construire deux maisons en même temps pour faire des économies sur
                                                 votre opération.
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="{{ path('immeuble') }}"
+                                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gray-900 text-white sm:h-12 sm:w-12">
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="81.471"
+                                                 height="81.471" viewBox="0 0 81.471 81.471">
+                                                <g id="Duotone" transform="translate(-2 -2)">
+                                                    <path id="Tracé_18" data-name="Tracé 18"
+                                                          d="M14,18.147A8.147,8.147,0,0,1,22.147,10H38.441a8.147,8.147,0,0,1,8.147,8.147V50.735a8.147,8.147,0,0,1-8.147,8.147H22.147A8.147,8.147,0,0,1,14,50.735Z"
+                                                          transform="translate(36.882 24.588)" fill="#fff"
+                                                          opacity="0.4"/>
+                                                    <path id="Tracé_19" data-name="Tracé 19"
+                                                          d="M25.147,18.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,18.074Z"
+                                                          transform="translate(46.103 36.882)" fill="#fff"/>
+                                                    <path id="Tracé_20" data-name="Tracé 20"
+                                                          d="M25.147,21.074a4.074,4.074,0,1,0-4.074,4.074A4.073,4.073,0,0,0,25.147,21.074Z"
+                                                          transform="translate(46.103 46.103)" fill="#fff"/>
+                                                    <path id="Tracé_21" data-name="Tracé 21"
+                                                          d="M2,10.147A8.147,8.147,0,0,1,10.147,2H34.588a8.147,8.147,0,0,1,8.147,8.147V75.324a8.147,8.147,0,0,1-8.147,8.147H10.147A8.147,8.147,0,0,1,2,75.324Z"
+                                                          transform="translate(0 0)" fill="#fff" opacity="0.4"/>
+                                                    <path id="Tracé_22" data-name="Tracé 22"
+                                                          d="M21.294,10.074A4.074,4.074,0,0,0,17.221,6H9.074a4.074,4.074,0,0,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,10.074Z"
+                                                          transform="translate(9.221 12.294)" fill="#fff"/>
+                                                    <path id="Tracé_23" data-name="Tracé 23"
+                                                          d="M21.294,14.074A4.074,4.074,0,0,0,17.221,10H9.074a4.074,4.074,0,1,0,0,8.147h8.147A4.074,4.074,0,0,0,21.294,14.074Z"
+                                                          transform="translate(9.221 24.588)" fill="#fff"/>
+                                                    <path id="Tracé_24" data-name="Tracé 24"
+                                                          d="M17.221,14a4.074,4.074,0,1,1,0,8.147H9.074a4.074,4.074,0,0,1,0-8.147Z"
+                                                          transform="translate(9.221 36.882)" fill="#fff"/>
+                                                    <path id="Tracé_25" data-name="Tracé 25"
+                                                          d="M21.294,22.074A4.074,4.074,0,0,0,17.221,18H9.074A4.074,4.074,0,0,0,5,22.074V32.257a2.037,2.037,0,0,0,2.037,2.037H19.257a2.037,2.037,0,0,0,2.037-2.037Z"
+                                                          transform="translate(9.221 49.177)" fill="#fff"/>
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                        <div class="ml-4">
+                                            <p class="text-base font-medium text-gray-900 font-playfair">
+                                                Achetez votre premier immeuble
+                                            </p>
+                                            <p class="mt-1 text-sm text-gray-500 font-raleway">
+                                                Acheter un immeuble et rentabiliser cet investissement en moins d’un an
+                                                est
+                                                possible.
                                             </p>
                                         </div>
                                     </a>
@@ -469,7 +470,7 @@
 
             {# CTA #}
             <div class="hidden md:flex md:order-2 items-center justify-end md:flex-1 ">
-                <a href="#"
+                <a href="https://formation.michaelballot.fr/connexion/"
                    class="btn-1 text-white py-3 bg-gray-900 hover:bg-pink-600">
                     Connexion
                 </a>
@@ -505,7 +506,7 @@
                 </div>
                 <div class="mt-6">
                     <nav class="grid gap-y-8">
-                        <a href="{{ path('homepage') }}"
+                        <a @click="mobileMenuOpen = false" href="{{ path('homepage') }}"
                            class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-pink-600">
                             <!-- Heroicon name: outline/chart-bar -->
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
@@ -514,7 +515,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ path('formations') }}"
+                        <a @click="mobileMenuOpen = false" href="{{ path('formations') }}"
                            class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-pink-600">
                             <!-- Heroicon name: outline/chart-bar -->
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -529,7 +530,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ path('coaching') }}"
+                        <a @click="mobileMenuOpen = false" href="{{ path('coaching') }}"
                            class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-pink-600">
                             <!-- Heroicon name: outline/cursor-click -->
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -542,7 +543,7 @@
                               </span>
                         </a>
 
-                        <a href="{{ path('service') }}"
+                        <a @click="mobileMenuOpen = false" href="{{ path('service') }}"
                            class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-pink-600">
                             <!-- Heroicon name: outline/shield-check -->
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
@@ -551,7 +552,7 @@
                               </span>
                         </a>
 
-                        <a href="{{ path('seminaire') }}"
+                        <a @click="mobileMenuOpen = false" href="{{ path('seminaire') }}"
                            class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-pink-600">
                             <!-- Heroicon name: outline/view-grid -->
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -564,7 +565,7 @@
               </span>
                         </a>
 
-                        <a href="{{ path('contact') }}"
+                        <a @click="mobileMenuOpen = false" href="{{ path('contact') }}"
                            class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-pink-600">
                             <!-- Heroicon name: outline/refresh -->
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -581,7 +582,7 @@
             </div>
             <div class="py-8 px-5">
                 <div>
-                    <a href="#"
+                    <a href="https://formation.michaelballot.fr/connexion/"
                        class="btn-1 text-white bg-pink-600 py-3">
                         Connexion
                     </a>

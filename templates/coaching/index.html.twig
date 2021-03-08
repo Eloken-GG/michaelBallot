@@ -8,13 +8,14 @@
 
     {# HERO #}
 
-    <main x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-13">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-13">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
-                            <div data-aos="fade-right" class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                            <div data-aos="fade-right"
+                                 class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
                                 <h1 class="title-1 text-white">
                                     Coaching personnalisé
                                 </h1>
@@ -22,7 +23,10 @@
                                     financièrement indépendant !Je vous accompagne pendant 1 an dans toutes les étapes
                                     de vos projets immobiliers.</p>
                             </div>
-                            <a href="http://michaelballot.fr/theschool" class="mx-auto">
+                            <a data-controller="typeform" class="mx-auto typeform-share" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
+                               data-mode="popup"
+                               data-size="100" target="_blank">
+
                                 <button class="btn-1 text-white mx-auto block lg:mx-0 hover:bg-gray-900 bg-pink-600">
                                     Inscription
                                 </button>
@@ -34,7 +38,7 @@
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
-                             alt="">
+                             alt="Michael Ballot présente The School Investment : Coaching en investissement immobilier">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -99,358 +103,409 @@
             </div>
         </div>
 
-    </main>
+    </header>
+    <main>
 
-    {# DESCRIPTION #}
-    <section class="py-20">
-        <div class="container px-4 mx-auto">
-            <div class="pt-20 pb-24 px-8 md:px-16 bg-gray-900 rounded">
-                <div class="flex flex-wrap items-center -mx-8">
-                    <div class="w-full lg:w-1/2 px-8 flex">
-                        <div class="my-auto text-white">
-                            <span class="subtitle-2 inline-block text-white">Accompagnement sur-mesure</span>
-                            <h2 class="title-2 my-6 text-gray-100 text-white">1 an pour devenir investisseur</h2>
+        {# DESCRIPTION #}
+        <section class="py-20">
+            <div class="container px-4 mx-auto">
+                <div class="pt-20 pb-24 px-8 md:px-16 bg-gray-900 rounded">
+                    <div class="flex flex-wrap items-center -mx-8">
+                        <div class="w-full lg:w-1/2 px-8 flex">
+                            <div class="my-auto text-white">
+                                <span class="subtitle-2 inline-block text-white">Accompagnement sur-mesure</span>
+                                <h2 class="title-2 my-6 text-gray-100 text-white">1 an pour devenir investisseur</h2>
 
-                            <p class="font-raleway font-base text-white tracking-tight">
-                                Vous avez toujours souhaité savoir comment vous constituer un patrimoine durable qui
-                                vous rapporte de l'argent immédiatement ?<br>
-                                La fiscalité, les règles d'urbanisme, la législation sur le foncier, l'accès aux
-                                financements, le choix des prestataires, les négociations avec les corps de métiers...
-                                Ayez toutes les armes en main pour maitriser vos investissements immobiliers et réaliser
-                                un maximum de plus-value
+                                <p class="font-raleway font-base text-white tracking-tight">
+                                    Vous avez toujours souhaité savoir comment vous constituer un patrimoine durable qui
+                                    vous rapporte de l'argent immédiatement ?<br>
+                                    La fiscalité, les règles d'urbanisme, la législation sur le foncier, l'accès aux
+                                    financements, le choix des prestataires, les négociations avec les corps de
+                                    métiers...
+                                    Ayez toutes les armes en main pour maitriser vos investissements immobiliers et
+                                    réaliser
+                                    un maximum de plus-value
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 px-8 mt-12 lg:mt-0">
+                            <div class="relative max-w-sm sm:max-w-md mx-auto">
+                                <div class="absolute" style="top: 22.8%; left: 3%; width: 25.2%; height: 72%;">
+                                    <img class="object-cover w-full h-full"
+                                         src="{{ asset('build/images/coaching/1.webp') }}"
+                                         alt="Immeubles dans une ville"></div>
+
+                                <div class="absolute" style="top: 12.8%; left: 70%; width: 25.2%; height: 72%;">
+                                    <img class="object-cover w-full h-full"
+                                         src="{{ asset('build/images/coaching/2.webp') }}"
+                                         alt="Immeubles à l'investissement"></div>
+                                <img class="relative mx-auto"
+                                     src="{{ asset('build/images/coaching/michael-ballot.webp') }}"
+                                     alt="Michael Ballot : formateur, coach, rentier et investisseur immobilier">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {# INTRODUCTION #}
+        <section class="bg-gray-100 mt-20 w-full pb-24">
+
+            <div class="py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="title-1">Rejoignez "The school Investment"</h2>
+                        <p class="body-2 m-6">The School investment a été lancée début 2020 et accompagne plus de 20
+                            investisseurs ambitieux dans leur opérations immobilières. Rejoignez The school investment,
+                            accédez à l’ensemble des formations et échangez directement avec des investisseurs
+                            professionnels qui vous aident à vous constituer un patrimoine.
+
+                            Prenez en main vos investissements immobiliers et maîtrisez l’ensemble des techniques pour
+                            vous
+                            constituer un patrimoine rapidement et sereinement. Devenez financièrement indépendant.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {# CARD COACHING #}
+        <section class="bg-gradient-to-b from-gray-100 w-full pb-24 ">
+            <div class="max-w-4xl px-8 mx-auto">
+
+                <div data-aos="fade-up"
+                     class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+                        <a href="http://michaelballot.fr/theschool">
+                            <img
+                                    class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/coaching-immobilier.webp') }}"
+                                    alt="Affiche de 'The School Investment' : coaching et accompagnement pour devenir investisseur immobilier"></a>
+                    </div>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto mb-4">
+                            <h2 class="subtitle-2">Coaching personnalisé</h2>
+                            <h3 class="title-2 py-5">The School Investment</h3>
+
+                            <p class="body-2 mt-5">Réalisez votre premier achat d’immeuble de rapport. De la recherche
+                                du
+                                bien à
+                                la location ou la vente des lots.</p>
+                            <ul class="font-raleway mt-5 uppercase font-bold text-sm">
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">1 an d'accompagnement sur-mesure</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">Accès illimité à vie aux formations</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">Des rencontres toute l'année</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">5 week-ends de séminaires privés</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">Bilan personnalisé</span>
+                                </li>
+
+                            </ul>
+                            <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="title-font font-medium text-2xl text-gray-900">3 100,00 €</span>
+                                <a data-controller="typeform" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
+                                   data-mode="popup"
+                                   class="ml-auto typeform-share"
+                                   data-size="100" target="_blank">
+                                    <button class="flex btn-1 text-white bg-pink-600 hover:bg-gray-900">
+                                        Je m'inscris
+                                    </button>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# DETAIL COACHING #}
+        <section class="bg-gray-100">
+            <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center -mx-4">
+                        <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
+                            <div class="max-w-md">
+                                <span class="subtitle-2 inline-block">Contenu de la formation</span>
+                                <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
+
+                                <ul class="font-raleway font-base text-gray-900 tracking-tight">
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Maîtriser les règles d'urbanisme</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Utiliser les leviers d'optimisation fiscale </span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Gérer son opération en toute autonomie</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Convaincre les banques</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Trouver des prestataires de confiance</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Etablir une étude de marché viable</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Négocier les prix et pérenniser son investissement</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Réduire au maximum les dépenses inutiles</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Trouver efficacement les locataires</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Maximiser son retour sur investissement</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="mb-4 flex flex-wrap items-end">
+                                <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/3.webp') }}"
+                                         alt="Remise des clés d'un bien immobilier par un professionnel de l'investissement">
+                                </div>
+                                <div class="w-full lg:w-1/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/4.webp') }}"
+                                         alt="Formations accessibles en ligne"></div>
+                            </div>
+                            <div class=" flex flex-wrap items-start">
+                                <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/7.webp') }}"
+                                         alt="Collaboration et accompagnement pour concevoir ses plans d'investissement">
+                                </div>
+                                <div class="w-full lg:w-2/3 px-3">
+                                    <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/9.webp') }}"
+                                         alt="Calcul de la rentabilité d'un bien immobilier pour réaliser un investissement">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        {# BULLET POINTS #}
+        {% include 'shared/_avantages.html.twig' %}
+
+        {# PROGRAM #}
+        {# LES SESSIONS #}
+        <section class="max-w-5xl mx-auto">
+
+            <div class="py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-xl mx-auto text-center">
+                        <span class="subtitle-2 inline-block mb-5">Contenu du coaching</span>
+                        <h2 class="title-2">The School Investment en détail</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="py-20">
+                <div class="container mx-auto px-4">
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-5 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">5 formations en ligne</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Formez-vous à votre rythme
+                                grâce à
+                                un accès illimité à 5 formations en ligne. Maitrisez les règles d'urbanisme, trouvez le
+                                bon
+                                bien, réalisez des opérations rentables, actionnez les bons leviers fiscaux, négociez
+                                avec
+                                la banque, gérez l'ensemble des travaux, entourez vous des bonnes personnes... Grâce à
+                                ces 5
+                                formations vous deviendrez un investisseur hors pair.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">1 accompagnement
+                                    sur-mesure</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">En visio-conférence ou en
+                                direct,
+                                nous nous rencontrons avec l’ensemble des élèves de The School Investment pour échanger
+                                à
+                                propos de vos projets. Je réponds à toutes vos questions et vous donne des astuces
+                                inédites.
                             </p>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2 px-8 mt-12 lg:mt-0">
-                        <div class="relative max-w-sm sm:max-w-md mx-auto">
-                            <div class="absolute" style="top: 22.8%; left: 3%; width: 25.2%; height: 72%;">
-                                <img class="object-cover w-full h-full"
-                                     src="{{ asset('build/images/coaching/1.webp') }}"
-                                     alt=""></div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-19 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6  ">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">5+ séminaires privés</h3>
+                            </div>
 
-                            <div class="absolute" style="top: 12.8%; left: 70%; width: 25.2%; height: 72%;">
-                                <img class="object-cover w-full h-full"
-                                     src="{{ asset('build/images/coaching/2.webp') }}"
-                                     alt=""></div>
-                            <img class="relative mx-auto" src="{{ asset('build/images/coaching/michael-ballot.webp') }}" alt="">
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">On se retrouve entre
+                                investisseurs dans
+                                des lieux atypiques : Golf, station de ski, hotels de luxe pour faire le point sur vos
+                                projets et approfondir des techniques d’investissement et d’optimisation
+                            </p>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="bg-cover bg-no-repeat py-20 bg-6 bg-fixed">
 
-
-
-
-    {# INTRODUCTION #}
-    <section class="bg-gray-100 mt-20 w-full pb-24">
-
-        <div class="py-20 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="title-1">Rejoignez "The school Investment"</h2>
-                    <p class="body-2 m-6">The School investment a été lancée début 2020 et accompagne plus de 20
-                        investisseurs ambitieux dans leur opérations immobilières. Rejoignez The school investment,
-                        accédez à l’ensemble des formations et échangez directement avec des investisseurs
-                        professionnels qui vous aident à vous constituer un patrimoine.
-
-                        Prenez en main vos investissements immobiliers et maîtrisez l’ensemble des techniques pour vous
-                        constituer un patrimoine rapidement et sereinement. Devenez financièrement indépendant.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    {# CARD COACHING #}
-    <section class="bg-gradient-to-b from-gray-100 w-full pb-24 ">
-        <div class="max-w-4xl px-8 mx-auto">
-
-            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
-                <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
-                        <img
-                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="{{ asset('build/images/main/coaching-immobilier.webp') }}" alt=""></a>
-                </div>
-                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto mb-4">
-                        <h2 class="subtitle-2">Coaching personnalisé</h2>
-                        <h3 class="title-2 py-5">The School Investment</h3>
-
-                        <p class="body-2 mt-5">Réalisez votre premier achat d’immeuble de rapport. De la recherche du
-                            bien à
-                            la location ou la vente des lots.</p>
-                        <ul class="font-raleway mt-5 uppercase font-bold text-sm">
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">1 an d'accompagnement sur-mesure</span>
-                            </li>
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">Accès illimité à vie aux formations</span>
-                            </li>
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">Des rencontres toute l'année</span>
-                            </li>
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">5 week-ends de séminaires privés</span>
-                            </li>
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">Bilan personnalisé</span>
-                            </li>
-
-                        </ul>
-                        <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                        </div>
-                        <div class="flex items-center">
-                            <span class="title-font font-medium text-2xl text-gray-900">3 100,00 €</span>
-                            <a href="http://michaelballot.fr/theschool" class="ml-auto">
-                                <button class="flex btn-1 text-white bg-pink-600 hover:bg-gray-900">
-                                    Je m'inscris
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {# DETAIL COACHING #}
-    <section class="bg-gray-100">
-        <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center -mx-4">
-                    <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
-                        <div class="max-w-md">
-                            <span class="subtitle-2 inline-block">Contenu de la formation</span>
-                            <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
-
-                            <ul class="font-raleway font-base text-gray-900 tracking-tight">
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Maîtriser les règles d'urbanisme</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Utiliser les leviers d'optimisation fiscale </span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Gérer son opération en toute autonomie</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Convaincre les banques</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Trouver des prestataires de confiance</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Etablir une étude de marché viable</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Négocier les prix et pérenniser son investissement</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Réduire au maximum les dépenses inutiles</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Trouver efficacement les locataires</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Maximiser son retour sur investissement</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/2">
-                        <div class="mb-4 flex flex-wrap items-end">
-                            <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                <img class="tagline w-full h-48 lg:h-32 lg:h-48 object-cover"
-                                     src="{{ asset('build/images/formations/3.webp') }}"
-                                     alt=""></div>
-                            <div class="w-full lg:w-1/3 px-3">
-                                <img class="punchline w-full h-48 lg:h-32 object-cover"
-                                     src="{{ asset('build/images/formations/4.webp') }}"
-                                     alt=""></div>
-                        </div>
-                        <div class=" flex flex-wrap items-start">
-                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                <img class="headline w-full h-48 lg:h-32 object-cover"
-                                     src="{{ asset('build/images/formations/7.webp') }}"
-                                     alt=""></div>
-                            <div class="w-full lg:w-2/3 px-3">
-                                <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
-                                     src="{{ asset('build/images/formations/9.webp') }}"
-                                     alt=""></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    {# BULLET POINTS #}
-    {% include 'shared/_avantages.html.twig' %}
-
-    {# PROGRAM #}
-    {# LES SESSIONS #}
-    <section class="max-w-5xl mx-auto">
-
-        <div class="py-20 radius-for-skewed">
             <div class="container mx-auto px-4">
                 <div class="max-w-xl mx-auto text-center">
-                    <span class="subtitle-2 inline-block mb-5">Contenu du coaching</span>
-                    <h2 class="title-2">The School Investment en détail</h2>
+
+                    <a data-controller="typeform"  class="my-12 block typeform-share" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
+                       data-mode="popup"
+                       data-size="100" target="_blank">
+                        <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">Je m'inscris</button>
+                    </a>
                 </div>
             </div>
-        </div>
 
+        </section>
+    </main>
 
-        <div class="py-20">
-            <div class="container mx-auto px-4">
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-5 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">5 formations en ligne</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Formez-vous à votre rythme grâce à
-                            un accès illimité à 5 formations en ligne. Maitrisez les règles d'urbanisme, trouvez le bon
-                            bien, réalisez des opérations rentables, actionnez les bons leviers fiscaux, négociez avec
-                            la banque, gérez l'ensemble des travaux, entourez vous des bonnes personnes... Grâce à ces 5
-                            formations vous deviendrez un investisseur hors pair.
-                        </p>
-
-                    </div>
-                </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden lg:order-1">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">1 accompagnement sur-mesure</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">En visio-conférence ou en direct,
-                            nous nous rencontrons avec l’ensemble des élèves de The School Investment pour échanger à
-                            propos de vos projets. Je réponds à toutes vos questions et vous donne des astuces
-                            inédites.
-                        </p>
-                    </div>
-                </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-19 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6  ">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">5+ séminaires privés</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">On se retrouve entre investisseurs dans
-                            des lieux atypiques : Golf, station de ski, hotels de luxe pour faire le point sur vos
-                            projets et approfondir des techniques d’investissement et d’optimisation
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 {% endblock %}

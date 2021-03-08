@@ -7,13 +7,14 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <main x-data="{ open: false }"  class="bg-cover bg-no-repeat border-black bg-gray-900 bg-gold">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-gold">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
-                            <div data-aos="fade-right" class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                            <div data-aos="fade-right"
+                                 class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
                                 <nav class="lg:block hidden mb-10 font-raleway justify-start text-gray-100 opacity-50"
                                      aria-label="Breadcrumb">
                                     <ol class="flex items-center justify-start mx-auto space-x-4">
@@ -61,11 +62,19 @@
                                 <h1 class="title-1 text-white">
                                     Location meublée de 2 biens
                                 </h1>
-                                <p class="body-1 mt-12 text-white">Vous souhaitez investir dans un projet locatif mais n’avez pas le temps ou l’envie de vous en occuper ? Je gère pour vous l’achat, les travaux et la location des 2 biens.</p>
+                                <p class="body-1 mt-12 text-white">Vous souhaitez investir dans un projet locatif mais
+                                    n’avez pas le temps ou l’envie de vous en occuper ? Je gère pour vous l’achat, les
+                                    travaux et la location des 2 biens.</p>
                             </div>
-                            <button class="btn-1 text-white mx-auto block lg:mx-0 hover:bg-gray-900 bg-pink-600">
-                                être contacté
-                            </button>
+                            <!-- Début de widget de lien Calendly -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
+                                    async></script>
+                            <a href="" class="mx-auto block lg:mx-0"
+                               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-3525/etre-recontacte-offre?text_color=111827&primary_color=db2777'});return false;">
+                                <button class=" btn-1 text-white hover:bg-gray-900 bg-pink-600">Être contacté</button>
+                            </a>
+                            <!-- Fin de widget de lien Calendly -->
                         </div>
                     </div>
 
@@ -80,533 +89,593 @@
             </div>
         </div>
 
-    </main>
+    </header>
+    <main>
+        {# INTRODUCTION #}
+        <section class="bg-gray-50 w-full">
 
-    {# INTRODUCTION #}
-    <section class="bg-gray-50 w-full">
+            <div class="pt-20 pb-8 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="title-1">Ce que vous aurez dans l'offre Gold</h2>
+                        <p class="body-2 max-w-lg mx-auto mt-6">L’offre Gold comprend l’inscription à The School
+                            Investment + l’achat et la location en meublé non professionnel de 2 biens
 
-        <div class="pt-20 pb-8 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="title-1">Ce que vous aurez dans l'offre Gold</h2>
-                    <p class="body-2 max-w-lg mx-auto mt-6">L’offre Gold comprend l’inscription à The School Investment + l’achat et la location en meublé non professionnel de 2 biens
-
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    {# CARD FORMATION #}
-    <section class="pt-8 bg-gray-50 w-full pb-8 ">
-        <div class="max-w-4xl px-8 mx-auto">
+        {# CARD FORMATION #}
+        <section class="pt-8 bg-gray-50 w-full pb-8 ">
+            <div class="max-w-4xl px-8 mx-auto">
 
-            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
-                <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
+                <div data-aos="fade-up"
+                     class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+
                         <img
                                 class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="{{ asset('build/images/main/offre-gold.webp') }}" alt=""></a>
-                </div>
-                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto mb-4">
-                        <h2 class="subtitle-2">Service premium</h2>
-                        <h3 class="title-2">Offre Gold</h3>
-
-                        <p class="body-2 mt-5">Accédez à toutes les formations et l'accompagnement nécessaire pour devenir investisseur immobilier. Bénéficiez d'un investissement clé en main adapté à vos exigences.</p>
-
-                        <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                        </div>
-                        <div class="flex">
-                            <span class="title-font font-medium text-2xl text-gray-900">7 997,00 €</span>
-                            <button class="flex ml-auto btn-1 hover:bg-gray-900 bg-pink-600 text-white">
-                                Être contacté
-                            </button>
-                        </div>
+                                src="{{ asset('build/images/main/offre-gold.webp') }}"
+                                alt="Affiche de l'offre pour un investissement clé en main de 2 biens en location meublée non professionnelle">
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto mb-4">
+                            <h2 class="subtitle-2">Service premium</h2>
+                            <h3 class="title-2">Offre Gold</h3>
 
-    {# CARD GOLD #}
-    <section>
-        <div class="bg-gradient-to-b from-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-8">
-                <div data-aos="fade-left" class="flex flex-wrap max-w-4xl mx-auto">
-                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-                        <div class="py-8 px-10 max-w-md mx-auto bg-white shadow-sm text-center">
-                            <div class="mb-8">
-                                <h3 class="subtitle-3">Un accompagnement sur-mesure</h3>
-                                <h4 class="title-4 pt-2">The School Investment</h4>
+                            <p class="body-2 mt-5">Accédez à toutes les formations et l'accompagnement nécessaire pour
+                                devenir investisseur immobilier. Bénéficiez d'un investissement clé en main adapté à vos
+                                exigences.</p>
+
+                            <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
                             </div>
-                            <div>
-                                <ul class="font-raleway text-left font-base text-gray-900 tracking-tight">
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Bilan personnalisé</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Accès illimité à vie aux formations en ligne</span>
-                                    </li>
-
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">5 weeks ends de séminaires privés</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">1 an d'accompagnement sur-mesure</span>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-right" class="w-full lg:w-1/2 px-4">
-                        <div class="py-8 px-10 max-w-md mx-auto bg-white shadow-sm text-center">
-                            <div class="mb-8">
-                                <h3 class="subtitle-3">Un investissement clé en main</h3>
-                                <h4 class="title-4 pt-2">Location meublée de 2 biens</h4>
-                            </div>
-                            <div>
-                                <ul class="font-raleway font-base text-gray-900 tracking-tight">
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Recherche des biens</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Rencontre avec les corps de métiers</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Dossiers pour l'urbanisme</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Permis de travaux / Construction</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Dossier bancaire</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Business plan</span>
-                                    </li>
-
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Suivi de chantier</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Étude pour la revente</span>
-                                    </li>
-                                    <li class="mb-3 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xmlns:svgjs="http://svgjs.com/svgjs"
-                                             viewBox="0 0 140 140" width="14" height="14">
-                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                      stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                        <span class="ml-4">Calcul de la rentabilité</span>
-                                    </li>
-
-                                </ul>
+                            <div class="flex">
+                                <span class="title-font font-medium text-2xl text-gray-900">7 997,00 €</span>
+                                <!-- Début de widget de lien Calendly -->
+                                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                                <script src="https://assets.calendly.com/assets/external/widget.js"
+                                        type="text/javascript" async></script>
+                                <a href="" class="ml-auto"
+                                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-3525/etre-recontacte-offre?text_color=111827&primary_color=db2777'});return false;">
+                                    <button class=" btn-1 text-white hover:bg-gray-900 bg-pink-600">Être contacté
+                                    </button>
+                                </a>
+                                <!-- Fin de widget de lien Calendly -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        {# CARD GOLD #}
+        <section>
+            <div class="bg-gradient-to-b from-gray-50 radius-for-skewed">
+                <div class="container mx-auto px-8">
+                    <div data-aos="fade-left" class="flex flex-wrap max-w-4xl mx-auto">
+                        <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                            <div class="py-8 px-10 max-w-md mx-auto bg-white shadow-sm text-center">
+                                <div class="mb-8">
+                                    <h3 class="subtitle-3">Un accompagnement sur-mesure</h3>
+                                    <h4 class="title-4 pt-2">The School Investment</h4>
+                                </div>
+                                <div>
+                                    <ul class="font-raleway text-left font-base text-gray-900 tracking-tight">
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Bilan personnalisé</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Accès illimité à vie aux formations en ligne</span>
+                                        </li>
 
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">5 weeks ends de séminaires privés</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">1 an d'accompagnement sur-mesure</span>
+                                        </li>
 
-
-    {# BULLET POINTS #}
-    {% include 'shared/_avantages.html.twig' %}
-
-    {# LES SESSIONS #}
-    <section class="max-w-5xl mx-auto">
-
-        <div class="py-20 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-xl mx-auto text-center">
-                    <span class="subtitle-2 inline-block mb-5">Contenu de l'offre</span>
-                    <h2 class="title-2">L'offre Gold en détail</h2>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="py-20">
-            <div class="container mx-auto px-4">
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-5 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">5 formations en ligne</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Formez-vous à votre rythme grâce à
-                            un accès illimité à 5 formations en ligne. Maitrisez les règles d'urbanisme, trouvez le bon
-                            bien, réalisez des opérations rentables, actionnez les bons leviers fiscaux, négociez avec
-                            la banque, gérez l'ensemble des travaux, entourez vous des bonnes personnes... Grâce à ces 5
-                            formations vous deviendrez un investisseur hors pair.
-                        </p>
-
-                    </div>
-                </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden lg:order-1">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">1 accompagnement sur-mesure</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">En visio-conférence ou en direct,
-                            nous nous rencontrons avec l’ensemble des élèves de The School Investment pour échanger à
-                            propos de vos projets. Je réponds à toutes vos questions et vous donne des astuces
-                            inédites.
-                        </p>
-                    </div>
-                </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-19 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6  ">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">5+ séminaires privés</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">On se retrouve entre investisseurs dans
-                            des lieux atypiques : Golf, station de ski, hotels de luxe pour faire le point sur vos
-                            projets et approfondir des techniques d’investissement et d’optimisation
-                        </p>
-
-                    </div>
-                </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-4 bg-gold-small bg-cover bg-no-repeat lg:block hidden lg:order-1">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">Location meublée non professionnelle de 2 biens</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Je gère pour vous l’ensemble des étapes pour acheter, améliorer et louer deux biens en location meublée non professionnelle : Recherche, étude de faisabilité, levée de fonds, plans, suivi de chantiers, documents légaux, déclaration et étude de marché pour la location meublée traditionnelle ou en courte durée.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {# FAQ #}
-    <section x-data="{selected:null}">
-        <div class="py-20 bg-gray-50 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="mb-16 max-w-xl mx-auto text-center">
-                    <span class="subtitle-2 inline-block mb-5">FAQ</span>
-                    <h2 class="mb-6 title-2">Questions fréquentes</h2>
-                </div>
-                <div class="max-w-3xl mx-auto">
-                    <ul class="space-y-1 lg:space-y-6">
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 1 ? selected = 1 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">C’est quoi The school Investment ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 1 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
+                                    </ul>
+                                </div>
                             </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1"
-                               x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-                               :class="{ 'mt-6' : selected == 1 }">
-                                Immeuble de rapport, Double construction, Investissement locatif, Acheter et rénover
-                                pour louer, Pierre papier, Promotion immobilière, Défiscalisation ...
-                                Dans The school Investment, nous vous accompagnons tout au long de votre parcours
-                                d'investissement avec des conseils personnalisés et adaptés à vos ambitions.
+                        </div>
+                        <div data-aos="fade-right" class="w-full lg:w-1/2 px-4">
+                            <div class="py-8 px-10 max-w-md mx-auto bg-white shadow-sm text-center">
+                                <div class="mb-8">
+                                    <h3 class="subtitle-3">Un investissement clé en main</h3>
+                                    <h4 class="title-4 pt-2">Location meublée de 2 biens</h4>
+                                </div>
+                                <div>
+                                    <ul class="font-raleway font-base text-gray-900 tracking-tight">
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Recherche des biens</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Rencontre avec les corps de métiers</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Dossiers pour l'urbanisme</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Permis de travaux / Construction</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Dossier bancaire</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Business plan</span>
+                                        </li>
+
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Suivi de chantier</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Étude pour la revente</span>
+                                        </li>
+                                        <li class="mb-3 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xmlns:svgjs="http://svgjs.com/svgjs"
+                                                 viewBox="0 0 140 140" width="14" height="14">
+                                                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                    <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none"
+                                                          stroke="#000000"
+                                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="ml-4">Calcul de la rentabilité</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        {# BULLET POINTS #}
+        {% include 'shared/_avantages.html.twig' %}
+
+        {# LES SESSIONS #}
+        <section class="max-w-5xl mx-auto">
+
+            <div class="py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-xl mx-auto text-center">
+                        <span class="subtitle-2 inline-block mb-5">Contenu de l'offre</span>
+                        <h2 class="title-2">L'offre Gold en détail</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="py-20">
+                <div class="container mx-auto px-4">
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-5 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">5 formations en ligne</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Formez-vous à votre rythme
+                                grâce à
+                                un accès illimité à 5 formations en ligne. Maitrisez les règles d'urbanisme, trouvez le
+                                bon
+                                bien, réalisez des opérations rentables, actionnez les bons leviers fiscaux, négociez
+                                avec
+                                la banque, gérez l'ensemble des travaux, entourez vous des bonnes personnes... Grâce à
+                                ces 5
+                                formations vous deviendrez un investisseur hors pair.
                             </p>
-                        </li>
 
-
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 2 ? selected = 2 : selected = null">
-                            <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Qu’y a-t-il dans la School ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 2 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-12 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">1 accompagnement
+                                    sur-mesure</h3>
                             </div>
-                            <div class="text-gray-500   font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                                 x-ref="container2"
-                                 x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
-                                 :class="{ 'my-6' : selected == 2 }">
-                                <ul class="list-disc list-outside ml-5">
-                                    <li>1 accès illimité à l'ensemble de mes formations
-                                        en ligne (5 formations offertes pour un total de 7200€).
-                                    </li>
-                                    <li>1 SAV par mail pour échanger avec moi et d'autres
-                                        professionnels de l'investissement tout au long de votre formation.
-                                    </li>
-                                    <li>1 cadeau de bienvenue directement livré chez vous
-                                        pour travailler dans les meilleures conditions.
-                                    </li>
-                                    <li>5 weeks ends de séminaires privés dans des
-                                        endroits de détente et de partage.
-                                    </li>
-                                    <li>Mon livre est offert : Je vous révèle l'ensemble
-                                        des investissements et des choix de rentabilité que j'ai fait au cours de ma
-                                        vie.
-                                    </li>
-                                    <li>1 accès au groupe fermé Facebook pour pouvoir
-                                        échanger et collaborer avec chacun des membres. Mais aussi profiter de conseils
-                                        d'experts et de professionnels du secteur.
-                                    </li>
-                                    <li>1 bilan personnalisé de votre situation suivi de
-                                        proposition concrètes d'investissements dès le premier jour de la formation.
-                                    </li>
-                                    <li>2 appels téléphoniques par mois pour suivre
-                                        l'avancement de vos investissements et travailler votre rentabilité.
-                                    </li>
-                                    <li>Des propositions d'associations pour réaliser des
-                                        investissements supérieurs en groupe.
-                                    </li>
-                                </ul>
 
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">En visio-conférence ou en
+                                direct,
+                                nous nous rencontrons avec l’ensemble des élèves de The School Investment pour échanger
+                                à
+                                propos de vos projets. Je réponds à toutes vos questions et vous donne des astuces
+                                inédites.
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-19 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6  ">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">5+ séminaires privés</h3>
                             </div>
-                        </li>
 
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 3 ? selected = 3 : selected = null">
-                            <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Quelles sont les 5 formations en ligne ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 3 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <div class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container3"
-                               x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
-                               :class="{ 'mt-6' : selected == 3 }">
-                                <ul class="list-disc list-outside ml-5">
-                                    <li>Trouver le bon bien</li>
-                                    <li>Réussir son dossier bancaire </li>
-                                    <li>Construire la maison de ses rêves</li>
-                                    <li>La double construction en investissement locatif</li>
-                                    <li>Acheter son premier immeuble de rapport</li>
-                                </ul>
-                            </div>
-                        </li>
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">On se retrouve entre
+                                investisseurs dans
+                                des lieux atypiques : Golf, station de ski, hotels de luxe pour faire le point sur vos
+                                projets et approfondir des techniques d’investissement et d’optimisation
+                            </p>
 
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 4 ? selected = 4 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 4 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-4 bg-gold-small bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">Location meublée non
+                                    professionnelle de 2 biens</h3>
                             </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container4"
-                               x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
-                               :class="{ 'mt-6' : selected == 4 }">
-                                Vous bénéficiez d’un accès à notre communauté d’investisseurs et aux conseils d'experts
-                                afin d'être au fait de toutes les évolutions de la législation et des obligations liées
-                                aux opérations de promotion immobilière. Vous bénéficiez aussi de tarifs préférentiels
-                                pour nos autres formations ou pour participer à nos évènements immobiliers.
-                        </li>
 
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 5 ? selected = 5 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 5 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container5"
-                               x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
-                               :class="{ 'mt-6' : selected == 5 }">
-                                Oui, absolument, vous avez la possibilité de payer en 1, 3 fois ou 12 fois. Vous êtes
-                                alors débité chaque mois du montant indiqué lors de l’achat.
-                        </li>
-
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 6 ? selected = 6 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Si l’offre ne me convient pas, puis-je me rétracter ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 6 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container6"
-                               x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''"
-                               :class="{ 'mt-6' : selected == 6 }">
-                                Oui ! Vous avez 30 jours pour changer d’avis. Aucune explication ne vous est demandée,
-                                nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de nos
-                                prestations, nous vous permettons de vous rétracter à tout moment pendant 30 jours
-                        </li>
-
-                        <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 7 ? selected = 7 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">A qui s'adresse l'offre Gold ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 7 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container7"
-                               x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''"
-                               :class="{ 'mt-6' : selected == 7 }">
-                                Vous souhaitez devenir rentier et voulez faire un investissement locatif sans accroc et
-                                avec une rentabilité assurée chaque mois. Vous souhaitez qu’un Investisseur
-                                professionnel gère de A à Z votre projet d’investissement.
-                        </li>
-
-                    </ul>
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Je gère pour vous l’ensemble
+                                des étapes pour acheter, améliorer et louer deux biens en location meublée non
+                                professionnelle : Recherche, étude de faisabilité, levée de fonds, plans, suivi de
+                                chantiers, documents légaux, déclaration et étude de marché pour la location meublée
+                                traditionnelle ou en courte durée.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        {# FAQ #}
+        <section x-data="{selected:null}">
+            <div class="py-20 bg-gray-50 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="mb-16 max-w-xl mx-auto text-center">
+                        <span class="subtitle-2 inline-block mb-5">FAQ</span>
+                        <h2 class="mb-6 title-2">Questions fréquentes</h2>
+                    </div>
+                    <div class="max-w-3xl mx-auto">
+                        <ul class="space-y-1 lg:space-y-6">
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 1 ? selected = 1 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">C’est quoi The school Investment ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 1 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container1"
+                                   x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                   :class="{ 'mt-6' : selected == 1 }">
+                                    Immeuble de rapport, Double construction, Investissement locatif, Acheter et rénover
+                                    pour louer, Pierre papier, Promotion immobilière, Défiscalisation ...
+                                    Dans The school Investment, nous vous accompagnons tout au long de votre parcours
+                                    d'investissement avec des conseils personnalisés et adaptés à vos ambitions.
+                                </p>
+                            </li>
+
+
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 2 ? selected = 2 : selected = null">
+                                <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Qu’y a-t-il dans la School ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 2 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-gray-500   font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                     x-ref="container2"
+                                     x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                                     :class="{ 'my-6' : selected == 2 }">
+                                    <ul class="list-disc list-outside ml-5">
+                                        <li>1 accès illimité à l'ensemble de mes formations
+                                            en ligne (5 formations offertes pour un total de 7200€).
+                                        </li>
+                                        <li>1 SAV par mail pour échanger avec moi et d'autres
+                                            professionnels de l'investissement tout au long de votre formation.
+                                        </li>
+                                        <li>1 cadeau de bienvenue directement livré chez vous
+                                            pour travailler dans les meilleures conditions.
+                                        </li>
+                                        <li>5 weeks ends de séminaires privés dans des
+                                            endroits de détente et de partage.
+                                        </li>
+                                        <li>Mon livre est offert : Je vous révèle l'ensemble
+                                            des investissements et des choix de rentabilité que j'ai fait au cours de ma
+                                            vie.
+                                        </li>
+                                        <li>1 accès au groupe fermé Facebook pour pouvoir
+                                            échanger et collaborer avec chacun des membres. Mais aussi profiter de
+                                            conseils
+                                            d'experts et de professionnels du secteur.
+                                        </li>
+                                        <li>1 bilan personnalisé de votre situation suivi de
+                                            proposition concrètes d'investissements dès le premier jour de la formation.
+                                        </li>
+                                        <li>2 appels téléphoniques par mois pour suivre
+                                            l'avancement de vos investissements et travailler votre rentabilité.
+                                        </li>
+                                        <li>Des propositions d'associations pour réaliser des
+                                            investissements supérieurs en groupe.
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 3 ? selected = 3 : selected = null">
+                                <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Quelles sont les 5 formations en ligne ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 3 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                     x-ref="container3"
+                                     x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                                     :class="{ 'mt-6' : selected == 3 }">
+                                    <ul class="list-disc list-outside ml-5">
+                                        <li>Trouver le bon bien</li>
+                                        <li>Réussir son dossier bancaire</li>
+                                        <li>Construire la maison de ses rêves</li>
+                                        <li>La double construction en investissement locatif</li>
+                                        <li>Acheter son premier immeuble de rapport</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 4 ? selected = 4 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 4 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container4"
+                                   x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+                                   :class="{ 'mt-6' : selected == 4 }">
+                                    Vous bénéficiez d’un accès à notre communauté d’investisseurs et aux conseils
+                                    d'experts
+                                    afin d'être au fait de toutes les évolutions de la législation et des obligations
+                                    liées
+                                    aux opérations de promotion immobilière. Vous bénéficiez aussi de tarifs
+                                    préférentiels
+                                    pour nos autres formations ou pour participer à nos évènements immobiliers.
+                            </li>
+
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 5 ? selected = 5 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 5 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container5"
+                                   x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+                                   :class="{ 'mt-6' : selected == 5 }">
+                                    Oui, absolument, vous avez la possibilité de payer en 1, 3 fois ou 12 fois. Vous
+                                    êtes
+                                    alors débité chaque mois du montant indiqué lors de l’achat.
+                            </li>
+
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 6 ? selected = 6 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Si l’offre ne me convient pas, puis-je me rétracter ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 6 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container6"
+                                   x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''"
+                                   :class="{ 'mt-6' : selected == 6 }">
+                                    Oui ! Vous avez 30 jours pour changer d’avis. Aucune explication ne vous est
+                                    demandée,
+                                    nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de
+                                    nos
+                                    prestations, nous vous permettons de vous rétracter à tout moment pendant 30 jours
+                            </li>
+
+                            <li class="pt-6 pb-3 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 7 ? selected = 7 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">A qui s'adresse l'offre Gold ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 7 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container7"
+                                   x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''"
+                                   :class="{ 'mt-6' : selected == 7 }">
+                                    Vous souhaitez devenir rentier et voulez faire un investissement locatif sans accroc
+                                    et
+                                    avec une rentabilité assurée chaque mois. Vous souhaitez qu’un Investisseur
+                                    professionnel gère de A à Z votre projet d’investissement.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 
     {# ECHANGE TELEPHONIQUE #}
     {% include 'shared/_contact.html.twig' %}
+
+
 {% endblock %}

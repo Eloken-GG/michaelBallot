@@ -7,13 +7,14 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-10" >
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-10">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
-                            <div data-aos="fade-right" class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                            <div data-aos="fade-right"
+                                 class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
                                 <nav class="lg:flex hidden mb-10 w-auto font-raleway mx-auto text-center text-gray-100 opacity-50"
                                      aria-label="Breadcrumb">
                                     <ol class="flex items-center mx-auto space-x-4">
@@ -74,7 +75,7 @@
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
-                             alt="">
+                             alt="Michael Ballot présente la formation d'immobilier d'investissement : La double construction en projet locatif">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -139,491 +140,534 @@
             </div>
         </div>
 
-    </section>
+    </header>
 
-    {# INTRODUCTION #}
-    <section class="w-full py-24">
-        <div class="md:py-20 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="title-1">Des économies d'échelle assurées</h2>
-                    <p class="body-2 m-6">Achetez un terrain, faites construire 2 maisons et multipliez vos gains.
-                        Viabilisation, plans, construction… Faites intervenir une fois chaque corps de métier tout en
-                        doublant vos retours sur investissement. Tel un lotisseur ou un constructeur, vous réalisez des
-                        économies sur les travaux et maximiser votre rendement.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
 
-
-
-    {# CARD FORMATION #}
-    <section data-aos="fade-up" class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
-        <div class="max-w-4xl px-8 mx-auto">
-            <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
-                <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
-                        <img
-                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-construction-location.webp') }}" alt=""></a>
-                </div>
-                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto mb-4">
-                        <h2 class="subtitle-2">Formation en ligne</h2>
-                        <h3 class="title-2">La double construction</h3>
-
-                        <p class="body-2 mt-5">Réalisez une double construction sur un terrain et réduisez de 30%
-                            l’ensemble de vos co</p>
-                        <ul class="font-raleway mt-5 uppercase font-bold text-sm">
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">5 modules</span>
-                            </li>
-
-                            <li class="mb-1 flex items-center text-pink-600">
-                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
-                                    <circle cx="4" cy="4" r="3"/>
-                                </svg>
-                                <span class="">accès illimité à vie</span>
-                            </li>
-
-
-                        </ul>
-                        <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                        </div>
-                        <div class="flex items-center">
-                            <span class="title-font font-medium text-2xl text-gray-900">297,00 €</span>
-                            <a class="ml-auto"
-                               href="https://formation.michaelballot.fr/inscription-formation-construction-locatif/">
-                                <button class="btn-1 text-white hover:bg-gray-900 bg-pink-600">
-                                    Acheter
-                                </button>
-                            </a>
-                        </div>
+        {# INTRODUCTION #}
+        <section class="w-full py-24">
+            <div class="md:py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="title-1">Des économies d'échelle assurées</h2>
+                        <p class="body-2 m-6">Achetez un terrain, faites construire 2 maisons et multipliez vos gains.
+                            Viabilisation, plans, construction… Faites intervenir une fois chaque corps de métier tout
+                            en
+                            doublant vos retours sur investissement. Tel un lotisseur ou un constructeur, vous réalisez
+                            des
+                            économies sur les travaux et maximiser votre rendement.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    {# BULLET POINTS #}
-    {% include 'shared/_avantages.html.twig' %}
+        </section>
 
 
-    {# DETAIL FORMATION #}
-    <section class="bg-gray-100">
-        <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center -mx-4">
-
-                    <div data-aos="fade-right" class="w-full lg:order-1 lg:w-1/2">
-                        <div class="mb-4 flex flex-wrap items-end">
-                            <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                <img class="tagline w-full h-48 lg:h-32 lg:h-48 object-cover"
-                                     src="{{ asset('build/images/formations/1.webp') }}"
-                                     alt=""></div>
-                            <div class="w-full lg:w-1/3 px-3">
-                                <img class="punchline w-full h-48 lg:h-32 object-cover"
-                                     src="{{ asset('build/images/formations/15.webp') }}"
-                                     alt=""></div>
-                        </div>
-                        <div class=" flex flex-wrap items-start">
-                            <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                <img class="headline w-full h-48 lg:h-32 object-cover"
-                                     src="{{ asset('build/images/formations/3.webp') }}"
-                                     alt=""></div>
-                            <div class="w-full lg:w-2/3 px-3">
-                                <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
-                                     src="{{ asset('build/images/formations/16.webp') }}"
-                                     alt=""></div>
-                        </div>
+        {# CARD FORMATION #}
+        <section data-aos="fade-up" class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
+            <div class="max-w-4xl px-8 mx-auto">
+                <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+                        <a href="https://formation.michaelballot.fr/inscription-formation-construction-locatif/">
+                            <img
+                                    class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/formation-construction-location.webp') }}"
+                                    alt="Affiche de la formations immobilière : La double construction en projet locatif"></a>
                     </div>
-                    <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
-                        <div class="max-w-md">
-                            <span class="subtitle-2 inline-block">Contenu de la formation</span>
-                            <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto mb-4">
+                            <h2 class="subtitle-2">Formation en ligne</h2>
+                            <h3 class="title-2">La double construction</h3>
 
-                            <ul class="font-raleway font-base text-gray-900 tracking-tight">
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
+                            <p class="body-2 mt-5">Réalisez une double construction sur un terrain et réduisez de 30%
+                                l’ensemble de vos co</p>
+                            <ul class="font-raleway mt-5 uppercase font-bold text-sm">
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
                                     </svg>
-                                    <span class="ml-4">Maîtriser les règles d'urbanisme</span>
+                                    <span class="">5 modules</span>
                                 </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
+
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
                                     </svg>
-                                    <span class="ml-4">Utiliser les leviers d'optimisation fiscale </span>
+                                    <span class="">accès illimité à vie</span>
                                 </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Gérer son opération en toute autonomie</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Contrôler les garanties post-achèvement</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Trouver des prestataires de confiance</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Négocier les tarifs de construction</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Faire construire sereinement</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Réduire au maximum les dépenses inutiles</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Trouver des locataires ou des acheteurs</span>
-                                </li>
-                                <li class="mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
-                                         viewBox="0 0 140 140" width="14" height="14">
-                                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-                                            <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-4">Maximiser son retour sur investissement</span>
-                                </li>
+
+
                             </ul>
+                            <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="title-font font-medium text-2xl text-gray-900">297,00 €</span>
+                                <a class="ml-auto"
+                                   href="https://formation.michaelballot.fr/inscription-formation-construction-locatif/">
+                                    <button class="btn-1 text-white hover:bg-gray-900 bg-pink-600">
+                                        Acheter
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        {# BULLET POINTS #}
+        {% include 'shared/_avantages.html.twig' %}
 
-    {# LES SESSIONS #}
-    <section class="max-w-5xl mx-auto">
 
-        <div class="py-8 lg:py-20 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="max-w-xl mx-auto md:text-center">
-                    <span class="subtitle-2 inline-block lg:mb-5">Les modules</span>
-                    <h2 class="title-2">5 étapes pour construire 2 fois</h2>
+        {# DETAIL FORMATION #}
+        <section class="bg-gray-100">
+            <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center -mx-4">
+
+                        <div data-aos="fade-right" class="w-full lg:order-1 lg:w-1/2">
+                            <div class="mb-4 flex flex-wrap items-end">
+                                <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/1.webp') }}"
+                                         alt="recherche d'un terrain disponible sur le cadastre pour investir"></div>
+                                <div class="w-full lg:w-1/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/15.webp') }}"
+                                         alt="Chantier d'un maison en construction sur un terrain viabilisé"></div>
+                            </div>
+                            <div class=" flex flex-wrap items-start">
+                                <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/3.webp') }}"
+                                         alt="Remise des clés d'un bien immobilier par un professionnel de l'investissement">
+                                </div>
+                                <div class="w-full lg:w-2/3 px-3">
+                                    <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/16.webp') }}"
+                                         alt="Deux maisons construites côtes à côtes sur un même terrain"></div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
+                            <div class="max-w-md">
+                                <span class="subtitle-2 inline-block">Contenu de la formation</span>
+                                <h2 class="title-2 my-6">Une formation adaptée à vos objectifs</h2>
+
+                                <ul class="font-raleway font-base text-gray-900 tracking-tight">
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Maîtriser les règles d'urbanisme</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Utiliser les leviers d'optimisation fiscale </span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Gérer son opération en toute autonomie</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Contrôler les garanties post-achèvement</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Trouver des prestataires de confiance</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Négocier les tarifs de construction</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Faire construire sereinement</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Réduire au maximum les dépenses inutiles</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Trouver des locataires ou des acheteurs</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Maximiser son retour sur investissement</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
+        </section>
 
-        <div class="py-8 lg:py-20">
-            <div class="container mx-auto px-4">
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-1 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6  ">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">1. Le choix du secteur
-                                cadastrale</h3>
-                        </div>
+        {# LES SESSIONS #}
+        <section class="max-w-5xl mx-auto">
 
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Trouver le terrain idéal pour
-                            construire 2 maisons n’est pas chose aisée sans un minimum de préparation. Les
-                            règlementations et les règles d’aménagement du territoire doivent être respectées. Bien
-                            choisir son terrain c’est avoir la garantie d’un projet qui débute vite et dans de bonnes
-                            conditions. Bien débuter pour maximiser sa rentabilité.</p>
-
+            <div class="py-8 lg:py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-xl mx-auto md:text-center">
+                        <span class="subtitle-2 inline-block lg:mb-5">Les modules</span>
+                        <h2 class="title-2">5 étapes pour construire 2 fois</h2>
                     </div>
                 </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-9 bg-cover bg-no-repeat lg:block hidden lg:order-1">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">2. Budgéter son projet</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Savez-vous quel type de logement
-                            construire ? Connaissez-vous le nombre de chambre idéal ? Avez-vous une idée de la
-                            superficie optimale pour le salon ? Quel est le coût de l’ameublement ? Le projet est
-                            destiné à d’autres personnes. Vous devez prendre en compte les besoins de vos futurs clients
-                            / locataires pour budgétiser au mieux votre projet et vous assurer de louer facilement ou de
-                            revendre avec un maximum de cash-flow.</p>
-                    </div>
-                </div>
-
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-11 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6  ">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">3. Réussir la vente</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Vous pouvez choisir de laisser un
-                            agent immobilier faire toutes les démarches de revente ou de location et ainsi perdre
-                            jusqu’à 10% de votre rentabilité. Ou vous pouvez choisir de le faire vous-même et maximiser
-                            votre retour sur investissement. Découvrez toutes les astuces pour réussir votre opération.
-                            De l’étude de marché à la remise des clés, faites les bons choix et augmentez votre
-                            rentabilité.</p>
-
-                    </div>
-                </div>
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-10 bg-cover bg-no-repeat lg:block hidden lg:order-1">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">4. Les bons choix de fiscalité</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Maîtrisez les clés pour payer un
-                            minimum d’impôt. Votre rentabilité ne devrait pas s’évaporer sous une fiscalité trop lourde.
-                            Dans le cadre d’une location, il est possible de ne pas payer d’impôts sur les loyers. Faire
-                            le bon choix de fiscalité dès le départ est une des clés de la réussite de votre projet.
-                            Faites les bonnes demandes, remplissez les bons formulaires et oubliez les problématiques
-                            fiscales.
-                        </p>
-                    </div>
-                </div>
-
-                <div data-aos="fade-right" class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
-                    <div class="w-full lg:w-1/2 bg-formation-7 bg-cover bg-no-repeat lg:block hidden">
-                    </div>
-                    <div class="w-full lg:w-1/2 pb-6  ">
-                        <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
-                                    class="text-xl font-bold uppercase font-raleway">5. Déclarer son projet</h3>
-                        </div>
-
-                        <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Vous avez accès à l’ensemble des
-                            documents fiscaux, administratifs et légaux pour réussir votre projet. Chaque déclaration
-                            doit être faite au bon moment pour s’assurer que l’opération ne subit aucune interruption et
-                            pour garantir une bonne fiscalité. Le retour sur investissement dépend exclusivement de
-                            cette bonne gestion. Bien se préparer est la clé de la réussite
-
-                        </p>
-
-                    </div>
-                </div>
-
-
             </div>
-        </div>
-    </section>
 
-    {# QUI SUIS JE #}
 
-    {% include 'shared/_aboutZone.html.twig' with {
-        'aboutText' : "Un de mes meilleurs investissements fut une double construction avec revente et location à la clé.
+            <div class="py-8 lg:py-20">
+                <div class="container mx-auto px-4">
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-1 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6  ">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">1. Le choix du secteur
+                                    cadastrale</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Trouver le terrain idéal pour
+                                construire 2 maisons n’est pas chose aisée sans un minimum de préparation. Les
+                                règlementations et les règles d’aménagement du territoire doivent être respectées. Bien
+                                choisir son terrain c’est avoir la garantie d’un projet qui débute vite et dans de
+                                bonnes
+                                conditions. Bien débuter pour maximiser sa rentabilité.</p>
+
+                        </div>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-9 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">2. Budgéter son projet</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Savez-vous quel type de
+                                logement
+                                construire ? Connaissez-vous le nombre de chambre idéal ? Avez-vous une idée de la
+                                superficie optimale pour le salon ? Quel est le coût de l’ameublement ? Le projet est
+                                destiné à d’autres personnes. Vous devez prendre en compte les besoins de vos futurs
+                                clients
+                                / locataires pour budgétiser au mieux votre projet et vous assurer de louer facilement
+                                ou de
+                                revendre avec un maximum de cash-flow.</p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-11 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6  ">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">3. Réussir la vente</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Vous pouvez choisir de laisser
+                                un
+                                agent immobilier faire toutes les démarches de revente ou de location et ainsi perdre
+                                jusqu’à 10% de votre rentabilité. Ou vous pouvez choisir de le faire vous-même et
+                                maximiser
+                                votre retour sur investissement. Découvrez toutes les astuces pour réussir votre
+                                opération.
+                                De l’étude de marché à la remise des clés, faites les bons choix et augmentez votre
+                                rentabilité.</p>
+
+                        </div>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-10 bg-cover bg-no-repeat lg:block hidden lg:order-1">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">4. Les bons choix de
+                                    fiscalité</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Maîtrisez les clés pour payer
+                                un
+                                minimum d’impôt. Votre rentabilité ne devrait pas s’évaporer sous une fiscalité trop
+                                lourde.
+                                Dans le cadre d’une location, il est possible de ne pas payer d’impôts sur les loyers.
+                                Faire
+                                le bon choix de fiscalité dès le départ est une des clés de la réussite de votre projet.
+                                Faites les bonnes demandes, remplissez les bons formulaires et oubliez les
+                                problématiques
+                                fiscales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right"
+                         class="mb-8 flex flex-wrap rounded-sm shadow-lg overflow-hidden bg-white">
+                        <div class="w-full lg:w-1/2 bg-formation-7 bg-cover bg-no-repeat lg:block hidden">
+                        </div>
+                        <div class="w-full lg:w-1/2 pb-6  ">
+                            <div class="w-full px-6  mb-4 border-b-2 border-gray-100  text-gray-300 py-8"><h3
+                                        class="text-xl font-bold uppercase font-raleway">5. Déclarer son projet</h3>
+                            </div>
+
+                            <p class="mb-4 px-6 text-gray-400 leading-loose font-raleway">Vous avez accès à l’ensemble
+                                des
+                                documents fiscaux, administratifs et légaux pour réussir votre projet. Chaque
+                                déclaration
+                                doit être faite au bon moment pour s’assurer que l’opération ne subit aucune
+                                interruption et
+                                pour garantir une bonne fiscalité. Le retour sur investissement dépend exclusivement de
+                                cette bonne gestion. Bien se préparer est la clé de la réussite
+
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        {# QUI SUIS JE #}
+
+        {% include 'shared/_aboutZone.html.twig' with {
+            'aboutText' : "Un de mes meilleurs investissements fut une double construction avec revente et location à la clé.
 Pour faire simple, j’ai trouvé un terrain sur lequel j’ai fait construire en simultané deux maisons que j’ai pu louer par la suite. Cet investissement m’a permis de faire des économies d’échelle considérables et ainsi de maximiser la rentabilité.
 Cette formation je l’ai faite telle que j’aurais aimé l’avoir afin de réussir ce projet sans accros. Je vous explique ici l’ensemble des erreurs que j’ai pu faire (à ne pas refaire) et des choix qui m’ont permis d’optimiser mon opération pour que vous aussi vous puissiez faire un investissement qui en vaut la peine."
-    } %}
+        } %}
 
 
-    {# FAQ #}
-    <section x-data="{selected:null}">
-        <div class="py-20 bg-gray-100 radius-for-skewed">
-            <div class="container mx-auto px-4">
-                <div class="mb-16 max-w-xl mx-auto text-center">
-                    <span class="subtitle-2 inline-block mb-5">FAQ</span>
-                    <h2 class="mb-6 title-2">Questions fréquentes</h2>
-                </div>
-                <div class="max-w-3xl mx-auto">
-                    <ul class="space-y-1 lg:space-y-6">
-                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 1 ? selected = 1 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">À qui s'adresse cette formation ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 1 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1"
-                               x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-                               :class="{ 'pt-6' : selected == 1 }">
-                                Vous êtes un investisseur débutant ou confirmé, déjà à l’aise avec les problématiques
-                                liées à la construction immobilière et souhaitez réaliser une opération de location
-                                rentable sur le long terme.</p>
-                        </li>
+        {# FAQ #}
+        <section x-data="{selected:null}">
+            <div class="py-20 bg-gray-100 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="mb-16 max-w-xl mx-auto text-center">
+                        <span class="subtitle-2 inline-block mb-5">FAQ</span>
+                        <h2 class="mb-6 title-2">Questions fréquentes</h2>
+                    </div>
+                    <div class="max-w-3xl mx-auto">
+                        <ul class="space-y-1 lg:space-y-6">
+                            <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 1 ? selected = 1 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">À qui s'adresse cette formation ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 1 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container1"
+                                   x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                   :class="{ 'pt-6' : selected == 1 }">
+                                    Vous êtes un investisseur débutant ou confirmé, déjà à l’aise avec les
+                                    problématiques
+                                    liées à la construction immobilière et souhaitez réaliser une opération de location
+                                    rentable sur le long terme.</p>
+                            </li>
 
 
-                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 2 ? selected = 2 : selected = null">
-                            <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Si la formation ne me convient pas, puis-je me rétracter ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 2 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1"
-                               x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-                               :class="{ 'pt-6' : selected == 2 }">
-                                Oui ! Vous avez 15 jours pour changer d’avis. Aucune explication ne vous est demandée,
-                                nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de nos
-                                formations, nous vous permettons de vous rétracter à tout moment pendant 15 jours.</p>
-                        </li>
+                            <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 2 ? selected = 2 : selected = null">
+                                <div class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Si la formation ne me convient pas, puis-je me rétracter ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 2 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container1"
+                                   x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                   :class="{ 'pt-6' : selected == 2 }">
+                                    Oui ! Vous avez 15 jours pour changer d’avis. Aucune explication ne vous est
+                                    demandée,
+                                    nous vous remboursons immédiatement. Parce que nous avons confiance en la qualité de
+                                    nos
+                                    formations, nous vous permettons de vous rétracter à tout moment pendant 15
+                                    jours.</p>
+                            </li>
 
-                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 3 ? selected = 3 : selected = null">
-                            <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 3 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1"
-                               x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-                               :class="{ 'pt-6' : selected == 3 }">
-                                Oui, en fonction de la formation, vous pouvez avoir la possibilité de payer en 1, 3 ou 5
-                                fois. Vous êtes alors débité chaque mois du montant indiqué lors de l’achat.
-                        </li>
+                            <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 3 ? selected = 3 : selected = null">
+                                <div class="w-full  flex justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Est-ce que je peux payer en plusieurs fois ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 3 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container1"
+                                   x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                   :class="{ 'pt-6' : selected == 3 }">
+                                    Oui, en fonction de la formation, vous pouvez avoir la possibilité de payer en 1, 3
+                                    ou 5
+                                    fois. Vous êtes alors débité chaque mois du montant indiqué lors de l’achat.
+                            </li>
 
-                        <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
-                            @click="selected !== 4 ? selected = 4 : selected = null">
-                            <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
-                                <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages de cette formation ?</span>
-                                <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
-                                     x-bind:class="{ 'rotate-180' : selected == 4 }" xmlns="http://www.w3.org/2000/svg"
-                                     fill="none"
-                                     viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
-                               x-ref="container1"
-                               x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-                               :class="{ 'pt-6' : selected == 4 }">
-                                Avec la formation vous bénéficiez d’un accès à notre communauté d’investisseurs et aux
-                                conseils d'experts afin d'être au fait de toutes les évolutions de la législation et des
-                                obligations liées aux opérations de promotion immobilière. Vous bénéficiez aussi de
-                                tarifs préférentiels pour nos autres formations ou pour participer à nos évènements
-                                immobiliers.
-                        </li>
+                            <li class="pt-6 border-t-2 cursor-pointer border-gray-200 hover:border-black relative transition-all duration-400"
+                                @click="selected !== 4 ? selected = 4 : selected = null">
+                                <div class="w-full flex  justify-between items-center text-left font-bold font-heading hover:text-gray-600 decoration">
+                                    <span class="text-lg font-semibold font-raleway">Quels sont les autres avantages de cette formation ?</span>
+                                    <svg class="w-4 h-4 text-gray-900 transform transition duration-200"
+                                         x-bind:class="{ 'rotate-180' : selected == 4 }"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-500 font-raleway body-3 overflow-hidden max-h-0 transition-all duration-400"
+                                   x-ref="container1"
+                                   x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                   :class="{ 'pt-6' : selected == 4 }">
+                                    Avec la formation vous bénéficiez d’un accès à notre communauté d’investisseurs et
+                                    aux
+                                    conseils d'experts afin d'être au fait de toutes les évolutions de la législation et
+                                    des
+                                    obligations liées aux opérations de promotion immobilière. Vous bénéficiez aussi de
+                                    tarifs préférentiels pour nos autres formations ou pour participer à nos évènements
+                                    immobiliers.
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </section>
-
+        </section>
 
 
+        {# ECHANGE TELEPHONIQUE #}
+        {% include 'shared/_contact.html.twig' %}
 
+        {# UPSELL #}
+        {% include 'shared/_packFormations.html.twig' %}
 
-    {# ECHANGE TELEPHONIQUE #}
-    {% include 'shared/_contact.html.twig' %}
-
-    {# UPSELL #}
-    {% include 'shared/_packFormations.html.twig' %}
-
-    {# FIXED #}
-    <div class="sticky bottom-0 inset-x-0 bg-gray-900 font-raleway bg-opacity-90 text-white">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="p-2  sm:p-3">
-                <div class="flex items-center justify-stretch">
-                    <div class="flex-1 flex items-center">
+        {# FIXED #}
+        <div class="sticky bottom-0 inset-x-0 bg-gray-900 font-raleway bg-opacity-90 text-white">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <div class="p-2  sm:p-3">
+                    <div class="flex items-center justify-stretch">
+                        <div class="flex-1 flex items-center">
                   <span class="flex p-2">
                     297,00 €
                   </span>
-                        <span class="hidden md:inline flex p-2"> | </span>
-                        <p class="ml-3 font-semibold uppercase">
+                            <span class="hidden md:inline flex p-2"> | </span>
+                            <p class="ml-3 font-semibold uppercase">
                         <span class="hidden md:inline">
                           La double construction
                         </span>
-                        </p>
-                    </div>
-                    <div class="order-3 mt-2 flex-shrink-0 sm:order-2 sm:mt-0 w-auto">
-                        <a href="https://formation.michaelballot.fr/inscription-formation-construction-locatif/"
-                           class=" text-white bg-pink-600 hover:bg-pink-700 btn-1 py-3">
-                            Acheter
-                        </a>
-                    </div>
+                            </p>
+                        </div>
+                        <div class="order-3 mt-2 flex-shrink-0 sm:order-2 sm:mt-0 w-auto">
+                            <a href="https://formation.michaelballot.fr/inscription-formation-construction-locatif/"
+                               class=" text-white bg-pink-600 hover:bg-pink-700 btn-1 py-3">
+                                Acheter
+                            </a>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-
+    </main>
 {% endblock %}

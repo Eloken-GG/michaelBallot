@@ -8,7 +8,7 @@
 
     {# HERO SECTION #}
 
-    <main x-data="{ open: false }"  class="bg-cover bg-no-repeat border-black bg-gray-900 bg-silver">
+    <header x-data="{ open: false }"  class="bg-cover bg-no-repeat border-black bg-gray-900 bg-silver">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -66,9 +66,13 @@
                                     le temps ou l’envie de vous en occuper ?
                                     Je gère pour vous l’achat, les travaux et la revente d’un bien.</p>
                             </div>
-                            <button class="btn-1 text-white mx-auto block lg:mx-0 hover:bg-gray-900 bg-pink-600">
-                                être contacté
-                            </button>
+                            <!-- Début de widget de lien Calendly -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                            <a href="" class="mx-auto block lg:mx-0" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-3525/etre-recontacte-offre?text_color=111827&primary_color=db2777'});return false;">
+                                <button class=" btn-1 text-white hover:bg-gray-900 bg-pink-600">Être contacté</button>
+                            </a>
+                            <!-- Fin de widget de lien Calendly -->
                         </div>
                     </div>
 
@@ -76,15 +80,76 @@
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
-                             alt="">
+                             alt="Michael Ballot présente la prestation d'investissements immobilier d'achat revente d'un bien">
+                        <div class="absolute  inset-0 flex items-center justify-center">
+                            <button @click="open = true"
+                                    class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="12" height="12">
+                                    <g transform="matrix(14,0,0,14,0,0)">
+                                        <path d="M8.266,3.563,3.7.316h0A1.686,1.686,0,0,0,1.916.2,1.754,1.754,0,0,0,1,1.753V8.247A1.753,1.753,0,0,0,1.916,9.8,1.687,1.687,0,0,0,3.7,9.685L8.266,6.438a1.775,1.775,0,0,0,0-2.875Z"
+                                              fill="currentColor" stroke="none" stroke-linecap="round"
+                                              stroke-linejoin="round" stroke-width="0"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
+                         x-show="open" x-cloak>
+                        <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
+                             @click="open = false"></div>
+
+                        <!-- A basic modal dialog with title, body and one button to close -->
+                        <div class="h-auto p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
+
+
+                            <div class="container">
+                                <video id="player" controls crossorigin playsinline
+                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                            type="video/mp4" size="576">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                                            type="video/mp4" size="720">
+                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                                            type="video/mp4" size="1080">
+
+                                    <!-- Caption files -->
+                                    <track kind="captions" label="English" srclang="en"
+                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                                           default>
+                                    <track kind="captions" label="Français" srclang="fr"
+                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                                    <!-- Fallback for browsers that don't support the <video> element -->
+                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                       download>Download</a>
+                                </video>
+                            </div>
+                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                            <!-- One big close button.  --->
+                            <div class="mt-5 sm:mt-6">
+                    <span class="flex js-pause2 w-full shadow-sm">
+                      <button @click="open = false"
+                              class="btn-1 text-white bg-gray-900 hover:bg-gray-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
 
-    </main>
+    </header>
 
+    <main>
 
 
     {# INTRODUCTION #}
@@ -109,10 +174,10 @@
 
             <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
+
                         <img
                                 class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="{{ asset('build/images/main/offre-silver.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/offre-silver.webp') }}" alt="Affiche de l'offre pour un investissement clé en main d'achat revente d'un bien">
                 </div>
                 <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto mb-4">
@@ -127,9 +192,15 @@
                         </div>
                         <div class="flex items-center">
                             <span class="title-font font-medium text-2xl text-gray-900">6 997,00 €</span>
-                            <button class="ml-auto btn-1 text-white hover:bg-gray-900 bg-pink-600">
-                                Être contacté
-                            </button>
+
+                            <!-- Début de widget de lien Calendly -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                            <a href="" class="ml-auto" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-3525/etre-recontacte-offre?text_color=111827&primary_color=db2777'});return false;">
+                                <button class=" btn-1 text-white hover:bg-gray-900 bg-pink-600">Être contacté</button>
+                            </a>
+                            <!-- Fin de widget de lien Calendly -->
+
                         </div>
                     </div>
                 </div>
@@ -609,4 +680,5 @@
 
     {# ECHANGE TELEPHONIQUE #}
     {% include 'shared/_contact.html.twig' %}
+    </main>
 {% endblock %}

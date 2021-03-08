@@ -16,7 +16,7 @@
         <div class="absolute z-20 w-auto min-w-full min-h-full max-w-none bg-opacity-50 bg-gray-900"></div>
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
             <source src="{{ asset('build/videos/ville-nuit.mp4') }}" type="video/mp4"/>
-            Your browser does not support the video tag.
+            Votre explorateur ne prend pas en charge le format vidéo.
         </video>
         <a class="transform animate-bounce z-20 absolute w-6 h-6 right-1/2 flex items-center justify-center bottom-5 left-1/2 ">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -83,7 +83,7 @@
 
                 <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                     <div class="w-full  max-w-sm md:col-span-1">
-                        <a href="">
+                        <a href="{{ path('seminaire') }}">
                             <img
                                     class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
                                     src="{{ asset('build/images/main/seminaire-immobilier.webp') }}" alt=""></a>
@@ -236,7 +236,7 @@
 
                 <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                     <div class="w-full  max-w-sm md:col-span-1">
-                        <a href="">
+                        <a href=href="{{ path('coaching') }}">
                             <img
                                     class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
                                     src="{{ asset('build/images/main/coaching-immobilier.webp') }}" alt=""></a>

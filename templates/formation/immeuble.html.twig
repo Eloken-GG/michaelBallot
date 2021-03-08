@@ -7,7 +7,7 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <section x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-7">
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-7">
         <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
             <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
                 <div class="flex flex-wrap items-center -mx-3">
@@ -76,7 +76,7 @@
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
                              src="https://picsum.photos/700/400"
-                             alt="">
+                             alt="Michael Ballot présente la formation d'immobilier d'investissement : Investir dans un immeuble de rapport">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -141,7 +141,9 @@
             </div>
         </div>
 
-    </section>
+    </header>
+
+    <main>
 
     {# INTRODUCTION #}
     <section class="w-full py-24">
@@ -168,9 +170,9 @@
 
             <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
-                    <a href="">
+                    <a href="https://formation.michaelballot.fr/commande-immeuble-de-rapport/">
                         <img class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt=""></a>
+                                src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt="Affiche de la formations immobilière : Investir dans un immeuble de rapport"></a>
                 </div>
                 <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                     <div class="max-w-sm mx-auto mb-4">
@@ -229,23 +231,23 @@
                     <div data-aos="fade-left" class="w-full lg:order-1 lg:w-1/2">
                         <div class="mb-4 flex flex-wrap items-end">
                             <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                                <img class="tagline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                <img class=" w-full h-48 lg:h-32 lg:h-48 object-cover"
                                      src="{{ asset('build/images/formations/10.webp') }}"
-                                     alt=""></div>
+                                     alt="Signature d'un acte sous seing auprès du notaire pour acheter un bien immobilier à l'investissement"></div>
                             <div class="w-full lg:w-1/3 px-3">
-                                <img class="punchline w-full h-48 lg:h-32 object-cover"
+                                <img class=" w-full h-48 lg:h-32 object-cover"
                                      src="{{ asset('build/images/formations/11.webp') }}"
-                                     alt=""></div>
+                                     alt="Mise en vente ou location d'un bien par un professionnel de l'immobilier d'investissement"></div>
                         </div>
                         <div class=" flex flex-wrap items-start">
                             <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                                <img class="headline w-full h-48 lg:h-32 object-cover"
+                                <img class=" w-full h-48 lg:h-32 object-cover"
                                      src="{{ asset('build/images/formations/13.webp') }}"
-                                     alt=""></div>
+                                     alt="Rencontre avec les artisans qui réaliseront votre chantier"></div>
                             <div class="w-full lg:w-2/3 px-3">
                                 <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
                                      src="{{ asset('build/images/formations/9.webp') }}"
-                                     alt=""></div>
+                                     alt="Calcul de la rentabilité d'un bien immobilier pour réaliser un investissement"></div>
                         </div>
                     </div>
                     <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
@@ -672,5 +674,6 @@
         </div>
     </div>
 
+    </main>
 
 {% endblock %}
