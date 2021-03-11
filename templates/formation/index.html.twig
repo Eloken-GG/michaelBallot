@@ -13,7 +13,8 @@
                 <div class="flex flex-wrap items-center -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="py-12">
-                            <div data-aos="fade-right" class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                            <div data-aos="fade-right"
+                                 class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
 
 
                                 <h1 class="title-1 text-white">
@@ -28,9 +29,9 @@
 
 
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
-                        <img  class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="https://picsum.photos/700/400"
-                             alt="">
+                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
+                             src="{{ asset ('build/images/miniatureVideo/1.png') }}"
+                             alt="Michael Ballot présente toutes les formations en ligne pour devenir rentier immobilier">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -52,31 +53,19 @@
                              @click="open = false"></div>
 
                         <!-- A basic modal dialog with title, body and one button to close -->
-                        <div class="h-auto p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
-
-
+                        <div class="h-auto w-full p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
                             <div class="container">
-                                <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                            type="video/mp4" size="576">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                            type="video/mp4" size="720">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                            type="video/mp4" size="1080">
-
-                                    <!-- Caption files -->
-                                    <track kind="captions" label="English" srclang="en"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                           default>
-                                    <track kind="captions" label="Français" srclang="fr"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
-                                    <!-- Fallback for browsers that don't support the <video> element -->
-                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                       download>Download</a>
-                                </video>
+                                <div class="plyr__video-embed" id="player" class="rounded-sm">
+                                    <iframe  width="1154" height="649" src="https://www.youtube.com/embed/eGJfK5GwJDY"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                     <!-- Fallback for browsers that don't support the <video> element -->
+                                     <a href="https://youtu.be/eGJfK5GwJDY"
+                                     download>Voir la vidéo sur Youtube</a>
+                                </div>
                             </div>
-                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
 
 
                             <!-- One big close button.  --->
@@ -97,181 +86,192 @@
 
     </header>
 
-<main>
+    <main>
 
-    {# BULLET POINTS #}
-    {% include 'shared/_avantages.html.twig' %}
+        {# BULLET POINTS #}
+        {% include 'shared/_avantages.html.twig' %}
 
-    {# LISTE FORMATIONS #}
+        {# LISTE FORMATIONS #}
 
-    <section  class="bg-gray-50 w-full pb-32">
+        <section class="bg-gray-50 w-full pb-32">
 
-        <div class="py-20 radius-for-skewed">
+            <div class="py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="title-1">Une formation pour chacun de vos projets</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+
+                {# FORMATION 1 #}
+
+                <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                    <div data-aos="fade-right" class="w-full lg:col-span-1">
+                        <a href="{{ path('bon') }}">
+                            <img
+                                    class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/formation-trouver-un-bien-immobilier.webp') }}"
+                                    alt="Affiche de la formation immobilière : trouver le bon bien pour investir ou acheter"></a>
+                    </div>
+                    <div data-aos="fade-left"
+                         class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto">
+                            <h2 class="mb-3 title-3">
+                                Trouver le bon bien
+                            </h2>
+                            <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Tous les sites et toutes les
+                                techniques pour trouver le bon bien sur internet et pour effectuer des visites
+                                efficaces.
+                                Validez tous les points de la check List et sélectionnez le meilleur bien en termes de
+                                rentabilité ...</p>
+                            <div>
+                                <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                   href="{{ path('bon') }}">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                {# FORMATION 2 #}
+
+                <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                    <div data-aos="fade-left" class="w-full lg:order-2 lg:col-span-1">
+                        <a href="{{ path('dossier') }}">
+                            <img
+                                    class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/formation-dossier-bancaire-immo.webp') }}"
+                                    alt="Affiche de la formations immobilière : Réussir son dossier bancaire"></a>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto">
+                            <h2 class="mb-3 title-3">
+                                Réussir son dossier bancaire
+                            </h2>
+                            <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Découvrez l’ensemble des
+                                documents à joindre, des indicateurs à calculer, des dispositions à prendre, des
+                                connaissances à avoir, et préparez un dossier irréprochable ...</p>
+                            <div>
+                                <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                   href="{{ path('dossier') }}">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# FORMATION 3 #}
+
+                <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                    <div data-aos="fade-right" class="w-full lg:col-span-1">
+                        <a href="{{ path('maison') }}">
+                            <img
+                                    class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}"
+                                    alt="Affiche de la formations immobilière : Construire sa maison en toute autonomie"></a>
+                    </div>
+                    <div data-aos="fade-left"
+                         class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto">
+                            <h2 class="mb-3 title-3">
+                                Construire la maison de ses rêves
+                            </h2>
+                            <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Estimez le coût de votre
+                                opération. Ne négligez aucun frais, aucune taxe et aucun travaux pour vous assurer une
+                                profitabilité optimale et un cash-flow rapide ...</p>
+                            <div>
+                                <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                   href="{{ path('maison') }}">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# FORMATION 4 #}
+
+                <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                    <div data-aos="fade-left" class="w-full lg:order-2 lg:col-span-1">
+                        <a href="{{ path('double') }}">
+                            <img
+                                    class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/formation-construction-location.webp') }}"
+                                    alt="Affiche de la formations immobilière : La double construction en projet locatif"></a>
+                    </div>
+                    <div data-aos="fade-right"
+                         class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto">
+                            <h2 class="mb-3 title-3">
+                                La double construction en projet locatif
+                            </h2>
+                            <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Trouvez le bon terrain,
+                                faites
+                                les bon choix de travaux, entourez-vous des meilleurs artisans, évaluez et appréhendez
+                                les
+                                leviers fiscaux, vendez ou louez ...</p>
+                            <div>
+                                <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                   href="{{ path('double') }}">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# FORMATION 5 #}
+
+                <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
+                    <div data-aos="fade-right" class="w-full lg:col-span-1">
+                        <a href="{{ path('immeuble') }}">
+                            <img
+                                    class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}"
+                                    alt="Affiche de la formations immobilière : Investir dans un immeuble de rapport"></a>
+                    </div>
+                    <div data-aos="fade-left"
+                         class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto">
+                            <h2 class="mb-3 title-3">
+                                Investir dans un immeuble&nbsp;de&nbsp;rapport
+                            </h2>
+                            <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Oui acheter un immeuble
+                                complet est
+                                possible
+                                et accessible. La clé de voûte de cet investissement est l'accompagnement de la
+                                banque.</p>
+                            <div>
+                                <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
+                                   href="{{ path('immeuble') }}">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# FORMATION OFFERTE #}
+
+        <section class="bg-cover bg-no-repeat bg-fixed py-20 bg-2 ">
+
             <div class="container mx-auto px-4">
-                <div class="max-w-2xl mx-auto text-center">
-                    <h2  class="title-1">Une formation pour chacun de vos projets</h2>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-3xl mx-auto">
-
-            {# FORMATION 1 #}
-
-            <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div data-aos="fade-right" class="w-full lg:col-span-1">
-                    <a href="{{ path('bon') }}">
-                        <img
-                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-trouver-un-bien-immobilier.webp') }}" alt="Affiche de la formation immobilière : trouver le bon bien pour investir ou acheter"></a>
-                </div>
-                <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
-                        <h2 class="mb-3 title-3">
-                            Trouver le bon bien
-                        </h2>
-                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Tous les sites et toutes les
-                            techniques pour trouver le bon bien sur internet et pour effectuer des visites efficaces.
-                            Validez tous les points de la check List et sélectionnez le meilleur bien en termes de
-                            rentabilité ...</p>
-                        <div>
-                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('bon') }}">En savoir plus</a>
-                        </div>
-                    </div>
+                <div class="max-w-2xl mx-auto text-center text-gray-900 bg-white rounded-sm bg-opacity-80 p-8">
+                    <span class="subtitle-2 block my-8">Formation offerte</span>
+                    <h2 class="title-2 mb-4">Envie d'essayer avant de s'engager ?</h2>
+                    <p class="body-2 m-6">Suivez gratuitement une mini formation de 1h30 pour découvrir comment devenir
+                        financièrement indépendant grâce à l'immobilier
+                    </p>
+                    <a href="https://formation.michaelballot.fr/formation-offerte/" class="mt-12 block">
+                        <button class="btn-1 text-white bg-gray-900 hover:bg-gray-800">Je me forme gratuitement</button>
+                    </a>
                 </div>
             </div>
 
-
-            {# FORMATION 2 #}
-
-            <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div data-aos="fade-left" class="w-full lg:order-2 lg:col-span-1">
-                    <a href="{{ path('dossier') }}">
-                        <img
-                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-dossier-bancaire-immo.webp') }}" alt="Affiche de la formations immobilière : Réussir son dossier bancaire"></a>
-                </div>
-                <div data-aos="fade-right" class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
-                        <h2 class="mb-3 title-3">
-                            Réussir son dossier bancaire
-                        </h2>
-                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Découvrez l’ensemble des
-                            documents à joindre, des indicateurs à calculer, des dispositions à prendre, des
-                            connaissances à avoir, et préparez un dossier irréprochable ...</p>
-                        <div>
-                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('dossier') }}">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {# FORMATION 3 #}
-
-            <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div data-aos="fade-right" class="w-full lg:col-span-1">
-                    <a href="{{ path('maison') }}">
-                        <img
-                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}" alt="Affiche de la formations immobilière : Construire sa maison en toute autonomie"></a>
-                </div>
-                <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
-                        <h2 class="mb-3 title-3">
-                            Construire la maison de ses rêves
-                        </h2>
-                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Estimez le coût de votre
-                            opération. Ne négligez aucun frais, aucune taxe et aucun travaux pour vous assurer une
-                            profitabilité optimale et un cash-flow rapide ...</p>
-                        <div>
-                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('maison') }}">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {# FORMATION 4 #}
-
-            <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div data-aos="fade-left" class="w-full lg:order-2 lg:col-span-1">
-                    <a href="{{ path('double') }}">
-                        <img
-                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-construction-location.webp') }}" alt="Affiche de la formations immobilière : La double construction en projet locatif"></a>
-                </div>
-                <div data-aos="fade-right"  class="w-full pl-6 text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
-                        <h2 class="mb-3 title-3">
-                            La double construction en projet locatif
-                        </h2>
-                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Trouvez le bon terrain, faites
-                            les bon choix de travaux, entourez-vous des meilleurs artisans, évaluez et appréhendez les
-                            leviers fiscaux, vendez ou louez ...</p>
-                        <div>
-                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('double') }}">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {# FORMATION 5 #}
-
-            <div class="w-full px-4 pt-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center">
-                <div data-aos="fade-right" class="w-full lg:col-span-1">
-                    <a href="{{ path('immeuble') }}">
-                        <img
-                                class="w-48 rounded-sm shadow-sm hover:shadow-xl mx-auto lg:hover:scale-105 transition duration-800 transform mb-8 lg:mb-0 h-auto"
-                                src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt="Affiche de la formations immobilière : Investir dans un immeuble de rapport"></a>
-                </div>
-                <div data-aos="fade-left" class="w-full text-center col-span-2 lg:text-left grid justify-self-end justify-items-center">
-                    <div class="max-w-sm mx-auto">
-                        <h2 class="mb-3 title-3">
-                            Investir dans un immeuble&nbsp;de&nbsp;rapport
-                        </h2>
-                        <p class="mb-6 mx-auto lg:mx-0 max-w-sm body-2 leading-relaxed">Oui acheter un immeuble
-                            complet est
-                            possible
-                            et accessible. La clé de voûte de cet investissement est l'accompagnement de la
-                            banque.</p>
-                        <div>
-                            <a class="btn-1 mt-6 border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                               href="{{ path('immeuble') }}">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {# FORMATION OFFERTE #}
-
-    <section class="bg-cover bg-no-repeat bg-fixed py-20 bg-2 ">
-
-        <div class="container mx-auto px-4">
-            <div class="max-w-2xl mx-auto text-center text-gray-900 bg-white rounded-sm bg-opacity-80 p-8">
-                <span class="subtitle-2 block my-8">Formation offerte</span>
-                <h2 class="title-2 mb-4">Envie d'essayer avant de s'engager ?</h2>
-                <p class="body-2 m-6">Suivez gratuitement une mini formation de 1h30 pour découvrir comment devenir
-                    financièrement indépendant grâce à l'immobilier
-                </p>
-                <a href="https://formation.michaelballot.fr/formation-offerte/" class="mt-12 block">
-                    <button class="btn-1 text-white bg-gray-900 hover:bg-gray-800">Je me forme gratuitement</button>
-                </a>
-            </div>
-        </div>
-
-    </section>
+        </section>
 
 
+        {# UPSELL #}
+        {% include 'shared/_packFormations.html.twig' %}
 
 
-    {# UPSELL #}
-    {% include 'shared/_packFormations.html.twig' %}
-
-
-</main>
+    </main>
 
 {% endblock %}
