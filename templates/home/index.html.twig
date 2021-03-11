@@ -15,7 +15,8 @@
         </div>
         <div class="absolute z-20 w-auto min-w-full min-h-full max-w-none bg-opacity-50 bg-gray-900"></div>
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-            <source src="{{ asset('build/videos/ville-nuit.mp4') }}" type="video/mp4"/>
+            <source src="{{ asset('build/videos/ville-nuit.mp4') }}" type="video/mp4">
+            <source src="{{ asset('build/videos/ville-nuit-phone.mp4') }}" type="video/mp4" media="all and (max-width: 768px)">
             Votre explorateur ne prend pas en charge le format vidéo.
         </video>
         <a class="transform animate-bounce z-20 absolute w-6 h-6 right-1/2 flex items-center justify-center bottom-5 left-1/2 ">

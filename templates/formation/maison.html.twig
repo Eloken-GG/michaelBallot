@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {# BLOC TITLE #}
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {# BLOC BODY #}
 {% block body %}

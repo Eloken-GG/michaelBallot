@@ -3,6 +3,19 @@
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 
+
+/* FONTS */
+@font-face {
+    font-family: 'Raleway', sans-serif;;
+    src:  url('../fonts/Raleway-VariableFont_wght.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Raleway', sans-serif;;
+    src:  url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('ttf');
+}
+
+
 @layer base {
 
     .title-1 {
