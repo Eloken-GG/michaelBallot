@@ -82,6 +82,15 @@ Encore
 // uncomment if you're having problems with a jQuery plugin
 //.autoProvidejQuery()
 
+
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+module.exports = {
+    optimization: {
+        minimizer: [new UglifyJsPlugin()],
+    },
+};
+
 module.exports = Encore.getWebpackConfig();
 
 if (Encore.isProduction()) {
@@ -96,4 +105,5 @@ if (Encore.isProduction()) {
                 return content.match(/[\w-/:]+(?<!:)/g) || [];
             }
         }));
+
 }
