@@ -3,165 +3,661 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-        <div class="title-1 relative z-30 p-5 text-6xl text-white">
-            NOTRE MISSION
+    <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-7">
+        <div class="w-full z-0 h-full bg-gray-900 bg-opacity-70">
+            <div class=" max-w-7xl z-10 px-4 py-32 px-8 mx-auto ">
+                <div class="flex flex-wrap items-center -mx-3">
+                    <div class="w-full lg:w-1/2 px-3">
+                        <div class="py-12">
+                            <div data-aos="fade-right"
+                                 class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                                <h1 class="title-1 text-white">
+                                    A propos de Michael Ballot
+                                </h1>
+                                <p class="body-1 mt-12 text-white">A 35 ans j'ai pu me constituer un patrimoine
+                                    de plus de 1 500 000 €. Fort de cette expérience, j'ai décidé d'accompagner de
+                                    nouveaux investisseurs immobiliers à se lancer et à réussir leurs opérations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
+                        <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
+                             src="{{ asset ('build/images/miniatureVideo/7.png') }}"
+                             alt="Michael Ballot présente la formation d'immobilier d'investissement : Investir dans un immeuble de rapport">
+                        <div class="absolute  inset-0 flex items-center justify-center">
+                            <button @click="open = true"
+                                    class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="12" height="12">
+                                    <g transform="matrix(14,0,0,14,0,0)">
+                                        <path d="M8.266,3.563,3.7.316h0A1.686,1.686,0,0,0,1.916.2,1.754,1.754,0,0,0,1,1.753V8.247A1.753,1.753,0,0,0,1.916,9.8,1.687,1.687,0,0,0,3.7,9.685L8.266,6.438a1.775,1.775,0,0,0,0-2.875Z"
+                                              fill="currentColor" stroke="none" stroke-linecap="round"
+                                              stroke-linejoin="round" stroke-width="0"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
+                         x-show="open" x-cloak>
+                        <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
+                             @click="open = false"></div>
+
+                        <!-- A basic modal dialog with title, body and one button to close -->
+                        <div class="h-auto w-full p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
+
+                            <div class="container">
+                                <div class="plyr__video-embed" id="player" class="rounded-sm">
+                                    <iframe width="1154" height="649" src="https://www.youtube.com/embed/yXvjFBmhkAg"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    <!-- Fallback for browsers that don't support the <video> element -->
+                                    <a href="https://youtu.be/yXvjFBmhkAg"
+                                       download>Voir la vidéo sur Youtube</a>
+                                </div>
+                            </div>
+                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                            <!-- One big close button.  --->
+                            <div class="mt-5 sm:mt-6">
+                    <span class="flex js-pause2 w-full shadow-sm">
+                      <button @click="open = false"
+                              class="btn-1 text-white bg-gray-900 hover:bg-gray-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-            <source src="{{ asset('build/videos/building.mp4') }}" type="video/mp4"/>
-            Votre explorateur ne prend pas en charge le format vidéo.
-        </video>
+
     </header>
     <main>
-        <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="flow-root">
-            <ul class="-mb-8">
-                <li>
+
+        {# BULLET POINTS #}
+        <section class="pt-8 pb-2 bg-gray-100 mb-24">
+            <div class="container max-w-7xl px-4 mx-auto">
+                <div data-aos="fade-up" class="flex flex-wrap">
+                    <div class="w-full md:w-1/3 px-3 mb-6">
+                        <div class="p-6 ">
+                            <p class="title-2 font-bold">+15K€</p>
+                            <p class="body-2">
+                                De revenus immobiliers par mois
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6">
+                        <div class="p-6 ">
+
+                            <p class="title-2 font-bold">+150</p>
+                            <p class="body-2">
+                                Biens construits, achetés, loués, gérés et/ou revendus
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6">
+                        <div class="p-6">
+
+                            <p class="title-2 font-bold">+1.7M€</p>
+                            <p class="body-2">
+                                de fonds levés auprès des banques
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        {# CARD SEMINAIRE #}
+        <section class="w-full ">
+            <div class="max-w-4xl px-8 py-20 mx-auto">
+
+                <div data-aos="fade-up"
+                     class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition-all duration-300 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+                        <a href="https://formation.michaelballot.fr/commande-livre/" target="_blank">
+                            <img
+                                    class="w-full  shadow-md mx-auto mb-8 md:mb-0 h-auto"
+                                    src="{{ asset('build/images/main/Livre-michael-ballot.webp') }}"
+                                    alt="Les clés de la réussite : Livre écrit par Michael Ballot"></a>
+                    </div>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto ">
+                            <h2 class="subtitle-2">Livre</h2>
+                            <h3 class="title-2 py-5">Découvrez mon parcours</h3>
+
+                            <p class="body-2 mt-5">15 000 € de revenus par mois sans rien faire. Ça vous laisse rêveur ?
+                                Moi aussi ...
+                                Il y a 2 ans, je ne pensais pas que cela serait possible. Je n'aurai même pas imaginé
+                                qu'un ancien agriculteur comme moi puisse y arriver.
+                                En 18 mois, mes investissements immobiliers m'ont permis de sortir de ma routine, de
+                                changer de vie, de quitter mon travail et de vivre uniquement de mes rentes.
+                                À travers ce livre, je vous décris humblement comment j'ai acquis ce niveau de vie et
+                                comment vous aussi, grâce à l'immobilier, vous pourrez vivre vos rêves d'indépendance.
+                                Je vous dévoile les clés de la réussite</p>
+
+                            <div class="flex mt-2 items-center pb-5">
+                            </div>
+                            <div class="">
+                                <a href="https://formation.michaelballot.fr/commande-livre/" target="_blank"
+                                   class="my-6">
+                                    <button class="btn-1 text-gray-900  border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition">
+                                        Commander le livre
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# DETAIL FORMATION #}
+        <section class="bg-gray-100">
+            <div class="py-20 my-12 max-w-5xl mx-auto  radius-for-skewed ">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center -mx-4">
+                        <div data-aos="fade-left" class="w-full lg:order-1 lg:w-1/2">
+                            <div class="mb-4 flex flex-wrap items-end">
+                                <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/10.webp') }}"
+                                         alt="Signature d'un acte sous seing auprès du notaire pour acheter un bien immobilier à l'investissement">
+                                </div>
+                                <div class="w-full lg:w-1/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/11.webp') }}"
+                                         alt="Mise en vente ou location d'un bien par un professionnel de l'immobilier d'investissement">
+                                </div>
+                            </div>
+                            <div class=" flex flex-wrap items-start">
+                                <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
+                                    <img class=" w-full h-48 lg:h-32 object-cover"
+                                         src="{{ asset('build/images/formations/13.webp') }}"
+                                         alt="Rencontre avec les artisans qui réaliseront votre chantier"></div>
+                                <div class="w-full lg:w-2/3 px-3">
+                                    <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
+                                         src="{{ asset('build/images/formations/9.webp') }}"
+                                         alt="Calcul de la rentabilité d'un bien immobilier pour réaliser un investissement">
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-right" class="mb-12 mt-8 lg:mt-0 lg:order-0 lg:mb-0 w-full lg:w-1/2 px-4">
+                            <div class="max-w-md">
+                                <h2 class="subtitle-2 inline-block mb-6">Mes investissements</h2>
+
+                                <ul class="font-raleway font-base text-gray-900 tracking-tight">
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Construction de 3 maisons</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Achat de 2 immeubles pour un total de 11 lots</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Achat d'une maison transformée en 3 appartements</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Construction d'une villa à Bali de 340 000 €</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Achat d'un appartement à Miami</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">1 750 000 € empruntés aux banques</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">10% à 14% de rendement sur les locations</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">3 appartements en sous location</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Gestion de 20 maisons et appartements en conciergerie</span>
+                                    </li>
+                                    <li class="mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xmlns:svgjs="http://svgjs.com/svgjs"
+                                             viewBox="0 0 140 140" width="14" height="14">
+                                            <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                                                <path d="M23.5 0.499L7 23.499 0.5 16.999" fill="none" stroke="#000000"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="ml-4">Patrimoine cumulé net de 1 500 000 € (2021)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        {# INTRODUCTION DATES CLES #}
+        <section class="w-full py-24">
+
+            <div class="md:py-20 radius-for-skewed">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="title-1">Quelques dates clés</h2>
+                        <p class="body-2 m-6">Bien que j'ai dévbuté ma carrière dans la construction immobilière il y a près de 10 ans, je n'ai réellement commencé à investir qu'en 2018.<br>Et depuis tout s'est enchaîné...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATES CLES -->
+        <section class="flow-root ">
+            <ul class="-mb-8 px-3 mx-auto max-w-lg">
+                <li data-aos="fade-right">
                     <div class="relative pb-8">
                         <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                        <div class="relative flex space-x-3">
+                        <div class="relative flex items-center space-x-3">
                             <div>
-            <span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-              <!-- Heroicon name: solid/user -->
-              <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-              </svg>
-            </span>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
                             </div>
-                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
                                 <div>
-                                    <p class="text-sm text-gray-500">Applied to <a href="#" class="font-medium text-gray-900">Front End Developer</a></p>
+                                    <p class="body-2 text-gray-500">Premiers pas dans l'immobilier en tant que constructeur</p>
                                 </div>
-                                <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                                    <time datetime="2020-09-20">Sep 20</time>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time>2012</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
 
-                <li>
+                <li data-aos="fade-right">
                     <div class="relative pb-8">
                         <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                        <div class="relative flex space-x-3">
+                        <div class="relative flex items-center  space-x-3">
                             <div>
-            <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-              <!-- Heroicon name: solid/thumb-up -->
-              <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
-              </svg>
-            </span>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
                             </div>
-                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
                                 <div>
-                                    <p class="text-sm text-gray-500">Advanced to phone screening by <a href="#" class="font-medium text-gray-900">Bethany Blake</a></p>
+                                    <p class="body-2 text-gray-500">Construction de ma résidence principale</p>
                                 </div>
-                                <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                                    <time datetime="2020-09-22">Sep 22</time>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time>2016</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-
-                <li>
+                <li data-aos="fade-right">
                     <div class="relative pb-8">
                         <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                        <div class="relative flex space-x-3">
+                        <div class="relative items-center  flex space-x-3">
                             <div>
-            <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-              <!-- Heroicon name: solid/check -->
-              <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-            </span>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
                             </div>
-                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
                                 <div>
-                                    <p class="text-sm text-gray-500">Completed phone screening with <a href="#" class="font-medium text-gray-900">Martha Gardner</a></p>
+                                    <p class="body-2 text-gray-500">Meilleur constructeur du groupe sur 120 commerciaux avec 3&nbsp;350&nbsp;000€ de chiffre d'affaires
+                                    </p>
                                 </div>
-                                <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                                    <time datetime="2020-09-28">Sep 28</time>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time>2017</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-
-                <li>
+                <li data-aos="fade-right">
                     <div class="relative pb-8">
                         <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                        <div class="relative flex space-x-3">
+                        <div class="relative  items-center  flex space-x-3">
                             <div>
-            <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-              <!-- Heroicon name: solid/thumb-up -->
-              <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
-              </svg>
-            </span>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
                             </div>
-                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
                                 <div>
-                                    <p class="text-sm text-gray-500">Advanced to interview by <a href="#" class="font-medium text-gray-900">Bethany Blake</a></p>
+                                    <p class="body-2 text-gray-500">Premier achat de formation en immobilier</p>
                                 </div>
-                                <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                                    <time datetime="2020-09-30">Sep 30</time>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2018</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-
-                <li>
+                <li data-aos="fade-right">
                     <div class="relative pb-8">
-                        <div class="relative flex space-x-3">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
                             <div>
-            <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-              <!-- Heroicon name: solid/check -->
-              <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-            </span>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
                             </div>
-                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
                                 <div>
-                                    <p class="text-sm text-gray-500">Completed interview with <a href="#" class="font-medium text-gray-900">Katherine Snyder</a></p>
+                                    <p class="body-2 text-gray-500">Achat et construction de 16 lots</p>
                                 </div>
-                                <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                                    <time datetime="2020-10-04">Oct 4</time>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2018</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">Constitution de 4 sociétés :  Marchand de bien, SCI et Michael Ballot Formation</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2019</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">Création de 5 formation sur l'immobilier</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2019</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">Sortie du livre "Les clés de la réussite"</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2020</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">Début de la construction du projet à Bali et création de Frenchy Homes conciergerie</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2020</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">ouverture de The School Investment et projet d'expatriation en Floride</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2020</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">Organisation du premier séminaire immobilier</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2021</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="relative pb-8">
+                        <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                        <div class="relative  items-center  flex space-x-3">
+                            <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center ">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5 flex justify-between items-center space-x-6">
+                                <div>
+                                    <p class="body-2 text-gray-500">Création d'une nouvelle société de marchand de bien, achat d'un appartement à Miami</p>
+                                </div>
+                                <div class="text-right text-sm whitespace-nowrap subtitle-3 pl-5 text-gray-500">
+                                    <time datetime="2020-10-04">2021</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="max-w-lg m-auto">
-        <div class="font-sans pt-12">
-            <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Qui sommes-nous
-                ?</h1>
-            <p class="text-sm md:text-base font-normal text-gray-600">Mis en place le 23 Février 2021</p>
-        </div>
-        <p class="mb-4">
-            Ut sagittis lacus consequat accumsan venenatis. Sed sollicitudin, lectus et
-            fringilla ultrices, dolor nisi scelerisque tortor, vel finibus magna massa
-            non nunc. Phasellus massa quam, egestas a nisl sed, porta volutpat metus.
-            Nunc sed elit ac tellus tempor cursus. Suspendisse potenti. Vestibulum
-            varius rutrum nisl nec consequat. Suspendisse semper dignissim sem viverra
-            semper. Nulla porttitor, purus nec accumsan pharetra, nisi dolor condimentum
-            ipsum, id consequat nulla nunc in ligula.
-        </p>
-        <p class="mb-12">
-            Nulla pharetra lacinia nisi, vitae mollis tellus euismod id. Mauris porta
-            dignissim hendrerit. Cras id velit varius, fermentum lectus vitae, ultricies
-            dolor. In bibendum rhoncus purus vel rutrum. Nam vulputate imperdiet
-            fringilla. Donec blandit libero massa. Suspendisse dictum diam mauris, vitae
-            fermentum dolor tincidunt in. Pellentesque sollicitudin venenatis dolor,
-            vitae scelerisque elit ultrices eu. Donec eget sodales risus, quis dignissim
-            neque.
-        </p>
-    </div>
+        {# FRENCHY HOMES #}
+
+        <section class="py-20 mt-12">
+            <h3 class="title-2 text-center my-8 text-gray-900">Un nouveau projet pour les investisseurs comme vous</h3>
+            <div class="container px-4 mx-auto">
+                <div class="pt-20 pb-24 px-8 md:px-16 bg-gray-900 rounded">
+                    <div class="flex flex-wrap items-center -mx-8">
+                        <div class="w-full lg:w-1/2 px-8 flex">
+                            <div class="my-auto text-white">
+                                <span class="subtitle-2 inline-block text-white">Services au propriétaires</span>
+                                <h3 class="title-2 my-6 text-gray-100 text-white">Frenchy homes</h3>
+
+                                <p class="font-raleway font-base text-white tracking-tight">
+                                    Ma femme et moi avons lancé dernièrement un service de conciergerie destiné aux propriétaires. Frenchy Homes gère l'ensemble de la gestion de locations saisonnières. Mise en ligne de l'offre, gestion des OTA, accueil des locataires, ménage... La conciergerie permet aux propriétaires de se décharger de la gestion et de profiter pleinement de leurs investissements.
+                                </p>
+                                <a class="mt-5 block" href="https://www.frenchyhomes.com" target="_blank">
+                                    <button class="btn-1 bg-pink-600 hover:bg-white hover:text-gray-900 text-white">
+                                        En savoir plus
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 px-8 mt-12 lg:mt-0">
+                            <div class="relative max-w-sm sm:max-w-md mx-auto">
+                                <div class="absolute" style="top: 22.8%; left: 3%; width: 25.2%; height: 72%;">
+                                    <img class="object-cover w-full h-full"
+                                         src="{{ asset('build/images/coaching/1.webp') }}"
+                                         alt="Immeubles dans une ville"></div>
+
+                                <div class="absolute" style="top: 12.8%; left: 70%; width: 25.2%; height: 72%;">
+                                    <img class="object-cover w-full h-full"
+                                         src="{{ asset('build/images/coaching/2.webp') }}"
+                                         alt="Immeubles à l'investissement"></div>
+                                <img class="relative mx-auto"
+                                     src="{{ asset('build/images/coaching/michael-ballot.webp') }}"
+                                     alt="Michael Ballot : formateur, coach, rentier et investisseur immobilier">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
 
     </main>
 {% endblock %}

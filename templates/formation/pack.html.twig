@@ -25,10 +25,11 @@
                             </div>
                         </div>
                     </div>
+
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="https://picsum.photos/700/400"
-                             alt="Michael Ballot présente la formation complète pour devenir investisseur immobilier">
+                             src="{{ asset ('build/images/miniatureVideo/8.png') }}"
+                             alt="Michael Ballot présente le pack de 5 formations pour devenir investisseur immobilier expert">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -53,25 +54,15 @@
                         <div class="h-auto w-full p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
 
                             <div class="container">
-                                <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                            type="video/mp4" size="576">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                            type="video/mp4" size="720">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                            type="video/mp4" size="1080">
-
-                                    <!-- Caption files -->
-                                    <track kind="captions" label="English" srclang="en"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                           default>
-                                    <track kind="captions" label="Français" srclang="fr"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                                <div class="plyr__video-embed" id="player" class="rounded-sm">
+                                    <iframe  width="1154" height="649" src="https://www.youtube.com/embed/EyfszMgmt-Y"
+                                             frameborder="0"
+                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                             allowfullscreen></iframe>
                                     <!-- Fallback for browsers that don't support the <video> element -->
-                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                       download>Download</a>
-                                </video>
+                                    <a href="https://youtu.be/EyfszMgmt-Y"
+                                       download>Voir la vidéo sur Youtube</a>
+                                </div>
                             </div>
                             <!-- Plyr resources and browser polyfills are specified in the pen settings -->
 
@@ -80,7 +71,7 @@
                             <div class="mt-5 sm:mt-6">
                     <span class="flex js-pause2 w-full shadow-sm">
                       <button @click="open = false"
-                              class="btn-1  text-white bg-gray-900 hover:bg-gray-700">
+                              class="btn-1 text-white bg-gray-900 hover:bg-gray-700">
                         Fermer la vidéo
                       </button>
                     </span>
@@ -116,7 +107,7 @@
     <section class="bg-gradient-to-b from-gray-50 w-full pb-24 ">
         <div class="max-w-4xl px-8 mx-auto">
 
-            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition duration-800 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+            <div data-aos="fade-up" class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition-all duration-300 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                 <div class="w-full  max-w-sm md:col-span-1">
                     <a href="https://formation.michaelballot.fr/inscription-5-formations/">
                         <img
