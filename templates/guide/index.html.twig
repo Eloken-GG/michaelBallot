@@ -6,25 +6,32 @@
 {# BLOC BODY #}
 {% block body %}
 
-    Date d’envoi de votre message : Aujourd’hui, à 15:18
+    <section class=" py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 mt-24">
+        <div class="relative max-w-xl mx-auto">
 
-    Guillaume, date d’envoi : Aujourd’hui, à 15:56
-    <section class="thankyoupage" data-aos="fade-up" data-aos-duration="2000">
-        <div><h1>Commence &agrave; b&acirc;tir ton projet</h1>
-            <h2> T&eacute;l&eacute;charge mon guide et d&eacute;couvre les premi&egrave;res astuces pour commencer
-                &agrave; esquisser ton projet en toute autonomie&nbsp;!</h2><a
-                    href="/CSS/Document/guide-construction.pdf" download>
-                <button class="main-buttons">T&eacute;l&eacute;charger le guide <img class="button-icon"
-                                                                                     src="CSS/Image/Icones/construire.png">
-                </button>
-            </a><a href=La-formation.html>
-                <button>Voir l'int&eacute;gralit&eacute; de la formation</button>
-            </a>
-            <p>Il se peut que vous ne puissiez pas t&eacute;l&eacute;charger le document depuis certains explorateurs
-                (internet explorer) ou t&eacute;l&eacute;phones mobiles (IOS). Veuillez dans ce cas r&eacute;essayer en
-                utilisant un autre appareil ou navigateur web</p>
-            <div class="separator3" data-aos="fade-left" data-aos-duration="2000"></div>
-            <h4>Consultez tes mails afin de recevoir d&egrave;s demain une nouvelle astuce de professionnel pour lancer
-                ta construction seul.e</h4></div>
+            <div class="text-center">
+                <h2 class="text-gray-900 title-1">
+                    Commencez à batir votre projet
+                </h2>
+                <p class="mt-4 body-1 text-gray-500">
+                    T&eacute;l&eacute;chargez le guide et d&eacute;couvrez les premi&egrave;res astuces pour commencer
+                    &agrave; esquisser votre projet en toute autonomie&nbsp;!
+                </p>
+                <div class="my-12 flex-wrap">
+                    <a href="{{ asset('files/guide-construction.pdf') }}" class="m-3 block" download>
+                        <button class="btn-1 bg-pink-600 text-white hover:bg-gray-900">T&eacute;l&eacute;charger le guide
+                        </button>
+                    </a>
+                    <a class="m-3block"  href="{{  path('maison') }}">
+                        <button class="btn-1 bg-gray-900 hover:bg-pink-600 text-white">Voir l'int&eacute;gralit&eacute; de la formation</button>
+                    </a>
+                </div>
+                <span class="body-3 text-gray-400">Il se peut que vous ne puissiez pas t&eacute;l&eacute;charger le document depuis certains explorateurs
+                    (internet explorer) ou t&eacute;l&eacute;phones mobiles (IOS). Veuillez dans ce cas r&eacute;essayer en
+                    utilisant un autre appareil ou navigateur web</span>
+            </div>
+        </div>
     </section>
+
+
 {% endblock %}

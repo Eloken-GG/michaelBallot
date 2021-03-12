@@ -1,6 +1,5 @@
 import { Controller } from 'stimulus';
 
-import '../app';
 import Plyr from 'plyr';
 
 
