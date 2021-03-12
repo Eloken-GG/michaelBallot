@@ -35,7 +35,7 @@ class ContactController extends AbstractController
 
             $message = (new Email())
                 ->from($contactFormData['email'])
-                ->to('your@mail.com')
+                ->to('contact@michaelballot.fr')
                 ->subject('Un mail provenant de votre site web')
                 ->html( '<div>
                                 <div>
