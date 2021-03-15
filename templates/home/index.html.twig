@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {# BLOC TITLE #}
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {# BLOC BODY #}
 {% block body %}
@@ -87,7 +98,7 @@
                         <a href="{{ path('seminaire') }}">
                             <img
                                     class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                    src="{{ asset('build/images/main/seminaire-immobilier.webp') }}" alt=""></a>
+                                    src="{{ asset('build/images/main/seminaire-immobilier.webp') }}" alt="Affiche du séminaire immobilier du 12 au 13 juin 2021 au Golf du médoc"></a>
                     </div>
                     <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                         <div class="max-w-sm mx-auto ">
@@ -212,15 +223,15 @@
                     </div>
                     <div data-aos="fade-right" class="relative transform mx-auto -rotate-12 flex items- md:w-1/3 lg:w-1/2 max-w-md l px-4">
                         <div class="w-1/3 transform translate-y-12">
-                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}" alt="">
+                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-construire-sa-maison.webp') }}" alt="Affiche de la formation immobilière : Construire sa maison en toute autonomie">
                         </div>
                         <div class="w-1/3 transform -translate-y-6">
-                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-construction-location.webp') }}" alt="">
-                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt="">
+                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-construction-location.webp') }}" alt="Affiche de la formation immobilière : La double construction en projet locatif">
+                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-achat-immeuble.webp') }}" alt="Affiche de la formation en ligne immobilière : Investir dans un immeuble de rapport">
                         </div>
                         <div class="w-1/3 transform translate-y-6">
-                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-trouver-un-bien-immobilier.webp') }}" alt="">
-                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-dossier-bancaire-immo.webp') }}" alt="">
+                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-trouver-un-bien-immobilier.webp') }}" alt="Affiche de la formation immobilière : Trouver un bien immobilier facilement">
+                            <img class="border-2 border-white transition transform duration-300 hover:scale-150" src="{{ asset('build/images/main/formation-dossier-bancaire-immo.webp') }}" alt="Affiche de la formation immobilière : Créer un dossier bancaire efficace">
                         </div>
                     </div>
                 </div>
@@ -236,10 +247,10 @@
 
                 <div class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition-all duration-300 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
                     <div class="w-full  max-w-sm md:col-span-1">
-                        <a href=href="{{ path('coaching') }}">
+                        <a href="{{ path('coaching') }}">
                             <img
                                     class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
-                                    src="{{ asset('build/images/main/coaching-immobilier.webp') }}" alt=""></a>
+                                    src="{{ asset('build/images/main/coaching-immobilier.webp') }}" alt="Coaching et accompagnement personnalisé pour devenir rentier et investisseur immobilier"></a>
                     </div>
                     <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
                         <div class="max-w-sm mx-auto ">
@@ -253,9 +264,9 @@
                             <div class="flex mt-2 items-center pb-5">
                             </div>
                             <div class="">
-                                <a class="my-6">
+                                <a href="{{ path('coaching') }}" class="my-6">
                                     <button class="btn-1 text-gray-900  border-2 border-gray-900 py-3 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-500 text-gray-900 transition"
-                                            href="{{ path('coaching') }}">En savoir plus
+                                            >En savoir plus
                                     </button>
                                 </a>
                             </div>

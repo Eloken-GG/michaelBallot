@@ -1,6 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {% block body %}
     <header x-data="{ open: false }" class="bg-cover bg-no-repeat border-black bg-gray-900 bg-7">
@@ -24,8 +35,8 @@
 
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="{{ asset ('build/images/miniatureVideo/7.png') }}"
-                             alt="Michael Ballot présente la formation d'immobilier d'investissement : Investir dans un immeuble de rapport">
+                             src="{{ asset ('build/images/miniatureVideo/7.webp') }}"
+                             alt="A propos de Michael Ballot Formation">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
                                     class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
@@ -172,23 +183,23 @@
                                 <div class=" mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
                                     <img class=" w-full h-48 lg:h-32 lg:h-48 object-cover"
                                          src="{{ asset('build/images/about/1.webp') }}"
-                                         alt="Signature d'un acte sous seing auprès du notaire pour acheter un bien immobilier à l'investissement">
+                                         alt="Investissement immobilier réalisé par Michael Ballot">
                                 </div>
                                 <div class="w-full lg:w-1/3 px-3">
                                     <img class=" w-full h-48 lg:h-32 object-cover"
                                          src="{{ asset('build/images/about/3.webp') }}"
-                                         alt="Mise en vente ou location d'un bien par un professionnel de l'immobilier d'investissement">
+                                         alt="Investissement immobilier réalisé par Michael Ballot">
                                 </div>
                             </div>
                             <div class=" flex flex-wrap items-start">
                                 <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
                                     <img class=" w-full h-48 lg:h-32 object-cover"
                                          src="{{ asset('build/images/about/4.webp') }}"
-                                         alt="Rencontre avec les artisans qui réaliseront votre chantier"></div>
+                                         alt="Investissement immobilier réalisé par Michael Ballot"></div>
                                 <div class="w-full lg:w-2/3 px-3">
                                     <img class="highline w-full h-48 lg:h-32 lg:h-48 object-cover"
                                          src="{{ asset('build/images/about/5.webp') }}"
-                                         alt="Calcul de la rentabilité d'un bien immobilier pour réaliser un investissement">
+                                         alt="Investissement immobilier réalisé par Michael Ballot">
                                 </div>
                             </div>
                         </div>
@@ -639,7 +650,7 @@
 
                                 <img class="relative mx-auto"
                                      src="{{ asset('build/images/about/2.webp') }}"
-                                     alt="Michael Ballot : formateur, coach, rentier et investisseur immobilier">
+                                     alt="Frenchy Homes : Conciergerie de luxe sur le Bassin d'Arcachon">
                             </div>
                         </div>
                     </div>

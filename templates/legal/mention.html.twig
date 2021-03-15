@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {# BLOC TITLE #}
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {# BLOC BODY #}
 {% block body %}
@@ -74,14 +85,14 @@
             </p>
         </div>
 
-        <a href="https://michaelballot.fr/build/files/cgv.pdf" target="_blank">
+        <a href="{{ asset('build/files/cgv.pdf') }}" target="_blank">
             <button class="bg-grey-400 hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
                 <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
                 <span>CGV</span>
             </button>
         </a>
 
-        <a href="https://michaelballot.fr/build/files/cgu.pdf" target="_blank">
+        <a href="{{ asset('build/files/cgu.pdf') }}" target="_blank">
             <button class="bg-grey-400 hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
                 <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
                 <span>CGU</span>
@@ -92,7 +103,7 @@
 
         <div class="flex w-full items-center font-sans px-4 py-12">
             <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('build/images/intervenants/michael-ballot.webp') }}"
-                 alt="Avatar of Author">
+                 alt="Michael Ballot">
             <div class="flex-1 px-2">
                 <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Michael Ballot</p>
                 <p class="text-gray-600 text-xs md:text-base">Investisseur et fondateur de <a

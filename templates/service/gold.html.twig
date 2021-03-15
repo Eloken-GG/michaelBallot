@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {# BLOC TITLE #}
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {# BLOC BODY #}
 {% block body %}
@@ -81,8 +92,57 @@
 
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="https://picsum.photos/700/400"
-                             alt="">
+                             src="{{ asset ('build/images/miniatureVideo/11.webp') }}"
+                             alt="Michael Ballot présente la prestation d'investissements immobilier clé en main de 2 biens en location meublée non professionnelle">
+                        <div class="absolute  inset-0 flex items-center justify-center">
+                            <button @click="open = true"
+                                    class="js-play flex bg-opacity-90 items-center justify-center bg-gray-900 text-white p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     viewBox="0 0 140 140" width="12" height="12">
+                                    <g transform="matrix(14,0,0,14,0,0)">
+                                        <path d="M8.266,3.563,3.7.316h0A1.686,1.686,0,0,0,1.916.2,1.754,1.754,0,0,0,1,1.753V8.247A1.753,1.753,0,0,0,1.916,9.8,1.687,1.687,0,0,0,3.7,9.685L8.266,6.438a1.775,1.775,0,0,0,0-2.875Z"
+                                              fill="currentColor" stroke="none" stroke-linecap="round"
+                                              stroke-linejoin="round" stroke-width="0"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
+                         x-show="open" x-cloak>
+                        <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
+                             @click="open = false"></div>
+
+                        <!-- A basic modal dialog with title, body and one button to close -->
+                        <div class="h-auto w-full p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
+
+                            <div class="container">
+                                <div class="plyr__video-embed" id="player" class="rounded-sm">
+                                    <iframe  width="1154" height="649" src="https://www.youtube.com/embed/C5IIclLSJpY"
+                                             frameborder="0"
+                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                             allowfullscreen></iframe>
+                                    <!-- Fallback for browsers that don't support the <video> element -->
+                                    <a href="https://youtu.be/C5IIclLSJpY"
+                                       download>Voir la vidéo sur Youtube</a>
+                                </div>
+                            </div>
+                            <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+
+
+                            <!-- One big close button.  --->
+                            <div class="mt-5 sm:mt-6">
+                    <span class="flex js-pause2 w-full shadow-sm">
+                      <button @click="open = false"
+                              class="btn-1 text-white bg-gray-900 hover:bg-gray-700">
+                        Fermer la vidéo
+                      </button>
+                    </span>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>

@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {# BLOC TITLE #}
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {# BLOC BODY #}
 {% block body %}
@@ -25,17 +36,19 @@
                                     immobilier,
                                     Coach et formateur en investissement, etc.</p>
                             </div>
-                            <a href="" class="mx-auto"></a>
+                            <a data-controller="typeform-seminar" class="mx-auto typeform-share" href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
+                               data-mode="popup"
+                               data-size="100" target="_blank">
                             <button class="btn-1 text-white mx-auto block lg:mx-0 hover:bg-gray-900 bg-pink-600">
                                 Inscription
                             </button>
+                            </a>
                         </div>
                     </div>
 
-
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="https://picsum.photos/700/400"
+                             src="{{ asset ('build/images/miniatureVideo/16.webp') }}"
                              alt="Michael Ballot présente le séminaire immobilier 2021 sur le Bassin d'arcachon">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
@@ -52,6 +65,7 @@
                             </button>
                         </div>
                     </div>
+
                     <div class="fixed z-50 top-0 left-0 flex items-center justify-center w-screen h-screen"
                          x-show="open" x-cloak>
                         <div class="w-screen js-pause absolute z-40 h-screen flex-none top-0 bg-gray-900 bg-opacity-90"
@@ -61,28 +75,17 @@
                         <div class="h-auto w-full p-4 mx-2 z-50 text-left bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0">
 
                             <div class="container">
-                                <video id="player" controls crossorigin playsinline
-                                       poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webp">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                            type="video/mp4" size="576">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                            type="video/mp4" size="720">
-                                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                            type="video/mp4" size="1080">
-
-                                    <!-- Caption files -->
-                                    <track kind="captions" label="English" srclang="en"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                           default>
-                                    <track kind="captions" label="Français" srclang="fr"
-                                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                                <div class="plyr__video-embed" id="player" class="rounded-sm">
+                                    <iframe  width="1154" height="649" src="https://www.youtube.com/embed/vcPMLTlOPrM&t=18s"
+                                             frameborder="0"
+                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                             allowfullscreen></iframe>
                                     <!-- Fallback for browsers that don't support the <video> element -->
-                                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                       download>Download</a>
-                                </video>
+                                    <a href="https://youtu.be/vcPMLTlOPrM&t=18s"
+                                       download>Voir la vidéo sur Youtube</a>
+                                </div>
                             </div>
                             <!-- Plyr resources and browser polyfills are specified in the pen settings -->
-
 
                             <!-- One big close button.  --->
                             <div class="mt-5 sm:mt-6">
@@ -308,7 +311,7 @@
                 <div class="container mx-auto px-4">
                     <div data-aos="fade-up" class="max-w-2xl mx-auto text-center">
                         <span class="subtitle-2 inline-block mb-5 text-white">QUAND ?</span>
-                        <h2 class="title-1 text-white">Du 27 au 28 Mars 2021</h2>
+                        <h2 class="title-1 text-white">Du 12 au 13 Juin 2021</h2>
                     </div>
                 </div>
             </div>
@@ -325,7 +328,7 @@
                                 <h2 class="title-1 my-6">Le Golf du Médoc</h2>
                                 <span class="body-3 font-bold">Chemin de Courmateau -
                                 33290 Le Pian Médoc - France</span><br><br>
-                                <p class="body-2">Le <a href="">Golf du Médoc</a> est un lieu d’exception aux plus beaux
+                                <p class="body-2">Le <a class="underline" href="https://golfdumedocresort.com/" target="_blank">Golf du Médoc</a> est un lieu d’exception aux plus beaux
                                     horizons.
                                     Une destination incontournable alliant golf, gastronomie, dégustation et détente
                                     entre
@@ -373,12 +376,15 @@
                                 <h2 class="title-1 my-6">Le Programme</h2>
                             </div>
                             <div class="text-left flex flex-wrap md:flex-nowrap justify-stretch md:justify-start block my-8">
-                                <a class="w-full md:w-auto" href="#">
+                                <a data-controller="typeform-seminar" href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
+                                       data-mode="popup"
+                                       class="w-full md:w-auto"
+                                       data-size="100" target="_blank">
                                     <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">S'inscrire</button>
                                 </a>
                                 <a class="w-full md:w-auto mt-6 md:mt-0 md:ml-6" target="_blank"
                                    href="{{ asset('build/files/seminaire-immobilier-2021.pdf') }}">
-                                    <button class="btn-1 bg-gray-300 hover:bg-gray-800">Télécharger le programme
+                                    <button class="btn-1 bg-gray-300 hover:bg-gray-800 text-white">Télécharger le programme
                                     </button>
                                 </a>
                             </div>
@@ -398,7 +404,7 @@
         <div class="bg-white max-w-5xl mx-auto overflow-hidden">
             <div class="px-4 py-5 sm:px-6">
                 <h3 class="subtitle-2">
-                    Samedi 27 Mars 2021
+                    Samedi 12 Juin 2021
                 </h3>
             </div>
             <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
@@ -509,7 +515,7 @@
         <div class="bg-white my-12 max-w-5xl mx-auto overflow-hidden">
             <div class="px-4 py-5 sm:px-6">
                 <h3 class="subtitle-2">
-                    Dimanche 28 Mars 2021
+                    Dimanche 13 Juin 2021
                 </h3>
             </div>
             <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
@@ -615,8 +621,10 @@
 
             <div class="container mx-auto px-4">
                 <div class="max-w-xl mx-auto text-center">
-
-                    <a href="" class="my-12 block">
+                    <a data-controller="typeform-seminar" href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
+                       data-mode="popup"
+                       class="my-12 block"
+                       data-size="100" target="_blank">
                         <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">Je m'inscris</button>
                     </a>
                 </div>

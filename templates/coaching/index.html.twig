@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {# BLOC TITLE #}
-{% block title %}{% endblock %}
+{% block title %}
+    <meta name="description" content="">
+    <meta name="title" content="">
+
+    <meta property="og:title" content="Formez-vous, construisez votre maison, devenez indépendant">
+    <meta property="og:site_name" content="Michael Ballot">
+    <meta property="og:url" content="https://michaelballot.fr">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="product.item">
+    <meta property="og:image" content="{{ asset('build/images/og/1.jpg') }}">
+
+{% endblock %}
 
 {# BLOC BODY #}
 {% block body %}
@@ -23,7 +34,7 @@
                                     financièrement indépendant !Je vous accompagne pendant 1 an dans toutes les étapes
                                     de vos projets immobiliers.</p>
                             </div>
-                            <a data-controller="typeform" class="mx-auto typeform-share" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
+                            <a data-controller="typeform-tsi" class="mx-auto typeform-share" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
                                data-mode="popup"
                                data-size="100" target="_blank">
 
@@ -37,7 +48,7 @@
 
                     <div data-aos="fade-left" class="w-full rounded relative lg:w-1/2 px-3 mb-12 lg:mb-0">
                         <img class="lg:h-128 rounded mx-auto flex items-center justify-center"
-                             src="{{ asset ('build/images/miniatureVideo/9.png') }}"
+                             src="{{ asset ('build/images/miniatureVideo/9.webp') }}"
                              alt="Michael Ballot présente The School Investment : Coaching en investissement immobilier">
                         <div class="absolute  inset-0 flex items-center justify-center">
                             <button @click="open = true"
@@ -220,7 +231,7 @@
                             </div>
                             <div class="flex items-center">
                                 <span class="title-font font-medium text-2xl text-gray-900">3 100,00 €</span>
-                                <a data-controller="typeform" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
+                                <a data-controller="typeform-tsi" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
                                    data-mode="popup"
                                    class="ml-auto typeform-share"
                                    data-size="100" target="_blank">
@@ -486,7 +497,7 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-xl mx-auto text-center">
 
-                    <a data-controller="typeform"  class="my-12 block typeform-share" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
+                    <a data-controller="typeform-tsi"  class="my-12 block typeform-share" href="https://form.typeform.com/to/iUWmWW?typeform-medium=embed-snippet"
                        data-mode="popup"
                        data-size="100" target="_blank">
                         <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">Je m'inscris</button>
