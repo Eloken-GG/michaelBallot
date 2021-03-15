@@ -1,7 +1,8 @@
 import { Controller } from 'stimulus';
 
 import Plyr from 'plyr';
-
+// Import theme
+import './js/theme'
 
 export default class extends Controller {
 

@@ -1,7 +1,9 @@
 const Encore = require('@symfony/webpack-encore');
 const PurgeCssPlugin = require('purgecss-webpack-plugin');
 const glob = require('glob-all');
-const path = require('path');
+const path = require('path')
+
+
 
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
@@ -37,7 +39,7 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
-    .enablePostCssLoader()
+
 
     /*
      * FEATURE CONFIGve
@@ -66,8 +68,10 @@ Encore
         config.corejs = 3;
     })
 
+
 // enables Sass/SCSS support
 //.enableSassLoader()
+    .enablePostCssLoader()
 
 // uncomment if you use TypeScript
 //.enableTypeScriptLoader()
@@ -91,19 +95,36 @@ module.exports = {
     },
 };
 
-module.exports = Encore.getWebpackConfig();
+
 
 if (Encore.isProduction()) {
+    Encore.addPlugin(new PurgeCssPlugin({
+
+        safelist: [ "aos-init", "aos-animate", "data-aos-delay", "data-aos-duration", "fade-up", "fade-left", "fade-right", "fade-left", "/plyr$/" ],
 
 
-        Encore.addPlugin(new PurgeCssPlugin({
+        paths: glob.sync([
+            path.join(__dirname, 'templates/**/*.html.twig'),
+            path.join(__dirname, 'templates/*.html.twig')
+        ]),
+        defaultExtractor: (content) => {
+            return content.match(/[\w-/:]+(?<!:)/g) || [];
 
-            paths: glob.sync([
-                path.join(__dirname, 'templates/**/*.html.twig')
-            ]),
-            defaultExtractor: (content) => {
-                return content.match(/[\w-/:]+(?<!:)/g) || [];
-            }
-        }));
+        },
+    }));
 
 }
+;
+
+
+
+
+module.exports = Encore.getWebpackConfig();
+
+
+
+
+
+
+
+
