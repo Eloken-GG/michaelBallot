@@ -15,7 +15,7 @@ class SitemapController extends AbstractController
     public function index(Request $request)
     {
         // Nous récupérons le nom d'hôte depuis l'URL
-        $hostname = $request->getHost();
+        $hostname = $request->getSchemeAndHttpHost();
 
         // On initialise un tableau pour lister les URLs
         $urls = [];
@@ -37,22 +37,28 @@ class SitemapController extends AbstractController
         $urls[] = ['loc' => $this->get('router')->generate('gold'), 'changefreq' => 'weekly', 'priority' => '1.0'];
         $urls[] = ['loc' => $this->get('router')->generate('platinium'), 'changefreq' => 'weekly', 'priority' => '1.0'];
         $urls[] = ['loc' => $this->get('router')->generate('diamond'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        
+        // Fabrication de la réponse XML
+        $response = new Response(
+            $this->renderView('sitemap/index.html.twig', [
+                    'urls' => $urls,
+                    'hostname' => $hostname]
+            )
+        );
 
-        // Once our array is filled, we define the controller response
-        $response = new Response();
-        $response->headers->set('Content-Type', 'xml');
+        // Ajout des entêtes
+        $response->headers->set('Content-Type', 'text/xml');
 
-        return $this->render('sitemap/index.html.twig', [
-            'urls' => $urls,
-            'hostname' => $hostname
-        ]);
+        // On envoie la réponse
+        return $response;
+
     }
 
-    /**
-     * @Route("/robot.txt", name="robot", defaults={"_format"="txt"})
-     */
-    public function robot()
-    {
-        return $this->render('sitemap/robot.txt');
-    }
+//    /**
+//     * @Route("/robot.txt", name="robot", defaults={"_format"="txt"})
+//     */
+//    public function robot()
+//    {
+//        return $this->render('sitemap/robot.txt');
+//    }
 }
