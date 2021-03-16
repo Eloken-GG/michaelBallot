@@ -15,43 +15,37 @@ class SitemapController extends AbstractController
     public function index(Request $request)
     {
         // Nous récupérons le nom d'hôte depuis l'URL
-        $hostname = $request->getSchemeAndHttpHost();
+        $hostname = $request->getHost();
 
         // On initialise un tableau pour lister les URLs
         $urls = [];
 
         // On ajoute les URLs "statiques"
-        $urls[] = ['loc' => $this->generateUrl('homepage')];
-        $urls[] = ['loc' => $this->generateUrl('about')];
-        $urls[] = ['loc' => $this->generateUrl('coaching')];
-        $urls[] = ['loc' => $this->generateUrl('contact')];
-        $urls[] = ['loc' => $this->generateUrl('formations')];
-        $urls[] = ['loc' => $this->generateUrl('maison')];
-        $urls[] = ['loc' => $this->generateUrl('dossier')];
-        $urls[] = ['loc' => $this->generateUrl('double')];
-        $urls[] = ['loc' => $this->generateUrl('bon')];
-        $urls[] = ['loc' => $this->generateUrl('immeuble')];
-        $urls[] = ['loc' => $this->generateUrl('pack')];
-        $urls[] = ['loc' => $this->generateUrl('seminaire')];
-        $urls[] = ['loc' => $this->generateUrl('pack')];
-        $urls[] = ['loc' => $this->generateUrl('service')];
-        $urls[] = ['loc' => $this->generateUrl('silver')];
-        $urls[] = ['loc' => $this->generateUrl('gold')];
-        $urls[] = ['loc' => $this->generateUrl('platinium')];
-        $urls[] = ['loc' => $this->generateUrl('diamond')];
+        $urls[] = ['loc' => $this->get('router')->generate('homepage'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('about'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('coaching'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('contact'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('formations'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('maison'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('dossier'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('double'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('bon'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('immeuble'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('pack'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('service'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('silver'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('gold'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('platinium'), 'changefreq' => 'weekly', 'priority' => '1.0'];
+        $urls[] = ['loc' => $this->get('router')->generate('diamond'), 'changefreq' => 'weekly', 'priority' => '1.0'];
 
-        // Fabrication de la réponse XML
-        $response = new Response(
-            $this->renderView('sitemap/index.html.twig', ['urls' => $urls,
-                'hostname' => $hostname]),
-            200
-        );
+        // Once our array is filled, we define the controller response
+        $response = new Response();
+        $response->headers->set('Content-Type', 'xml');
 
-        // Ajout des entêtes
-        $response->headers->set('Content-Type', 'text/xml');
-
-        // On envoie la réponse
-        return $response;
+        return $this->render('sitemap/index.html.twig', [
+            'urls' => $urls,
+            'hostname' => $hostname
+        ]);
     }
 
     /**
