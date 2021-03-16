@@ -37,7 +37,7 @@ class SitemapController extends AbstractController
         $urls[] = ['loc' => $this->get('router')->generate('gold'), 'changefreq' => 'weekly', 'priority' => '1.0'];
         $urls[] = ['loc' => $this->get('router')->generate('platinium'), 'changefreq' => 'weekly', 'priority' => '1.0'];
         $urls[] = ['loc' => $this->get('router')->generate('diamond'), 'changefreq' => 'weekly', 'priority' => '1.0'];
-        
+
         // Fabrication de la réponse XML
         $response = new Response(
             $this->renderView('sitemap/index.html.twig', [
@@ -54,11 +54,11 @@ class SitemapController extends AbstractController
 
     }
 
-//    /**
-//     * @Route("/robot.txt", name="robot", defaults={"_format"="txt"})
-//     */
-//    public function robot()
-//    {
-//        return $this->render('sitemap/robot.txt');
-//    }
+    /**
+     * @Route("/robot.txt", name="robot", defaults={"_format"="txt"})
+     */
+    public function robot()
+    {
+        return $this->render('sitemap/robot.txt');
+    }
 }
