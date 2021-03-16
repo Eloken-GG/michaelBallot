@@ -2,6 +2,13 @@
 <html lang="fr">
 {# HEAD #}
 <head>
+    {# COOKIES #}
+    <script type="text/javascript">
+        const _iub = _iub || [];
+        _iub.csConfiguration = {"consentOnContinuedBrowsing":false,"whitelabel":false,"lang":"fr","siteId":2167795,"cookiePolicyId":22659429,"cookiePolicyUrl":"https://www.michaelballot.fr/mentions-legales.html", "banner":{ "brandBackgroundColor":"none","brandTextColor":"black","acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#111827","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","position":"float-bottom-left","backgroundOverlay":true,"textColor":"black","backgroundColor":"white" }};
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
     {# META #}
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -21,14 +28,12 @@
     {# BLOC STYLESHEET #}
 
     {% block stylesheets %}
-        {% include 'shared/_cookies.html.twig' %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
 
     {# BLOC JAVASCRIPT #}
     {% block javascripts %}
-        {% include 'shared/_cookies.html.twig' %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
