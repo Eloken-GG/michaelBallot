@@ -14,11 +14,4 @@ class LegalController extends AbstractController
     {
         return $this->render('legal/mention.html.twig');
     }
-
-    // Display the CGU page.
-    #[Route('/conditions-generales-utilisation', name: 'cgu')]
-    public function cgu()
-    {
-        return $this->render('legal/cgu.html.twig');
-    }
 }
