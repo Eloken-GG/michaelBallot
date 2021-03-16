@@ -21,13 +21,14 @@
     {# BLOC STYLESHEET #}
 
     {% block stylesheets %}
-
+        {% include 'shared/_cookies.html.twig' %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
 
     {# BLOC JAVASCRIPT #}
     {% block javascripts %}
+        {% include 'shared/_cookies.html.twig' %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
