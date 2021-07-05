@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /guide
-Disallow: /mentions-legales

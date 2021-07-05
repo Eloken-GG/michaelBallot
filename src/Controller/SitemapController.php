@@ -55,10 +55,10 @@ class SitemapController extends AbstractController
     }
 
     /**
-     * @Route("/robot.txt", name="robot", defaults={"_format"="txt"})
+     * @Route("/robots.txt", name="robot", defaults={"_format"="txt"})
      */
     public function robot()
     {
-        return $this->render('sitemap/robot.txt');
+        return $this->render('sitemap/robots.txt');
     }
 }
