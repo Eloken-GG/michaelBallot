@@ -6,11 +6,13 @@
 {% endblock %}
 
 {% block meta %}
-    <meta name="description" content="Carolin Arthaud, Tony Jazz, Thibault Epée, Michael Ballot et bien d'autres interviendront... 2 jours de séminaires immobilier pour devenir rentier et investisseur.">
+    <meta name="description"
+          content="Carolin Arthaud, Tony Jazz, Thibault Epée, Michael Ballot et bien d'autres interviendront... 2 jours de séminaires immobilier pour devenir rentier et investisseur.">
     <meta property="og:title" content="Séminaire immobilier | 12 - 13 Juin 2021 | Bassin d'Arcachon">
     <meta property="og:site_name" content="Michael Ballot">
     <meta property="og:url" content="https://www.michaelballot.fr/seminaire">
-    <meta property="og:description" content="Carolin Arthaud, Tony Jazz, Thibault Epée, Michael Ballot et bien d'autres intervenants d'exception... Réservez votre place.">
+    <meta property="og:description"
+          content="Carolin Arthaud, Tony Jazz, Thibault Epée, Michael Ballot et bien d'autres intervenants d'exception... Réservez votre place.">
     <meta property="og:type" content="event">
     <meta property="og:image" content="{{ asset('build/images/og/18.png') }}">
 {% endblock %}
@@ -30,19 +32,17 @@
                                 <h1 class="title-1 text-white">
                                     2 jours pour devenir investisseur
                                 </h1>
-                                <p class="body-1 mt-12 text-white">10 intervenants professionnels seront présents pour
-                                    accompagner
-                                    votre réussite : Comptable, Fiscaliste, agent immobilier, Entrepreneur, Banquier,
-                                    Marchand de biens, Professionnel de la location courte durée, Investisseur
-                                    immobilier,
-                                    Coach et formateur en investissement, etc.</p>
+                                <p class="body-1 mt-12 text-white">Après une incroyable réussite en 2021, le séminaire
+                                    revient en 2022 avec de plus grandes ambitions. Participez au séminaire immobilier
+                                    des investisseurs les plus audacieux de France.</p>
                             </div>
-                            <a data-controller="typeform-seminar" class="mx-auto typeform-share" href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
+                            <a data-controller="typeform-seminar" class="mx-auto typeform-share"
+                               href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
                                data-mode="popup"
                                data-size="100" target="_blank">
-                            <button class="btn-1 text-white mx-auto block lg:mx-0 hover:bg-gray-900 bg-pink-600">
-                                Inscription
-                            </button>
+                                <button class="btn-1 text-white mx-auto block lg:mx-0 hover:bg-gray-900 bg-pink-600">
+                                    Inscription
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -77,12 +77,13 @@
 
                             <div class="container">
                                 <div class="plyr__video-embed" id="player" class="rounded-sm">
-                                    <iframe  width="1154" height="649" src="https://www.youtube.com/embed/vcPMLTlOPrM&t=18s"
-                                             frameborder="0"
-                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                             allowfullscreen></iframe>
+                                    <iframe width="1154" height="649"
+                                            src="https://www.youtube.com/embed/EWD2FhijsZU"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
                                     <!-- Fallback for browsers that don't support the <video> element -->
-                                    <a href="https://youtu.be/vcPMLTlOPrM&t=18s"
+                                    <a href="https://youtu.be/EWD2FhijsZU"
                                        download>Voir la vidéo sur Youtube</a>
                                 </div>
                             </div>
@@ -143,168 +144,255 @@
             </div>
         </section>
 
-        {# INTERVENANTS #}
-        <section class="mb-24 px-8 w-full">
+        {# INTRODUCTION #}
+        <section class="w-full">
 
-            <div class="py-20 radius-for-skewed">
+            <div class="md:pt-20 md:pb-6 radius-for-skewed">
                 <div class="container mx-auto px-4">
-                    <div class="max-w-xl mx-auto text-center">
-                        <span class="subtitle-2 inline-block mb-5">QUI ?</span>
-                        <h2 class="title-1">Les intervenants</h2>
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="title-1">Le prochain séminaire arrive</h2>
+                        <p class="body-2 m-6">En 2022 le séminaire "2 jours pour devenir investisseur" voit grand. Des
+                            thématiques inédites, des interventions de qualité et toujours des intervenants d'exception.
+                            Le tout avec une surprise : la possibilité de gagner un voyage à Miami Beach</p>
                     </div>
                 </div>
             </div>
-            <div class="grid mx-auto max-w-7xl lg:grid-cols-8 md:grid-cols-4 justify-center mb-12 ">
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-auto w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/notaire.webp') }}"
-                             alt="Maître robin Vayssière : notaire">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">MAÎTRE ROBIN-VAYSSIERE</h3>
-                                <p class="font-raleway font-medium text-white">Notaire</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-full w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/thomas-miralles.webp') }}"
-                             alt="Thomas Miralles : courtier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Thomas Miralles</h3>
-                                <p class="font-raleway font-medium text-white">Courtier</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up"
-                     class="flex lg:col-span-4 mx-auto lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-full w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/carolin-arthaud.webp') }}"
-                             alt="Carolin Arthaud : Coach immobilier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Carolin Arthaud</h3>
-                                <p class="font-raleway font-medium text-white">Coach immobilier</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up"
-                     class="flex lg:col-span-4 mx-auto lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-full w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/tony-jazz.webp') }}"
-                             alt="Tony jazz : investisseur immobilier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Tony Jazz</h3>
-                                <p class="font-raleway font-medium text-white">Investisseur & Entrepreneur</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-auto w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/leo-blanchet.webp') }}"
-                             alt="Léo blanchet : investisseur immobilier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Léo Blanchet</h3>
-                                <p class="font-raleway font-medium text-white">Investisseur immobilier</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-full w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/carolin-arthaud.webp') }}"
-                             alt="Christophe Tournier : agent immobilier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Christophe Tournier</h3>
-                                <p class="font-raleway font-medium text-white">Agent immobilier</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-auto w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/thibault-epee.webp') }}"
-                             alt="Thibault épée : fondateur du club rentabilité">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">THIBAULT EPÉE</h3>
-                                <p class="font-raleway font-medium text-white">Fondateur du Club rentabilité</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-auto w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/mathieu-kirios.webp') }}"
-                             alt="Mathieu Quiros : investisseur immobilier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Mathieu Quiros</h3>
-                                <p class="font-raleway font-medium text-white">Investisseur immobilier</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-full w-full rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/michael-ballot.webp') }}"
-                             alt="Michael ballot : investisseur, coach et formateur immobilier">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">Micahel Ballot</h3>
-                                <p class="font-raleway font-medium text-white">Investisseur & Coach</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up"
-                     class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300">
-                    <div class="w-full h-auto relative">
-                        <img class="h-full w-full  rounded-lg object-cover"
-                             src="{{ asset('build/images/intervenants/invite-surprise.webp') }}"
-                             alt="invité mystère">
-                        <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg">
-                            <div class="">
-                                <h3 class="subtitle-2 text-white">???</h3>
-                                <p class="font-raleway font-medium text-white">Invité mystère</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
         </section>
+
+        {# CARD FORMATION #}
+        <section class="bg-gradient-to-b from-gray-50 w-full py-24">
+            <div class="max-w-4xl px-8 mx-auto">
+
+                <div data-aos="fade-up"
+                     class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition-all duration-300 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                    <div class="w-full  max-w-sm md:col-span-1">
+                        <a href="https://michaelballotformation.podia.com/construire-sa-maison-en-toute-autonomie">
+                            <img
+                                    class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                    src="{{ asset('build/images/seminaire/seminaire immobilier.webp') }}"
+                                    alt="Affiche séminaire immobilier 2022 : 2 jours pour devenir investisseur"></a>
+                    </div>
+                    <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                        <div class="max-w-sm mx-auto mb-4">
+                            <h2 class="subtitle-2">Séminaire immobilier</h2>
+                            <h3 class="title-2">Inscrivez-vous au séminaire 2022</h3>
+
+                            <ul class="font-raleway mt-5 uppercase font-bold text-sm">
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">Du 25 au 26 Juin 2022</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">Toujours au Golf du Médoc</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">2 jours pour devenir investisseur</span>
+                                </li>
+                                <li class="mb-1 flex items-center text-pink-600">
+                                    <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                        <circle cx="4" cy="4" r="3"/>
+                                    </svg>
+                                    <span class="">1 Voyage d'une valeur de 3500€ à gagner</span>
+                                </li>
+
+                            </ul>
+                            <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                            </div>
+                            <div class="flex items-center">
+                                <a data-controller="typeform-seminar"
+                                   href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
+                                   data-mode="popup"
+                                   class="ml-auto"
+                                   data-size="100" target="_blank">
+                                    <button class="btn-1 text-white hover:bg-gray-900 bg-pink-600">
+                                        S'inscrire
+                                    </button>
+                                </a>
+
+                                <a target="_blank" href="{{ asset('build/files/seminaire-immobilier-2022.pdf') }}"
+                                   class="hidden md:inline ml-auto">
+                                    <button class="btn-1 ml-2 text-white hover:bg-gray-900 bg-gray-300">
+                                        Télécharger la brochure
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# INTERVENANTS #}
+        {# <section class="mb-24 px-8 w-full"> #}
+
+        {# <div class="py-20 radius-for-skewed"> #}
+        {# <div class="container mx-auto px-4"> #}
+        {# <div class="max-w-xl mx-auto text-center"> #}
+        {# <span class="subtitle-2 inline-block mb-5">QUI ?</span> #}
+        {# <h2 class="title-1">Les intervenants</h2> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div class="grid mx-auto max-w-7xl lg:grid-cols-8 md:grid-cols-4 justify-center mb-12 "> #}
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-auto w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/notaire.webp') }}" #}
+        {# alt="Maître robin Vayssière : notaire"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">MAÎTRE ROBIN-VAYSSIERE</h3> #}
+        {# <p class="font-raleway font-medium text-white">Notaire</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-full w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/thomas-miralles.webp') }}" #}
+        {# alt="Thomas Miralles : courtier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Thomas Miralles</h3> #}
+        {# <p class="font-raleway font-medium text-white">Courtier</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+
+        {# <div data-aos="fade-up" #}
+        {# class="flex lg:col-span-4 mx-auto lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-full w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/carolin-arthaud.webp') }}" #}
+        {# alt="Carolin Arthaud : Coach immobilier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Carolin Arthaud</h3> #}
+        {# <p class="font-raleway font-medium text-white">Coach immobilier</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+
+        {# <div data-aos="fade-up" #}
+        {# class="flex lg:col-span-4 mx-auto lg:row-span-2 col-span-2 row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-full w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/tony-jazz.webp') }}" #}
+        {# alt="Tony jazz : investisseur immobilier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Tony Jazz</h3> #}
+        {# <p class="font-raleway font-medium text-white">Investisseur & Entrepreneur</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-auto w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/leo-blanchet.webp') }}" #}
+        {# alt="Léo blanchet : investisseur immobilier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Léo Blanchet</h3> #}
+        {# <p class="font-raleway font-medium text-white">Investisseur immobilier</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-full w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/carolin-arthaud.webp') }}" #}
+        {# alt="Christophe Tournier : agent immobilier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Christophe Tournier</h3> #}
+        {# <p class="font-raleway font-medium text-white">Agent immobilier</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-auto w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/thibault-epee.webp') }}" #}
+        {# alt="Thibault épée : fondateur du club rentabilité"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">THIBAULT EPÉE</h3> #}
+        {# <p class="font-raleway font-medium text-white">Fondateur du Club rentabilité</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-auto w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/mathieu-kirios.webp') }}" #}
+        {# alt="Mathieu Quiros : investisseur immobilier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Mathieu Quiros</h3> #}
+        {# <p class="font-raleway font-medium text-white">Investisseur immobilier</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-full w-full rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/michael-ballot.webp') }}" #}
+        {# alt="Michael ballot : investisseur, coach et formateur immobilier"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">Micahel Ballot</h3> #}
+        {# <p class="font-raleway font-medium text-white">Investisseur & Coach</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+
+        {# <div data-aos="fade-up" #}
+        {# class="flex col-span-2 mx-auto row-span-1 px-4 m-3 w-full md:hover:scale-105   transition-all transform duration-300"> #}
+        {# <div class="w-full h-auto relative"> #}
+        {# <img class="h-full w-full  rounded-lg object-cover" #}
+        {# src="{{ asset('build/images/intervenants/invite-surprise.webp') }}" #}
+        {# alt="invité mystère"> #}
+        {# <div class="absolute h-full mx-auto w-full p-6 inset-0 bg-gradient-to-t flex items-end justify-start from-gray-900 rounded-lg"> #}
+        {# <div class=""> #}
+        {# <h3 class="subtitle-2 text-white">???</h3> #}
+        {# <p class="font-raleway font-medium text-white">Invité mystère</p> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+
+
+        {# </div> #}
+
+        {# </section> #}
 
         {# DATE #}
         <section class="pt-20 pb-24 bg-gray-900 text-white">
@@ -312,7 +400,7 @@
                 <div class="container mx-auto px-4">
                     <div data-aos="fade-up" class="max-w-2xl mx-auto text-center">
                         <span class="subtitle-2 inline-block mb-5 text-white">QUAND ?</span>
-                        <h2 class="title-1 text-white">Du 12 au 13 Juin 2021</h2>
+                        <h2 class="title-1 text-white">Du 25 au 26 Juin 2022</h2>
                     </div>
                 </div>
             </div>
@@ -329,7 +417,9 @@
                                 <h2 class="title-1 my-6">Le Golf du Médoc</h2>
                                 <span class="body-3 font-bold">Chemin de Courmateau -
                                 33290 Le Pian Médoc - France</span><br><br>
-                                <p class="body-2">Le <a class="underline" href="https://golfdumedocresort.com/" target="_blank">Golf du Médoc</a> est un lieu d’exception aux plus beaux
+                                <p class="body-2">Le <a class="underline" href="https://golfdumedocresort.com/"
+                                                        target="_blank">Golf du Médoc</a> est un lieu d’exception aux
+                                    plus beaux
                                     horizons.
                                     Une destination incontournable alliant golf, gastronomie, dégustation et détente
                                     entre
@@ -367,272 +457,364 @@
         </section>
 
         {# PROGRAMME #}
-        <section class="">
-            <div class="max-w-5xl px-4 mx-auto">
-                <div class="flex flex-wrap items-center -mx-3">
-                    <div class="w-full lg:w-1/2 px-3">
-                        <div class="py-12">
-                            <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-12 text-center lg:text-left">
-                                <span class="subtitle-2 inline-block">QUOI ?</span>
-                                <h2 class="title-1 my-6">Le Programme</h2>
-                            </div>
-                            <div class="text-left flex flex-wrap md:flex-nowrap justify-stretch md:justify-start block my-8">
-                                <a data-controller="typeform-seminar" href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
-                                       data-mode="popup"
-                                       class="w-full md:w-auto"
-                                       data-size="100" target="_blank">
-                                    <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">S'inscrire</button>
-                                </a>
-                                <a class="w-full md:w-auto mt-6 md:mt-0 md:ml-6" target="_blank"
-                                   href="{{ asset('build/files/seminaire-immobilier-2021.pdf') }}">
-                                    <button class="btn-1 bg-gray-300 hover:bg-gray-800 text-white">Télécharger le programme
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
-                        <div class="lg:h-128 flex items-center justify-center"><img class="lg:max-w-lg"
-                                                                                    src="metis-assets/illustrations/work-tv.png"
-                                                                                    alt=""></div>
-                    </div>
-                </div>
-            </div>
+        {# <section class=""> #}
+        {# <div class="max-w-5xl px-4 mx-auto"> #}
+        {# <div class="flex flex-wrap items-center -mx-3"> #}
+        {# <div class="w-full lg:w-1/2 px-3"> #}
+        {# <div class="py-12"> #}
+        {# <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-12 text-center lg:text-left"> #}
+        {# <span class="subtitle-2 inline-block">QUOI ?</span> #}
+        {# <h2 class="title-1 my-6">Le Programme</h2> #}
+        {# </div> #}
+        {# <div class="text-left flex flex-wrap md:flex-nowrap justify-stretch md:justify-start block my-8"> #}
+        {# <a data-controller="typeform-seminar" #}
+        {# href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet" #}
+        {# data-mode="popup" #}
+        {# class="w-full md:w-auto" #}
+        {# data-size="100" target="_blank"> #}
+        {# <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">S'inscrire</button> #}
+        {# </a> #}
+        {# <a class="w-full md:w-auto mt-6 md:mt-0 md:ml-6" target="_blank" #}
+        {# href="{{ asset('build/files/seminaire-immobilier-2021.pdf') }}"> #}
+        {# <button class="btn-1 bg-gray-300 hover:bg-gray-800 text-white">Télécharger le #}
+        {# programme #}
+        {# </button> #}
+        {# </a> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0"> #}
+        {# <div class="lg:h-128 flex items-center justify-center"><img class="lg:max-w-lg" #}
+        {# src="metis-assets/illustrations/work-tv.png" #}
+        {# alt=""></div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
 
-        </section>
+        {# </section> #}
 
         {# PROGRAMME J 1 #}
-        <div class="bg-white max-w-5xl mx-auto overflow-hidden">
-            <div class="px-4 py-5 sm:px-6">
-                <h3 class="subtitle-2">
-                    Samedi 12 Juin 2021
-                </h3>
-            </div>
-            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
-                <dl class="sm:divide-y sm:divide-gray-200">
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            08h00 - 08h45
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Petit déjeuner de bienvenue
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            08h45 - 09h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Présentation du séminaire par Michael Ballot
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            09h00 – 10h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Christophe Tournier, agent immobilier
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            10h00 - 11h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Maître Robin-Vayssière, notaire
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            11h00 - 11h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Pause & échanges
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            11h30 - 12h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Léo Blanchet, investisseur et marchand de biens
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            12h30 – 14h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Pause déjeuner
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            14h00 - 15h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Tony Jazz, investisseur et entrepreneur
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            15h00 – 16h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Julien Tomassi, comptable et fiscaliste
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            16h00 – 16h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Pause & échanges
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            16h30 – 17h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Carolin Arthaud marchand de bien, promoteur et formateur
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            17h00 – 18h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Echanges, conclusion et bilan
-                        </dd>
-                    </div>
+        {# <div class="bg-white max-w-5xl mx-auto overflow-hidden"> #}
+        {# <div class="px-4 py-5 sm:px-6"> #}
+        {# <h3 class="subtitle-2"> #}
+        {# Samedi 12 Juin 2021 #}
+        {# </h3> #}
+        {# </div> #}
+        {# <div class="border-t border-gray-200 px-4 py-5 sm:p-0"> #}
+        {# <dl class="sm:divide-y sm:divide-gray-200"> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 08h00 - 08h45 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Petit déjeuner de bienvenue #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 08h45 - 09h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Présentation du séminaire par Michael Ballot #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 09h00 – 10h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Christophe Tournier, agent immobilier #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 10h00 - 11h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Maître Robin-Vayssière, notaire #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 11h00 - 11h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Pause & échanges #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 11h30 - 12h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Léo Blanchet, investisseur et marchand de biens #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 12h30 – 14h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Pause déjeuner #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 14h00 - 15h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Tony Jazz, investisseur et entrepreneur #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 15h00 – 16h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Julien Tomassi, comptable et fiscaliste #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 16h00 – 16h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Pause & échanges #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 16h30 – 17h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Carolin Arthaud marchand de bien, promoteur et formateur #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 17h00 – 18h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Echanges, conclusion et bilan #}
+        {# </dd> #}
+        {# </div> #}
 
 
-                </dl>
-            </div>
-        </div>
+        {# </dl> #}
+        {# </div> #}
+        {# </div> #}
 
         {# JOUR 2 #}
-        <div class="bg-white my-12 max-w-5xl mx-auto overflow-hidden">
-            <div class="px-4 py-5 sm:px-6">
-                <h3 class="subtitle-2">
-                    Dimanche 13 Juin 2021
-                </h3>
-            </div>
-            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
-                <dl class="sm:divide-y sm:divide-gray-200">
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            08h00 - 09h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Petit déjeuner
-                        </dd>
-                    </div>
+        {# <div class="bg-white my-12 max-w-5xl mx-auto overflow-hidden"> #}
+        {# <div class="px-4 py-5 sm:px-6"> #}
+        {# <h3 class="subtitle-2"> #}
+        {# Dimanche 13 Juin 2021 #}
+        {# </h3> #}
+        {# </div> #}
+        {# <div class="border-t border-gray-200 px-4 py-5 sm:p-0"> #}
+        {# <dl class="sm:divide-y sm:divide-gray-200"> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 08h00 - 09h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Petit déjeuner #}
+        {# </dd> #}
+        {# </div> #}
 
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            09h00 – 10h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Michael Ballot, investisseur et coach
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            10h00 - 11h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Thomas Miralles, courtier
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            11h00 - 11h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Pause & échanges
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            11h30 - 12h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Mathieu Quiros, investisseur et chasseur immobilier, revenue manager
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            12h30 – 14h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Pause déjeuner
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            14h00 - 15h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Un intervenant surprise va venir vous raconter son histoire
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            15h00 – 16h00
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Intervention de Thibault Epée, investisseur, formateur et fondateur du club rentabilité
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            16h00 – 16h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Pause & échanges
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            16h30 – 17h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Carolin Arthaud marchand de bien, promoteur et formateur
-                        </dd>
-                    </div>
-                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                        <dt class="body-2 font-semibold">
-                            17h00 – 18h30
-                        </dt>
-                        <dd class="body-2 col-span-3">
-                            Réponse aux questions, conclusion et bilan
-                        </dd>
-                    </div>
-
-
-                </dl>
-            </div>
-        </div>
-        {# INSCRIPTION #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 09h00 – 10h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Michael Ballot, investisseur et coach #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 10h00 - 11h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Thomas Miralles, courtier #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 11h00 - 11h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Pause & échanges #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 11h30 - 12h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Mathieu Quiros, investisseur et chasseur immobilier, revenue manager #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 12h30 – 14h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Pause déjeuner #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 14h00 - 15h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Un intervenant surprise va venir vous raconter son histoire #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 15h00 – 16h00 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Intervention de Thibault Epée, investisseur, formateur et fondateur du club rentabilité #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 16h00 – 16h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Pause & échanges #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 16h30 – 17h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Carolin Arthaud marchand de bien, promoteur et formateur #}
+        {# </dd> #}
+        {# </div> #}
+        {# <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"> #}
+        {# <dt class="body-2 font-semibold"> #}
+        {# 17h00 – 18h30 #}
+        {# </dt> #}
+        {# <dd class="body-2 col-span-3"> #}
+        {# Réponse aux questions, conclusion et bilan #}
+        {# </dd> #}
+        {# </div> #}
 
 
-        <section class="bg-cover bg-no-repeat py-20 bg-6 bg-fixed">
+        {# </dl> #}
+        {# </div> #}
+        {# </div> #}
 
-            <div class="container mx-auto px-4">
-                <div class="max-w-xl mx-auto text-center">
-                    <a data-controller="typeform-seminar" href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
-                       data-mode="popup"
-                       class="my-12 block"
-                       data-size="100" target="_blank">
-                        <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">Je m'inscris</button>
-                    </a>
-                </div>
-            </div>
 
-        </section>
     </main>
 
+
+    {# LAST YEAR ______________ #}
+
+
+    {# INTRODUCTION #}
+    <section class="w-full">
+
+        <div class="md:pt-20 md:pb-6 radius-for-skewed">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="title-1">Visionnez le séminaire 2021</h2>
+                    <p class="body-2 m-6">L'ensemble du séminaire a été enregistré et est désormais disponible.
+                        Découvrez des conseils inédits de Carolin Arthaud, Tony Jazz, Thibault Epée et bien d'autres
+                        intervenants exceptionnels. 9 intervenants d'exception ont animé et participé au séminaire qui
+                        a réunit 50 personnes pendant 2 jours. Des rencontres et des échanges incroyables que nous
+                        souhaitons renouveler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# CARD FORMATION #}
+    <section class="bg-gradient-to-b from-gray-50 w-full py-24">
+        <div class="max-w-4xl px-8 mx-auto">
+
+            <div data-aos="fade-up"
+                 class="w-full p-6 bg-white shadow-lg  hover:shadow-sm transition-all duration-300 grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+                <div class="w-full  max-w-sm md:col-span-1">
+                    <a href="https://michaelballotformation.podia.com/construire-sa-maison-en-toute-autonomie">
+                        <img
+                                class="w-full  shadow-sm mx-auto mb-8 md:mb-0 h-auto"
+                                src="{{ asset('build/images/main/seminaire-immobilier.webp') }}"
+                                alt="Affiche séminaire immobilier 2022 : 2 jours pour devenir investisseur"></a>
+                </div>
+                <div class="w-full col-span-2 text-left grid justify-self-end justify-items-center">
+                    <div class="max-w-sm mx-auto mb-4">
+                        <h2 class="subtitle-2">Séminaire immobilier</h2>
+                        <h3 class="title-2">Le séminaire 2021</h3>
+
+                        <p class="body-2 mt-5">2 jours de contenus exclusifs avec des intervenants exceptionnels. Le
+                            séminaire s'est déroulé du 12 au 13 Juin 2021 au Golf du Médoc.</p>
+
+                        <ul class="font-raleway mt-5 uppercase font-bold text-sm">
+                            <li class="mb-1 flex items-center text-pink-600">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">13 vidéos</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-pink-600">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">12h30 de vidéo</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-pink-600">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">Accès illimité à vie</span>
+                            </li>
+                            <li class="mb-1 flex items-center text-pink-600">
+                                <svg class="mr-1.5 h-2 w-2" fill="currentColor" viewBox="0 0 8 8">
+                                    <circle cx="4" cy="4" r="3"/>
+                                </svg>
+                                <span class="">-200€ avec le code SEMINAIRE2021</span>
+                            </li>
+
+                        </ul>
+                        <div class="flex mt-2 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="title-font font-medium text-2xl text-gray-900">297,00 €</span>
+                            <a class="ml-auto "
+                               href="https://michaelballotformation.podia.com/seminaire-immobilier-2-jours-pour-devenir-investisseur-immobilier/buy">
+                                <button class="btn-1  text-white hover:bg-gray-900 bg-pink-600">
+                                    Acheter
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {# INSCRIPTION #}
+
+    <section class="bg-cover bg-no-repeat py-20 bg-6 bg-fixed">
+
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto text-center">
+                <a data-controller="typeform-seminar"
+                   href="https://form.typeform.com/to/ip3Baz?typeform-medium=embed-snippet"
+                   data-mode="popup"
+                   class="my-12 block"
+                   data-size="100" target="_blank">
+                    <button class="btn-1 text-white bg-gray-900 hover:bg-pink-600">Je m'inscris</button>
+                </a>
+            </div>
+        </div>
+
+    </section>
 
 {% endblock %}

@@ -1,7 +1,5 @@
-@import "~swiper/swiper-bundle";
-@import "~tailwindcss/base";
-@import "~tailwindcss/components";
 
+@tailwind base;
 
 /* FONTS */
 @font-face {
@@ -13,6 +11,10 @@
     font-family: 'Raleway', sans-serif;;
     src:  url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('ttf');
 }
+
+@tailwind components;
+
+
 
 
 @layer base {
@@ -206,17 +208,12 @@
 }
 
 
+@tailwind utilities;
+
+
 @import "~plyr/dist/plyr.css";
-
 @import '~aos/dist/aos.css';
-
-
-
-
-@import "~tailwindcss/utilities";
-
-
-
+@import "~swiper/swiper-bundle";
 
 
 
